@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farmzz</title>
+<!-- Self-referencing hreflang tag -->
+<link rel="alternate" hreflang="fr-ca" href="https://farmzz.com/static/images/logo.png"/>
+<!-- x-default hreflang (defaults to French for Canadian market) -->
+<link rel="alternate" hreflang="x-default" href="https://farmzz.com/fr"/>
+<!-- Canonical URL (always present to prevent duplicate content) -->
+<link rel="canonical" href="https://farmzz.com/static/images/logo.png"/>
+<meta property="fb:app_id" content="1608329193231126">
+<meta property="og:title" content="Farmzz"/>
+<meta property="og:description" content="Farmzz - SMS and Email notifications for farmers"/>
+<meta property="og:url" content="https://farmzz.com/static/images/logo.png"/>
+<meta property="og:image:url" content=""/>
+<meta property="og:image:secure_url" content=""/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:locale" content="fr_CA"/>
+<meta property="og:site_name" content="Farmzz"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Farmzz">
+<meta name="twitter:image" content="">
+<meta property="twitter:description" content="Farmzz - SMS and Email notifications for farmers"/>
+<meta property="twitter:site" content="https://www.farmzz.com"/>
+<meta property="url" content="https://farmzz.com/static/images/logo.png"/>
+<meta name="image" content="">
+<meta property="title" content="Farmzz"/>
+<meta name="description" content="Farmzz - SMS and Email notifications for farmers"/>
+
+<!-- Schema Markup -->
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Farmzz",
+        "url": "https://farmzz.com",
+        "logo": "https://farmzz.com/static/images/logo.png",
+        "description": "Plateforme de fidélisation SMS et email pour producteurs agricoles"
+    }
+</script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Farmzz",
+            "url": "https://farmzz.com",
+            "description": "Plateforme de fidélisation SMS et email pour producteurs agricoles québécois",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://farmzz.com/fr/fermes?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+            }
+        }
+    </script>
+
+
+
+
+
+    <meta name="robots" content="noindex,nofollow">
+
+<link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="manifest" href="/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="stripe-key" content="pk_live_51KfS3XBeYzaQCvQD8Mtdajzk0XOIhrqZVaAKiCnd8Z0JLX1fxVw3F8MUNISMPdCbekzHNaGTLHz6JEXtwFXoRBtV00woPCwNXC">
+<meta name="app-env" content="production">
+<meta name="fb-pixel-id" content="">
+<meta name="recaptcha-sitekey" content="6Lff1RsrAAAAAMSQ0cBozdOuv0ckQazddmXRAnHb">
+<meta name="turnstile-sitekey" content="0x4AAAAAAB7XjC7g8X8xwJiZ">
+
+
+        <link rel="preload" href="/static/fonts/Geist-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/static/fonts/Geist-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/static/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/static/fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/static/fonts/Poppins-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+
+    <style>@font-face{font-family:Geist;src:url('/static/fonts/Geist-Regular.woff2') format('woff2');font-weight:400;font-display:optional}@font-face{font-family:Geist;src:url('/static/fonts/Geist-Medium.woff2') format('woff2');font-weight:500;font-display:optional}@font-face{font-family:Geist;src:url('/static/fonts/Geist-SemiBold.woff2') format('woff2');font-weight:600;font-display:optional}@font-face{font-family:Geist;src:url('/static/fonts/Geist-Bold.woff2') format('woff2');font-weight:700;font-display:optional}@font-face{font-family:Inter;src:url('/static/fonts/Inter-Regular.woff2') format('woff2');font-weight:400;font-display:optional}@font-face{font-family:Inter;src:url('/static/fonts/Inter-Medium.woff2') format('woff2');font-weight:500;font-display:optional}@font-face{font-family:Poppins;src:url('/static/fonts/Poppins-Regular.woff2') format('woff2');font-weight:400;font-display:optional}@font-face{font-family:Poppins;src:url('/static/fonts/Poppins-SemiBold.woff2') format('woff2');font-weight:600;font-display:optional}</style>
+    <link rel="preload" as="style" href="/static/fonts.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/static/fonts.css"></noscript>
+    <link rel="stylesheet" href="/dist/css/app.16f360aff6ccc1a1.css">
+
+
+    <script>
+        window.__initialData__ = null;
+            </script>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id="
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+<div id="page-content" style="display:none!important;">
+    
+    </div>
+
+<div id="root">
+    <script>
+        //Will be replace by REACT so it wil work as expected
+        window.__IS_SSG__ = "false" === 'true'
+    </script>
+    
+</div>
+<script defer src="/dist/js/vendor.6443f4117ce92ba2.js"></script>
+<script defer src="/dist/js/app.c4316e97780c4475.js"></script>
+</body>
+</html>
