@@ -1,11 +1,871 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" data-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>raphatb</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rapha TB — Clarifier. Systématiser. Déléguer.</title>
+
+  <!-- OG Tags -->
+  <meta property="og:title" content="Rapha TB" />
+  <meta property="og:description" content="I build systems for people who actually ship things." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="description" content="Raphael Tremblay-Bouchard — Builder, systems thinker, Notion consultant. Currently building Farmzz. Previously exited Monsieur Chalets." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+
+  <style>
+    :root {
+      --bg: #0a0a0c;
+      --bg-elevated: #111114;
+      --fg: #f0f0f0;
+      --fg-muted: #888;
+      --accent: #d4a843;
+      --accent-dim: rgba(212, 168, 67, 0.15);
+      --border: #1a1a1e;
+      --radius: 12px;
+      --max-w: 1100px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(10, 10, 12, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--fg);
+    }
+
+    .nav-logo span { color: var(--accent); }
+
+    .nav-links { display: flex; gap: 32px; list-style: none; }
+
+    .nav-links a {
+      color: var(--fg-muted);
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--fg); text-decoration: none; }
+
+    .nav-cta {
+      background: var(--accent);
+      color: #000;
+      padding: 8px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      transition: opacity 0.2s;
+    }
+
+    .nav-cta:hover { opacity: 0.85; text-decoration: none; }
+
+    .hamburger {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--fg);
+      cursor: pointer;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 64px;
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--accent);
+      background: var(--accent-dim);
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 24px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 4.2rem);
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: var(--fg-muted);
+      max-width: 540px;
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #000;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: opacity 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary:hover { opacity: 0.85; text-decoration: none; }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      color: var(--fg);
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--fg-muted);
+      text-decoration: none;
+    }
+
+    /* ── STATS ── */
+    .stats {
+      padding: 60px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      text-align: center;
+    }
+
+    .stat-num {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--fg-muted);
+      margin-top: 4px;
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 100px 0; }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      margin-bottom: 20px;
+    }
+
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--fg-muted);
+      max-width: 600px;
+      margin-bottom: 48px;
+    }
+
+    /* ── ABOUT ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .about-text p {
+      color: var(--fg-muted);
+      margin-bottom: 16px;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .about-text strong { color: var(--fg); }
+
+    .about-photo {
+      width: 100%;
+      border-radius: var(--radius);
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      border: 1px solid var(--border);
+    }
+
+    /* ── WHAT I DO ── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      transition: border-color 0.2s;
+    }
+
+    .card:hover { border-color: var(--accent); }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--accent-dim);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      color: var(--accent);
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--fg-muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* ── TRACK RECORD ── */
+    .track-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .track-item {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+    }
+
+    .track-item h3 {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+
+    .track-role {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .track-item p {
+      color: var(--fg-muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+    }
+
+    .testimonial blockquote {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--fg);
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .testimonial-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--accent-dim);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.9rem;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .testimonial-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .testimonial-role {
+      font-size: 0.8rem;
+      color: var(--fg-muted);
+    }
+
+    /* ── CREDENTIALS ── */
+    .creds-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .cred {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .cred-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--accent-dim);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .cred h4 { font-size: 0.95rem; margin-bottom: 4px; }
+    .cred p { font-size: 0.8rem; color: var(--fg-muted); }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      text-align: center;
+      padding: 120px 0;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      color: var(--fg-muted);
+      font-size: 1.1rem;
+      margin-bottom: 36px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 48px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-left {
+      font-size: 0.85rem;
+      color: var(--fg-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: var(--fg-muted);
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--fg); }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: block; }
+
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        padding: 24px;
+        gap: 20px;
+      }
+
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .cards-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; gap: 32px; }
+      .about-grid .about-photo-wrap { order: -1; }
+      .track-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .creds-grid { grid-template-columns: 1fr; }
+      .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
+
+      .hero h1 { font-size: 2.2rem; }
+    }
+  </style>
 </head>
 <body>
-  <h1>raphatb - coming soon</h1>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">rapha<span>tb</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">What I Do</a></li>
+      <li><a href="#track">Track Record</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+    </ul>
+    <a href="https://www.linkedin.com/in/raphatb/" target="_blank" rel="noopener" class="nav-cta">Let's Talk</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <i data-lucide="menu" style="width:24px;height:24px"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-tag">Builder &middot; Systems &middot; Leverage</div>
+      <h1>Clarifier.<br>Systématiser.<br><em>Déléguer.</em></h1>
+      <p class="hero-sub">I build SaaS for people who actually sell things — farmers, producers, operators. I value clarity, leverage, and products that work without hype.</p>
+      <div class="hero-ctas">
+        <a href="https://www.linkedin.com/in/raphatb/" target="_blank" rel="noopener" class="btn-primary">
+          <i data-lucide="arrow-up-right" style="width:18px;height:18px"></i>
+          Connect on LinkedIn
+        </a>
+        <a href="#work" class="btn-secondary">See My Work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── STATS ── -->
+<div class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div>
+        <div class="stat-num">1</div>
+        <div class="stat-label">Successful Exit (Monsieur Chalets)</div>
+      </div>
+      <div>
+        <div class="stat-num">800+</div>
+        <div class="stat-label">Properties Migrated</div>
+      </div>
+      <div>
+        <div class="stat-num">2.5x</div>
+        <div class="stat-label">Revenue Increase (Speed Optimization)</div>
+      </div>
+      <div>
+        <div class="stat-num">80%</div>
+        <div class="stat-label">Faster Page Load</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="section-label">About</div>
+        <h2 class="section-title">Shipping &gt; Talking</h2>
+        <p>Currently building <strong>Farmzz</strong> — turning offline traffic into recurring revenue for farmers.</p>
+        <p>Previously exited <strong>monsieurchalets.com</strong>, where I led Product, Tech & Operations for Quebec's premium cottage rental platform. I built the dev team from scratch, rebuilt the entire tech stack, migrated 800+ properties, and optimized site speed by 80% — resulting in 2.5x revenue growth.</p>
+        <p>I'm a <strong>Notion Certified Consulting Partner</strong>, featured on <strong>Cloudflare's Innovator Spotlights</strong>, and I run <strong>AI Geeks</strong> — a community for builders leveraging AI.</p>
+        <p>I think in systems. I build for leverage. I don't do hype.</p>
+      </div>
+      <div class="about-photo-wrap">
+        <img src="moi/ContentHUB-057.jpg" alt="Raphael Tremblay-Bouchard" class="about-photo" loading="lazy" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHAT I DO ── -->
+<section id="work" style="background: var(--bg-elevated); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <div class="section-label">What I Do</div>
+    <h2 class="section-title">Systems That Work Without You</h2>
+    <p class="section-sub">I help entrepreneurs stop being the bottleneck. From ops to tech to AI, I build the infrastructure that lets you scale.</p>
+
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-icon"><i data-lucide="database" style="width:24px;height:24px"></i></div>
+        <h3>Systems & Operations</h3>
+        <p>Notion workspaces, CRMs, automations, SOPs. I map your chaos into clarity so your business runs whether you're there or not.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i data-lucide="code" style="width:24px;height:24px"></i></div>
+        <h3>Product & Tech</h3>
+        <p>Full-stack development, site speed optimization, tech migrations, dev team management. I've rebuilt platforms from zero under deadline pressure.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i data-lucide="brain" style="width:24px;height:24px"></i></div>
+        <h3>AI-First Thinking</h3>
+        <p>Leveraging AI tools to 10x output. From automated transcripts to AI-powered workflows — I help you think AI-first, not AI-last.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i data-lucide="target" style="width:24px;height:24px"></i></div>
+        <h3>Strategic Coaching</h3>
+        <p>Honest, direct guidance. I tell you what's not working, help you map the path from A to B, and stay with you until it's done.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i data-lucide="globe" style="width:24px;height:24px"></i></div>
+        <h3>Web & Performance</h3>
+        <p>Cloudflare, CDN optimization, SEO migrations, conversion rate improvements. Speed = money. I've proven it.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><i data-lucide="users" style="width:24px;height:24px"></i></div>
+        <h3>Community Building</h3>
+        <p>Running AI Geeks — bringing together builders, entrepreneurs, and tech enthusiasts to learn, share, and ship together.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TRACK RECORD ── -->
+<section id="track">
+  <div class="container">
+    <div class="section-label">Track Record</div>
+    <h2 class="section-title">Built, Shipped, Exited</h2>
+    <p class="section-sub">Real projects. Real results. No fluff.</p>
+
+    <div class="track-grid">
+      <div class="track-item">
+        <h3>Farmzz</h3>
+        <div class="track-role">Founder &middot; Current</div>
+        <p>Turning offline traffic into recurring revenue for farmers. Building a SaaS ecosystem that farmers, producers, and operators actually use.</p>
+      </div>
+      <div class="track-item">
+        <h3>Monsieur Chalets</h3>
+        <div class="track-role">Product, Tech & Operations &middot; Exited</div>
+        <p>Quebec's premium Airbnb-style cottage platform. Built the dev team, rebuilt the tech from scratch, migrated 800+ chalets and 2000+ reservations under a hard deadline. 2.5x revenue from speed optimization alone.</p>
+      </div>
+      <div class="track-item">
+        <h3>AI Geeks</h3>
+        <div class="track-role">Founder &middot; Community</div>
+        <p>A community of builders leveraging AI. Events, content, workshops — bringing together people who ship, not just talk about shipping.</p>
+      </div>
+      <div class="track-item">
+        <h3>leverageOS</h3>
+        <div class="track-role">Notion Certified Consulting Partner</div>
+        <p>Featured on Notion's Marketplace. Helping businesses systemize with Notion — from onboarding to full operational frameworks. "Clarifier. Systématiser. Déléguer."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section id="testimonials" style="background: var(--bg-elevated); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <div class="section-label">Testimonials</div>
+    <h2 class="section-title">What They Say</h2>
+    <p class="section-sub">Real words from real people I've worked with.</p>
+
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <blockquote>"C'est comme si tu avais une rivière, mais il n'y a pas de pont encore. Puis à mesure que j'avance, c'est comme si tu bâtis le pont. Tu es en avant de moi et tu clous les planches. Avec Raph, on se sent en sécurité."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MA</div>
+          <div>
+            <div class="testimonial-name">Miguel Alain</div>
+            <div class="testimonial-role">Kinésiologie &middot; Entrepreneur</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <blockquote>"On a arrêté de perdre du temps. Notre profit est passé de 50% à 75%. Mais le plus gros impact, c'est quand j'arrivais à la maison et que j'étais capable de relaxer — je savais enfin ce qui se passait dans ma business."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">OP</div>
+          <div>
+            <div class="testimonial-name">Oli Pharand</div>
+            <div class="testimonial-role">Service Business Owner</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <blockquote>"On l'appelait la pieuvre — il allait mettre ses tentacules dans tous les départements pour trouver les bobos et optimiser. Ta rigueur de travail et ton éthique de travail, 100%."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">WB</div>
+          <div>
+            <div class="testimonial-name">William Burgess</div>
+            <div class="testimonial-role">Co-founder, Monsieur Chalets</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <blockquote>"Raph, c'est un gars all-in. Peu importe, il ne va jamais arrêter, il ne va jamais abandonner. Peu importe c'est quoi ta contrainte — tu es avec un gars, la tête baissée, le couteau entre les dents."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">MA</div>
+          <div>
+            <div class="testimonial-name">Miguel Alain</div>
+            <div class="testimonial-role">Coaching Client</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <blockquote>"Travailler avec Raph, il faut que tu aimes recevoir la vérité. Il ne sugarcoat pas. Si ça va mal, il te le dit. C'est la seule façon d'avancer — et c'est extrêmement rare."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">OP</div>
+          <div>
+            <div class="testimonial-name">Oli Pharand</div>
+            <div class="testimonial-role">Service Business Owner</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <blockquote>"Raph est arrivé avec un plan de match. Je lui ai donné carte blanche, il a monté une équipe de programmeurs de A à Z pour reconstruire toute la tech. La migration s'est extrêmement bien passée."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">WB</div>
+          <div>
+            <div class="testimonial-name">William Burgess</div>
+            <div class="testimonial-role">Co-founder, Monsieur Chalets</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CREDENTIALS ── -->
+<section id="credentials">
+  <div class="container">
+    <div class="section-label">Credentials</div>
+    <h2 class="section-title">Recognized By</h2>
+    <p class="section-sub">Certifications and recognitions from industry leaders.</p>
+
+    <div class="creds-grid">
+      <div class="cred">
+        <div class="cred-icon"><i data-lucide="award" style="width:20px;height:20px"></i></div>
+        <div>
+          <h4>Notion Consulting Partner</h4>
+          <p>Certified consultant on Notion's Marketplace</p>
+        </div>
+      </div>
+      <div class="cred">
+        <div class="cred-icon"><i data-lucide="cloud" style="width:20px;height:20px"></i></div>
+        <div>
+          <h4>Cloudflare Innovator Spotlight</h4>
+          <p>Featured on Cloudflare's global innovators page</p>
+        </div>
+      </div>
+      <div class="cred">
+        <div class="cred-icon"><i data-lucide="badge-check" style="width:20px;height:20px"></i></div>
+        <div>
+          <h4>Notion Advanced Badge</h4>
+          <p>Advanced certification &middot; Workflows &middot; Settings & Sharing</p>
+        </div>
+      </div>
+      <div class="cred">
+        <div class="cred-icon"><i data-lucide="shopping-bag" style="width:20px;height:20px"></i></div>
+        <div>
+          <h4>Notion Marketplace Creator</h4>
+          <p>@leverageos — Templates & consulting</p>
+        </div>
+      </div>
+      <div class="cred">
+        <div class="cred-icon"><i data-lucide="code-2" style="width:20px;height:20px"></i></div>
+        <div>
+          <h4>Full Stack JavaScript</h4>
+          <p>Treehouse Certification</p>
+        </div>
+      </div>
+      <div class="cred">
+        <div class="cred-icon"><i data-lucide="presentation" style="width:20px;height:20px"></i></div>
+        <div>
+          <h4>Speaker — Notion at Waterloo</h4>
+          <p>Presented on Notion systems & productivity</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section" style="border-top: 1px solid var(--border);">
+  <div class="container">
+    <h2>Ready to <em style="color:var(--accent);font-style:italic;">build</em>?</h2>
+    <p>If you're shipping something real, let's talk.</p>
+    <div class="hero-ctas" style="justify-content: center;">
+      <a href="https://www.linkedin.com/in/raphatb/" target="_blank" rel="noopener" class="btn-primary">
+        <i data-lucide="arrow-up-right" style="width:18px;height:18px"></i>
+        Connect on LinkedIn
+      </a>
+      <a href="https://aigeekssquad.com" target="_blank" rel="noopener" class="btn-secondary">AI Geeks Community</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">&copy; 2026 raphatb. Shipping &gt; Talking.</div>
+      <ul class="footer-links">
+        <li><a href="https://www.linkedin.com/in/raphatb/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://aigeekssquad.com" target="_blank" rel="noopener">AI Geeks</a></li>
+        <li><a href="https://www.notion.com/@leverageos" target="_blank" rel="noopener">Notion</a></li>
+        <li><a href="https://www.cloudflare.com/zh-tw/innovator-spotlights/" target="_blank" rel="noopener">Cloudflare</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Lucide icons
+  lucide.createIcons();
+
+  // Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+  // Close mobile menu on link click
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navLinks.classList.remove('open'));
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+
+  // Fade-in on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.card, .track-item, .testimonial, .cred, .stat-num').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+
 </body>
 </html>
