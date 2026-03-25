@@ -1,117 +1,101 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="dark">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rapha TB — Clarifier. Systématiser. Déléguer.</title>
+  <title>Raphael Tremblay-Bouchard — Builder, Operator, Systems Architect</title>
 
-  <!-- OG Tags -->
-  <meta property="og:title" content="Rapha TB" />
-  <meta property="og:description" content="I build systems for people who actually ship things." />
+  <meta property="og:title" content="Raphael Tremblay-Bouchard" />
+  <meta property="og:description" content="Builder. Operator. Systems Architect. Exited Monsieur Chalets. Building Farmzz. Notion Consulting Partner. Cloudflare Innovator." />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="description" content="Raphael Tremblay-Bouchard — Builder, systems thinker, Notion consultant. Currently building Farmzz. Previously exited Monsieur Chalets." />
+  <meta name="description" content="Raphael Tremblay-Bouchard — Builder, Operator, Systems Architect. Exited Monsieur Chalets. Building Farmzz. Notion Certified Consulting Partner. Featured on Cloudflare Innovator Spotlights." />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
-
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --bg: #0a0a0c;
-      --bg-elevated: #111114;
-      --fg: #f0f0f0;
-      --fg-muted: #888;
-      --accent: #d4a843;
-      --accent-dim: rgba(212, 168, 67, 0.15);
-      --border: #1a1a1e;
+      --bg: #ffffff;
+      --bg-subtle: #fafafa;
+      --bg-muted: #f5f5f5;
+      --fg: #171717;
+      --fg-secondary: #525252;
+      --fg-muted: #a3a3a3;
+      --border: #e5e5e5;
+      --border-subtle: #f0f0f0;
+      --accent: #171717;
       --radius: 12px;
-      --max-w: 1100px;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', -apple-system, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--bg);
       color: var(--fg);
-      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
     }
 
-    h1, h2, h3, h4 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 600;
-      line-height: 1.2;
-    }
-
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    .container {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+    h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
+    a { color: inherit; text-decoration: none; }
 
     /* ── NAV ── */
     nav {
       position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
+      top: 0; left: 0; right: 0;
       z-index: 100;
-      background: rgba(10, 10, 12, 0.85);
+      background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border);
     }
 
     .nav-inner {
-      max-width: var(--max-w);
+      max-width: 1200px;
       margin: 0 auto;
       padding: 0 24px;
+      height: 64px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 64px;
     }
 
-    .nav-logo {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: var(--fg);
+    .nav-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: -0.01em;
     }
 
-    .nav-logo span { color: var(--accent); }
-
-    .nav-links { display: flex; gap: 32px; list-style: none; }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
 
     .nav-links a {
-      color: var(--fg-muted);
-      font-size: 0.9rem;
+      font-size: 0.875rem;
+      color: var(--fg-secondary);
       transition: color 0.2s;
     }
 
-    .nav-links a:hover { color: var(--fg); text-decoration: none; }
+    .nav-links a:hover { color: var(--fg); }
 
     .nav-cta {
-      background: var(--accent);
-      color: #000;
-      padding: 8px 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--bg);
+      background: var(--fg);
+      padding: 8px 16px;
       border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.85rem;
       transition: opacity 0.2s;
     }
 
-    .nav-cta:hover { opacity: 0.85; text-decoration: none; }
+    .nav-cta:hover { opacity: 0.8; }
 
     .hamburger {
       display: none;
@@ -119,258 +103,295 @@
       border: none;
       color: var(--fg);
       cursor: pointer;
+      font-size: 1.4rem;
     }
 
     /* ── HERO ── */
     .hero {
-      min-height: 100vh;
-      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 160px 24px 120px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
       align-items: center;
-      padding-top: 64px;
     }
 
-    .hero-content {
-      max-width: 720px;
-    }
+    .hero-text { max-width: 560px; }
 
-    .hero-tag {
-      display: inline-block;
+    .hero-label {
       font-size: 0.8rem;
       font-weight: 500;
-      color: var(--accent);
-      background: var(--accent-dim);
-      padding: 6px 14px;
-      border-radius: 20px;
+      color: var(--fg-muted);
       margin-bottom: 24px;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
+      letter-spacing: 0.02em;
     }
 
     .hero h1 {
-      font-size: clamp(2.5rem, 6vw, 4.2rem);
-      margin-bottom: 20px;
-      letter-spacing: -1px;
+      font-size: clamp(2.8rem, 4.5vw, 4rem);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      margin-bottom: 24px;
     }
 
-    .hero h1 em {
-      font-style: italic;
-      color: var(--accent);
-    }
-
-    .hero-sub {
-      font-size: 1.15rem;
-      color: var(--fg-muted);
-      max-width: 540px;
-      margin-bottom: 36px;
+    .hero-description {
+      font-size: 1.125rem;
       line-height: 1.7;
+      color: var(--fg-secondary);
+      margin-bottom: 48px;
     }
 
-    .hero-ctas {
+    .hero-stats {
       display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
+      gap: 48px;
     }
 
-    .btn-primary {
-      background: var(--accent);
-      color: #000;
-      padding: 14px 28px;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: opacity 0.2s;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .btn-primary:hover { opacity: 0.85; text-decoration: none; }
-
-    .btn-secondary {
-      border: 1px solid var(--border);
-      color: var(--fg);
-      padding: 14px 28px;
-      border-radius: 10px;
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: all 0.2s;
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--fg-muted);
-      text-decoration: none;
-    }
-
-    /* ── STATS ── */
-    .stats {
-      padding: 60px 0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 32px;
-      text-align: center;
-    }
-
-    .stat-num {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 2.5rem;
+    .hero-stat-num {
+      font-size: 2rem;
       font-weight: 700;
-      color: var(--accent);
+      letter-spacing: -0.03em;
     }
 
-    .stat-label {
-      font-size: 0.85rem;
+    .hero-stat-label {
+      font-size: 0.8rem;
       color: var(--fg-muted);
       margin-top: 4px;
     }
 
-    /* ── SECTIONS ── */
-    section { padding: 100px 0; }
-
-    .section-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 12px;
+    .hero-image {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
     }
 
-    .section-title {
-      font-size: clamp(1.8rem, 4vw, 2.5rem);
-      margin-bottom: 20px;
-    }
-
-    .section-sub {
-      font-size: 1.05rem;
-      color: var(--fg-muted);
-      max-width: 600px;
-      margin-bottom: 48px;
-    }
-
-    /* ── ABOUT ── */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
-    }
-
-    .about-text p {
-      color: var(--fg-muted);
-      margin-bottom: 16px;
-      font-size: 1rem;
-      line-height: 1.8;
-    }
-
-    .about-text strong { color: var(--fg); }
-
-    .about-photo {
+    .hero-image img {
       width: 100%;
-      border-radius: var(--radius);
-      aspect-ratio: 3/4;
+      aspect-ratio: 4/5;
       object-fit: cover;
-      border: 1px solid var(--border);
+      object-position: center top;
+      display: block;
     }
 
-    /* ── WHAT I DO ── */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+    /* ── LOGO BAR ── */
+    .logo-bar {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 32px 24px;
     }
 
-    .card {
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px;
-      transition: border-color 0.2s;
-    }
-
-    .card:hover { border-color: var(--accent); }
-
-    .card-icon {
-      width: 48px;
-      height: 48px;
-      background: var(--accent-dim);
-      border-radius: 10px;
+    .logo-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 20px;
-      color: var(--accent);
+      gap: 64px;
     }
 
-    .card h3 {
-      font-size: 1.15rem;
-      margin-bottom: 10px;
-    }
-
-    .card p {
+    .logo-bar-label {
+      font-size: 0.75rem;
       color: var(--fg-muted);
-      font-size: 0.9rem;
-      line-height: 1.6;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
     }
 
-    /* ── TRACK RECORD ── */
-    .track-grid {
+    .logo-bar-logos {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .logo-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      opacity: 0.5;
+      transition: opacity 0.2s;
+      white-space: nowrap;
+    }
+
+    .logo-item:hover { opacity: 0.8; }
+
+    .logo-item svg {
+      height: 20px;
+      width: auto;
+      flex-shrink: 0;
+    }
+
+    .logo-item span {
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    /* ── SECTIONS ── */
+    .section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 120px 24px;
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--fg-muted);
+      margin-bottom: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    .section-heading {
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+
+    .section-lead {
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: var(--fg-secondary);
+      max-width: 600px;
+      margin-bottom: 64px;
+    }
+
+    /* ── STORY BLOCKS ── */
+    .story-block {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+      padding: 80px 0;
+      border-top: 1px solid var(--border);
     }
 
-    .track-item {
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
+    .story-block:first-of-type { border-top: none; }
+    .story-block.reverse .story-visual { order: -1; }
+
+    .story-visual img {
+      width: 100%;
       border-radius: var(--radius);
-      padding: 32px;
+      aspect-ratio: 4/5;
+      object-fit: cover;
     }
 
-    .track-item h3 {
-      font-size: 1.1rem;
-      margin-bottom: 6px;
-    }
-
-    .track-role {
-      font-size: 0.85rem;
-      color: var(--accent);
-      margin-bottom: 12px;
-    }
-
-    .track-item p {
+    .story-role {
+      font-size: 0.8rem;
+      font-weight: 500;
       color: var(--fg-muted);
-      font-size: 0.9rem;
-      line-height: 1.6;
+      margin-bottom: 20px;
+      letter-spacing: 0.02em;
+    }
+
+    .story-text h2 {
+      font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      line-height: 1.15;
+    }
+
+    .story-text p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--fg-secondary);
+      margin-bottom: 16px;
+    }
+
+    .story-text p strong { color: var(--fg); font-weight: 600; }
+
+    .story-stat {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-top: 16px;
+      padding: 16px 24px;
+      background: var(--bg-muted);
+      border-radius: 10px;
+    }
+
+    .story-stat-num {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .story-stat-label {
+      font-size: 0.875rem;
+      color: var(--fg-secondary);
+    }
+
+    /* ── PHOTO STRIP ── */
+    .photo-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+    }
+
+    .photo-strip img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ── VIDEO ── */
+    .video-section {
+      background: var(--bg-subtle);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .video-container {
+      max-width: 900px;
+      margin: 0 auto;
+      aspect-ratio: 16/9;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .video-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
 
     /* ── TESTIMONIALS ── */
-    .testimonials-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
+    .testimonials-section {
+      background: var(--bg-subtle);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
 
-    .testimonial {
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 32px;
+    .testimonial-single {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 64px 24px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .testimonial blockquote {
-      font-size: 1rem;
-      line-height: 1.7;
+    .testimonial-single:last-child { border-bottom: none; }
+
+    .testimonial-quote {
+      font-size: clamp(1.25rem, 2vw, 1.75rem);
+      line-height: 1.5;
       color: var(--fg);
-      margin-bottom: 20px;
-      font-style: italic;
+      margin-bottom: 32px;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      max-width: 800px;
     }
 
-    .testimonial-author {
+    .testimonial-quote::before {
+      content: '\201C';
+      display: block;
+      font-size: 3rem;
+      line-height: 1;
+      color: var(--fg-muted);
+      margin-bottom: 16px;
+    }
+
+    .testimonial-attribution {
       display: flex;
       align-items: center;
       gap: 12px;
@@ -380,14 +401,13 @@
       width: 40px;
       height: 40px;
       border-radius: 50%;
-      background: var(--accent-dim);
+      background: var(--bg-muted);
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--accent);
-      font-weight: 700;
-      font-size: 0.9rem;
-      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      color: var(--fg-secondary);
     }
 
     .testimonial-name {
@@ -395,74 +415,124 @@
       font-size: 0.9rem;
     }
 
-    .testimonial-role {
+    .testimonial-title {
       font-size: 0.8rem;
       color: var(--fg-muted);
+      margin-top: 1px;
     }
 
     /* ── CREDENTIALS ── */
     .creds-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 1px;
+      background: var(--border);
     }
 
-    .cred {
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px;
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
+    .cred-card {
+      background: var(--bg);
+      padding: 40px 32px;
+      transition: background 0.2s;
     }
 
-    .cred-icon {
-      width: 40px;
-      height: 40px;
-      background: var(--accent-dim);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent);
-      flex-shrink: 0;
-    }
+    .cred-card:hover { background: var(--bg-subtle); }
 
-    .cred h4 { font-size: 0.95rem; margin-bottom: 4px; }
-    .cred p { font-size: 0.8rem; color: var(--fg-muted); }
-
-    /* ── CTA SECTION ── */
-    .cta-section {
-      text-align: center;
-      padding: 120px 0;
-    }
-
-    .cta-section h2 {
-      font-size: clamp(2rem, 4vw, 3rem);
-      margin-bottom: 16px;
-    }
-
-    .cta-section p {
+    .cred-issuer {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
       color: var(--fg-muted);
-      font-size: 1.1rem;
-      margin-bottom: 36px;
+      margin-bottom: 12px;
+      font-weight: 500;
     }
+
+    .cred-card h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+
+    .cred-card p {
+      font-size: 0.875rem;
+      color: var(--fg-secondary);
+      line-height: 1.6;
+    }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      text-align: center;
+      padding: 160px 24px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .final-cta h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+
+    .final-cta p {
+      font-size: 1.125rem;
+      color: var(--fg-secondary);
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--fg);
+      color: var(--bg);
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: opacity 0.2s;
+    }
+
+    .btn-primary:hover { opacity: 0.8; }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--border);
+      color: var(--fg);
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover { border-color: var(--fg-muted); }
 
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
-      padding: 48px 0;
+      padding: 32px 24px;
     }
 
     .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     .footer-left {
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       color: var(--fg-muted);
     }
 
@@ -473,15 +543,30 @@
     }
 
     .footer-links a {
+      font-size: 0.8rem;
       color: var(--fg-muted);
-      font-size: 0.85rem;
       transition: color 0.2s;
     }
 
     .footer-links a:hover { color: var(--fg); }
 
+    /* ── ANIMATIONS ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+
     /* ── MOBILE ── */
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       .nav-links { display: none; }
       .hamburger { display: block; }
 
@@ -490,380 +575,404 @@
         flex-direction: column;
         position: absolute;
         top: 64px;
-        left: 0;
-        right: 0;
+        left: 0; right: 0;
         background: var(--bg);
-        border-bottom: 1px solid var(--border);
         padding: 24px;
+        gap: 20px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 120px 24px 80px;
+        gap: 48px;
+      }
+
+      .hero-stats { gap: 32px; }
+
+      .logo-bar-inner {
+        flex-direction: column;
         gap: 20px;
       }
 
-      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-      .cards-grid { grid-template-columns: 1fr; }
-      .about-grid { grid-template-columns: 1fr; gap: 32px; }
-      .about-grid .about-photo-wrap { order: -1; }
-      .track-grid { grid-template-columns: 1fr; }
-      .testimonials-grid { grid-template-columns: 1fr; }
-      .creds-grid { grid-template-columns: 1fr; }
-      .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
+      .logo-bar-logos {
+        flex-wrap: wrap;
+        gap: 24px;
+        justify-content: center;
+      }
 
-      .hero h1 { font-size: 2.2rem; }
+      .story-block {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 60px 0;
+      }
+
+      .story-block.reverse .story-visual { order: 0; }
+
+      .photo-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .creds-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
 
-<!-- ── NAV ── -->
+<!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <a href="#" class="nav-logo">rapha<span>tb</span></a>
+    <span class="nav-name">Raphael Tremblay-Bouchard</span>
     <ul class="nav-links" id="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#work">What I Do</a></li>
-      <li><a href="#track">Track Record</a></li>
+      <li><a href="#story">Parcours</a></li>
       <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#credentials">Credentials</a></li>
     </ul>
-    <a href="https://www.linkedin.com/in/raphatb/" target="_blank" rel="noopener" class="nav-cta">Let's Talk</a>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <i data-lucide="menu" style="width:24px;height:24px"></i>
-    </button>
+    <a href="https://www.linkedin.com/in/raphatb/" target="_blank" rel="noopener" class="nav-cta">Contact</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
   </div>
 </nav>
 
-<!-- ── HERO ── -->
+<!-- HERO -->
 <section class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-tag">Builder &middot; Systems &middot; Leverage</div>
-      <h1>Clarifier.<br>Systématiser.<br><em>Déléguer.</em></h1>
-      <p class="hero-sub">I build SaaS for people who actually sell things — farmers, producers, operators. I value clarity, leverage, and products that work without hype.</p>
-      <div class="hero-ctas">
-        <a href="https://www.linkedin.com/in/raphatb/" target="_blank" rel="noopener" class="btn-primary">
-          <i data-lucide="arrow-up-right" style="width:18px;height:18px"></i>
-          Connect on LinkedIn
-        </a>
-        <a href="#work" class="btn-secondary">See My Work</a>
+  <div class="hero-text">
+    <div class="hero-label">Builder &middot; Operator &middot; Systems Architect</div>
+    <h1>J'ai bâti, scalé et vendu avant d'en parler.</h1>
+    <p class="hero-description">
+      J'ai quitté Monsieur Chalets après avoir rebâti la tech de A à Z, migré 800+ propriétés et 2x les revenus. Aujourd'hui je construis Farmzz et j'aide des entrepreneurs à systématiser leurs opérations.
+    </p>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">1</div>
+        <div class="hero-stat-label">Exit</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">800+</div>
+        <div class="hero-stat-label">Propriétés migrées</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">2.5x</div>
+        <div class="hero-stat-label">Revenus</div>
       </div>
     </div>
   </div>
+  <div class="hero-image">
+    <img src="assets/photos/hero.jpg" alt="Raphael Tremblay-Bouchard" />
+  </div>
 </section>
 
-<!-- ── STATS ── -->
-<div class="stats">
-  <div class="container">
-    <div class="stats-grid">
-      <div>
-        <div class="stat-num">1</div>
-        <div class="stat-label">Successful Exit (Monsieur Chalets)</div>
+<!-- LOGO BAR -->
+<div class="logo-bar">
+  <div class="logo-bar-inner">
+    <span class="logo-bar-label">Reconnu par</span>
+    <div class="logo-bar-logos">
+      <a href="https://farmzz.com/" target="_blank" rel="noopener" class="logo-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="height:18px"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        <span>Farmzz</span>
+      </a>
+      <a href="https://www.monsieurchalets.com/" target="_blank" rel="noopener" class="logo-item">
+        <!-- Monsieur Chalets logo (simplified M mark) -->
+        <svg viewBox="0 0 324 187" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height:20px">
+          <path d="M323.4,11.4a3.1,3.1,0,0,0-3.8-3.1,5.57,5.57,0,0,0-1.9.9l-156.1,81h0L5.3,8.9a2.07,2.07,0,0,0-1-.6,3.18,3.18,0,0,0-4.3,3L.1,174.2a3.1,3.1,0,0,0,3.8,3.1,5.57,5.57,0,0,0,1.9-.9l156.1-81h0l156.3,81.4a2.36,2.36,0,0,0,.9.6,3.18,3.18,0,0,0,4.3-3Z"/>
+        </svg>
+        <span>Monsieur Chalets</span>
+      </a>
+      <a href="https://luma.com/ai.geeks" target="_blank" rel="noopener" class="logo-item">
+        <!-- AI Geeks logo -->
+        <svg width="894" height="240" viewBox="0 0 894 240" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height:18px">
+          <path d="M100.6 164.2H51.6L36.6 194H0L79.6 51H115.6L139.4 194H104L100.6 164.2ZM65 136.8H97.8L91.8 84H91.4L65 136.8ZM176.5 51H212.5L184.7 194H148.7L176.5 51ZM348.1 97.6C347.5 87.8 343.7 77.2 324.9 77.2C300.3 77.2 286.5 96.4 281.1 124.2C276.1 150.2 280.7 167.8 304.7 167.8C322.3 167.8 336.9 157 340.1 143.2L312.7 144L317.7 118H382.1L367.3 194H341.7V175.8L341.3 176.6C332.1 189.6 317.7 197.2 297.7 197.2C256.1 197.2 237.3 164.8 245.9 120.6C253.9 78.6 283.1 47.8 327.1 47.8C367.3 47.8 385.3 71.8 383.5 99.2L348.1 97.6ZM436.4 105.8H498.8L493 135.2H430.6L425 164.6H498.6L492.8 194H383.2L411 51H519.4L513.8 80.4H441.4L436.4 105.8ZM561.4 105.8H623.8L618 135.2H555.6L550 164.6H623.6L617.8 194H508.2L536 51H644.4L638.8 80.4H566.4L561.4 105.8ZM661 51H697L685.4 109L746.4 51H789.2L722.2 114L762.6 194H721.4L695 139.8L677 156.2L669.2 194H633.2L661 51ZM836.5 105.8C865.1 116.8 886.1 124.2 883.9 155.8C882.1 182.6 859.7 197.2 824.9 197.2C786.7 197.2 763.7 178 763.7 147.8H799.3C799.3 163 812.9 167.8 826.9 167.8C839.3 167.8 847.1 164 848.1 154.6C849.3 142.6 835.9 141.4 817.9 134.8C793.7 126 775.1 114.8 778.9 87.4C782.9 59.2 808.1 47.8 837.9 47.8C872.3 47.8 893.3 66.2 893.3 93.6H857.9C858.3 82.8 849.1 77.2 836.3 77.2C824.5 77.2 815.5 80.6 814.5 88.4C813.5 96.4 820.7 99.8 836.5 105.8Z"/>
+        </svg>
+      </a>
+      <a href="https://www.cloudflare.com/zh-tw/innovator-spotlights/" target="_blank" rel="noopener" class="logo-item">
+        <svg viewBox="0 0 283 68" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height:18px">
+          <path d="M55.8 45.1l1.6-5.4c.7-2.4.4-4.6-.8-6.2-1.1-1.5-3-2.4-5.2-2.5l-30.4-.4c-.3 0-.5-.1-.7-.3-.2-.2-.2-.5-.1-.7.1-.4.5-.6.9-.7l30.7-.4c5.2-.3 10.8-4.6 12.8-10l1.6-4.3c.1-.2.1-.4 0-.6C63.3 6.3 55.8.5 47 .5 39 .5 32 5.1 28.7 11.8c-2.4-1.8-5.5-2.7-8.8-2.3-5.6.6-10.1 5.1-10.7 10.7-.1 1.3-.1 2.5.2 3.7C4.2 24.2 0 28.7 0 34.1 0 37 1.1 39.8 3 41.8c.2.2.5.3.8.3h50.3c.4 0 .8-.3.9-.7l.8-3.3v7z"/>
+          <path d="M63.8 26.2c-.3 0-.6 0-.9.1-.2 0-.5.2-.6.5l-1.1 3.9c-.7 2.4-.4 4.6.8 6.2 1.1 1.5 3 2.4 5.2 2.5l6.4.4c.3 0 .5.1.7.3.2.2.2.5.1.7-.1.4-.5.6-.9.7l-6.7.4c-5.2.3-10.8 4.6-12.8 10l-.5 1.4c-.1.3.1.6.4.6h26.6c.3 0 .6-.2.7-.5 1-3.1 1.5-6.4 1.5-9.8.1-9.5-8.3-17.4-18.9-17.4z"/>
+        </svg>
+        <span>Cloudflare</span>
+      </a>
+      <a href="https://www.notion.com/@leverageos" target="_blank" rel="noopener" class="logo-item">
+        <svg viewBox="0 0 100 100" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="height:22px">
+          <path d="M6.017 4.313l55.333-4.087c6.797-.583 8.543-.19 12.817 2.917l17.663 12.443c2.913 2.14 3.883 2.723 3.883 5.053v68.243c0 4.277-1.553 6.807-6.99 7.193L24.467 99.967c-4.08.193-6.023-.39-8.16-3.113L3.3 79.94c-2.333-3.113-3.3-5.443-3.3-8.167V11.113c0-3.497 1.553-6.413 6.017-6.8z"/>
+          <path d="M61.35 0.227l-55.333 4.087C1.553 4.7 0 7.617 0 11.113v60.66c0 2.723.967 5.053 3.3 8.167l12.993 16.913c2.137 2.723 4.08 3.307 8.16 3.113L88.723 96.08c5.437-.387 6.99-2.917 6.99-7.193V20.64c0-2.21-.875-2.847-3.443-4.733L74.167 3.14C69.893.033 68.147-.36 61.35.227zM25.6 19.14c-5.357.39-6.573.477-9.627-1.85L9.14 11.647c-.78-.78-.39-1.753 1.36-1.947l51.443-3.7c4.66-.39 7.01 1.167 8.75 2.527l8.17 5.833c.39.193.97 1.167.193 1.167l-53.07 3.42-.387.193zM19.46 88.3V35.467c0-2.723.967-3.89 3.497-4.08L84.84 27.69c2.527-.193 3.69.967 3.69 3.69V83.44c0 2.72-.39 5.053-4.273 5.247l-58.067 3.3c-3.887.193-5.73-.97-6.73-3.69zM77.267 35.657c.39 1.75 0 3.5-1.75 3.697l-2.917.58v44.043c-2.527 1.36-4.853 2.137-6.797 2.137-3.107 0-3.883-.967-6.217-3.887L39.5 52.037v27.813l6.017 1.36s0 3.5-4.853 3.5l-13.377.78c-.39-.78 0-2.723 1.357-3.11l3.497-.97V42.953l-4.853-.39c-.39-1.75.583-4.277 3.3-4.473l14.367-.967 21.287 32.48V40.327l-5.053-.58c-.39-2.143 1.163-3.7 3.103-3.89l13.573-.2z" fill="white"/>
+        </svg>
+        <span>Notion</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STORY -->
+<div id="story" class="section">
+  <div class="section-label">Parcours</div>
+
+  <!-- MONSIEUR CHALETS -->
+  <div class="story-block reveal">
+    <div class="story-text">
+      <div class="story-role">Monsieur Chalets &middot; Product, Tech & Ops &middot; Exit</div>
+      <h2>On était en train de couler. J'ai rebâti le navire.</h2>
+      <p>Quand <strong>William Burgess</strong> m'a appelé, leur PMS venait de fermer. <strong>800 chalets, 2000+ réservations</strong> à migrer vers une tech qui n'existait pas encore. L'agence précédente avait livré du code inutilisable.</p>
+      <p>J'ai monté une équipe de développeurs de A à Z. Reconstruit la plateforme au complet. Migré le SEO sans perdre un seul ranking. Branché Cloudflare et <strong>accéléré le site de 80%</strong> — la première nuit.</p>
+      <div class="story-stat">
+        <span class="story-stat-num">2.5x</span>
+        <span class="story-stat-label">les revenus — juste avec la vitesse du site</span>
       </div>
+    </div>
+    <div class="story-visual">
+      <img src="assets/photos/consulting.jpg" alt="Raph en consultation" loading="lazy" />
+    </div>
+  </div>
+
+  <!-- FARMZZ -->
+  <div class="story-block reverse reveal">
+    <div class="story-text">
+      <div class="story-role">Farmzz &middot; Founder &middot; En cours</div>
+      <h2>Les fermiers vendent. Leur tech ne suit pas.</h2>
+      <p>Les producteurs, maraîchers et fermiers d'ici perdent des ventes parce qu'ils n'ont aucun système en ligne. Pas de CRM, pas de récurrence, pas de visibilité.</p>
+      <p><strong>Farmzz</strong> transforme le trafic offline en revenus récurrents. Un écosystème de vente bâti pour les gens qui vendent des vraies choses — pas du SaaS à du SaaS.</p>
+    </div>
+    <div class="story-visual">
+      <img src="assets/photos/working.jpg" alt="Raph au travail" loading="lazy" />
+    </div>
+  </div>
+
+  <!-- AI GEEKS -->
+  <div class="story-block reveal">
+    <div class="story-text">
+      <div class="story-role">AI Geeks &middot; Founder &middot; Communauté</div>
+      <h2>AI-first. Pas AI-éventuellement.</h2>
+      <p>J'ai fondé <strong>AI Geeks</strong> pour rassembler les builders qui veulent utiliser l'intelligence artificielle pour shipper plus vite — pas juste en parler sur LinkedIn.</p>
+      <p>Événements, workshops, contenu. Une communauté de gens qui pensent en systèmes, qui buildent avec l'AI, et qui exécutent.</p>
+    </div>
+    <div class="story-visual">
+      <img src="assets/photos/speaking.jpg" alt="Raph speaking at AI Geeks event" loading="lazy" />
+    </div>
+  </div>
+</div>
+
+<!-- PHOTO STRIP -->
+<div class="photo-strip">
+  <img src="assets/photos/hero.jpg" alt="Raph" loading="lazy" />
+  <img src="assets/photos/event-smile.jpg" alt="Raph at event" loading="lazy" />
+  <img src="assets/photos/speaking.jpg" alt="Raph speaking" loading="lazy" />
+  <img src="assets/photos/consulting.jpg" alt="Raph consulting" loading="lazy" />
+</div>
+
+<!-- VIDEO -->
+<div class="video-section">
+  <div class="section" style="padding-bottom: 80px;">
+    <div class="section-label">Sur scène</div>
+    <h2 class="section-heading">Notion Presentations — Waterloo</h2>
+    <p class="section-lead">Conférence sur les systèmes Notion, l'automatisation et la productivité pour entrepreneurs.</p>
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/CGxoRasRJrs"
+        title="Raph TB — Notion Presentations Waterloo"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<div id="testimonials" class="testimonials-section">
+  <div class="section" style="padding-bottom: 0;">
+    <div class="section-label">Témoignages</div>
+    <h2 class="section-heading">Ce qu'ils en disent.</h2>
+    <p class="section-lead">Des vrais mots, de vraies personnes avec qui j'ai travaillé.</p>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      C'est comme si tu avais une rivière, mais il n'y a pas de pont. Puis à mesure que j'avance dans mon parcours, c'est comme si tu bâtis le pont — tu es en avant de moi et tu clous les planches. Avec Raph, on se sent en sécurité.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar">MA</div>
       <div>
-        <div class="stat-num">800+</div>
-        <div class="stat-label">Properties Migrated</div>
+        <div class="testimonial-name">Miguel Alain</div>
+        <div class="testimonial-title">Kinésiologue &middot; Entrepreneur</div>
       </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      Je lui ai donné carte blanche — il a monté une équipe de programmeurs de A à Z pour complètement reconstruire la tech. On l'appelait la pieuvre: il allait mettre ses tentacules dans tous les départements pour trouver les bobos et optimiser. Sa rigueur de travail et son éthique, 100%.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar">WB</div>
       <div>
-        <div class="stat-num">2.5x</div>
-        <div class="stat-label">Revenue Increase (Speed Optimization)</div>
+        <div class="testimonial-name">William Burgess</div>
+        <div class="testimonial-title">Co-fondateur, Monsieur Chalets</div>
       </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      On a arrêté de perdre du temps. Notre profit est passé de 50% à 75%. Mais le plus gros impact? Quand j'arrivais à la maison et que j'étais capable de relaxer. Je savais enfin ce qui se passait — aujourd'hui, cette semaine, ce mois, et même le plan à 3 ans.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar">OP</div>
       <div>
-        <div class="stat-num">80%</div>
-        <div class="stat-label">Faster Page Load</div>
+        <div class="testimonial-name">Oli Pharand</div>
+        <div class="testimonial-title">Entrepreneur, entreprise de services</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      Raph, c'est un gars all-in. Il ne va jamais arrêter, jamais abandonner. Peu importe c'est quoi ta contrainte — tu es avec un gars, la tête baissée, le couteau entre les dents. Il ne m'a pas juste donné des outils, il a changé ma façon de penser en systèmes.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar">MA</div>
+      <div>
+        <div class="testimonial-name">Miguel Alain</div>
+        <div class="testimonial-title">Client coaching &middot; De zéro à entrepreneur</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      Pour travailler avec Raph, il faut que tu aimes recevoir la vérité. Il ne sugarcoat pas. Si ça va mal, il te le dit. C'est extrêmement rare — tout le monde essaie de juste être gentil pour garder un mandat. Raph est là pour faire des changements positifs, point.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar">OP</div>
+      <div>
+        <div class="testimonial-name">Oli Pharand</div>
+        <div class="testimonial-title">Entrepreneur, entreprise de services</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      On a reçu un support autant concret qu'émotionnel — c'était une phase extrêmement difficile. Il fallait migrer 100% de l'entreprise, 800 chalets, tout le SEO. On n'a rien perdu. Ça, c'est grâce à sa rigueur.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar">WB</div>
+      <div>
+        <div class="testimonial-name">William Burgess</div>
+        <div class="testimonial-title">Co-fondateur, Monsieur Chalets</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ── ABOUT ── -->
-<section id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-text">
-        <div class="section-label">About</div>
-        <h2 class="section-title">Shipping &gt; Talking</h2>
-        <p>Currently building <strong>Farmzz</strong> — turning offline traffic into recurring revenue for farmers.</p>
-        <p>Previously exited <strong>monsieurchalets.com</strong>, where I led Product, Tech & Operations for Quebec's premium cottage rental platform. I built the dev team from scratch, rebuilt the entire tech stack, migrated 800+ properties, and optimized site speed by 80% — resulting in 2.5x revenue growth.</p>
-        <p>I'm a <strong>Notion Certified Consulting Partner</strong>, featured on <strong>Cloudflare's Innovator Spotlights</strong>, and I run <strong>AI Geeks</strong> — a community for builders leveraging AI.</p>
-        <p>I think in systems. I build for leverage. I don't do hype.</p>
-      </div>
-      <div class="about-photo-wrap">
-        <img src="moi/ContentHUB-057.jpg" alt="Raphael Tremblay-Bouchard" class="about-photo" loading="lazy" />
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── WHAT I DO ── -->
-<section id="work" style="background: var(--bg-elevated); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-  <div class="container">
-    <div class="section-label">What I Do</div>
-    <h2 class="section-title">Systems That Work Without You</h2>
-    <p class="section-sub">I help entrepreneurs stop being the bottleneck. From ops to tech to AI, I build the infrastructure that lets you scale.</p>
-
-    <div class="cards-grid">
-      <div class="card">
-        <div class="card-icon"><i data-lucide="database" style="width:24px;height:24px"></i></div>
-        <h3>Systems & Operations</h3>
-        <p>Notion workspaces, CRMs, automations, SOPs. I map your chaos into clarity so your business runs whether you're there or not.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon"><i data-lucide="code" style="width:24px;height:24px"></i></div>
-        <h3>Product & Tech</h3>
-        <p>Full-stack development, site speed optimization, tech migrations, dev team management. I've rebuilt platforms from zero under deadline pressure.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon"><i data-lucide="brain" style="width:24px;height:24px"></i></div>
-        <h3>AI-First Thinking</h3>
-        <p>Leveraging AI tools to 10x output. From automated transcripts to AI-powered workflows — I help you think AI-first, not AI-last.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon"><i data-lucide="target" style="width:24px;height:24px"></i></div>
-        <h3>Strategic Coaching</h3>
-        <p>Honest, direct guidance. I tell you what's not working, help you map the path from A to B, and stay with you until it's done.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon"><i data-lucide="globe" style="width:24px;height:24px"></i></div>
-        <h3>Web & Performance</h3>
-        <p>Cloudflare, CDN optimization, SEO migrations, conversion rate improvements. Speed = money. I've proven it.</p>
-      </div>
-      <div class="card">
-        <div class="card-icon"><i data-lucide="users" style="width:24px;height:24px"></i></div>
-        <h3>Community Building</h3>
-        <p>Running AI Geeks — bringing together builders, entrepreneurs, and tech enthusiasts to learn, share, and ship together.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── TRACK RECORD ── -->
-<section id="track">
-  <div class="container">
-    <div class="section-label">Track Record</div>
-    <h2 class="section-title">Built, Shipped, Exited</h2>
-    <p class="section-sub">Real projects. Real results. No fluff.</p>
-
-    <div class="track-grid">
-      <div class="track-item">
-        <h3>Farmzz</h3>
-        <div class="track-role">Founder &middot; Current</div>
-        <p>Turning offline traffic into recurring revenue for farmers. Building a SaaS ecosystem that farmers, producers, and operators actually use.</p>
-      </div>
-      <div class="track-item">
-        <h3>Monsieur Chalets</h3>
-        <div class="track-role">Product, Tech & Operations &middot; Exited</div>
-        <p>Quebec's premium Airbnb-style cottage platform. Built the dev team, rebuilt the tech from scratch, migrated 800+ chalets and 2000+ reservations under a hard deadline. 2.5x revenue from speed optimization alone.</p>
-      </div>
-      <div class="track-item">
-        <h3>AI Geeks</h3>
-        <div class="track-role">Founder &middot; Community</div>
-        <p>A community of builders leveraging AI. Events, content, workshops — bringing together people who ship, not just talk about shipping.</p>
-      </div>
-      <div class="track-item">
-        <h3>leverageOS</h3>
-        <div class="track-role">Notion Certified Consulting Partner</div>
-        <p>Featured on Notion's Marketplace. Helping businesses systemize with Notion — from onboarding to full operational frameworks. "Clarifier. Systématiser. Déléguer."</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── TESTIMONIALS ── -->
-<section id="testimonials" style="background: var(--bg-elevated); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
-  <div class="container">
-    <div class="section-label">Testimonials</div>
-    <h2 class="section-title">What They Say</h2>
-    <p class="section-sub">Real words from real people I've worked with.</p>
-
-    <div class="testimonials-grid">
-      <div class="testimonial">
-        <blockquote>"C'est comme si tu avais une rivière, mais il n'y a pas de pont encore. Puis à mesure que j'avance, c'est comme si tu bâtis le pont. Tu es en avant de moi et tu clous les planches. Avec Raph, on se sent en sécurité."</blockquote>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">MA</div>
-          <div>
-            <div class="testimonial-name">Miguel Alain</div>
-            <div class="testimonial-role">Kinésiologie &middot; Entrepreneur</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial">
-        <blockquote>"On a arrêté de perdre du temps. Notre profit est passé de 50% à 75%. Mais le plus gros impact, c'est quand j'arrivais à la maison et que j'étais capable de relaxer — je savais enfin ce qui se passait dans ma business."</blockquote>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">OP</div>
-          <div>
-            <div class="testimonial-name">Oli Pharand</div>
-            <div class="testimonial-role">Service Business Owner</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial">
-        <blockquote>"On l'appelait la pieuvre — il allait mettre ses tentacules dans tous les départements pour trouver les bobos et optimiser. Ta rigueur de travail et ton éthique de travail, 100%."</blockquote>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">WB</div>
-          <div>
-            <div class="testimonial-name">William Burgess</div>
-            <div class="testimonial-role">Co-founder, Monsieur Chalets</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial">
-        <blockquote>"Raph, c'est un gars all-in. Peu importe, il ne va jamais arrêter, il ne va jamais abandonner. Peu importe c'est quoi ta contrainte — tu es avec un gars, la tête baissée, le couteau entre les dents."</blockquote>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">MA</div>
-          <div>
-            <div class="testimonial-name">Miguel Alain</div>
-            <div class="testimonial-role">Coaching Client</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial">
-        <blockquote>"Travailler avec Raph, il faut que tu aimes recevoir la vérité. Il ne sugarcoat pas. Si ça va mal, il te le dit. C'est la seule façon d'avancer — et c'est extrêmement rare."</blockquote>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">OP</div>
-          <div>
-            <div class="testimonial-name">Oli Pharand</div>
-            <div class="testimonial-role">Service Business Owner</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testimonial">
-        <blockquote>"Raph est arrivé avec un plan de match. Je lui ai donné carte blanche, il a monté une équipe de programmeurs de A à Z pour reconstruire toute la tech. La migration s'est extrêmement bien passée."</blockquote>
-        <div class="testimonial-author">
-          <div class="testimonial-avatar">WB</div>
-          <div>
-            <div class="testimonial-name">William Burgess</div>
-            <div class="testimonial-role">Co-founder, Monsieur Chalets</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ── CREDENTIALS ── -->
+<!-- CREDENTIALS -->
 <section id="credentials">
-  <div class="container">
+  <div class="section">
     <div class="section-label">Credentials</div>
-    <h2 class="section-title">Recognized By</h2>
-    <p class="section-sub">Certifications and recognitions from industry leaders.</p>
-
-    <div class="creds-grid">
-      <div class="cred">
-        <div class="cred-icon"><i data-lucide="award" style="width:20px;height:20px"></i></div>
-        <div>
-          <h4>Notion Consulting Partner</h4>
-          <p>Certified consultant on Notion's Marketplace</p>
-        </div>
-      </div>
-      <div class="cred">
-        <div class="cred-icon"><i data-lucide="cloud" style="width:20px;height:20px"></i></div>
-        <div>
-          <h4>Cloudflare Innovator Spotlight</h4>
-          <p>Featured on Cloudflare's global innovators page</p>
-        </div>
-      </div>
-      <div class="cred">
-        <div class="cred-icon"><i data-lucide="badge-check" style="width:20px;height:20px"></i></div>
-        <div>
-          <h4>Notion Advanced Badge</h4>
-          <p>Advanced certification &middot; Workflows &middot; Settings & Sharing</p>
-        </div>
-      </div>
-      <div class="cred">
-        <div class="cred-icon"><i data-lucide="shopping-bag" style="width:20px;height:20px"></i></div>
-        <div>
-          <h4>Notion Marketplace Creator</h4>
-          <p>@leverageos — Templates & consulting</p>
-        </div>
-      </div>
-      <div class="cred">
-        <div class="cred-icon"><i data-lucide="code-2" style="width:20px;height:20px"></i></div>
-        <div>
-          <h4>Full Stack JavaScript</h4>
-          <p>Treehouse Certification</p>
-        </div>
-      </div>
-      <div class="cred">
-        <div class="cred-icon"><i data-lucide="presentation" style="width:20px;height:20px"></i></div>
-        <div>
-          <h4>Speaker — Notion at Waterloo</h4>
-          <p>Presented on Notion systems & productivity</p>
-        </div>
-      </div>
+    <h2 class="section-heading">Pas juste des mots.</h2>
+    <p class="section-lead">Certifications, reconnaissances et preuves concrètes.</p>
+  </div>
+  <div class="creds-grid">
+    <div class="cred-card reveal">
+      <div class="cred-issuer">Notion</div>
+      <h3>Consulting Partner</h3>
+      <p>Partenaire certifié sur le Marketplace de Notion. Profil @leverageos.</p>
+    </div>
+    <div class="cred-card reveal reveal-delay-1">
+      <div class="cred-issuer">Cloudflare</div>
+      <h3>Innovator Spotlight</h3>
+      <p>Featured sur la page mondiale des innovateurs Cloudflare.</p>
+    </div>
+    <div class="cred-card reveal reveal-delay-2">
+      <div class="cred-issuer">Notion</div>
+      <h3>Advanced + Workflows + Essentials</h3>
+      <p>Triple certification Notion. Badges Advanced, Workflows, Settings & Sharing.</p>
+    </div>
+    <div class="cred-card reveal">
+      <div class="cred-issuer">Notion &middot; Waterloo</div>
+      <h3>Conférencier</h3>
+      <p>Présentation sur les systèmes Notion et la productivité pour entrepreneurs.</p>
+    </div>
+    <div class="cred-card reveal reveal-delay-1">
+      <div class="cred-issuer">Notion Marketplace</div>
+      <h3>Template Creator — @leverageos</h3>
+      <p>"Clarifier. Systématiser. Déléguer." Templates et frameworks opérationnels.</p>
+    </div>
+    <div class="cred-card reveal reveal-delay-2">
+      <div class="cred-issuer">Treehouse</div>
+      <h3>Full Stack JavaScript</h3>
+      <p>Certification développement web full-stack.</p>
     </div>
   </div>
 </section>
 
-<!-- ── CTA ── -->
-<section class="cta-section" style="border-top: 1px solid var(--border);">
-  <div class="container">
-    <h2>Ready to <em style="color:var(--accent);font-style:italic;">build</em>?</h2>
-    <p>If you're shipping something real, let's talk.</p>
-    <div class="hero-ctas" style="justify-content: center;">
+<!-- FINAL CTA -->
+<div style="border-top: 1px solid var(--border);">
+  <div class="final-cta">
+    <h2>Prêt à systématiser?</h2>
+    <p>Si tu bâtis quelque chose de réel et que tu veux arrêter d'être le bottleneck de ta propre business — parlons.</p>
+    <div class="cta-buttons">
       <a href="https://www.linkedin.com/in/raphatb/" target="_blank" rel="noopener" class="btn-primary">
-        <i data-lucide="arrow-up-right" style="width:18px;height:18px"></i>
-        Connect on LinkedIn
+        Connecter sur LinkedIn
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:16px;height:16px"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
       </a>
-      <a href="https://aigeekssquad.com" target="_blank" rel="noopener" class="btn-secondary">AI Geeks Community</a>
+      <a href="https://aigeekssquad.com" target="_blank" rel="noopener" class="btn-secondary">
+        Rejoindre AI Geeks
+      </a>
     </div>
   </div>
-</section>
+</div>
 
-<!-- ── FOOTER ── -->
+<!-- FOOTER -->
 <footer>
-  <div class="container">
-    <div class="footer-inner">
-      <div class="footer-left">&copy; 2026 raphatb. Shipping &gt; Talking.</div>
-      <ul class="footer-links">
-        <li><a href="https://www.linkedin.com/in/raphatb/" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://aigeekssquad.com" target="_blank" rel="noopener">AI Geeks</a></li>
-        <li><a href="https://www.notion.com/@leverageos" target="_blank" rel="noopener">Notion</a></li>
-        <li><a href="https://www.cloudflare.com/zh-tw/innovator-spotlights/" target="_blank" rel="noopener">Cloudflare</a></li>
-      </ul>
-    </div>
+  <div class="footer-inner">
+    <div class="footer-left">&copy; 2026 Raphael Tremblay-Bouchard</div>
+    <ul class="footer-links">
+      <li><a href="https://www.linkedin.com/in/raphatb/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://aigeekssquad.com" target="_blank" rel="noopener">AI Geeks</a></li>
+      <li><a href="https://www.notion.com/@leverageos" target="_blank" rel="noopener">Notion</a></li>
+      <li><a href="https://www.cloudflare.com/zh-tw/innovator-spotlights/" target="_blank" rel="noopener">Cloudflare</a></li>
+    </ul>
   </div>
 </footer>
 
 <script>
-  // Lucide icons
-  lucide.createIcons();
-
   // Mobile menu
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
-  hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
-
-  // Close mobile menu on link click
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => navLinks.classList.remove('open'));
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('nav-links').classList.toggle('open');
   });
 
-  // Smooth scroll for anchor links
+  document.querySelectorAll('#nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('nav-links').classList.remove('open');
+    });
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-
-  // Fade-in on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.card, .track-item, .testimonial, .cred, .stat-num').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(el);
   });
 </script>
 
