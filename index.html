@@ -576,6 +576,48 @@
       line-height: 1.6;
     }
 
+    /* ── MID CTA ── */
+    .mid-cta {
+      text-align: center;
+      padding: 80px 24px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .mid-cta-handle {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--fg);
+      margin-bottom: 8px;
+      transition: opacity 0.2s;
+    }
+
+    .mid-cta-handle:hover { opacity: 0.6; }
+
+    .mid-cta-label {
+      font-size: 0.85rem;
+      color: var(--fg-muted);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+    }
+
+    .mid-cta-row {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      margin-bottom: 32px;
+    }
+
+    .mid-cta-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     /* ── FINAL CTA ── */
     .final-cta {
       text-align: center;
@@ -872,6 +914,26 @@
     <img src="assets/photos/consulting.jpg" alt="Raph consulting" loading="lazy" />
     <img src="assets/photos/seated.jpg" alt="Raph seated" loading="lazy" />
     <img src="assets/photos/speaking.jpg" alt="Raph arms crossed" loading="lazy" />
+  </div>
+</div>
+
+<!-- MID CTA -->
+<div style="border-top: 1px solid var(--border);">
+  <div class="mid-cta">
+    <div class="mid-cta-row">
+      <div class="mid-cta-col">
+        <span class="mid-cta-label">AI-first Founder</span>
+        <a href="https://www.instagram.com/farmzz_app/" target="_blank" rel="noopener" class="mid-cta-handle">@farmzz_app</a>
+      </div>
+      <div class="mid-cta-col">
+        <span class="mid-cta-label">AI-first Community</span>
+        <a href="https://www.instagram.com/ai.geeks.squad/" target="_blank" rel="noopener" class="mid-cta-handle">@ai.geeks.squad</a>
+      </div>
+    </div>
+    <a href="https://aigeekssquad.com" target="_blank" rel="noopener" class="btn-secondary">
+      Join AI Geeks
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+    </a>
   </div>
 </div>
 
