@@ -782,10 +782,113 @@
         gap: 16px;
         text-align: center;
       }
+
+      .side-toc { display: none; }
+    }
+
+    /* ── SIDE TOC ── */
+    .side-toc {
+      position: fixed;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 90;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .side-toc.visible { opacity: 1; }
+
+    .side-toc-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .side-toc-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--fg-muted);
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateX(8px);
+      transition: opacity 0.2s, transform 0.2s;
+      pointer-events: none;
+    }
+
+    .side-toc:hover .side-toc-label {
+      opacity: 1;
+      transform: translateX(0);
+      pointer-events: auto;
+    }
+
+    .side-toc-item.active .side-toc-label {
+      color: var(--fg);
+      font-weight: 600;
+    }
+
+    .side-toc-dash {
+      width: 16px;
+      height: 2px;
+      background: var(--fg-muted);
+      border-radius: 1px;
+      transition: width 0.2s, background 0.2s;
+      flex-shrink: 0;
+    }
+
+    .side-toc-item.active .side-toc-dash {
+      width: 24px;
+      background: var(--fg);
+    }
+
+    .side-toc:hover .side-toc-dash {
+      width: 12px;
+    }
+
+    .side-toc:hover .side-toc-item.active .side-toc-dash {
+      width: 18px;
     }
   </style>
 </head>
 <body>
+
+<!-- SIDE TOC -->
+<nav class="side-toc" id="side-toc">
+  <a href="#story" class="side-toc-item" data-section="story">
+    <span class="side-toc-label">Story</span>
+    <span class="side-toc-dash"></span>
+  </a>
+  <a href="#mc" class="side-toc-item" data-section="mc">
+    <span class="side-toc-label">Monsieur Chalets</span>
+    <span class="side-toc-dash"></span>
+  </a>
+  <a href="#farmzz" class="side-toc-item" data-section="farmzz">
+    <span class="side-toc-label">Farmzz</span>
+    <span class="side-toc-dash"></span>
+  </a>
+  <a href="#aigeeks" class="side-toc-item" data-section="aigeeks">
+    <span class="side-toc-label">AI Geeks</span>
+    <span class="side-toc-dash"></span>
+  </a>
+  <a href="#onstage" class="side-toc-item" data-section="onstage">
+    <span class="side-toc-label">On Stage</span>
+    <span class="side-toc-dash"></span>
+  </a>
+  <a href="#testimonials" class="side-toc-item" data-section="testimonials">
+    <span class="side-toc-label">Testimonials</span>
+    <span class="side-toc-dash"></span>
+  </a>
+  <a href="#credentials" class="side-toc-item" data-section="credentials">
+    <span class="side-toc-label">Credentials</span>
+    <span class="side-toc-dash"></span>
+  </a>
+</nav>
 
 <!-- NAV -->
 <nav>
@@ -862,7 +965,7 @@
   <div class="section-label">Story</div>
 
   <!-- MONSIEUR CHALETS -->
-  <div class="story-block reveal">
+  <div id="mc" class="story-block reveal">
     <div class="story-text">
       <div class="story-role">Monsieur Chalets &middot; Product, Tech & Ops &middot; Exit</div>
       <h2>We were sinking. I <u>rebuilt the ship</u>.</h2>
@@ -879,7 +982,7 @@
   </div>
 
   <!-- FARMZZ -->
-  <div class="story-block reverse reveal">
+  <div id="farmzz" class="story-block reverse reveal">
     <div class="story-text">
       <div class="story-role">Farmzz &middot; Founder &middot; Ongoing</div>
       <h2>Farmers sell. Their tech <u>can't keep up</u>.</h2>
@@ -892,7 +995,7 @@
   </div>
 
   <!-- AI GEEKS -->
-  <div class="story-block reveal">
+  <div id="aigeeks" class="story-block reveal">
     <div class="story-text">
       <div class="story-role">AI Geeks &middot; Founder &middot; Community</div>
       <h2><u>AI-first</u>. Not AI-eventually.</h2>
@@ -938,7 +1041,7 @@
 </div>
 
 <!-- VIDEO -->
-<div class="video-section">
+<div id="onstage" class="video-section">
   <div class="section" style="padding-bottom: 80px;">
     <div class="section-label">On stage</div>
     <h2 class="section-heading">Notion Presentations, Waterloo</h2>
@@ -1257,6 +1360,33 @@
       }
     });
   });
+
+  // Side TOC
+  (() => {
+    const toc = document.getElementById('side-toc');
+    const items = toc.querySelectorAll('.side-toc-item');
+    const sections = Array.from(items).map(item => ({
+      el: document.getElementById(item.dataset.section),
+      item
+    })).filter(s => s.el);
+
+    const update = () => {
+      const scrollY = window.scrollY + window.innerHeight / 3;
+
+      // Show/hide TOC based on scroll position
+      toc.classList.toggle('visible', window.scrollY > 400);
+
+      let active = sections[0];
+      for (const s of sections) {
+        if (s.el.offsetTop <= scrollY) active = s;
+      }
+      items.forEach(i => i.classList.remove('active'));
+      if (active) active.item.classList.add('active');
+    };
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
 </script>
 
 </body>
