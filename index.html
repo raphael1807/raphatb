@@ -92,21 +92,57 @@
       font-size: 0.875rem;
       color: var(--fg-secondary);
       transition: color 0.2s;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--fg);
+      transition: width 0.25s ease;
     }
 
     .nav-links a:hover { color: var(--fg); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-lang {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      color: var(--fg-secondary);
+      border: 1px solid var(--border);
+      padding: 4px 10px;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+
+    .nav-lang:hover {
+      color: var(--fg);
+      border-color: var(--fg-muted);
+      background: var(--bg-muted);
+    }
 
     .nav-cta {
       font-size: 0.8rem;
       font-weight: 500;
       color: var(--bg);
       background: var(--fg);
-      padding: 8px 16px;
+      padding: 8px 18px;
       border-radius: 8px;
-      transition: opacity 0.2s;
+      transition: all 0.2s;
     }
 
-    .nav-cta:hover { opacity: 0.8; }
+    .nav-cta:hover { opacity: 0.85; transform: translateY(-1px); }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
 
     .hamburger {
       display: none;
@@ -222,8 +258,9 @@
     }
 
     .hero-stats {
-      display: flex;
-      gap: 48px;
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: 32px 48px;
     }
 
     .hero-stat-num {
@@ -1057,8 +1094,10 @@
       <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#credentials">Credentials</a></li>
     </ul>
-    <a href="fr.html" style="opacity:.5;font-size:.75rem;letter-spacing:.05em">FR</a>
-    <a href="https://www.linkedin.com/in/raphatb/" target="_blank" rel="noopener" class="nav-cta">Contact</a>
+    <div class="nav-right">
+      <a href="https://www.linkedin.com/in/raphatb/" target="_blank" rel="noopener" class="nav-cta">Contact</a>
+      <a href="fr.html" class="nav-lang">FR</a>
+    </div>
     <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
   </div>
 </nav>
@@ -1096,6 +1135,18 @@
       <div>
         <div class="hero-stat-num">2.5x</div>
         <div class="hero-stat-label">Revenue</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">200+</div>
+        <div class="hero-stat-label">AI Geeks attendees</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">4</div>
+        <div class="hero-stat-label">Editions</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">20+</div>
+        <div class="hero-stat-label">Speakers</div>
       </div>
     </div>
   </div>
