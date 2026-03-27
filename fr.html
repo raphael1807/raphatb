@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>raphatb | Builder, Operator, AI-First Systems Architect</title>
+  <title>raphatb | Bâtisseur, Opérateur, Architecte de systèmes AI-First</title>
 
-  <meta property="og:title" content="raphatb | Builder, Operator, AI-First Systems Architect" />
-  <meta property="og:description" content="J'ai bâti, scalé et vendu avant d'en parler. Exit Monsieur Chalets. Fondateur Farmzz & AI Geeks. Notion Consulting Partner. Cloudflare Innovator." />
+  <meta property="og:title" content="raphatb | Bâtisseur, Opérateur, Architecte de systèmes AI-First" />
+  <meta property="og:description" content="J'ai bâti, scalé et vendu avant d'en parler. Exit Monsieur Chalets. Fondateur Farmzz & AI Geeks. Partenaire Notion. Innovateur Cloudflare." />
   <meta property="og:image" content="https://raphatb.com/og-image.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://raphatb.com/fr.html" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="description" content="Raphael Tremblay-Bouchard (raphatb) | Builder, Operator, AI-First Systems Architect. Exit Monsieur Chalets (800+ propriétés, 2.5x revenus). Fondateur Farmzz & AI Geeks. Notion Certified Consulting Partner. Cloudflare Innovator Spotlight." />
+  <meta name="description" content="Raphael Tremblay-Bouchard (raphatb) | Bâtisseur, Opérateur, Architecte de systèmes AI-First. Exit Monsieur Chalets (800+ propriétés, 2.5x revenus). Fondateur Farmzz & AI Geeks. Partenaire certifié Notion. Innovateur Cloudflare." />
   <meta name="keywords" content="Raphael Tremblay-Bouchard, raphatb, AI-first, systems architect, Notion consulting partner, Cloudflare innovator, Farmzz, AI Geeks, Monsieur Chalets, entrepreneur Québec" />
   <link rel="canonical" href="https://raphatb.com/fr.html" />
   <link rel="alternate" hreflang="fr" href="https://raphatb.com/fr.html" />
   <link rel="alternate" hreflang="en" href="https://raphatb.com" />
 
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
 
@@ -54,7 +55,7 @@
     a { color: inherit; text-decoration: none; }
 
     /* ── NAV ── */
-    nav {
+    .top-nav {
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
@@ -75,9 +76,10 @@
     }
 
     .nav-name {
-      font-weight: 600;
-      font-size: 0.95rem;
-      letter-spacing: -0.01em;
+      font-family: 'Apercu', 'Apercu Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
     }
 
     .nav-links {
@@ -168,16 +170,14 @@
 
     .hero-warning {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       gap: 10px;
       margin-top: -32px;
       margin-bottom: 48px;
       font-size: 0.9rem;
-      color: var(--fg-muted);
+      color: var(--fg);
       padding: 12px 16px;
-      background: var(--bg-muted);
-      border-radius: 8px;
-      border-left: 3px solid var(--fg-muted);
+      border-left: 3px solid var(--fg);
     }
 
     .hero-label {
@@ -570,6 +570,27 @@
       line-height: 1.6;
     }
 
+    .cred-card-press {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      text-decoration: none;
+    }
+
+    .cred-card-press img {
+      width: 200px;
+      height: 130px;
+      object-fit: cover;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      .cred-card-press { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .cred-card-press img { width: 100%; height: 180px; }
+    }
+
     /* ── MID CTA ── */
     .mid-cta {
       text-align: center;
@@ -670,6 +691,140 @@
     }
 
     .btn-secondary:hover { border-color: var(--fg-muted); }
+
+    /* ── AI GEEKS SECTION ── */
+    .aigeeks-section {
+      border-top: 1px solid var(--border);
+      background: var(--bg);
+    }
+
+    .aigeeks-hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+      padding: 80px 0 48px;
+    }
+
+    .aigeeks-hero-text h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .aigeeks-hero-text p {
+      color: var(--fg-muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+
+    .aigeeks-hero-visual {
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .aigeeks-hero-visual img {
+      width: 100%;
+      display: block;
+    }
+
+    .aigeeks-stats {
+      display: flex;
+      gap: 48px;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .aigeeks-stat-num {
+      font-size: 1.8rem;
+      font-weight: 700;
+      display: block;
+    }
+
+    .aigeeks-stat-label {
+      font-size: 0.8rem;
+      color: var(--fg-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding-bottom: 48px;
+    }
+
+    .event-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 1;
+      transition: transform 0.2s;
+    }
+
+    .event-card:hover { transform: translateY(-4px); }
+
+    .event-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .aigeeks-testimonials {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      padding-bottom: 48px;
+    }
+
+    .aigeeks-testimonial {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .aigeeks-testimonial blockquote {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--fg);
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+
+    .aigeeks-testimonial cite {
+      font-style: normal;
+      font-size: 0.8rem;
+      color: var(--fg-muted);
+    }
+
+    .aigeeks-testimonial cite strong {
+      color: var(--fg);
+      display: block;
+      font-size: 0.85rem;
+      margin-bottom: 2px;
+    }
+
+    .aigeeks-cta {
+      text-align: center;
+      padding: 48px 0 80px;
+      border-top: 1px solid var(--border);
+    }
+
+    .aigeeks-cta p {
+      color: var(--fg-muted);
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .aigeeks-hero { grid-template-columns: 1fr; gap: 32px; padding: 48px 0 32px; }
+      .aigeeks-stats { gap: 24px; }
+      .event-grid { grid-template-columns: repeat(2, 1fr); }
+      .aigeeks-testimonials { grid-template-columns: 1fr; }
+    }
 
     /* ── FOOTER ── */
     footer {
@@ -793,16 +948,19 @@
       gap: 12px;
       opacity: 0;
       transition: opacity 0.3s;
+      pointer-events: none;
+      width: 24px;
     }
 
-    .side-toc.visible { opacity: 1; }
+    .side-toc.visible { opacity: 1; pointer-events: auto; }
 
     .side-toc-item {
       display: flex;
       align-items: center;
-      gap: 12px;
+      justify-content: flex-end;
       cursor: pointer;
       text-decoration: none;
+      position: relative;
     }
 
     .side-toc-label {
@@ -811,14 +969,14 @@
       color: var(--fg-muted);
       white-space: nowrap;
       opacity: 0;
-      transform: translateX(8px);
-      transition: opacity 0.2s, transform 0.2s;
+      position: absolute;
+      right: calc(100% + 8px);
+      transition: opacity 0.2s;
       pointer-events: none;
     }
 
     .side-toc:hover .side-toc-label {
       opacity: 1;
-      transform: translateX(0);
       pointer-events: auto;
     }
 
@@ -885,15 +1043,15 @@
 </nav>
 
 <!-- NAV -->
-<nav>
+<nav class="top-nav">
   <div class="nav-inner">
-    <span class="nav-name">Raphael Tremblay-Bouchard</span>
+    <span class="nav-name">raphatb</span>
     <ul class="nav-links" id="nav-links">
       <li><a href="#story">Parcours</a></li>
       <li><a href="#testimonials">Témoignages</a></li>
-      <li><a href="#credentials">Credentials</a></li>
-      <li><a href="/" style="opacity:.5;font-size:.75rem;letter-spacing:.05em">EN</a></li>
+      <li><a href="#credentials">Références</a></li>
     </ul>
+    <a href="/" style="opacity:.5;font-size:.75rem;letter-spacing:.05em">EN</a>
     <a href="https://www.linkedin.com/in/raphatb/" target="_blank" rel="noopener" class="nav-cta">Contact</a>
     <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
   </div>
@@ -907,14 +1065,14 @@
       <a href="https://luma.com/ai.geeks" target="_blank" rel="noopener"><img src="assets/logos/aigeeks-black.svg" alt="AI Geeks" /></a>
       <a href="https://www.monsieurchalets.com/" target="_blank" rel="noopener" class="hero-logo-exited"><img src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" /><span>exit</span></a>
     </div>
-    <div class="hero-label">Créatif &middot; Code &middot; Ventes &middot; AI-First Systems Architect</div>
+    <div class="hero-label">Fondateur AI-first &middot; Créatif &middot; Code &middot; Ventes</div>
     <h1>J'ai <u>bâti</u>, <u>scalé</u> et <u>vendu</u> avant d'en parler.</h1>
     <p class="hero-description">
       Je design, je code et je vends. J'ai quitté Monsieur Chalets après avoir rebâti la tech de A à Z, migré <u>800+ propriétés</u> et <u>2x les revenus</u>. Aujourd'hui je construis Farmzz et j'aide des entrepreneurs à <u>systématiser</u> leurs opérations, devenir AI-first et bâtir du levier pour aller au plus haut sommet.
     </p>
     <p class="hero-warning">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;flex-shrink:0"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-      Je fonctionne avec des individus ambitieux qui veulent aller vite. Ce n'est pas pour tout le monde.
+      Je fonctionne avec des individus ambitieux qui veulent aller vite. Ce n'est pas pour tout le monde. Qui voit le monde en termes d'investissement, pas de prix.
     </p>
     <blockquote class="hero-quote">
       "Sa rigueur de travail et son éthique de travail. 100%. La première année, 2.5x les ventes juste avec la vitesse du site."
@@ -923,7 +1081,7 @@
     <div class="hero-stats">
       <div>
         <div class="hero-stat-num">1</div>
-        <div class="hero-stat-label">Exit</div>
+        <div class="hero-stat-label">Sortie</div>
       </div>
       <div>
         <div class="hero-stat-num">800+</div>
@@ -961,7 +1119,7 @@
   <!-- MONSIEUR CHALETS -->
   <div id="mc" class="story-block reveal">
     <div class="story-text">
-      <div class="story-role">Monsieur Chalets &middot; Product, Tech & Ops &middot; Exit</div>
+      <div class="story-role">Monsieur Chalets &middot; Produit, Tech & Ops &middot; Sortie</div>
       <h2>On était en train de couler. J'ai <u>rebâti le navire</u>.</h2>
       <p>Quand <strong>William Burgess</strong> m'a appelé, leur PMS venait de fermer. <strong>800 chalets, 2000+ réservations</strong> à migrer vers une tech qui n'existait pas encore. L'agence précédente avait livré du code inutilisable.</p>
       <p>J'ai monté une équipe de développeurs de A à Z. Reconstruit la plateforme au complet. Bâti toute leur <strong>infrastructure Notion</strong> pour les opérations. Migré le SEO sans perdre un seul ranking. Branché Cloudflare et <strong>accéléré le site de 80%</strong>, la première nuit.</p>
@@ -978,7 +1136,7 @@
   <!-- FARMZZ -->
   <div id="farmzz" class="story-block reverse reveal">
     <div class="story-text">
-      <div class="story-role">Farmzz &middot; Founder &middot; En cours</div>
+      <div class="story-role">Farmzz &middot; Fondateur &middot; En cours</div>
       <h2>Les fermiers vendent. Leur tech <u>ne suit pas</u>.</h2>
       <p>Les producteurs, maraîchers et fermiers d'ici perdent des ventes parce qu'ils n'ont aucun système en ligne. Pas de CRM, pas de récurrence, pas de visibilité.</p>
       <p><strong>Farmzz</strong> transforme le trafic offline en revenus récurrents. Un écosystème de vente bâti pour les gens qui vendent des vraies choses, pas du SaaS à du SaaS.</p>
@@ -988,18 +1146,6 @@
     </div>
   </div>
 
-  <!-- AI GEEKS -->
-  <div id="aigeeks" class="story-block reveal">
-    <div class="story-text">
-      <div class="story-role">AI Geeks &middot; Founder &middot; Communauté</div>
-      <h2><u>AI-first</u>. Pas AI-éventuellement.</h2>
-      <p>J'ai fondé <strong>AI Geeks</strong> pour rassembler les builders qui veulent utiliser l'intelligence artificielle pour shipper plus vite, pas juste en parler sur LinkedIn.</p>
-      <p>Événements, workshops, contenu. Une communauté de gens qui pensent en systèmes, qui buildent avec l'AI, et qui exécutent.</p>
-    </div>
-    <div class="story-visual">
-      <img src="assets/photos/speaking.jpg" alt="Raph speaking at AI Geeks event" loading="lazy" />
-    </div>
-  </div>
 </div>
 
 <!-- PHOTO STRIP -->
@@ -1019,11 +1165,11 @@
   <div class="mid-cta">
     <div class="mid-cta-row">
       <div class="mid-cta-col">
-        <span class="mid-cta-label">AI-first Founder</span>
+        <span class="mid-cta-label">Fondateur AI-first</span>
         <a href="https://www.instagram.com/farmzz_app/" target="_blank" rel="noopener" class="mid-cta-handle">@farmzz_app</a>
       </div>
       <div class="mid-cta-col">
-        <span class="mid-cta-label">AI-first Community</span>
+        <span class="mid-cta-label">Communauté AI-first</span>
         <a href="https://www.instagram.com/ai.geeks.squad/" target="_blank" rel="noopener" class="mid-cta-handle">@ai.geeks.squad</a>
       </div>
     </div>
@@ -1031,6 +1177,76 @@
       Rejoindre AI Geeks
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
     </a>
+  </div>
+</div>
+
+<!-- AI GEEKS SECTION -->
+<div id="aigeeks" class="aigeeks-section">
+  <div class="section">
+    <div class="aigeeks-hero reveal">
+      <div class="aigeeks-hero-text">
+        <div class="section-label">AI Geeks</div>
+        <h2><u>AI-first</u>. Pas AI-éventuellement.</h2>
+        <p>J'ai fondé <strong>AI Geeks</strong> pour rassembler les builders qui veulent utiliser l'intelligence artificielle pour shipper plus vite, pas juste en parler sur LinkedIn.</p>
+        <p>Événements, workshops, contenu. Une communauté de gens qui pensent en systèmes, qui buildent avec l'AI, et qui exécutent.</p>
+        <div class="aigeeks-stats">
+          <div>
+            <span class="aigeeks-stat-num">200+</span>
+            <span class="aigeeks-stat-label">Participants</span>
+          </div>
+          <div>
+            <span class="aigeeks-stat-num">4</span>
+            <span class="aigeeks-stat-label">Éditions</span>
+          </div>
+          <div>
+            <span class="aigeeks-stat-num">20+</span>
+            <span class="aigeeks-stat-label">Conférenciers</span>
+          </div>
+        </div>
+      </div>
+      <div class="aigeeks-hero-visual">
+        <img src="assets/photos/speaking.jpg" alt="Raph en conférence AI Geeks" loading="lazy" />
+      </div>
+    </div>
+
+    <div class="event-grid">
+      <a href="https://luma.com/aqnxoqhq" target="_blank" rel="noopener" class="event-card">
+        <img src="assets/events/aigeeks-1.png" alt="AI Geeks Édition #1" loading="lazy" />
+      </a>
+      <a href="https://luma.com/ue3ngs6g" target="_blank" rel="noopener" class="event-card">
+        <img src="assets/events/aigeeks-2.png" alt="AI Geeks Édition #2" loading="lazy" />
+      </a>
+      <a href="https://luma.com/ntlh786m" target="_blank" rel="noopener" class="event-card">
+        <img src="assets/events/aigeeks-3.png" alt="AI Geeks Édition #3" loading="lazy" />
+      </a>
+      <a href="https://luma.com/914u2we6" target="_blank" rel="noopener" class="event-card">
+        <img src="assets/events/aigeeks-4.png" alt="AI Geeks Édition #4" loading="lazy" />
+      </a>
+    </div>
+
+    <div class="aigeeks-testimonials">
+      <div class="aigeeks-testimonial reveal">
+        <blockquote>J'ai plus appris en une soirée au AI Geeks qu'en 4 formations ailleurs. C'est les gens de qualité. Les gens qui sont sharp. C'est ça la vraie valeur.</blockquote>
+        <cite><strong>Gabriel Gouveia</strong>PDG, Lasclay.com</cite>
+      </div>
+      <div class="aigeeks-testimonial reveal">
+        <blockquote>C'est ici que la communauté AI du Québec se rassemble. Si tu shippes quelque chose avec l'AI, tu dois être dans cette salle.</blockquote>
+        <cite><strong>Jacomo Deschatelets</strong>Fondateur, Instrumnt</cite>
+
+      </div>
+      <div class="aigeeks-testimonial reveal">
+        <blockquote>Je cherchais un endroit comme AI Geeks depuis longtemps. Un spot où le monde parle pas juste d'AI, ils buildent avec. La vibe c'est comme un mini SF mais chez nous à Québec.</blockquote>
+        <cite><strong>Antoine Boudreau</strong>Fondateur, BouAI</cite>
+      </div>
+    </div>
+
+    <div class="aigeeks-cta">
+      <p>Rejoins 200+ builders qui shippent avec l'AI.</p>
+      <a href="https://aigeekssquad.com" target="_blank" rel="noopener" class="btn-primary">
+        Rejoindre AI Geeks
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+      </a>
+    </div>
   </div>
 </div>
 
@@ -1179,45 +1395,6 @@
 
   <div class="testimonial-single reveal">
     <div class="testimonial-quote">
-      J'ai plus appris en une soirée au AI Geeks qu'en 4 formations ailleurs. C'est les gens de qualité. Les gens qui sont sharp. C'est ça la vraie valeur.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar">GG</div>
-      <div>
-        <div class="testimonial-name">Gabriel Gouveia</div>
-        <div class="testimonial-title">CEO, Lasclay.com</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      C'est ici que la communauté AI du Québec se ramasse. Si tu ships de quoi avec l'IA, tu dois être dans cette salle.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar">JD</div>
-      <div>
-        <div class="testimonial-name">Jacomo Deschatelets</div>
-        <div class="testimonial-title">Founder, Instrumnt</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      Je cherchais un endroit comme AI Geeks depuis longtemps. Un spot où le monde parle pas juste d'AI, ils buildent avec. La vibe c'est comme un mini SF mais chez nous à Québec.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar">AB</div>
-      <div>
-        <div class="testimonial-name">Antoine Boudreau</div>
-        <div class="testimonial-title">Founder, DMSWhileSleep</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
       Je sais c'est quoi l'énergie que tu mets dans tes projets. On a fait des ajustements, simplifié le message, ajouté une offre. On a vraiment vécu une montée rapide de nos abonnés. Les gens venaient à la caisse et nous en parlaient. T'es disponible, t'es présent. On a eu un service vraiment adapté à notre réalité.
     </div>
     <div class="testimonial-attribution">
@@ -1233,25 +1410,25 @@
 <!-- CREDENTIALS -->
 <section id="credentials">
   <div class="section">
-    <div class="section-label">Credentials</div>
+    <div class="section-label">Références</div>
     <h2 class="section-heading">Pas juste des mots.</h2>
     <p class="section-lead">Certifications, reconnaissances et preuves concrètes.</p>
   </div>
   <div class="creds-grid">
     <div class="cred-card reveal">
       <div class="cred-issuer">Notion</div>
-      <h3>Consulting Partner</h3>
-      <p>Partenaire certifié sur le Marketplace de Notion. Profil @leverageos.</p>
+      <h3>Partenaire certifié</h3>
+      <p>Partenaire de consultation certifié sur le Marketplace de Notion. Profil @leverageos.</p>
     </div>
     <div class="cred-card reveal reveal-delay-1">
       <div class="cred-issuer">Cloudflare</div>
-      <h3>Innovator Spotlight</h3>
-      <p>Featured sur la page mondiale des innovateurs Cloudflare.</p>
+      <h3>Innovateur en vedette</h3>
+      <p>Mis en vedette sur la page mondiale des innovateurs Cloudflare.</p>
     </div>
     <div class="cred-card reveal reveal-delay-2">
       <div class="cred-issuer">Notion</div>
-      <h3>Advanced + Workflows + Essentials</h3>
-      <p>Triple certification Notion. Badges Advanced, Workflows, Settings & Sharing.</p>
+      <h3>Certifications Notion</h3>
+      <p>Triple certification Notion : Advanced, Workflows, Settings & Sharing.</p>
     </div>
     <div class="cred-card reveal">
       <div class="cred-issuer">Notion &middot; Waterloo</div>
@@ -1260,14 +1437,22 @@
     </div>
     <div class="cred-card reveal reveal-delay-1">
       <div class="cred-issuer">Notion Marketplace</div>
-      <h3>Template Creator, @leverageos</h3>
+      <h3>Créateur de templates, @leverageos</h3>
       <p>"Clarifier. Systématiser. Déléguer." Templates et frameworks opérationnels.</p>
     </div>
     <div class="cred-card reveal reveal-delay-2">
       <div class="cred-issuer">Treehouse</div>
-      <h3>Full Stack JavaScript</h3>
+      <h3>Développement Full Stack JavaScript</h3>
       <p>Certification développement web full-stack.</p>
     </div>
+    <a href="https://ici.radio-canada.ca/info/videos/1-8118601/futurs-maraichers-a-entrainement?liste=28-34803" target="_blank" rel="noopener" class="cred-card cred-card-press reveal">
+      <img src="assets/photos/radio-canada.png" alt="Radio-Canada — De futurs maraîchers à l'entraînement" loading="lazy" />
+      <div>
+        <div class="cred-issuer">Radio-Canada &middot; 14 juillet 2019</div>
+        <h3>De futurs maraîchers à l'entraînement</h3>
+        <p>Reportage à la télévision nationale de Radio-Canada.</p>
+      </div>
+    </a>
   </div>
 </section>
 
@@ -1293,10 +1478,10 @@
   <div class="footer-inner">
     <div class="footer-left">&copy; 2026 Raphael Tremblay-Bouchard</div>
     <ul class="footer-links">
+      <li><a href="https://www.instagram.com/raphatb/" target="_blank" rel="noopener">Instagram</a></li>
       <li><a href="https://www.linkedin.com/in/raphatb/" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="https://aigeekssquad.com" target="_blank" rel="noopener">AI Geeks</a></li>
+      <li><a href="https://www.youtube.com/@raphatb" target="_blank" rel="noopener">YouTube</a></li>
       <li><a href="https://www.notion.com/@leverageos" target="_blank" rel="noopener">Notion</a></li>
-      <li><a href="https://www.cloudflare.com/en-ca/innovator-spotlights/" target="_blank" rel="noopener">Cloudflare</a></li>
     </ul>
   </div>
 </footer>
@@ -1308,9 +1493,9 @@
   "name": "Raphael Tremblay-Bouchard",
   "alternateName": "raphatb",
   "url": "https://raphatb.com",
-  "jobTitle": "Builder, Operator, AI-First Systems Architect",
-  "description": "Exit Monsieur Chalets. Fondateur Farmzz & AI Geeks. Notion Certified Consulting Partner. Cloudflare Innovator.",
-  "knowsAbout": ["AI", "Systems Architecture", "Notion", "Cloudflare", "SaaS", "Operations", "Product Management"],
+  "jobTitle": "Bâtisseur, Opérateur, Architecte de systèmes AI-First",
+  "description": "Exit Monsieur Chalets. Fondateur Farmzz & AI Geeks. Partenaire certifié Notion. Innovateur Cloudflare.",
+  "knowsAbout": ["IA", "Architecture de systèmes", "Notion", "Cloudflare", "SaaS", "Opérations", "Gestion de produit"],
   "sameAs": [
     "https://www.linkedin.com/in/raphatb/",
     "https://www.notion.com/@leverageos",
