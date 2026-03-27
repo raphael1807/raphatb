@@ -397,6 +397,12 @@
       object-fit: cover;
     }
 
+    .story-logo {
+      height: 24px;
+      margin-bottom: 12px;
+      opacity: 0.7;
+    }
+
     .story-role {
       font-size: 0.8rem;
       font-weight: 500;
@@ -545,8 +551,8 @@
     }
 
     .testimonial-avatar {
-      width: 44px;
-      height: 44px;
+      width: 88px;
+      height: 88px;
       border-radius: 50%;
       background: var(--bg-muted);
       display: flex;
@@ -1176,6 +1182,7 @@
   <!-- MONSIEUR CHALETS -->
   <div id="mc" class="story-block reveal">
     <div class="story-text">
+      <img src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" class="story-logo" />
       <div class="story-role">Monsieur Chalets &middot; Product, Tech & Ops &middot; Exit</div>
       <h2>We were sinking. I <u>rebuilt the ship</u>.</h2>
       <p>When <strong>William Burgess</strong> called me, their PMS had just shut down. <strong>800 chalets, 2000+ reservations</strong> to migrate to tech that didn't exist yet. The previous agency had delivered unusable code.</p>
@@ -1193,6 +1200,7 @@
   <!-- FARMZZ -->
   <div id="farmzz" class="story-block reverse reveal">
     <div class="story-text">
+      <img src="assets/logos/farmzz-black.svg" alt="Farmzz" class="story-logo" />
       <div class="story-role">Farmzz &middot; Founder &middot; Ongoing</div>
       <h2>Farmers sell. Their tech <u>can't keep up</u>.</h2>
       <p>Local producers, market gardeners and farmers are losing sales because they have zero online systems. No CRM, no recurring revenue, no visibility.</p>
@@ -1205,35 +1213,181 @@
 
 </div>
 
-<!-- PHOTO STRIP -->
-<div class="photo-strip-wrapper">
-  <div class="photo-strip">
-    <img src="assets/photos/hero.jpg" alt="Raph" loading="lazy" />
-    <img src="assets/photos/meeting.jpg" alt="Raph consulting" loading="lazy" />
-    <img src="assets/photos/event-smile.jpg" alt="Raph rooftop" loading="lazy" />
-    <img src="assets/photos/consulting.jpg" alt="Raph consulting" loading="lazy" />
-    <img src="assets/photos/seated.jpg" alt="Raph seated" loading="lazy" />
-    <img src="assets/photos/speaking.jpg" alt="Raph arms crossed" loading="lazy" />
+<!-- TESTIMONIALS -->
+<div id="testimonials" class="testimonials-section">
+  <div class="section" style="padding-bottom: 0;">
+    <div class="section-label">Testimonials</div>
+    <h2 class="section-heading">What they say.</h2>
+    <p class="section-lead">Real words from real people I've worked with.</p>
   </div>
-</div>
 
-<!-- MID CTA -->
-<div style="border-top: 1px solid var(--border);">
-  <div class="mid-cta">
-    <div class="mid-cta-row">
-      <div class="mid-cta-col">
-        <span class="mid-cta-label">AI-first Founder</span>
-        <a href="https://www.instagram.com/farmzz_app/" target="_blank" rel="noopener" class="mid-cta-handle">@farmzz_app</a>
-      </div>
-      <div class="mid-cta-col">
-        <span class="mid-cta-label">AI-first Community</span>
-        <a href="https://www.instagram.com/ai.geeks.squad/" target="_blank" rel="noopener" class="mid-cta-handle">@ai.geeks.squad</a>
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      Raph, we're going bankrupt. Literally, I don't know what to do anymore. I hired you on the spot, gave you my trust, gave you carte blanche. The first year, it was 2.5x sales just from the site speed. Your work discipline and work ethic. 100%.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/william-burgess.jpg" alt="William Burgess" /></div>
+      <div>
+        <div class="testimonial-name"><a href="https://www.linkedin.com/in/william-burgess-3a0687a7/" target="_blank" rel="noopener">William Burgess</a></div>
+        <div class="testimonial-title">Co-founder, Monsieur Chalets &middot; 800+ chalets</div>
       </div>
     </div>
-    <a href="https://aigeekssquad.com" target="_blank" rel="noopener" class="btn-secondary">
-      Join AI Geeks
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-    </a>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      I used to go to bed and couldn't sleep. It felt like there were 25 paths, and 24 of them were wrong. It was just stressful. Today? Our profit went from 50% to 75%. The biggest impact was when I came home and could actually relax.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/oli-pharand.jpg" alt="Oli Pharand" /></div>
+      <div>
+        <div class="testimonial-name">Oli Pharand</div>
+        <div class="testimonial-title">Entrepreneur &middot; Service business</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      What really convinced me was when you asked: is your problem acquisition or retention? Nobody had ever asked me that. You became more than someone offering a service, you approached it like you were my partner. The best $1000 you'll ever spend.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/emmanuel-ouellet.png" alt="Emanuel Ouellet Lapointe" /></div>
+      <div>
+        <div class="testimonial-name">Emanuel « Mani » Ouellet Lapointe</div>
+        <div class="testimonial-title">Restaurant owner &middot; Pour de Vrai</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      When something came out of your mouth, it wasn't up for debate. You do your due diligence, you're so all-in. You were my source of information for everything. When we started working together, there was no ChatGPT that powerful. You were my ChatGPT. Head down, knife between his teeth. With Raph, you feel safe.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/miguel-alain.jpg" alt="Miguel Alain" /></div>
+      <div>
+        <div class="testimonial-name"><a href="https://amorcekinesiologie.com/" target="_blank" rel="noopener">Miguel Alain</a></div>
+        <div class="testimonial-title">Founder, Amorce</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      I haven't stopped in three years. No vacations. I'm empty, empty, empty. He processed 6,242 emails. Almost 700 drafts. 48 hours of meetings. During the week, I save 4 to 5 hours straight. As soon as I get an email, he's already suggesting something. All I have to do is change a word and send.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/pierre-olivier-drouin.png" alt="Pierre-Olivier Drouin" /></div>
+      <div>
+        <div class="testimonial-name"><a href="https://firebarns.com/" target="_blank">Pierre-Olivier Drouin</a></div>
+        <div class="testimonial-title">Owner, Firebarns</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      If you're hesitating to take action with Raph, it's probably because you're super busy. If you're very busy, that's exactly why you should meet him. I was using Notion like a 4-year-old in a sandbox, meaning all over the place. Today, I save a ton of time and stress.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/carl-moreau.jpg" alt="Carl Moreau" /></div>
+      <div>
+        <div class="testimonial-name">Carl Moreau</div>
+        <div class="testimonial-title">Entrepreneur &middot; CRM & Notion</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      You showed up one morning and you'd done it overnight. Like a surprise. "Boys, the site is faster." We increased our conversion rate, our recurring revenue. It's really not comfortable working with you sometimes. But I know it's going to bring something positive. You tell us the real things, and then we have no choice.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/william-burgess.jpg" alt="William Burgess" /></div>
+      <div>
+        <div class="testimonial-name"><a href="https://www.linkedin.com/in/william-burgess-3a0687a7/" target="_blank" rel="noopener">William Burgess</a></div>
+        <div class="testimonial-title">Co-founder, Monsieur Chalets</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      He's not there just trying to be nice to keep a long-term contract. He's there to make real positive changes in your business. That's extremely underrated. I didn't feel like I was buying something I'd be dependent on. I was building my own skills through the whole process.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/oli-pharand.jpg" alt="Oli Pharand" /></div>
+      <div>
+        <div class="testimonial-name">Oli Pharand</div>
+        <div class="testimonial-title">Entrepreneur &middot; Service business</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      We went from being scared to getting positive results. We would've been happy if people just thought of us when they got the text. But no, people were responding. They were coming in. I don't know when you sleep, but you're on it. There's not a single dollar spent elsewhere that'll give you a better return.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/emmanuel-ouellet.png" alt="Emanuel Ouellet Lapointe" /></div>
+      <div>
+        <div class="testimonial-name">Emanuel « Mani » Ouellet Lapointe</div>
+        <div class="testimonial-title">Restaurant owner &middot; Pour de Vrai</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      I know the kind of energy you put into your projects. We made adjustments, simplified the message, added an offer. We saw a rapid increase in subscribers. People came to the counter talking about it. You're available, you're present. We got a service truly adapted to our reality.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/noemie-paleta.jpeg" alt="Noémie Paleta" /></div>
+      <div>
+        <div class="testimonial-name">Noémie Paleta</div>
+        <div class="testimonial-title">Owner, Café No Paleta &middot; Farmzz</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      Texting is a way to reach customers fast. The open rate is about 99%. I quickly saw clients come buy thanks to a text I sent through Farmzz. One of my clients told me "it's because I got your text" — and placed an order of at least $150.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/emilie-turcotte.jpg" alt="Émilie Turcotte" /></div>
+      <div>
+        <div class="testimonial-name">Émilie Turcotte</div>
+        <div class="testimonial-title">Agricultural Producer &middot; Farmzz</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      What you taught me is to think in systems. Whenever you do something, there should be a system that can replace you or make you better. I recovered so much time that every time now I want to think in systems. You free up time in your schedule and you think: ok my God, more time, more money.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/miguel-alain.jpg" alt="Miguel Alain" /></div>
+      <div>
+        <div class="testimonial-name"><a href="https://amorcekinesiologie.com/" target="_blank" rel="noopener">Miguel Alain</a></div>
+        <div class="testimonial-title">Founder, Amorce</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      It was chaos. We could see numbers but didn't understand our numbers. It was a mix of Excel, Trello and a bunch of tools together. Honestly, it was hell. Raph didn't try to sell anything. He just looked at everything I had in my systems. When I finished the call, I realized he was truly there to help me get clarity.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/oli-pharand.jpg" alt="Oli Pharand" /></div>
+      <div>
+        <div class="testimonial-name">Oli Pharand</div>
+        <div class="testimonial-title">Entrepreneur &middot; Service Business</div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -1294,6 +1448,18 @@
         <blockquote>I'd been looking for a place like AI Geeks for a long time. A spot where people don't just talk about AI, they build with it. The vibe is like a mini SF but right here in Quebec.</blockquote>
         <cite><strong>Antoine Boudreau</strong>Founder, BouAI</cite>
       </div>
+      <div class="aigeeks-testimonial reveal">
+        <blockquote>You taught me to use AI and to think AI-first, not the other way around. Whenever you have a problem, think AI first.</blockquote>
+        <cite><strong>Miguel Alain</strong>Founder, Amorce</cite>
+      </div>
+      <div class="aigeeks-testimonial reveal">
+        <blockquote>If you want to be an entrepreneur, you have to think in systems. If everything is in your head and you're not organized, you'll hit walls. You'll end up burned out.</blockquote>
+        <cite><strong>Miguel Alain</strong>Founder, Amorce</cite>
+      </div>
+      <div class="aigeeks-testimonial reveal">
+        <blockquote>If nothing changes, nothing changes. Raph, if things are going bad, he tells you. You have to be able to deal with that. But it's the only way forward.</blockquote>
+        <cite><strong>Oli Pharand</strong>Entrepreneur</cite>
+      </div>
     </div>
 
     <div class="aigeeks-cta">
@@ -1303,6 +1469,18 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
       </a>
     </div>
+  </div>
+</div>
+
+<!-- PHOTO STRIP -->
+<div class="photo-strip-wrapper">
+  <div class="photo-strip">
+    <img src="assets/photos/hero.jpg" alt="Raph" loading="lazy" />
+    <img src="assets/photos/meeting.jpg" alt="Raph consulting" loading="lazy" />
+    <img src="assets/photos/event-smile.jpg" alt="Raph rooftop" loading="lazy" />
+    <img src="assets/photos/consulting.jpg" alt="Raph consulting" loading="lazy" />
+    <img src="assets/photos/seated.jpg" alt="Raph seated" loading="lazy" />
+    <img src="assets/photos/speaking.jpg" alt="Raph arms crossed" loading="lazy" />
   </div>
 </div>
 
@@ -1320,145 +1498,6 @@
         allowfullscreen
         loading="lazy">
       </iframe>
-    </div>
-  </div>
-</div>
-
-<!-- TESTIMONIALS -->
-<div id="testimonials" class="testimonials-section">
-  <div class="section" style="padding-bottom: 0;">
-    <div class="section-label">Testimonials</div>
-    <h2 class="section-heading">What they say.</h2>
-    <p class="section-lead">Real words from real people I've worked with.</p>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      Raph, we're going bankrupt. Literally, I don't know what to do anymore. I hired you on the spot, gave you my trust, gave you carte blanche. The first year, it was 2.5x sales just from the site speed. Your work discipline and work ethic. 100%.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/william-burgess.png" alt="William Burgess" /></div>
-      <div>
-        <div class="testimonial-name"><a href="https://www.linkedin.com/in/william-burgess-3a0687a7/" target="_blank" rel="noopener">William Burgess</a></div>
-        <div class="testimonial-title">Co-founder, Monsieur Chalets &middot; 800+ chalets</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      I used to go to bed and couldn't sleep. It felt like there were 25 paths, and 24 of them were wrong. It was just stressful. Today? Our profit went from 50% to 75%. The biggest impact was when I came home and could actually relax.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar">OP</div>
-      <div>
-        <div class="testimonial-name">Oli Pharand</div>
-        <div class="testimonial-title">Entrepreneur &middot; Service business</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      What really convinced me was when you asked: is your problem acquisition or retention? Nobody had ever asked me that. You became more than someone offering a service, you approached it like you were my partner. The best $1000 you'll ever spend.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/emmanuel-ouellet.png" alt="Emanuel Ouellet Lapointe" /></div>
-      <div>
-        <div class="testimonial-name">Emanuel « Mani » Ouellet Lapointe</div>
-        <div class="testimonial-title">Restaurant owner &middot; Pour de Vrai</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      When something came out of your mouth, it wasn't up for debate. You do your due diligence, you're so all-in. You were my source of information for everything. When we started working together, there was no ChatGPT that powerful. You were my ChatGPT. Head down, knife between his teeth. With Raph, you feel safe.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar">MA</div>
-      <div>
-        <div class="testimonial-name">Miguel Alain</div>
-        <div class="testimonial-title">Kinesiologist &middot; Entrepreneur</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      I haven't stopped in three years. No vacations. I'm empty, empty, empty. He processed 6,242 emails. Almost 700 drafts. 48 hours of meetings. During the week, I save 4 to 5 hours straight. As soon as I get an email, he's already suggesting something. All I have to do is change a word and send.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/pierre-olivier-drouin.png" alt="Pierre-Olivier Drouin" /></div>
-      <div>
-        <div class="testimonial-name">Pierre-Olivier Drouin</div>
-        <div class="testimonial-title">Entrepreneur</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      If you're hesitating to take action with Raph, it's probably because you're super busy. If you're very busy, that's exactly why you should meet him. I was using Notion like a 4-year-old in a sandbox, meaning all over the place. Today, I save a ton of time and stress.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar">CM</div>
-      <div>
-        <div class="testimonial-name">Carl Moreau</div>
-        <div class="testimonial-title">Entrepreneur &middot; CRM & Notion</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      You showed up one morning and you'd done it overnight. Like a surprise. "Boys, the site is faster." We increased our conversion rate, our recurring revenue. It's really not comfortable working with you sometimes. But I know it's going to bring something positive. You tell us the real things, and then we have no choice.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/william-burgess.png" alt="William Burgess" /></div>
-      <div>
-        <div class="testimonial-name"><a href="https://www.linkedin.com/in/william-burgess-3a0687a7/" target="_blank" rel="noopener">William Burgess</a></div>
-        <div class="testimonial-title">Co-founder, Monsieur Chalets</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      He's not there just trying to be nice to keep a long-term contract. He's there to make real positive changes in your business. That's extremely underrated. I didn't feel like I was buying something I'd be dependent on. I was building my own skills through the whole process.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar">OP</div>
-      <div>
-        <div class="testimonial-name">Oli Pharand</div>
-        <div class="testimonial-title">Entrepreneur &middot; Service business</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      We went from being scared to getting positive results. We would've been happy if people just thought of us when they got the text. But no, people were responding. They were coming in. I don't know when you sleep, but you're on it. There's not a single dollar spent elsewhere that'll give you a better return.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/emmanuel-ouellet.png" alt="Emanuel Ouellet Lapointe" /></div>
-      <div>
-        <div class="testimonial-name">Emanuel « Mani » Ouellet Lapointe</div>
-        <div class="testimonial-title">Restaurant owner &middot; Pour de Vrai</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      I know the kind of energy you put into your projects. We made adjustments, simplified the message, added an offer. We saw a rapid increase in subscribers. People came to the counter talking about it. You're available, you're present. We got a service truly adapted to our reality.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar">NP</div>
-      <div>
-        <div class="testimonial-name">Noémie Paleta</div>
-        <div class="testimonial-title">Owner, Café No Paleta &middot; Farmzz</div>
-      </div>
     </div>
   </div>
 </div>

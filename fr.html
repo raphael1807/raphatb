@@ -391,6 +391,12 @@
       object-fit: cover;
     }
 
+    .story-logo {
+      height: 24px;
+      margin-bottom: 12px;
+      opacity: 0.7;
+    }
+
     .story-role {
       font-size: 0.8rem;
       font-weight: 500;
@@ -539,8 +545,8 @@
     }
 
     .testimonial-avatar {
-      width: 44px;
-      height: 44px;
+      width: 88px;
+      height: 88px;
       border-radius: 50%;
       background: var(--bg-muted);
       display: flex;
@@ -1170,6 +1176,7 @@
   <!-- MONSIEUR CHALETS -->
   <div id="mc" class="story-block reveal">
     <div class="story-text">
+      <img src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" class="story-logo" />
       <div class="story-role">Monsieur Chalets &middot; Produit, Tech & Ops &middot; Sortie</div>
       <h2>On était en train de couler. J'ai <u>rebâti le navire</u>.</h2>
       <p>Quand <strong>William Burgess</strong> m'a appelé, leur PMS venait de fermer. <strong>800 chalets, 2000+ réservations</strong> à migrer vers une tech qui n'existait pas encore. L'agence précédente avait livré du code inutilisable.</p>
@@ -1187,6 +1194,7 @@
   <!-- FARMZZ -->
   <div id="farmzz" class="story-block reverse reveal">
     <div class="story-text">
+      <img src="assets/logos/farmzz-black.svg" alt="Farmzz" class="story-logo" />
       <div class="story-role">Farmzz &middot; Fondateur &middot; En cours</div>
       <h2>Les fermiers vendent. Leur tech <u>ne suit pas</u>.</h2>
       <p>Les producteurs, maraîchers et fermiers d'ici perdent des ventes parce qu'ils n'ont aucun système en ligne. Pas de CRM, pas de récurrence, pas de visibilité.</p>
@@ -1199,35 +1207,181 @@
 
 </div>
 
-<!-- PHOTO STRIP -->
-<div class="photo-strip-wrapper">
-  <div class="photo-strip">
-    <img src="assets/photos/hero.jpg" alt="Raph" loading="lazy" />
-    <img src="assets/photos/meeting.jpg" alt="Raph en consultation" loading="lazy" />
-    <img src="assets/photos/event-smile.jpg" alt="Raph rooftop" loading="lazy" />
-    <img src="assets/photos/consulting.jpg" alt="Raph consulting" loading="lazy" />
-    <img src="assets/photos/seated.jpg" alt="Raph seated" loading="lazy" />
-    <img src="assets/photos/speaking.jpg" alt="Raph arms crossed" loading="lazy" />
+<!-- TESTIMONIALS -->
+<div id="testimonials" class="testimonials-section">
+  <div class="section" style="padding-bottom: 0;">
+    <div class="section-label">Témoignages</div>
+    <h2 class="section-heading">Ce qu'ils en disent.</h2>
+    <p class="section-lead">Des vrais mots, de vraies personnes avec qui j'ai travaillé.</p>
   </div>
-</div>
 
-<!-- MID CTA -->
-<div style="border-top: 1px solid var(--border);">
-  <div class="mid-cta">
-    <div class="mid-cta-row">
-      <div class="mid-cta-col">
-        <span class="mid-cta-label">Fondateur AI-first</span>
-        <a href="https://www.instagram.com/farmzz_app/" target="_blank" rel="noopener" class="mid-cta-handle">@farmzz_app</a>
-      </div>
-      <div class="mid-cta-col">
-        <span class="mid-cta-label">Communauté AI-first</span>
-        <a href="https://www.instagram.com/ai.geeks.squad/" target="_blank" rel="noopener" class="mid-cta-handle">@ai.geeks.squad</a>
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      Raph, on va faire faillite. Littéralement, je ne sais plus quoi faire. Je t'ai embauché direct, je t'ai fait confiance, je t'ai donné carte blanche. La première année, ça avait fait 2.5x les ventes juste avec la vitesse du site. Ta rigueur de travail et ton éthique de travail. 100%.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/william-burgess.jpg" alt="William Burgess" /></div>
+      <div>
+        <div class="testimonial-name"><a href="https://www.linkedin.com/in/william-burgess-3a0687a7/" target="_blank" rel="noopener">William Burgess</a></div>
+        <div class="testimonial-title">Co-fondateur, Monsieur Chalets &middot; 800+ chalets</div>
       </div>
     </div>
-    <a href="https://aigeekssquad.com" target="_blank" rel="noopener" class="btn-secondary">
-      Rejoindre AI Geeks
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-    </a>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      J'allais me coucher le soir puis c'était dur de dormir. On dirait qu'il y a 25 chemins, puis 24 qui sont pas bons. Ça devenait juste stressant. Aujourd'hui? Notre profit est passé de 50% à 75%. Le plus gros impact, c'était quand j'arrivais à la maison et j'étais capable de relaxer.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/oli-pharand.jpg" alt="Oli Pharand" /></div>
+      <div>
+        <div class="testimonial-name">Oli Pharand</div>
+        <div class="testimonial-title">Entrepreneur &middot; Entreprise de services</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      Ce qui m'a vraiment convaincu, c'est quand tu m'as posé la question: est-ce que votre problème, c'est un problème d'acquisition ou un problème de rétention? Personne ne m'avait posé cette question-là. T'es devenu plus que quelqu'un qui m'offrait un service, tu l'as approché comme si t'étais mon partner. Le meilleur 1000$ que tu vas dépenser.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/emmanuel-ouellet.png" alt="Emanuel Ouellet Lapointe" /></div>
+      <div>
+        <div class="testimonial-name">Emanuel « Mani » Ouellet Lapointe</div>
+        <div class="testimonial-title">Restaurateur &middot; Pour de Vrai</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      Quand quelque chose sortait de ta bouche, c'était pas discutable. Tu fais tes dues diligences, t'es tellement all-in. C'était tellement ma source d'information. Quand on a commencé, il n'y avait pas de ChatGPT aussi puissant. C'est toi qui étais mon ChatGPT. La tête baissée, le couteau entre les dents. Avec Raph, on se sent en sécurité.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/miguel-alain.jpg" alt="Miguel Alain" /></div>
+      <div>
+        <div class="testimonial-name"><a href="https://amorcekinesiologie.com/" target="_blank" rel="noopener">Miguel Alain</a></div>
+        <div class="testimonial-title">Fondateur, Amorce</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      Ça fait trois ans que j'ai pas arrêté et que j'ai pas pris de vacances. Je suis vide, vide, vide. Il a traité 6242 courriels. Presque 700 drafts. 48 heures de meeting. En semaine, je sauve 4 à 5 heures direct. Dès que je reçois un courriel, il me propose déjà quelque chose. Tout ce que j'ai à faire, c'est changer un mot et envoyer.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/pierre-olivier-drouin.png" alt="Pierre-Olivier Drouin" /></div>
+      <div>
+        <div class="testimonial-name"><a href="https://firebarns.com/" target="_blank" rel="noopener">Pierre-Olivier Drouin</a></div>
+        <div class="testimonial-title">Propriétaire, Firebarns</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      Si t'hésites à passer à l'action avec Raph, c'est sûrement que t'es super occupé. Si tu es très occupé, c'est la raison pour laquelle tu devrais le rencontrer. J'utilisais Notion comme un enfant de 4 ans dans un bac à sable, c'est-à-dire à peu près tout croche. Aujourd'hui, je sauve énormément de temps et de stress.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/carl-moreau.jpg" alt="Carl Moreau" /></div>
+      <div>
+        <div class="testimonial-name">Carl Moreau</div>
+        <div class="testimonial-title">Entrepreneur &middot; CRM & Notion</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      T'es arrivé un matin et tu l'avais fait de nuit. C'était comme une surprise. Les boys, le site est plus rapide. On a augmenté notre taux de conversion, notre recurring. C'est vraiment pas confortable travailler avec toi des fois. Par contre, je le sais que ça va amener du positif. Tu nous dis les vraies choses, puis après ça, on n'a pas le choix.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/william-burgess.jpg" alt="William Burgess" /></div>
+      <div>
+        <div class="testimonial-name"><a href="https://www.linkedin.com/in/william-burgess-3a0687a7/" target="_blank" rel="noopener">William Burgess</a></div>
+        <div class="testimonial-title">Co-fondateur, Monsieur Chalets</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      Il est pas là à juste essayer d'être gentil pour garder un mandat à long terme. Il est là pour faire des changements positifs dans ta business. C'est extrêmement underrated. Je me sentais pas comme si j'achetais quelque chose dont j'étais dépendant après. Je buildais mes skills au travers de tout ça.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/oli-pharand.jpg" alt="Oli Pharand" /></div>
+      <div>
+        <div class="testimonial-name">Oli Pharand</div>
+        <div class="testimonial-title">Entrepreneur &middot; Entreprise de services</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      On est parti d'avoir peur, à avoir des résultats positifs. On aurait juste été content si les gens pensaient à nous en recevant le texto. Mais non, les gens répondaient. Ils venaient. Je sais pas quand est-ce que tu dors, mais tu roules. Il n'y a pas un dollar investi ailleurs que tu vas avoir un meilleur retour.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/emmanuel-ouellet.png" alt="Emanuel Ouellet Lapointe" /></div>
+      <div>
+        <div class="testimonial-name">Emanuel « Mani » Ouellet Lapointe</div>
+        <div class="testimonial-title">Restaurateur &middot; Pour de Vrai</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      Je sais c'est quoi l'énergie que tu mets dans tes projets. On a fait des ajustements, simplifié le message, ajouté une offre. On a vraiment vécu une montée rapide de nos abonnés. Les gens venaient à la caisse et nous en parlaient. T'es disponible, t'es présent. On a eu un service vraiment adapté à notre réalité.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/noemie-paleta.jpeg" alt="Noémie Paleta" /></div>
+      <div>
+        <div class="testimonial-name">Noémie Paleta</div>
+        <div class="testimonial-title">Propriétaire, Café No Paleta &middot; Farmzz</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      Les textos, c'est une façon de rejoindre rapidement les clients. Le taux d'ouverture, c'est environ 99%. J'ai vu rapidement des clients qui sont venus acheter grâce à un texto que j'ai envoyé de Farmzz. Un de mes clients est venu me dire « c'est parce que j'ai reçu ton texto » — et il m'a fait une commande d'au moins 150$.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/emilie-turcotte.jpg" alt="Émilie Turcotte" /></div>
+      <div>
+        <div class="testimonial-name">Émilie Turcotte</div>
+        <div class="testimonial-title">Productrice agricole &middot; Farmzz</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      Ce que tu m'as appris, c'est apprendre à penser en système. Dès qu'il y a quelque chose que tu fais, il doit y avoir un système qui peut te remplacer ou te rendre meilleur. J'ai tellement récupéré du temps qu'à toutes les fois j'ai envie de penser en système. Tu te débloques du temps dans ton horaire, et tu dis : ok my God, plus de temps, plus d'argent.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/miguel-alain.jpg" alt="Miguel Alain" /></div>
+      <div>
+        <div class="testimonial-name"><a href="https://amorcekinesiologie.com/" target="_blank" rel="noopener">Miguel Alain</a></div>
+        <div class="testimonial-title">Fondateur, Amorce</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      C'était le chaos. On voyait des chiffres mais on ne comprenait pas nos chiffres. C'était un mix de Excel, Trello et plein de logiciels ensemble. Pour vrai, c'était l'enfer. Raph n'a pas essayé de vendre quelque chose. Il a juste regardé tout ce que j'avais dans mes systèmes. Quand j'ai fini le call, j'ai réalisé qu'il était vraiment là pour m'aider à avoir de la clarté.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/oli-pharand.jpg" alt="Oli Pharand" /></div>
+      <div>
+        <div class="testimonial-name">Oli Pharand</div>
+        <div class="testimonial-title">Entrepreneur &middot; Entreprise de services</div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -1283,11 +1437,22 @@
       <div class="aigeeks-testimonial reveal">
         <blockquote>C'est ici que la communauté AI du Québec se rassemble. Si tu shippes quelque chose avec l'AI, tu dois être dans cette salle.</blockquote>
         <cite><strong>Jacomo Deschatelets</strong>Fondateur, Instrumnt</cite>
-
       </div>
       <div class="aigeeks-testimonial reveal">
         <blockquote>Je cherchais un endroit comme AI Geeks depuis longtemps. Un spot où le monde parle pas juste d'AI, ils buildent avec. La vibe c'est comme un mini SF mais chez nous à Québec.</blockquote>
         <cite><strong>Antoine Boudreau</strong>Fondateur, BouAI</cite>
+      </div>
+      <div class="aigeeks-testimonial reveal">
+        <blockquote>Tu m'as appris à utiliser l'intelligence artificielle et à penser en premier avec du AI et non l'inverse. Dès que tu as un problème, pense en AI first.</blockquote>
+        <cite><strong>Miguel Alain</strong>Fondateur, Amorce</cite>
+      </div>
+      <div class="aigeeks-testimonial reveal">
+        <blockquote>Si tu veux être un entrepreneur, il faut que tu penses en système. Si tout est dans ton cerveau et que tu n'es pas organisé, tu vas frapper des murs. C'est sûr que tu vas finir en burn out.</blockquote>
+        <cite><strong>Miguel Alain</strong>Fondateur, Amorce</cite>
+      </div>
+      <div class="aigeeks-testimonial reveal">
+        <blockquote>S'il n'y a rien qui change, il n'y a rien qui change. Raph, si ça va mal, il te le dit. Il faut que tu sois capable de dealer avec ça. Mais c'est la seule façon d'avancer.</blockquote>
+        <cite><strong>Oli Pharand</strong>Entrepreneur</cite>
       </div>
     </div>
 
@@ -1298,6 +1463,18 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:14px;height:14px"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
       </a>
     </div>
+  </div>
+</div>
+
+<!-- PHOTO STRIP -->
+<div class="photo-strip-wrapper">
+  <div class="photo-strip">
+    <img src="assets/photos/hero.jpg" alt="Raph" loading="lazy" />
+    <img src="assets/photos/meeting.jpg" alt="Raph en consultation" loading="lazy" />
+    <img src="assets/photos/event-smile.jpg" alt="Raph rooftop" loading="lazy" />
+    <img src="assets/photos/consulting.jpg" alt="Raph consulting" loading="lazy" />
+    <img src="assets/photos/seated.jpg" alt="Raph seated" loading="lazy" />
+    <img src="assets/photos/speaking.jpg" alt="Raph arms crossed" loading="lazy" />
   </div>
 </div>
 
@@ -1315,145 +1492,6 @@
         allowfullscreen
         loading="lazy">
       </iframe>
-    </div>
-  </div>
-</div>
-
-<!-- TESTIMONIALS -->
-<div id="testimonials" class="testimonials-section">
-  <div class="section" style="padding-bottom: 0;">
-    <div class="section-label">Témoignages</div>
-    <h2 class="section-heading">Ce qu'ils en disent.</h2>
-    <p class="section-lead">Des vrais mots, de vraies personnes avec qui j'ai travaillé.</p>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      Raph, on va faire faillite. Littéralement, je ne sais plus quoi faire. Je t'ai embauché direct, je t'ai fait confiance, je t'ai donné carte blanche. La première année, ça avait fait 2.5x les ventes juste avec la vitesse du site. Ta rigueur de travail et ton éthique de travail. 100%.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/william-burgess.png" alt="William Burgess" /></div>
-      <div>
-        <div class="testimonial-name"><a href="https://www.linkedin.com/in/william-burgess-3a0687a7/" target="_blank" rel="noopener">William Burgess</a></div>
-        <div class="testimonial-title">Co-fondateur, Monsieur Chalets &middot; 800+ chalets</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      J'allais me coucher le soir puis c'était dur de dormir. On dirait qu'il y a 25 chemins, puis 24 qui sont pas bons. Ça devenait juste stressant. Aujourd'hui? Notre profit est passé de 50% à 75%. Le plus gros impact, c'était quand j'arrivais à la maison et j'étais capable de relaxer.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar">OP</div>
-      <div>
-        <div class="testimonial-name">Oli Pharand</div>
-        <div class="testimonial-title">Entrepreneur &middot; Entreprise de services</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      Ce qui m'a vraiment convaincu, c'est quand tu m'as posé la question: est-ce que votre problème, c'est un problème d'acquisition ou un problème de rétention? Personne ne m'avait posé cette question-là. T'es devenu plus que quelqu'un qui m'offrait un service, tu l'as approché comme si t'étais mon partner. Le meilleur 1000$ que tu vas dépenser.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/emmanuel-ouellet.png" alt="Emanuel Ouellet Lapointe" /></div>
-      <div>
-        <div class="testimonial-name">Emanuel « Mani » Ouellet Lapointe</div>
-        <div class="testimonial-title">Restaurateur &middot; Pour de Vrai</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      Quand quelque chose sortait de ta bouche, c'était pas discutable. Tu fais tes dues diligences, t'es tellement all-in. C'était tellement ma source d'information. Quand on a commencé, il n'y avait pas de ChatGPT aussi puissant. C'est toi qui étais mon ChatGPT. La tête baissée, le couteau entre les dents. Avec Raph, on se sent en sécurité.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar">MA</div>
-      <div>
-        <div class="testimonial-name">Miguel Alain</div>
-        <div class="testimonial-title">Kinésiologue &middot; Entrepreneur</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      Ça fait trois ans que j'ai pas arrêté et que j'ai pas pris de vacances. Je suis vide, vide, vide. Il a traité 6242 courriels. Presque 700 drafts. 48 heures de meeting. En semaine, je sauve 4 à 5 heures direct. Dès que je reçois un courriel, il me propose déjà quelque chose. Tout ce que j'ai à faire, c'est changer un mot et envoyer.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/pierre-olivier-drouin.png" alt="Pierre-Olivier Drouin" /></div>
-      <div>
-        <div class="testimonial-name">Pierre-Olivier Drouin</div>
-        <div class="testimonial-title">Entrepreneur</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      Si t'hésites à passer à l'action avec Raph, c'est sûrement que t'es super occupé. Si tu es très occupé, c'est la raison pour laquelle tu devrais le rencontrer. J'utilisais Notion comme un enfant de 4 ans dans un bac à sable, c'est-à-dire à peu près tout croche. Aujourd'hui, je sauve énormément de temps et de stress.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar">CM</div>
-      <div>
-        <div class="testimonial-name">Carl Moreau</div>
-        <div class="testimonial-title">Entrepreneur &middot; CRM & Notion</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      T'es arrivé un matin et tu l'avais fait de nuit. C'était comme une surprise. Les boys, le site est plus rapide. On a augmenté notre taux de conversion, notre recurring. C'est vraiment pas confortable travailler avec toi des fois. Par contre, je le sais que ça va amener du positif. Tu nous dis les vraies choses, puis après ça, on n'a pas le choix.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/william-burgess.png" alt="William Burgess" /></div>
-      <div>
-        <div class="testimonial-name"><a href="https://www.linkedin.com/in/william-burgess-3a0687a7/" target="_blank" rel="noopener">William Burgess</a></div>
-        <div class="testimonial-title">Co-fondateur, Monsieur Chalets</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      Il est pas là à juste essayer d'être gentil pour garder un mandat à long terme. Il est là pour faire des changements positifs dans ta business. C'est extrêmement underrated. Je me sentais pas comme si j'achetais quelque chose dont j'étais dépendant après. Je buildais mes skills au travers de tout ça.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar">OP</div>
-      <div>
-        <div class="testimonial-name">Oli Pharand</div>
-        <div class="testimonial-title">Entrepreneur &middot; Entreprise de services</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      On est parti d'avoir peur, à avoir des résultats positifs. On aurait juste été content si les gens pensaient à nous en recevant le texto. Mais non, les gens répondaient. Ils venaient. Je sais pas quand est-ce que tu dors, mais tu roules. Il n'y a pas un dollar investi ailleurs que tu vas avoir un meilleur retour.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/emmanuel-ouellet.png" alt="Emanuel Ouellet Lapointe" /></div>
-      <div>
-        <div class="testimonial-name">Emanuel « Mani » Ouellet Lapointe</div>
-        <div class="testimonial-title">Restaurateur &middot; Pour de Vrai</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      Je sais c'est quoi l'énergie que tu mets dans tes projets. On a fait des ajustements, simplifié le message, ajouté une offre. On a vraiment vécu une montée rapide de nos abonnés. Les gens venaient à la caisse et nous en parlaient. T'es disponible, t'es présent. On a eu un service vraiment adapté à notre réalité.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar">NP</div>
-      <div>
-        <div class="testimonial-name">Noémie Paleta</div>
-        <div class="testimonial-title">Propriétaire, Café No Paleta &middot; Farmzz</div>
-      </div>
     </div>
   </div>
 </div>
