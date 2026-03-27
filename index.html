@@ -212,8 +212,10 @@
       margin-bottom: 48px;
       font-size: 0.9rem;
       color: var(--fg);
-      padding: 12px 16px;
+      padding: 16px 20px;
       border-left: 3px solid var(--fg);
+      background: var(--bg-alt, rgba(0,0,0,0.03));
+      border-radius: 0 8px 8px 0;
     }
 
     .hero-label {
@@ -516,32 +518,42 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .testimonial-single {
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       max-width: 1200px;
       margin: 0 auto;
-      padding: 64px 24px;
-      border-bottom: 1px solid var(--border);
     }
 
-    .testimonial-single:last-child { border-bottom: none; }
+    .testimonial-single {
+      padding: 32px 24px;
+      border-bottom: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+    }
+
+    .testimonial-single:nth-child(3n) { border-right: none; }
+
+    .testimonial-quote .red, .aigeeks-testimonial blockquote .red {
+      color: #e53e3e;
+      font-weight: 700;
+    }
 
     .testimonial-quote {
-      font-size: clamp(1.25rem, 2vw, 1.75rem);
-      line-height: 1.5;
+      font-size: 0.95rem;
+      line-height: 1.6;
       color: var(--fg);
-      margin-bottom: 32px;
+      margin-bottom: 24px;
       font-weight: 400;
       letter-spacing: -0.01em;
-      max-width: 800px;
     }
 
     .testimonial-quote::before {
       content: '\201C';
       display: block;
-      font-size: 3rem;
+      font-size: 2rem;
       line-height: 1;
       color: var(--fg-muted);
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     .testimonial-attribution {
@@ -551,8 +563,8 @@
     }
 
     .testimonial-avatar {
-      width: 88px;
-      height: 88px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
       background: var(--bg-muted);
       display: flex;
@@ -573,13 +585,32 @@
 
     .testimonial-name {
       font-weight: 600;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
 
     .testimonial-title {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: var(--fg-muted);
       margin-top: 1px;
+    }
+
+    .testimonial-title a {
+      color: var(--fg-muted);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .testimonial-title a:hover {
+      color: var(--fg);
+    }
+
+    @media (max-width: 768px) {
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+      .testimonial-single {
+        border-right: none !important;
+      }
     }
 
     /* ── CREDENTIALS ── */
@@ -816,6 +847,21 @@
 
     .event-card:hover { transform: translateY(-4px); }
 
+    .event-card .sold-out {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: #e53e3e;
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      z-index: 1;
+    }
+
     .event-card img {
       width: 100%;
       height: 100%;
@@ -857,6 +903,54 @@
       margin-bottom: 2px;
     }
 
+    .aigeeks-logos {
+      padding: 48px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .aigeeks-logos-label {
+      font-size: 0.75rem;
+      color: var(--fg-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .aigeeks-logos-grid {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 28px 20px;
+      align-items: center;
+      justify-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .aigeeks-logos-grid img {
+      max-height: 20px;
+      max-width: 100px;
+      width: auto;
+      object-fit: contain;
+      opacity: 0.45;
+      filter: grayscale(100%) brightness(0.3);
+    }
+
+    .aigeeks-photos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4px;
+      padding-top: 48px;
+      border-top: 1px solid var(--border);
+    }
+
+    .aigeeks-photos img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
     .aigeeks-cta {
       text-align: center;
       padding: 48px 0 80px;
@@ -873,6 +967,7 @@
       .aigeeks-stats { gap: 24px; }
       .event-grid { grid-template-columns: repeat(2, 1fr); }
       .aigeeks-testimonials { grid-template-columns: 1fr; }
+      .aigeeks-photos { grid-template-columns: repeat(2, 1fr); }
     }
 
     /* ── FOOTER ── */
@@ -1119,11 +1214,11 @@
     <div class="hero-label">Creative &middot; Code &middot; Sales &middot; AI-First Systems Architect</div>
     <h1>I <u>built</u>, <u>scaled</u> and <u>sold</u> before talking about it.</h1>
     <p class="hero-description">
-      I design, code and sell. I left Monsieur Chalets after rebuilding the tech from scratch, migrating <u>800+ properties</u> and <u>2x-ing revenue</u>. Today I'm building Farmzz and helping entrepreneurs <u>systemize</u> their operations, go AI-first and build leverage to reach the highest summit.
+      I rebuilt Monsieur Chalets' tech from scratch — <u>800+ properties</u> migrated, <u>2.5x revenue</u>. Today I'm building Farmzz and helping entrepreneurs <u>systemize</u>, go AI-first and build leverage.
     </p>
     <p class="hero-warning">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;flex-shrink:0"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-      I work with ambitious individuals who want to move fast. This isn't for everyone.
+      <span>I work with ambitious individuals who want to move fast. This <strong>isn't for everyone</strong>.</span>
     </p>
     <blockquote class="hero-quote">
       "His work ethic and discipline, 100%. The first year, 2.5x sales just from site speed."
@@ -1217,26 +1312,27 @@
 <div id="testimonials" class="testimonials-section">
   <div class="section" style="padding-bottom: 0;">
     <div class="section-label">Testimonials</div>
-    <h2 class="section-heading">What they say.</h2>
+    <h2 class="section-heading">24 testimonials. What they say.</h2>
     <p class="section-lead">Real words from real people I've worked with.</p>
   </div>
 
+  <div class="testimonials-grid">
   <div class="testimonial-single reveal">
     <div class="testimonial-quote">
-      Raph, we're going bankrupt. Literally, I don't know what to do anymore. I hired you on the spot, gave you my trust, gave you carte blanche. The first year, it was 2.5x sales just from the site speed. Your work discipline and work ethic. 100%.
+      Raph, we're <strong class="red">going bankrupt</strong>. Literally, I don't know what to do anymore. I hired you on the spot, gave you my trust, gave you <strong>carte blanche</strong>. The first year, it was <strong>2.5x sales</strong> just from the site speed. Your work discipline and work ethic. <strong>100%</strong>.
     </div>
     <div class="testimonial-attribution">
       <div class="testimonial-avatar"><img src="assets/photos/william-burgess.jpg" alt="William Burgess" /></div>
       <div>
         <div class="testimonial-name"><a href="https://www.linkedin.com/in/william-burgess-3a0687a7/" target="_blank" rel="noopener">William Burgess</a></div>
-        <div class="testimonial-title">Co-founder, Monsieur Chalets &middot; 800+ chalets</div>
+        <div class="testimonial-title">Co-founder, <a href="https://monsieurchalets.com/" target="_blank" rel="noopener">Monsieur Chalets</a> &middot; 800+ chalets</div>
       </div>
     </div>
   </div>
 
   <div class="testimonial-single reveal">
     <div class="testimonial-quote">
-      I used to go to bed and couldn't sleep. It felt like there were 25 paths, and 24 of them were wrong. It was just stressful. Today? Our profit went from 50% to 75%. The biggest impact was when I came home and could actually relax.
+      I used to go to bed and <strong class="red">couldn't sleep</strong>. It felt like there were 25 paths, and 24 of them were wrong. It was just stressful. Today? Our profit went from <strong class="red">50% to 75%</strong>. The biggest impact was when I came home and could actually <strong>relax</strong>.
     </div>
     <div class="testimonial-attribution">
       <div class="testimonial-avatar"><img src="assets/photos/oli-pharand.jpg" alt="Oli Pharand" /></div>
@@ -1249,72 +1345,72 @@
 
   <div class="testimonial-single reveal">
     <div class="testimonial-quote">
-      What really convinced me was when you asked: is your problem acquisition or retention? Nobody had ever asked me that. You became more than someone offering a service, you approached it like you were my partner. The best $1000 you'll ever spend.
+      What really convinced me was when you asked: is your problem acquisition or retention? <strong class="red">Nobody had ever asked me that</strong>. You became more than someone offering a service, you approached it like you were <strong>my partner</strong>. The <strong>best $1000</strong> you'll ever spend.
     </div>
     <div class="testimonial-attribution">
       <div class="testimonial-avatar"><img src="assets/photos/emmanuel-ouellet.png" alt="Emanuel Ouellet Lapointe" /></div>
       <div>
         <div class="testimonial-name">Emanuel « Mani » Ouellet Lapointe</div>
-        <div class="testimonial-title">Restaurant owner &middot; Pour de Vrai</div>
+        <div class="testimonial-title">Restaurant owner &middot; <a href="https://share.google/bJ7hul6ON4wCaj1LG" target="_blank" rel="noopener">Taza Flores</a> &middot; Pour de Vrai</div>
       </div>
     </div>
   </div>
 
   <div class="testimonial-single reveal">
     <div class="testimonial-quote">
-      When something came out of your mouth, it wasn't up for debate. You do your due diligence, you're so all-in. You were my source of information for everything. When we started working together, there was no ChatGPT that powerful. You were my ChatGPT. Head down, knife between his teeth. With Raph, you feel safe.
+      When something came out of your mouth, <strong>it wasn't up for debate</strong>. You do your due diligence, <strong class="red">you're so all-in</strong>. You were my source of information for everything. When we started working together, there was no ChatGPT that powerful. You were my ChatGPT. Head down, knife between his teeth. With Raph, <strong>you feel safe</strong>.
     </div>
     <div class="testimonial-attribution">
       <div class="testimonial-avatar"><img src="assets/photos/miguel-alain.jpg" alt="Miguel Alain" /></div>
       <div>
         <div class="testimonial-name"><a href="https://amorcekinesiologie.com/" target="_blank" rel="noopener">Miguel Alain</a></div>
-        <div class="testimonial-title">Founder, Amorce</div>
+        <div class="testimonial-title">Founder, <a href="https://amorcekinesiologie.com/" target="_blank" rel="noopener">Amorce</a></div>
       </div>
     </div>
   </div>
 
   <div class="testimonial-single reveal">
     <div class="testimonial-quote">
-      I haven't stopped in three years. No vacations. I'm empty, empty, empty. He processed 6,242 emails. Almost 700 drafts. 48 hours of meetings. During the week, I save 4 to 5 hours straight. As soon as I get an email, he's already suggesting something. All I have to do is change a word and send.
+      I haven't stopped in three years. No vacations. I'm <strong class="red">empty, empty, empty</strong>. He processed <strong>6,242 emails</strong>. Almost 700 drafts. 48 hours of meetings. With the solution Raph set up for my emails, I <strong>save 4 to 5 hours per week</strong>. As soon as I get an email, he's already suggesting something. All I have to do is change a word and send.
     </div>
     <div class="testimonial-attribution">
       <div class="testimonial-avatar"><img src="assets/photos/pierre-olivier-drouin.png" alt="Pierre-Olivier Drouin" /></div>
       <div>
         <div class="testimonial-name"><a href="https://firebarns.com/" target="_blank">Pierre-Olivier Drouin</a></div>
-        <div class="testimonial-title">Owner, Firebarns</div>
+        <div class="testimonial-title">Owner, <a href="https://firebarns.com/" target="_blank" rel="noopener">Firebarns</a></div>
       </div>
     </div>
   </div>
 
   <div class="testimonial-single reveal">
     <div class="testimonial-quote">
-      If you're hesitating to take action with Raph, it's probably because you're super busy. If you're very busy, that's exactly why you should meet him. I was using Notion like a 4-year-old in a sandbox, meaning all over the place. Today, I save a ton of time and stress.
+      If you're hesitating to take action with Raph, it's probably because you're super busy. If you're very busy, <strong>that's exactly why you should meet him</strong>. I was using Notion like a 4-year-old in a sandbox, meaning all over the place. Today, I save a <strong class="red">ton of time and stress</strong>.
     </div>
     <div class="testimonial-attribution">
       <div class="testimonial-avatar"><img src="assets/photos/carl-moreau.jpg" alt="Carl Moreau" /></div>
       <div>
         <div class="testimonial-name">Carl Moreau</div>
-        <div class="testimonial-title">Entrepreneur &middot; CRM & Notion</div>
+        <div class="testimonial-title">Entrepreneur &middot; <a href="https://www.instagram.com/gorilomarketing" target="_blank" rel="noopener">Gorilo Marketing</a></div>
       </div>
     </div>
   </div>
 
   <div class="testimonial-single reveal">
     <div class="testimonial-quote">
-      You showed up one morning and you'd done it overnight. Like a surprise. "Boys, the site is faster." We increased our conversion rate, our recurring revenue. It's really not comfortable working with you sometimes. But I know it's going to bring something positive. You tell us the real things, and then we have no choice.
+      You showed up one morning and you'd done it overnight. Like a surprise. "Boys, the site is faster." We increased our <strong>conversion rate</strong>, our recurring revenue. It's really not comfortable working with you sometimes. But I know it's going to bring something positive. You tell us <strong class="red">the real things</strong>, and then we have no choice.
     </div>
     <div class="testimonial-attribution">
       <div class="testimonial-avatar"><img src="assets/photos/william-burgess.jpg" alt="William Burgess" /></div>
       <div>
         <div class="testimonial-name"><a href="https://www.linkedin.com/in/william-burgess-3a0687a7/" target="_blank" rel="noopener">William Burgess</a></div>
-        <div class="testimonial-title">Co-founder, Monsieur Chalets</div>
+        <div class="testimonial-title">Co-founder, <a href="https://monsieurchalets.com/" target="_blank" rel="noopener">Monsieur Chalets</a></div>
       </div>
     </div>
   </div>
 
   <div class="testimonial-single reveal">
     <div class="testimonial-quote">
-      He's not there just trying to be nice to keep a long-term contract. He's there to make real positive changes in your business. That's extremely underrated. I didn't feel like I was buying something I'd be dependent on. I was building my own skills through the whole process.
+      He's <strong class="red">not there just trying to be nice</strong> to keep a long-term contract. He's there to make real <strong>positive changes</strong> in your business. That's extremely underrated. I didn't feel like I was buying something I'd be dependent on. I was <strong>building my own skills</strong> through the whole process.
     </div>
     <div class="testimonial-attribution">
       <div class="testimonial-avatar"><img src="assets/photos/oli-pharand.jpg" alt="Oli Pharand" /></div>
@@ -1327,67 +1423,92 @@
 
   <div class="testimonial-single reveal">
     <div class="testimonial-quote">
-      We went from being scared to getting positive results. We would've been happy if people just thought of us when they got the text. But no, people were responding. They were coming in. I don't know when you sleep, but you're on it. There's not a single dollar spent elsewhere that'll give you a better return.
+      We went from <strong class="red">being scared</strong> to getting positive results. We would've been happy if people just thought of us when they got the text. But no, people were responding. They were coming in. I don't know when you sleep, but you're on it. There's not a single dollar spent elsewhere that'll give you a <strong>better return</strong>.
     </div>
     <div class="testimonial-attribution">
       <div class="testimonial-avatar"><img src="assets/photos/emmanuel-ouellet.png" alt="Emanuel Ouellet Lapointe" /></div>
       <div>
         <div class="testimonial-name">Emanuel « Mani » Ouellet Lapointe</div>
-        <div class="testimonial-title">Restaurant owner &middot; Pour de Vrai</div>
+        <div class="testimonial-title">Restaurant owner &middot; <a href="https://share.google/bJ7hul6ON4wCaj1LG" target="_blank" rel="noopener">Taza Flores</a> &middot; Pour de Vrai</div>
       </div>
     </div>
   </div>
 
   <div class="testimonial-single reveal">
     <div class="testimonial-quote">
-      I know the kind of energy you put into your projects. We made adjustments, simplified the message, added an offer. We saw a rapid increase in subscribers. People came to the counter talking about it. You're available, you're present. We got a service truly adapted to our reality.
+      I know the kind of <strong class="red">energy you put into your projects</strong>. We made adjustments, simplified the message, added an offer. We saw a <strong>rapid increase</strong> in subscribers. People came to the counter talking about it. You're available, you're present. We got a service <strong>truly adapted to our reality</strong>.
     </div>
     <div class="testimonial-attribution">
       <div class="testimonial-avatar"><img src="assets/photos/noemie-paleta.jpeg" alt="Noémie Paleta" /></div>
       <div>
         <div class="testimonial-name">Noémie Paleta</div>
-        <div class="testimonial-title">Owner, Café No Paleta &middot; Farmzz</div>
+        <div class="testimonial-title">Owner, <a href="https://www.paleta.ca/" target="_blank" rel="noopener">Café Paleta</a> &middot; <a href="https://farmzz.com/" target="_blank" rel="noopener">Farmzz</a></div>
       </div>
     </div>
   </div>
 
   <div class="testimonial-single reveal">
     <div class="testimonial-quote">
-      Texting is a way to reach customers fast. The open rate is about 99%. I quickly saw clients come buy thanks to a text I sent through Farmzz. One of my clients told me "it's because I got your text" — and placed an order of at least $150.
+      Texting is a way to reach customers fast. The open rate is about <strong>99%</strong>. I <strong class="red">quickly saw clients come buy thanks to</strong> a text I sent through Farmzz. One of my clients told me "it's because I got your text" — and placed an <strong>order of at least $150</strong>.
     </div>
     <div class="testimonial-attribution">
       <div class="testimonial-avatar"><img src="assets/photos/emilie-turcotte.jpg" alt="Émilie Turcotte" /></div>
       <div>
         <div class="testimonial-name">Émilie Turcotte</div>
-        <div class="testimonial-title">Agricultural Producer &middot; Farmzz</div>
+        <div class="testimonial-title">Agricultural Producer &middot; <a href="https://farmzz.com/" target="_blank" rel="noopener">Farmzz</a></div>
       </div>
     </div>
   </div>
 
   <div class="testimonial-single reveal">
     <div class="testimonial-quote">
-      What you taught me is to think in systems. Whenever you do something, there should be a system that can replace you or make you better. I recovered so much time that every time now I want to think in systems. You free up time in your schedule and you think: ok my God, more time, more money.
+      What you taught me is to <strong>think in systems</strong>. Whenever you do something, there should be a system that can replace you or make you better. <strong class="red">I recovered so much time</strong> that every time now I want to think in systems. You free up time in your schedule and you think: ok my God, <strong>more time, more money</strong>.
     </div>
     <div class="testimonial-attribution">
       <div class="testimonial-avatar"><img src="assets/photos/miguel-alain.jpg" alt="Miguel Alain" /></div>
       <div>
         <div class="testimonial-name"><a href="https://amorcekinesiologie.com/" target="_blank" rel="noopener">Miguel Alain</a></div>
-        <div class="testimonial-title">Founder, Amorce</div>
+        <div class="testimonial-title">Founder, <a href="https://amorcekinesiologie.com/" target="_blank" rel="noopener">Amorce</a></div>
       </div>
     </div>
   </div>
 
   <div class="testimonial-single reveal">
     <div class="testimonial-quote">
-      It was chaos. We could see numbers but didn't understand our numbers. It was a mix of Excel, Trello and a bunch of tools together. Honestly, it was hell. Raph didn't try to sell anything. He just looked at everything I had in my systems. When I finished the call, I realized he was truly there to help me get clarity.
+      It was <strong class="red">chaos</strong>. We could see numbers but didn't understand our numbers. It was a mix of Excel, Trello and a bunch of tools together. Honestly, it was hell. Raph didn't try to sell anything. He just looked at everything I had in my systems. When I finished the call, I realized he was truly there to help me get <strong>clarity</strong>.
     </div>
     <div class="testimonial-attribution">
       <div class="testimonial-avatar"><img src="assets/photos/oli-pharand.jpg" alt="Oli Pharand" /></div>
       <div>
         <div class="testimonial-name">Oli Pharand</div>
-        <div class="testimonial-title">Entrepreneur &middot; Service Business</div>
+        <div class="testimonial-title">Entrepreneur &middot; <a href="https://www.instagram.com/opsell.ca/" target="_blank" rel="noopener">Opsell</a></div>
       </div>
     </div>
+  </div>
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      Before working with Raph, our agency was facing several bottlenecks that were massively slowing down our client onboarding. Our internal structure wasn't optimal and video approvals were quickly becoming complex for clients. <strong class="red">Raph didn't just add automations</strong>. We took the time together to identify the real problems, the friction points and the inefficiencies in our process. Most importantly, he taught me how to use Claude Code, which now allows me to <strong>solve my own problems</strong> without depending on anyone else. <strong class="red">It's a skill that will serve me for the rest of my life</strong>. Honestly, it's impressive to see everything that just <strong>4 hours of consulting</strong> were able to transform in my business.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/evan-arcand.jpg" alt="Evan Arcand" /></div>
+      <div>
+        <div class="testimonial-name"><a href="https://axiomedia.ca/" target="_blank" rel="noopener">Evan Arcand</a></div>
+        <div class="testimonial-title">Founder, <a href="https://axiomedia.ca/" target="_blank" rel="noopener">Axiomedia</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      Claude Code is <strong>magical</strong>. Raph taught me how to use it and <strong class="red">it changed everything</strong>. I recommended it to a lead of mine who needed automations with Airtable. The tech guy wasn't available, her projects were behind. I told her: have you thought about using Claude? One hour later, she texts me: I'm done with my automations, <strong>I don't even need that person anymore</strong>. I'm building a portal for employees and clients myself with Supabase and Hostinger. We've really entered <strong>another world</strong>.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/gael-mercier.png" alt="Gaël Mercier" /></div>
+      <div>
+        <div class="testimonial-name"><a href="https://www.linkedin.com/in/merciergael/" target="_blank" rel="noopener">Gaël Mercier</a></div>
+        <div class="testimonial-title">COO, <a href="https://www.lesgmstudios.com/" target="_blank" rel="noopener">GM Studios</a></div>
+      </div>
+    </div>
+  </div>
   </div>
 </div>
 
@@ -1422,56 +1543,98 @@
 
     <div class="event-grid">
       <a href="https://luma.com/aqnxoqhq" target="_blank" rel="noopener" class="event-card">
+        <span class="sold-out">Sold out</span>
         <img src="assets/events/aigeeks-1.png" alt="AI Geeks Edition #1" loading="lazy" />
       </a>
       <a href="https://luma.com/ue3ngs6g" target="_blank" rel="noopener" class="event-card">
+        <span class="sold-out">Sold out</span>
         <img src="assets/events/aigeeks-2.png" alt="AI Geeks Edition #2" loading="lazy" />
       </a>
       <a href="https://luma.com/ntlh786m" target="_blank" rel="noopener" class="event-card">
+        <span class="sold-out">Sold out</span>
         <img src="assets/events/aigeeks-3.png" alt="AI Geeks Edition #3" loading="lazy" />
       </a>
       <a href="https://luma.com/914u2we6" target="_blank" rel="noopener" class="event-card">
+        <span class="sold-out">Sold out</span>
         <img src="assets/events/aigeeks-4.png" alt="AI Geeks Edition #4" loading="lazy" />
       </a>
     </div>
 
     <div class="aigeeks-testimonials">
       <div class="aigeeks-testimonial reveal">
-        <blockquote>I learned more in one evening at AI Geeks than in 4 trainings elsewhere. One single conference was more relevant than all those full days. I'd heard about Claude Code all week, installed everything, it wasn't working, I was at "fuck this." Then I was there that same evening and it all clicked. It's the quality of people. People who are sharp. That's the real value.</blockquote>
+        <blockquote>I <strong>learned more in one evening</strong> at AI Geeks than in 4 trainings elsewhere. One single conference was more relevant than all those full days. I'd heard about Claude Code all week, installed everything, it wasn't working, I was at "fuck this." Then I was there that same evening and <strong>it all clicked</strong>. It's the quality of people. People who are sharp. That's the <strong>real value</strong>.</blockquote>
         <cite><strong>Gabriel Gouveia</strong>CEO, Lasclay.com</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
-        <blockquote>It's impressive to see how we're redefining the rules of what we've always known and done. That kind of shift is huge. Most people use AI in copy-paste mode. The next step is when your computer takes control and executes for you. Big crowd, filled with amazing people, all eager to learn more and most importantly, to execute.</blockquote>
+        <blockquote>It's impressive to see how we're <strong>redefining the rules</strong> of what we've always known and done. That kind of shift is huge. Most people use AI in copy-paste mode. The next step is when your computer <strong>takes control and executes</strong> for you. Big crowd, filled with amazing people, all eager to learn more and most importantly, to execute.</blockquote>
         <cite><strong>Stéphanie Bédard</strong>Fractional CMO</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
-        <blockquote>Tangible! Real! A packed full house of 70 people watching presentations on concrete use cases. Anthony B. with his cabin retreat that produced tools in 3 hours, Francois Lanthier Nadeau who created a newsletter live without touching his keyboard… Excellent event organization.</blockquote>
+        <blockquote><strong>Tangible! Real!</strong> A packed full house of 70 people watching presentations on <strong>concrete use cases</strong>. Anthony B. with his cabin retreat that produced tools in 3 hours, Francois Lanthier Nadeau who created a newsletter live without touching his keyboard… Excellent event organization.</blockquote>
         <cite><strong>Francis Laplante</strong>CEO, Spektrum</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
-        <blockquote>Before Raphaël started this, Quebec really had nothing. Now, 55 people sign up, everything sells out in four days. The difference: people who actually build share real use cases, concrete demos. This is where Quebec's AI community gathers. If you're shipping something with AI, you need to be in this room.</blockquote>
+        <blockquote>Before Raphaël started this, Quebec really had nothing. Now, 55 people sign up, <strong>everything sells out in four days</strong>. The difference: people who actually build share real use cases, concrete demos. This is where Quebec's AI community gathers. If you're shipping something with AI, <strong>you need to be in this room</strong>.</blockquote>
         <cite><strong>Jacomo Deschatelets</strong>Founder, Instrumnt</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
-        <blockquote>For founders by founders — I love the approach (while remaining super accessible for non-founders like me). Wow. I had zero expectations and I LOVED IT! It was accessible, unpretentious, and super welcoming.</blockquote>
+        <blockquote>For founders by founders — I love the approach (while remaining super accessible for non-founders like me). Wow. I had <strong>zero expectations</strong> and <strong>I LOVED IT!</strong> It was accessible, unpretentious, and super welcoming.</blockquote>
         <cite><strong>Rosalie Simard, MBA</strong>Venture Capital @ Investissement Québec · VP @ Capitale Numérique</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
-        <blockquote>Two editions, and each time I leave with concrete ideas we can apply the very next day in our operations. It's the kind of event where the value comes as much from the conversations as from the presentations.</blockquote>
+        <blockquote>Two editions, and each time I leave with <strong>concrete ideas</strong> we can apply <strong>the very next day</strong> in our operations. It's the kind of event where the value comes as much from the conversations as from the presentations.</blockquote>
         <cite><strong>Rosalie Breton</strong>VP of Operations, iFinance</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
-        <blockquote>What surprised me most was how much AI and the presented cases have advanced since the previous edition. Capabilities have evolved enormously and we got access to use cases that show new features can truly apply in a business context. I can't wait for the next one!</blockquote>
+        <blockquote>What surprised me most was how much AI and the presented cases have advanced since the previous edition. Capabilities have <strong>evolved enormously</strong> and we got access to use cases that show new features can truly apply in a business context. <strong>I can't wait for the next one!</strong></blockquote>
         <cite><strong>Daphné Croteau</strong>Customer Experience & Process Optimization Expert</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
-        <blockquote>It's insane what you're building, honestly.</blockquote>
+        <blockquote>It's <strong>insane</strong> what you're building, honestly.</blockquote>
         <cite><strong>William Topaczewski</strong>Founding Account Executive, Glowtify</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
-        <blockquote>We're using the AI Geeks evening as a launchpad for Homard Cloud. At Spektrum, it's always been in our DNA: launching projects, encouraging entrepreneurship.</blockquote>
+        <blockquote>We're using the AI Geeks evening as a <strong>launchpad</strong> for Homard Cloud. At Spektrum, it's always been in our DNA: <strong>launching projects</strong>, encouraging entrepreneurship.</blockquote>
         <cite><strong>Sébastien Lemieux</strong>CEO, Spektrum</cite>
       </div>
+    </div>
+
+    <div class="aigeeks-logos reveal">
+      <div class="aigeeks-logos-label">They trusted us</div>
+      <div class="aigeeks-logos-grid">
+        <img src="assets/logos/aigeeks/saaspasse.png" alt="SaaSpasse" />
+        <img src="assets/logos/aigeeks/farmzz.svg" alt="Farmzz" />
+        <img src="assets/logos/aigeeks/spektrum.svg" alt="Spektrum" />
+        <img src="assets/logos/aigeeks/fourwaves.png" alt="Fourwaves" />
+        <img src="assets/logos/aigeeks/bnkr.svg" alt="BNKR" />
+        <img src="assets/logos/aigeeks/frontleap.svg" alt="Frontleap" />
+        <img src="assets/logos/aigeeks/lightbeans.svg" alt="Lightbeans" />
+        <img src="assets/logos/aigeeks/wifiquebec.png" alt="WiFi Québec" />
+        <img src="assets/logos/aigeeks/monsieurchalets.svg" alt="Monsieur Chalets" />
+        <img src="assets/logos/aigeeks/ccube.svg" alt="CCube" style="max-height:28px" />
+        <img src="assets/logos/aigeeks/instrumnt.svg" alt="Instrumnt" style="max-height:28px" />
+        <img src="assets/logos/aigeeks/elia.svg" alt="Elia" />
+        <img src="assets/logos/aigeeks/lasclay.png" alt="Lasclay" />
+        <img src="assets/logos/aigeeks/amorce.png" alt="Amorce" style="max-height:28px" />
+        <img src="assets/logos/aigeeks/gmstudios.svg" alt="GM Studios" />
+        <img src="assets/logos/aigeeks/propulsionsport.svg" alt="Propulsion Sport" />
+        <img src="assets/logos/aigeeks/sosmissdolittle.svg" alt="SOS Miss Dolittle" style="max-height:28px" />
+        <img src="assets/logos/aigeeks/glowtify.png" alt="Glowtify" />
+        <img src="assets/logos/aigeeks/iceberg.png" alt="Iceberg Finance" />
+        <img src="assets/logos/aigeeks/rally.png" alt="Rally" />
+        <img src="assets/logos/aigeeks/baseline.svg" alt="Baseline AI" />
+        <img src="assets/logos/aigeeks/gilcode.svg" alt="Gilcode" />
+        <img src="assets/logos/aigeeks/axelr.svg" alt="AXLR" />
+        <img src="assets/logos/aigeeks/adopto.png" alt="Adopto" />
+        <img src="assets/logos/aigeeks/xseek.webp" alt="xSeek" style="max-height:28px" />
+      </div>
+    </div>
+
+    <div class="aigeeks-photos reveal">
+      <img src="assets/photos/speaking.jpg" alt="AI Geeks conference" loading="lazy" />
+      <img src="assets/photos/event-smile.jpg" alt="AI Geeks participants" loading="lazy" />
+      <img src="assets/photos/meeting.jpg" alt="AI Geeks networking" loading="lazy" />
+      <img src="assets/photos/consulting.jpg" alt="AI Geeks collaboration" loading="lazy" />
     </div>
 
     <div class="aigeeks-cta">
