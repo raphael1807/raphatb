@@ -291,6 +291,28 @@
       display: block;
     }
 
+    .hero-cta-photo {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #e53e3e;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: -0.01em;
+      box-shadow: 0 4px 20px rgba(229,62,62,0.4);
+      transition: background 0.2s, transform 0.2s;
+      white-space: nowrap;
+    }
+    .hero-cta-photo:hover {
+      background: #c53030;
+      transform: translateX(-50%) scale(1.03);
+    }
+
     /* ── LOGO BAR ── */
     .logo-bar {
       border-top: 1px solid var(--border);
@@ -1192,11 +1214,11 @@
     <span class="nav-name">raphatb</span>
     <ul class="nav-links" id="nav-links">
       <li><a href="#story">Story</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#testimonials">Testimonials (25)</a></li>
       <li><a href="#credentials">Credentials</a></li>
     </ul>
     <div class="nav-right">
-      <a href="https://www.linkedin.com/in/raphatb/" target="_blank" rel="noopener" class="nav-cta">Contact</a>
+      <a href="#testimonials" class="nav-cta">See Results</a>
       <a href="fr.html" class="nav-lang">FR</a>
     </div>
     <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
@@ -1253,6 +1275,7 @@
   </div>
   <div class="hero-image">
     <img src="assets/photos/hero.jpg" alt="Raphael Tremblay-Bouchard" />
+    <a href="#testimonials" class="hero-cta-photo">See the results I've delivered ↓</a>
   </div>
 </section>
 
@@ -1312,7 +1335,7 @@
 <div id="testimonials" class="testimonials-section">
   <div class="section" style="padding-bottom: 0;">
     <div class="section-label">Testimonials</div>
-    <h2 class="section-heading">24 testimonials. What they say.</h2>
+    <h2 class="section-heading">25 testimonials. What they say.</h2>
     <p class="section-lead">Real words from real people I've worked with.</p>
   </div>
 
@@ -1506,6 +1529,18 @@
       <div>
         <div class="testimonial-name"><a href="https://www.linkedin.com/in/merciergael/" target="_blank" rel="noopener">Gaël Mercier</a></div>
         <div class="testimonial-title">COO, <a href="https://www.lesgmstudios.com/" target="_blank" rel="noopener">GM Studios</a></div>
+      </div>
+    </div>
+  </div>
+  <div class="testimonial-single reveal">
+    <div class="testimonial-quote">
+      I've known Raph for <strong>over 16 years</strong>. He's like a car with <strong class="red">no brakes</strong>. When he commits to something, he goes all the way. It's rare to find someone with that kind of <strong>drive</strong>. He helped me <strong>get on the map</strong>, <strong>learn by doing</strong> and <strong>automate what I do</strong>.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/nicolas-nihezagire.png" alt="Nicolas R Nihezagire" /></div>
+      <div>
+        <div class="testimonial-name">Nicolas R Nihezagire</div>
+        <div class="testimonial-title">SME Acquirer &middot; Nomad Capital &middot; Ex-PwC M&amp;A &middot; Tiny Capital</div>
       </div>
     </div>
   </div>
