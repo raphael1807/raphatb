@@ -992,6 +992,64 @@
       .aigeeks-photos { grid-template-columns: repeat(2, 1fr); }
     }
 
+    /* ── CONTACT ── */
+    .contact-section {
+      padding: 80px 24px;
+      background: var(--bg-alt, #fafafa);
+    }
+    .contact-inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .contact-inner h2 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      letter-spacing: -0.03em;
+    }
+    .contact-inner p {
+      color: var(--fg-muted);
+      margin-bottom: 32px;
+      font-size: 0.95rem;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      background: var(--bg);
+      color: var(--fg);
+      resize: vertical;
+      box-sizing: border-box;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--fg);
+    }
+    .contact-form button {
+      background: #e53e3e;
+      color: #fff;
+      border: none;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+      align-self: flex-start;
+    }
+    .contact-form button:hover {
+      background: #c53030;
+    }
+
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
@@ -1778,15 +1836,33 @@
   </div>
 </div>
 
+<!-- CONTACT -->
+<div id="contact" class="contact-section">
+  <div class="contact-inner reveal">
+    <h2>Get in touch</h2>
+    <p>A question, a project, an idea? Write to me.</p>
+    <form class="contact-form" action="https://formspree.io/f/raphatbventures@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="email" placeholder="Your email" required />
+      <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+      <button type="submit">Send →</button>
+    </form>
+  </div>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div class="footer-left">&copy; 2026 Raphael Tremblay-Bouchard</div>
+    <div class="footer-left">
+      <strong style="font-size: 0.95rem; color: var(--fg);">Raphael Tremblay-Bouchard</strong><br>
+      <span>&copy; 2026 — raphatb.com</span>
+    </div>
     <ul class="footer-links">
       <li><a href="https://www.instagram.com/raphatb/" target="_blank" rel="noopener">Instagram</a></li>
       <li><a href="https://www.linkedin.com/in/raphatb/" target="_blank" rel="noopener">LinkedIn</a></li>
       <li><a href="https://www.youtube.com/@raphatb" target="_blank" rel="noopener">YouTube</a></li>
       <li><a href="https://www.notion.com/@leverageos" target="_blank" rel="noopener">Notion</a></li>
+      <li><a href="mailto:raphatbventures@gmail.com">Email</a></li>
     </ul>
   </div>
 </footer>
