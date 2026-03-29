@@ -1005,43 +1005,21 @@
       margin-bottom: 32px;
       font-size: 0.95rem;
     }
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 14px 16px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-family: inherit;
-      font-size: 0.95rem;
-      background: var(--bg);
-      color: var(--fg);
-      resize: vertical;
-      box-sizing: border-box;
-    }
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      outline: none;
-      border-color: var(--fg);
-    }
-    .contact-form button {
+    .contact-mailto {
+      display: inline-block;
       background: #e53e3e;
       color: #fff;
-      border: none;
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-size: 1rem;
+      padding: 16px 32px;
+      border-radius: 10px;
+      font-size: 1.1rem;
       font-weight: 700;
-      cursor: pointer;
-      transition: background 0.2s;
-      align-self: flex-start;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 20px rgba(229,62,62,0.4);
     }
-    .contact-form button:hover {
+    .contact-mailto:hover {
       background: #c53030;
+      transform: scale(1.03);
     }
 
     /* ── FOOTER ── */
@@ -1835,12 +1813,7 @@
   <div class="contact-inner reveal">
     <h2>Me contacter</h2>
     <p>Une question, un projet, une idée? Écris-moi.</p>
-    <form class="contact-form" action="https://formspree.io/f/raphatbventures@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Ton nom" required />
-      <input type="email" name="email" placeholder="Ton courriel" required />
-      <textarea name="message" rows="5" placeholder="Ton message" required></textarea>
-      <button type="submit">Envoyer →</button>
-    </form>
+    <a href="mailto:raphatbventures@gmail.com?subject=Prise%20de%20contact%20%E2%80%94%20raphatb.com" class="contact-mailto">M'écrire un courriel →</a>
   </div>
 </div>
 
