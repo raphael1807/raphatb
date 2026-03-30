@@ -54,9 +54,10 @@
         --accent: #ededed;
       }
       :root:not([data-theme="light"]) .logo-bar-logos img,
+      :root:not([data-theme="light"]) .logo-item svg,
       :root:not([data-theme="light"]) .aigeeks-logos-grid img {
-        filter: grayscale(100%) brightness(1.8) !important;
-        opacity: 0.5 !important;
+        filter: grayscale(100%) invert(1) brightness(1.2) !important;
+        opacity: 0.7 !important;
       }
     }
 
@@ -73,9 +74,10 @@
       --accent: #ededed;
     }
     :root[data-theme="dark"] .logo-bar-logos img,
+    :root[data-theme="dark"] .logo-item svg,
     :root[data-theme="dark"] .aigeeks-logos-grid img {
-      filter: grayscale(100%) brightness(1.8) !important;
-      opacity: 0.5 !important;
+      filter: grayscale(100%) invert(1) brightness(1.2) !important;
+      opacity: 0.7 !important;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
