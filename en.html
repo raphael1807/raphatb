@@ -6,7 +6,7 @@
   <title>raphatb | Builder, Operator, AI-First Systems Architect</title>
 
   <meta property="og:title" content="raphatb | Builder, Operator, AI-First Systems Architect" />
-  <meta property="og:description" content="I built, scaled and sold before talking about it. Exit Monsieur Chalets. Founder Farmzz & AI Geeks. Notion Consulting Partner. Cloudflare Innovator." />
+  <meta property="og:description" content="I help you build, automate and sell faster. Exit Monsieur Chalets. Founder Farmzz & AI Geeks. Notion Consulting Partner. Cloudflare Innovator." />
   <meta property="og:image" content="https://raphatb.com/og-image.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://raphatb.com/en.html" />
@@ -55,8 +55,12 @@
       }
       :root:not([data-theme="light"]) .logo-bar-logos img,
       :root:not([data-theme="light"]) .logo-item svg,
-      :root:not([data-theme="light"]) .aigeeks-logos-grid img {
+      :root:not([data-theme="light"]) .hero-logos img {
         filter: grayscale(100%) invert(1) brightness(1.2) !important;
+        opacity: 0.7 !important;
+      }
+      :root:not([data-theme="light"]) .aigeeks-logos-grid img {
+        filter: brightness(0) invert(1) !important;
         opacity: 0.7 !important;
       }
     }
@@ -75,8 +79,12 @@
     }
     :root[data-theme="dark"] .logo-bar-logos img,
     :root[data-theme="dark"] .logo-item svg,
-    :root[data-theme="dark"] .aigeeks-logos-grid img {
+    :root[data-theme="dark"] .hero-logos img {
       filter: grayscale(100%) invert(1) brightness(1.2) !important;
+      opacity: 0.7 !important;
+    }
+    :root[data-theme="dark"] .aigeeks-logos-grid img {
+      filter: brightness(0) invert(1) !important;
       opacity: 0.7 !important;
     }
 
@@ -233,16 +241,16 @@
     }
 
     .hero-logos a {
-      opacity: 0.4;
+      opacity: 0.7;
       transition: opacity 0.2s;
     }
 
-    .hero-logos a:hover { opacity: 0.7; }
+    .hero-logos a:hover { opacity: 1; }
 
     .hero-logos img {
-      height: 12px;
+      height: 16px;
       width: auto;
-      max-width: 110px;
+      max-width: 130px;
     }
 
     .hero-logo-exited {
@@ -405,7 +413,7 @@
     .logo-item {
       display: flex;
       align-items: center;
-      opacity: 0.7;
+      opacity: 0.9;
       transition: opacity 0.2s;
     }
 
@@ -1336,7 +1344,7 @@
       <a href="https://www.monsieurchalets.com/" target="_blank" rel="noopener" class="hero-logo-exited"><img src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" /><span>exit</span></a>
     </div>
     <div class="hero-label">Creative &middot; Code &middot; Sales &middot; AI-First Systems Architect</div>
-    <h1>I <u>built</u>, <u>scaled</u> and <u>sold</u> before talking about it.</h1>
+    <h1>I help you <u>build</u>, <u>automate</u> and <u>sell</u> faster.</h1>
     <p class="hero-description">
       I rebuilt Monsieur Chalets' tech from scratch — <u>800+ properties</u> migrated, <u>2.5x revenue</u>. Today I'm building Farmzz and helping entrepreneurs <u>systemize</u>, go AI-first and build leverage.
     </p>

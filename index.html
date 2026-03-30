@@ -6,7 +6,7 @@
   <title>raphatb | Bâtisseur, Opérateur, Architecte de systèmes AI-First</title>
 
   <meta property="og:title" content="raphatb | Bâtisseur, Opérateur, Architecte de systèmes AI-First" />
-  <meta property="og:description" content="J'ai bâti, scalé et vendu avant d'en parler. Exit Monsieur Chalets. Fondateur Farmzz & AI Geeks. Partenaire Notion. Innovateur Cloudflare." />
+  <meta property="og:description" content="Je t'aide à bâtir, automatiser et vendre plus vite. Exit Monsieur Chalets. Fondateur Farmzz & AI Geeks. Partenaire Notion. Innovateur Cloudflare." />
   <meta property="og:image" content="https://raphatb.com/og-image.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://raphatb.com" />
@@ -55,8 +55,12 @@
       }
       :root:not([data-theme="light"]) .logo-bar-logos img,
       :root:not([data-theme="light"]) .logo-item svg,
-      :root:not([data-theme="light"]) .aigeeks-logos-grid img {
+      :root:not([data-theme="light"]) .hero-logos img {
         filter: grayscale(100%) invert(1) brightness(1.2) !important;
+        opacity: 0.7 !important;
+      }
+      :root:not([data-theme="light"]) .aigeeks-logos-grid img {
+        filter: brightness(0) invert(1) !important;
         opacity: 0.7 !important;
       }
     }
@@ -75,8 +79,12 @@
     }
     :root[data-theme="dark"] .logo-bar-logos img,
     :root[data-theme="dark"] .logo-item svg,
-    :root[data-theme="dark"] .aigeeks-logos-grid img {
+    :root[data-theme="dark"] .hero-logos img {
       filter: grayscale(100%) invert(1) brightness(1.2) !important;
+      opacity: 0.7 !important;
+    }
+    :root[data-theme="dark"] .aigeeks-logos-grid img {
+      filter: brightness(0) invert(1) !important;
       opacity: 0.7 !important;
     }
 
@@ -233,16 +241,16 @@
     }
 
     .hero-logos a {
-      opacity: 0.4;
+      opacity: 0.7;
       transition: opacity 0.2s;
     }
 
-    .hero-logos a:hover { opacity: 0.7; }
+    .hero-logos a:hover { opacity: 1; }
 
     .hero-logos img {
-      height: 12px;
+      height: 16px;
       width: auto;
-      max-width: 110px;
+      max-width: 130px;
     }
 
     .hero-logo-exited {
@@ -405,7 +413,7 @@
     .logo-item {
       display: flex;
       align-items: center;
-      opacity: 0.7;
+      opacity: 0.9;
       transition: opacity 0.2s;
     }
 
@@ -1330,7 +1338,7 @@
       <a href="https://www.monsieurchalets.com/" target="_blank" rel="noopener" class="hero-logo-exited"><img src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" /><span>exit</span></a>
     </div>
     <div class="hero-label">Fondateur AI-first &middot; Créatif &middot; Code &middot; Ventes</div>
-    <h1>J'ai <u>bâti</u>, <u>scalé</u> et <u>vendu</u> avant d'en parler.</h1>
+    <h1>Je t'aide à <u>bâtir</u>, <u>automatiser</u> et <u>vendre</u> plus vite.</h1>
     <p class="hero-description">
       J'ai rebâti la tech de Monsieur Chalets de A à Z — <u>800+ propriétés</u> migrées, <u>2.5x les revenus</u>. Aujourd'hui je construis Farmzz et j'aide des entrepreneurs à <u>systématiser</u>, devenir AI-first et bâtir du levier.
     </p>
