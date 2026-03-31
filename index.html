@@ -1102,6 +1102,49 @@
       background: #c53030;
       transform: scale(1.03);
     }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 24px;
+      max-width: 500px;
+    }
+    .contact-form input[type="email"],
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 1rem;
+      background: var(--bg);
+      color: var(--fg);
+      outline: none;
+      font-family: inherit;
+      resize: vertical;
+    }
+    .contact-form input[type="email"]:focus,
+    .contact-form textarea:focus {
+      border-color: #e53e3e;
+    }
+    .contact-form button {
+      padding: 14px 28px;
+      background: #e53e3e;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 20px rgba(229,62,62,0.4);
+    }
+    .contact-form button:hover {
+      background: #c53030;
+      transform: scale(1.03);
+    }
+    @media (max-width: 600px) {
+      .contact-form { flex-direction: column; }
+    }
 
     /* ── FOOTER ── */
     footer {
@@ -1981,7 +2024,15 @@
   <div class="contact-inner reveal">
     <h2>Me contacter</h2>
     <p>Une question, un projet, une idée? Écris-moi.</p>
-    <a href="mailto:raphatbventures@gmail.com?subject=Prise%20de%20contact%20%E2%80%94%20raphatb.com" class="contact-mailto">M'écrire un courriel →</a>
+    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="9b4777fc-2433-41ad-9e0c-f217a3dddbf3">
+      <input type="hidden" name="subject" value="Nouveau message via raphatb.com">
+      <input type="hidden" name="redirect" value="https://raphatb.com">
+      <input type="email" name="email" placeholder="ton@email.com" required />
+      <input type="text" name="name" placeholder="Sujet" required />
+      <textarea name="message" placeholder="Ton message..." rows="3" required></textarea>
+      <button type="submit">Envoyer →</button>
+    </form>
   </div>
 </div>
 
