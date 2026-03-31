@@ -619,7 +619,7 @@
     .testimonial-single:nth-last-child(2):nth-child(3n+1) ~ .testimonial-single:last-child,
     .testimonial-single:nth-last-child(2):nth-child(3n+1) { grid-column: span 1; }
 
-    .testimonial-quote .red, .aigeeks-testimonial blockquote .red {
+    .red {
       color: #e53e3e;
       font-weight: 700;
     }
@@ -1113,6 +1113,7 @@
       max-width: 500px;
     }
     .contact-form input[type="email"],
+    .contact-form input[type="text"],
     .contact-form textarea {
       width: 100%;
       padding: 14px 18px;
@@ -1126,6 +1127,7 @@
       resize: vertical;
     }
     .contact-form input[type="email"]:focus,
+    .contact-form input[type="text"]:focus,
     .contact-form textarea:focus {
       border-color: #e53e3e;
     }
@@ -1464,7 +1466,7 @@
     <div class="story-text">
       <img src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" class="story-logo" />
       <div class="story-role">Monsieur Chalets &middot; Produit, Tech & Ops &middot; Sortie</div>
-      <h2>On était en train de couler. J'ai <u>rebâti le navire</u>.</h2>
+      <h2>On était en train de <strong class="red">couler</strong>. J'ai <u>rebâti le navire</u>.</h2>
       <p>Quand William Burgess m'a appelé, leur PMS venait de fermer. <strong>800 chalets, 2000+ réservations</strong> à migrer vers une tech qui n'existait pas encore. L'agence précédente avait livré du code inutilisable.</p>
       <p>J'ai monté une équipe de développeurs de A à Z. Reconstruit la plateforme au complet. Bâti toute leur infrastructure Notion pour les opérations. Migré le SEO sans perdre un seul ranking. Branché Cloudflare et <strong>accéléré le site de 80%</strong>, la première nuit.</p>
       <div class="story-stat">
@@ -1482,7 +1484,7 @@
     <div class="story-text">
       <img src="assets/logos/farmzz-black.svg" alt="Farmzz" class="story-logo" style="height: 30px;" />
       <div class="story-role">Farmzz &middot; Fondateur &middot; En cours</div>
-      <h2>Les fermiers vendent. Leur tech <u>ne suit pas</u>.</h2>
+      <h2>Bons produits. <u>Zéro système de vente</u>.</h2>
       <p>Les producteurs focussent sur leurs produits et pas assez sur leurs ventes. Pas de CRM, pas de récurrence, pas de visibilité.</p>
       <p>Farmzz transforme le trafic offline en revenus récurrents. Un écosystème de vente bâti pour les gens qui vendent des vraies choses, pas du SaaS à du SaaS.</p>
     </div>
@@ -1497,7 +1499,7 @@
 <div id="testimonials" class="testimonials-section">
   <div class="section" style="padding-bottom: 0;">
     <div class="section-label">Témoignages</div>
-    <h2 class="section-heading">22 personnes. Zéro script.</h2>
+    <h2 class="section-heading">22 transformations. Dans leurs mots.</h2>
     <p class="section-lead">Des vrais mots, de vraies personnes avec qui j'ai travaillé.</p>
   </div>
 
@@ -1797,7 +1799,7 @@
     <div class="aigeeks-hero reveal">
       <div class="aigeeks-hero-text">
         <div class="section-label">AI Geeks</div>
-        <h2><u>AI-first</u>. Pas AI-éventuellement.</h2>
+        <h2><strong class="red">AI-first</strong>. Pas AI-éventuellement.</h2>
         <p>J'ai fondé <strong>AI Geeks</strong> pour rassembler les builders qui veulent utiliser l'intelligence artificielle pour shipper plus vite, pas juste en parler sur LinkedIn.</p>
         <p>Événements, workshops, contenu. Une communauté de gens qui pensent en systèmes, qui buildent avec l'AI, et qui exécutent.</p>
         <div class="aigeeks-stats">
