@@ -55,13 +55,17 @@
       }
       :root:not([data-theme="light"]) .logo-bar-logos img,
       :root:not([data-theme="light"]) .logo-item svg,
-      :root:not([data-theme="light"]) .hero-logos img {
+      :root:not([data-theme="light"]) .hero-logos img,
+      :root:not([data-theme="light"]) .people-helped-logo {
         filter: grayscale(100%) invert(1) brightness(1.2) !important;
-        opacity: 0.7 !important;
+        opacity: 0.8 !important;
       }
       :root:not([data-theme="light"]) .aigeeks-logos-grid img {
         filter: brightness(0) invert(1) !important;
         opacity: 0.7 !important;
+      }
+      :root:not([data-theme="light"]) .people-helped-logo[alt="Amorce"] {
+        filter: none !important;
       }
     }
 
@@ -79,13 +83,17 @@
     }
     :root[data-theme="dark"] .logo-bar-logos img,
     :root[data-theme="dark"] .logo-item svg,
-    :root[data-theme="dark"] .hero-logos img {
+    :root[data-theme="dark"] .hero-logos img,
+    :root[data-theme="dark"] .people-helped-logo {
       filter: grayscale(100%) invert(1) brightness(1.2) !important;
-      opacity: 0.7 !important;
+      opacity: 0.8 !important;
     }
     :root[data-theme="dark"] .aigeeks-logos-grid img {
       filter: brightness(0) invert(1) !important;
       opacity: 0.7 !important;
+    }
+    :root[data-theme="dark"] .people-helped-logo[alt="Amorce"] {
+      filter: none !important;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -421,6 +429,63 @@
     }
 
     u { text-decoration-color: var(--fg-muted); text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+
+    /* ── PEOPLE HELPED ── */
+    .people-helped {
+      padding: 64px 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .people-helped-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .people-helped-label {
+      font-size: 0.75rem;
+      color: var(--fg-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 40px;
+    }
+
+    .people-helped-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 32px 48px;
+    }
+
+    .people-helped-item {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+    }
+
+    .people-helped-item:hover {
+      opacity: 1;
+    }
+
+    .people-helped-logo {
+      height: 36px;
+      width: auto;
+      max-width: 160px;
+      object-fit: contain;
+    }
+
+    .people-helped-logo[alt="Monsieur Chalets"] { height: 20px; }
+    .people-helped-logo[alt="HOLOS"] { height: 28px; }
+    .people-helped-logo[alt="Firebarns"] { height: 44px; }
+    .people-helped-logo[alt="GM Studios"] { height: 40px; }
+    .people-helped-logo[alt="Opsell"] { height: 44px; max-width: 44px; }
+    .people-helped-logo[alt="Axiomedia"] { height: 44px; max-width: 44px; }
+    .people-helped-logo[alt="Nouvelle Vie"] { height: 48px; max-width: 48px; }
+    .people-helped-logo[alt="Café Paleta"] { height: 32px; }
+    .people-helped-logo[alt="Amorce"] { height: 44px; max-width: 44px; }
 
     /* ── SECTIONS ── */
     .section {
@@ -1371,7 +1436,7 @@
       <li><a href="#credentials">Références</a></li>
     </ul>
     <div class="nav-right">
-      <a href="#testimonials" class="nav-cta">Voir Résultats</a>
+      <a href="#testimonials" class="nav-cta">Voir Résultats (22)</a>
       <a href="en.html" class="nav-lang">EN</a>
       <button class="theme-toggle" id="theme-toggle" aria-label="Changer le thème">☀️</button>
     </div>
@@ -1401,6 +1466,10 @@
       <cite>William Burgess, Co-fondateur Monsieur Chalets</cite>
     </blockquote>
     <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">22+</div>
+        <div class="hero-stat-label">Transformations</div>
+      </div>
       <div>
         <div class="hero-stat-num">1</div>
         <div class="hero-stat-label">Sortie</div>
@@ -1483,6 +1552,48 @@
     </div>
   </div>
 
+</div>
+
+<!-- PEOPLE HELPED -->
+<div class="people-helped">
+  <div class="people-helped-inner">
+    <div class="people-helped-label">Ils m'ont fait confiance</div>
+    <div class="people-helped-grid">
+      <a href="https://www.monsieurchalets.com/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" class="people-helped-logo" loading="lazy" />
+      </a>
+      <a href="https://www.liveholos.com/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/holos.png" alt="HOLOS" class="people-helped-logo" loading="lazy" />
+      </a>
+      <a href="https://elevonutrition.com/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/elevo.png" alt="ELEVO Nutrition" class="people-helped-logo" loading="lazy" />
+      </a>
+      <a href="https://firebarns.com/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/firebarns.png" alt="Firebarns" class="people-helped-logo" loading="lazy" />
+      </a>
+      <a href="https://nouvellevie.com/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/nouvellevie.svg" alt="Nouvelle Vie" class="people-helped-logo" loading="lazy" />
+      </a>
+      <a href="https://amorcekinesiologie.com/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/amorce.png" alt="Amorce" class="people-helped-logo" loading="lazy" />
+      </a>
+      <a href="https://www.paleta.ca/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/paleta.png" alt="Café Paleta" class="people-helped-logo" loading="lazy" />
+      </a>
+      <a href="https://www.lesgmstudios.com/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/gmstudios.png" alt="GM Studios" class="people-helped-logo" loading="lazy" />
+      </a>
+      <a href="https://axiomedia.ca/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/axiomedia.png" alt="Axiomedia" class="people-helped-logo" loading="lazy" />
+      </a>
+      <a href="https://www.instagram.com/opsell.ca/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/opsell.png" alt="Opsell" class="people-helped-logo" loading="lazy" />
+      </a>
+      <a href="https://farmzz.com/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/farmzz-black.svg" alt="Farmzz" class="people-helped-logo" loading="lazy" />
+      </a>
+    </div>
+  </div>
 </div>
 
 <!-- TESTIMONIALS -->
