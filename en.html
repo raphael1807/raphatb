@@ -12,14 +12,14 @@
   <meta property="og:url" content="https://raphatb.com/en.html" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="description" content="Raphael Tremblay-Bouchard (raphatb) | Builder, Operator, AI-First Systems Architect. Exit Monsieur Chalets (800+ properties, 2.5x revenue). Founder Farmzz & AI Geeks. Notion Certified Consulting Partner. Cloudflare Innovator Spotlight." />
-  <meta name="keywords" content="Raphael Tremblay-Bouchard, raphatb, AI-first, systems architect, Notion consulting partner, Cloudflare innovator, Farmzz, AI Geeks, Monsieur Chalets, entrepreneur Québec" />
+  <meta name="keywords" content="Raphael Tremblay-Bouchard, raphatb, AI-first, systems architect, Notion consulting partner, Cloudflare innovator, Farmzz, AI Geeks, Monsieur Chalets, entrepreneur Quebec" />
   <link rel="canonical" href="https://raphatb.com/en.html" />
   <link rel="alternate" hreflang="fr" href="https://raphatb.com" />
   <link rel="alternate" hreflang="en" href="https://raphatb.com/en.html" />
 
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="favicon.svg?v=2" type="image/svg+xml" />
+  <link rel="icon" href="favicon.ico?v=2" sizes="any" />
+  <link rel="icon" href="favicon-32.png?v=2" type="image/png" sizes="32x32" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,13 +55,17 @@
       }
       :root:not([data-theme="light"]) .logo-bar-logos img,
       :root:not([data-theme="light"]) .logo-item svg,
-      :root:not([data-theme="light"]) .hero-logos img {
+      :root:not([data-theme="light"]) .hero-logos img,
+      :root:not([data-theme="light"]) .people-helped-logo {
         filter: grayscale(100%) invert(1) brightness(1.2) !important;
-        opacity: 0.7 !important;
+        opacity: 0.8 !important;
       }
       :root:not([data-theme="light"]) .aigeeks-logos-grid img {
         filter: brightness(0) invert(1) !important;
         opacity: 0.7 !important;
+      }
+      :root:not([data-theme="light"]) .people-helped-logo[alt="Amorce"] {
+        filter: none !important;
       }
     }
 
@@ -79,13 +83,17 @@
     }
     :root[data-theme="dark"] .logo-bar-logos img,
     :root[data-theme="dark"] .logo-item svg,
-    :root[data-theme="dark"] .hero-logos img {
+    :root[data-theme="dark"] .hero-logos img,
+    :root[data-theme="dark"] .people-helped-logo {
       filter: grayscale(100%) invert(1) brightness(1.2) !important;
-      opacity: 0.7 !important;
+      opacity: 0.8 !important;
     }
     :root[data-theme="dark"] .aigeeks-logos-grid img {
       filter: brightness(0) invert(1) !important;
       opacity: 0.7 !important;
+    }
+    :root[data-theme="dark"] .people-helped-logo[alt="Amorce"] {
+      filter: none !important;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -110,17 +118,17 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 100;
-      background: color-mix(in srgb, var(--bg) 80%, transparent);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
+      background: color-mix(in srgb, var(--bg) 85%, transparent);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
       border-bottom: 1px solid var(--border);
     }
 
     .nav-inner {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 0 24px;
-      height: 64px;
+      padding: 0 32px;
+      height: 56px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -128,87 +136,77 @@
 
     .nav-name {
       font-family: 'Apercu', 'Apercu Pro', -apple-system, BlinkMacSystemFont, sans-serif;
-      font-weight: 700;
-      font-size: 1.05rem;
-      letter-spacing: -0.02em;
+      font-weight: 800;
+      font-size: 1.1rem;
+      letter-spacing: -0.03em;
     }
 
     .nav-links {
       display: flex;
-      gap: 32px;
+      gap: 28px;
       list-style: none;
     }
 
     .nav-links a {
-      font-size: 0.875rem;
+      font-size: 0.82rem;
+      font-weight: 500;
       color: var(--fg-secondary);
       transition: color 0.2s;
-      position: relative;
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 1.5px;
-      background: var(--fg);
-      transition: width 0.25s ease;
+      letter-spacing: -0.01em;
     }
 
     .nav-links a:hover { color: var(--fg); }
-    .nav-links a:hover::after { width: 100%; }
 
     .nav-lang {
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.05em;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
       color: var(--fg-secondary);
       border: 1px solid var(--border);
-      padding: 4px 10px;
-      border-radius: 6px;
+      padding: 5px 10px;
+      border-radius: 50px;
       transition: all 0.2s;
     }
 
     .nav-lang:hover {
       color: var(--fg);
       border-color: var(--fg-muted);
-      background: var(--bg-muted);
     }
 
     .nav-cta {
-      font-size: 0.8rem;
-      font-weight: 500;
-      color: var(--bg);
-      background: var(--fg);
-      padding: 8px 18px;
-      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #fff;
+      background: #e53e3e;
+      padding: 8px 20px;
+      border-radius: 50px;
       transition: all 0.2s;
+      letter-spacing: -0.01em;
+      box-shadow: 0 2px 12px rgba(229,62,62,0.3);
     }
 
-    .nav-cta:hover { opacity: 0.85; transform: translateY(-1px); }
+    .nav-cta:hover { background: #c53030; transform: translateY(-1px); }
 
     .theme-toggle {
       background: none;
       border: 1px solid var(--border);
       color: var(--fg);
       cursor: pointer;
-      font-size: 1rem;
-      padding: 4px 8px;
-      border-radius: 6px;
+      font-size: 0.9rem;
+      padding: 5px 8px;
+      border-radius: 50px;
       transition: all 0.2s;
       line-height: 1;
     }
     .theme-toggle:hover {
       border-color: var(--fg-muted);
-      background: var(--bg-muted);
     }
 
     .nav-right {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
     }
 
     .hamburger {
@@ -251,6 +249,7 @@
       height: 16px;
       width: auto;
       max-width: 130px;
+      object-fit: contain;
     }
 
     .hero-logo-exited {
@@ -430,13 +429,64 @@
       height: 14px;
     }
 
-    .logo-item span {
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: -0.01em;
+    u { text-decoration-color: var(--fg-muted); text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+
+    /* ── PEOPLE HELPED ── */
+    .people-helped {
+      padding: 64px 24px;
+      border-top: 1px solid var(--border);
     }
 
-    u { text-decoration-color: var(--fg-muted); text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+    .people-helped-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .people-helped-label {
+      font-size: 0.75rem;
+      color: var(--fg-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 40px;
+    }
+
+    .people-helped-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 32px 48px;
+    }
+
+    .people-helped-item {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+    }
+
+    .people-helped-item:hover {
+      opacity: 1;
+    }
+
+    .people-helped-logo {
+      height: 36px;
+      width: auto;
+      max-width: 160px;
+      object-fit: contain;
+    }
+
+    .people-helped-logo[alt="Monsieur Chalets"] { height: 20px; }
+    .people-helped-logo[alt="HOLOS"] { height: 28px; }
+    .people-helped-logo[alt="Firebarns"] { height: 44px; }
+    .people-helped-logo[alt="GM Studios"] { height: 40px; }
+    .people-helped-logo[alt="Opsell"] { height: 44px; max-width: 44px; }
+    .people-helped-logo[alt="Axiomedia"] { height: 44px; max-width: 44px; }
+    .people-helped-logo[alt="Nouvelle Vie"] { height: 48px; max-width: 48px; }
+    .people-helped-logo[alt="Café Paleta"] { height: 32px; }
+    .people-helped-logo[alt="Amorce"] { height: 60px; max-width: 60px; filter: invert(1); }
 
     /* ── SECTIONS ── */
     .section {
@@ -621,12 +671,27 @@
     }
 
     .testimonial-single:nth-child(3n) { border-right: none; }
+    .testimonial-single:last-child:nth-child(3n+1) { grid-column: 1 / -1; border-right: none; }
+    .testimonial-single:nth-last-child(2):nth-child(3n+1) ~ .testimonial-single:last-child,
+    .testimonial-single:nth-last-child(2):nth-child(3n+1) { grid-column: span 1; }
 
-    .testimonial-quote .red, .aigeeks-testimonial blockquote .red {
+    .red {
       color: #e53e3e;
       font-weight: 700;
     }
 
+    .testimonial-transform {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--accent, #c00);
+      margin-bottom: 12px;
+    }
+    .testimonial-transform span {
+      color: var(--fg);
+      opacity: 0.45;
+    }
     .testimonial-quote {
       font-size: 0.95rem;
       line-height: 1.85;
@@ -1096,6 +1161,51 @@
       background: #c53030;
       transform: scale(1.03);
     }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 24px;
+      max-width: 500px;
+    }
+    .contact-form input[type="email"],
+    .contact-form input[type="text"],
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 1rem;
+      background: var(--bg);
+      color: var(--fg);
+      outline: none;
+      font-family: inherit;
+      resize: vertical;
+    }
+    .contact-form input[type="email"]:focus,
+    .contact-form input[type="text"]:focus,
+    .contact-form textarea:focus {
+      border-color: #e53e3e;
+    }
+    .contact-form button {
+      padding: 14px 28px;
+      background: #e53e3e;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 20px rgba(229,62,62,0.4);
+    }
+    .contact-form button:hover {
+      background: #c53030;
+      transform: scale(1.03);
+    }
+    @media (max-width: 600px) {
+      .contact-form { flex-direction: column; }
+    }
 
     /* ── FOOTER ── */
     footer {
@@ -1154,7 +1264,7 @@
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 64px;
+        top: 56px;
         left: 0; right: 0;
         background: var(--bg);
         padding: 24px;
@@ -1343,20 +1453,24 @@
       <a href="https://luma.com/ai.geeks" target="_blank" rel="noopener"><img src="assets/logos/aigeeks-black.svg" alt="AI Geeks" /></a>
       <a href="https://www.monsieurchalets.com/" target="_blank" rel="noopener" class="hero-logo-exited"><img src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" /><span>exit</span></a>
     </div>
-    <div class="hero-label">Creative &middot; Code &middot; Sales &middot; AI-First Systems Architect</div>
-    <h1>I help you <u>build</u>, <u>automate</u> and <u>sell</u> faster.</h1>
+    <div class="hero-label">AI-first founder &middot; Creative &middot; Code &middot; Sales</div>
+    <h1>I help you build, automate and <u>sell faster</u>.</h1>
     <p class="hero-description">
-      I rebuilt Monsieur Chalets' tech from scratch — <u>800+ properties</u> migrated, <u>2.5x revenue</u>. Today I'm building Farmzz and helping entrepreneurs <u>systemize</u>, go AI-first and build leverage.
+      I rebuilt Monsieur Chalets' tech from scratch — 800+ properties migrated, 2.5x revenue. Today I'm building Farmzz and helping entrepreneurs systemize, go AI-first and build leverage.
     </p>
     <p class="hero-warning">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;flex-shrink:0"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-      <span>I work with ambitious individuals who want to move fast. This <strong>isn't for everyone</strong>.</span>
+      <span>I work with ambitious individuals who want to move fast. This is <strong>not for everyone</strong>. People who see the world in terms of <strong>investment</strong>, not price.</span>
     </p>
     <blockquote class="hero-quote">
-      "His work ethic and discipline, 100%. The first year, 2.5x sales just from site speed."
+      "His work ethic and discipline. 100%. The first year, 2.5x sales just from site speed."
       <cite>William Burgess, Co-founder Monsieur Chalets</cite>
     </blockquote>
     <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">22+</div>
+        <div class="hero-stat-label">Transformations</div>
+      </div>
       <div>
         <div class="hero-stat-num">1</div>
         <div class="hero-stat-label">Exit</div>
@@ -1412,9 +1526,9 @@
     <div class="story-text">
       <img src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" class="story-logo" />
       <div class="story-role">Monsieur Chalets &middot; Product, Tech & Ops &middot; Exit</div>
-      <h2>We were sinking. I <u>rebuilt the ship</u>.</h2>
-      <p>When <strong>William Burgess</strong> called me, their PMS had just shut down. <strong>800 chalets, 2000+ reservations</strong> to migrate to tech that didn't exist yet. The previous agency had delivered unusable code.</p>
-      <p>I assembled a dev team from scratch. Rebuilt the entire platform. Built their entire <strong>Notion infrastructure</strong> for operations. Migrated SEO without losing a single ranking. Plugged in Cloudflare and <strong>sped up the site by 80%</strong>, the first night.</p>
+      <h2>We were <strong class="red">sinking</strong>. I <u>rebuilt the ship</u>.</h2>
+      <p>When William Burgess called me, their PMS had just shut down. <strong>800 chalets, 2,000+ reservations</strong> to migrate to tech that didn't exist yet. The previous agency had delivered unusable code.</p>
+      <p>I built a dev team from scratch. Rebuilt the entire platform. Set up their full Notion infrastructure for operations. Migrated the SEO without losing a single ranking. Plugged in Cloudflare and <strong>sped up the site by 80%</strong>, the first night.</p>
       <div class="story-stat">
         <span class="story-stat-num">2.5x</span>
         <span class="story-stat-label">revenue, just from site speed</span>
@@ -1430,15 +1544,57 @@
     <div class="story-text">
       <img src="assets/logos/farmzz-black.svg" alt="Farmzz" class="story-logo" style="height: 30px;" />
       <div class="story-role">Farmzz &middot; Founder &middot; Ongoing</div>
-      <h2>Farmers sell. Their tech <u>can't keep up</u>.</h2>
-      <p>Local producers, market gardeners and farmers are losing sales because they have zero online systems. No CRM, no recurring revenue, no visibility.</p>
-      <p><strong>Farmzz</strong> turns offline traffic into recurring revenue. A sales ecosystem built for people who sell real things, not SaaS to SaaS.</p>
+      <h2>Good products. <u>Zero sales system</u>.</h2>
+      <p>Producers focus on their products, not their sales. No CRM, no recurring revenue, no visibility.</p>
+      <p>Farmzz turns offline traffic into recurring revenue. A sales ecosystem built for people who sell real things, not SaaS to SaaS.</p>
     </div>
     <div class="story-visual">
       <img src="assets/photos/working.jpg" alt="Raph working" loading="lazy" />
     </div>
   </div>
 
+</div>
+
+<!-- PEOPLE HELPED -->
+<div class="people-helped">
+  <div class="people-helped-inner">
+    <div class="people-helped-label">They trusted me</div>
+    <div class="people-helped-grid">
+      <a href="https://www.monsieurchalets.com/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" class="people-helped-logo" loading="lazy" decoding="async" />
+      </a>
+      <a href="https://www.liveholos.com/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/holos.png" alt="HOLOS" class="people-helped-logo" loading="lazy" decoding="async" />
+      </a>
+      <a href="https://elevonutrition.com/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/elevo.png" alt="ELEVO Nutrition" class="people-helped-logo" loading="lazy" decoding="async" />
+      </a>
+      <a href="https://firebarns.com/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/firebarns.png" alt="Firebarns" class="people-helped-logo" loading="lazy" decoding="async" />
+      </a>
+      <a href="https://nouvellevie.com/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/nouvellevie.svg" alt="Nouvelle Vie" class="people-helped-logo" loading="lazy" decoding="async" />
+      </a>
+      <a href="https://amorcekinesiologie.com/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/amorce.png" alt="Amorce" class="people-helped-logo" loading="lazy" decoding="async" />
+      </a>
+      <a href="https://www.paleta.ca/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/paleta.png" alt="Café Paleta" class="people-helped-logo" loading="lazy" decoding="async" />
+      </a>
+      <a href="https://www.lesgmstudios.com/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/gmstudios.png" alt="GM Studios" class="people-helped-logo" loading="lazy" decoding="async" />
+      </a>
+      <a href="https://axiomedia.ca/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/axiomedia.png" alt="Axiomedia" class="people-helped-logo" loading="lazy" decoding="async" />
+      </a>
+      <a href="https://www.instagram.com/opsell.ca/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/opsell.png" alt="Opsell" class="people-helped-logo" loading="lazy" decoding="async" />
+      </a>
+      <a href="https://farmzz.com/" target="_blank" rel="noopener" class="people-helped-item">
+        <img src="assets/logos/farmzz-black.svg" alt="Farmzz" class="people-helped-logo" loading="lazy" decoding="async" />
+      </a>
+    </div>
+  </div>
 </div>
 
 <!-- TESTIMONIALS -->
@@ -1450,9 +1606,12 @@
   </div>
 
   <div class="testimonials-grid">
+
+  <!-- 1. PUNCH — bankruptcy -->
   <div class="testimonial-single reveal">
+    <div class="testimonial-transform"><span>Bankruptcy</span> → 2.5x sales</div>
     <div class="testimonial-quote">
-      Raph, we're <strong class="red">going bankrupt</strong>. Literally, I don't know what to do anymore. I hired you on the spot, gave you my trust, gave you <strong>carte blanche</strong>. The first year, it was <strong>2.5x sales</strong> just from the site speed. Your work discipline and work ethic. <strong>100%</strong>.
+      Raph, we're <strong class="red">going bankrupt</strong>. Literally, I don't know what to do anymore. I hired you on the spot, gave you my trust, gave you carte blanche. The first year, it was <strong>2.5x sales</strong> just from the site speed. Your work discipline and work ethic. 100%.
     </div>
     <div class="testimonial-attribution">
       <div class="testimonial-avatar"><img src="assets/photos/william-burgess.jpg" alt="William Burgess" /></div>
@@ -1463,22 +1622,56 @@
     </div>
   </div>
 
+  <!-- 2. METAPHOR — Swiss army knife -->
   <div class="testimonial-single reveal">
+    <div class="testimonial-transform"><span>I ask for X</span> → He delivers 5X</div>
     <div class="testimonial-quote">
-      I used to go to bed and <strong class="red">couldn't sleep</strong>. It felt like there were 25 paths, and 24 of them were wrong. It was just stressful. Today? Our profit went from <strong class="red">50% to 75%</strong>. The biggest impact was when I came home and could actually <strong>relax</strong>.
+      Having Raph by your side is like having a <strong class="red">Swiss army knife in the wild</strong>. Very few people combine such a high level of knowledge AND such fast execution. Email deliverability, marketing strategy, workflows, automations: Raph masters it and — above all — he ships. You can have the best can opener in the world… if you can't cut your fish or start your fire, you won't get far. And he overdelivers. Always. You never just get what you asked for, you always get more. If you want someone who moves things forward, <strong>Raph is a no-brainer</strong>.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/christophe-contant.jpg" alt="Christophe Contant" /></div>
+      <div>
+        <div class="testimonial-name"><a href="https://www.liveholos.com/" target="_blank" rel="noopener">Christophe Contant</a></div>
+        <div class="testimonial-title">Co-founder, <a href="https://www.liveholos.com/" target="_blank" rel="noopener">HOLOS</a> &middot; Founder &amp; CEO, <a href="https://elevonutrition.com/" target="_blank" rel="noopener">ELEVO Nutrition</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. EMOTIONAL — insomnia -->
+  <div class="testimonial-single reveal">
+    <div class="testimonial-transform"><span>Insomnia</span> → Profit 50% to 75%</div>
+    <div class="testimonial-quote">
+      I'd go to bed at night and it was <strong class="red">hard to sleep</strong>. It felt like there were 25 paths, and 24 of them were wrong. It just got stressful. Today? Our profit went from <strong>50% to 75%</strong>. The biggest impact was when I came home and was able to relax.
     </div>
     <div class="testimonial-attribution">
       <div class="testimonial-avatar"><img src="assets/photos/oli-pharand.jpg" alt="Oli Pharand" /></div>
       <div>
         <div class="testimonial-name">Oli Pharand</div>
-        <div class="testimonial-title">Entrepreneur &middot; Service business</div>
+        <div class="testimonial-title">Entrepreneur &middot; <a href="https://www.instagram.com/opsell.ca/" target="_blank" rel="noopener">Opsell</a></div>
       </div>
     </div>
   </div>
 
+  <!-- 4. POISED — Notion -->
   <div class="testimonial-single reveal">
+    <div class="testimonial-transform"><span>Messy project</span> → Notion that runs</div>
     <div class="testimonial-quote">
-      What really convinced me was when you asked: is your problem acquisition or retention? <strong class="red">Nobody had ever asked me that</strong>. You became more than someone offering a service, you approached it like you were <strong>my partner</strong>. The <strong>best $1000</strong> you'll ever spend.
+      We brought Raphaël in to <strong>optimize our Notion projects</strong>. He quickly grasped our challenges and found tailored, lasting solutions. Raphaël is attentive, dynamic, and extremely professional. His expertise didn't just meet our expectations — it <strong class="red">exceeded them</strong>.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/melanie-bacquet.jpg" alt="Mélanie Bacquet" /></div>
+      <div>
+        <div class="testimonial-name"><a href="https://nouvellevie.com/" target="_blank" rel="noopener">Mélanie Bacquet</a></div>
+        <div class="testimonial-title">Head of Communications &amp; Productions &mdash; <a href="https://nouvellevie.com/" target="_blank" rel="noopener">NV Québec</a> &middot; 1,800+ people every Sunday &middot; Notion architecture/management</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. STRATEGIC — the right question -->
+  <div class="testimonial-single reveal">
+    <div class="testimonial-transform"><span>Vendor</span> → Partner</div>
+    <div class="testimonial-quote">
+      What really convinced me was when you asked: is your problem an acquisition problem or a retention problem? <strong class="red">Nobody had ever asked me that</strong>. You became more than someone offering a service — you approached it like you were <strong>my partner</strong>. The best $1,000 you'll ever spend.
     </div>
     <div class="testimonial-attribution">
       <div class="testimonial-avatar"><img src="assets/photos/emmanuel-ouellet.png" alt="Emanuel Ouellet Lapointe" /></div>
@@ -1489,35 +1682,26 @@
     </div>
   </div>
 
+  <!-- 6. PUNCH — burnout, emails -->
   <div class="testimonial-single reveal">
+    <div class="testimonial-transform"><span>6,242 emails</span> → 4-5h saved/week</div>
     <div class="testimonial-quote">
-      When something came out of your mouth, <strong>it wasn't up for debate</strong>. You do your due diligence, <strong class="red">you're so all-in</strong>. You were my source of information for everything. When we started working together, there was no ChatGPT that powerful. You were my ChatGPT. Head down, knife between his teeth. With Raph, <strong>you feel safe</strong>.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/miguel-alain.jpg" alt="Miguel Alain" /></div>
-      <div>
-        <div class="testimonial-name"><a href="https://amorcekinesiologie.com/" target="_blank" rel="noopener">Miguel Alain</a></div>
-        <div class="testimonial-title">Founder, <a href="https://amorcekinesiologie.com/" target="_blank" rel="noopener">Amorce</a></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      I haven't stopped in three years. No vacations. I'm <strong class="red">empty, empty, empty</strong>. He processed <strong>6,242 emails</strong>. Almost 700 drafts. 48 hours of meetings. With the solution Raph set up for my emails, I <strong>save 4 to 5 hours per week</strong>. As soon as I get an email, he's already suggesting something. All I have to do is change a word and send.
+      I haven't stopped in three years. No vacations. I'm <strong class="red">empty, empty, empty</strong>. He processed 6,242 emails. Almost 700 drafts. 48 hours of meetings. With the solution Raph set up for my emails, I <strong>save 4 to 5 hours per week</strong>. As soon as I get an email, he's already suggesting something. All I have to do is change a word and send.
     </div>
     <div class="testimonial-attribution">
       <div class="testimonial-avatar"><img src="assets/photos/pierre-olivier-drouin.png" alt="Pierre-Olivier Drouin" /></div>
       <div>
-        <div class="testimonial-name"><a href="https://firebarns.com/" target="_blank">Pierre-Olivier Drouin</a></div>
+        <div class="testimonial-name"><a href="https://firebarns.com/" target="_blank" rel="noopener">Pierre-Olivier Drouin</a></div>
         <div class="testimonial-title">Owner, <a href="https://firebarns.com/" target="_blank" rel="noopener">Firebarns</a></div>
       </div>
     </div>
   </div>
 
+  <!-- 7. LIGHT — Notion sandbox -->
   <div class="testimonial-single reveal">
+    <div class="testimonial-transform"><span>Messy Notion</span> → Tons of time saved</div>
     <div class="testimonial-quote">
-      If you're hesitating to take action with Raph, it's probably because you're super busy. If you're very busy, <strong>that's exactly why you should meet him</strong>. I was using Notion like a 4-year-old in a sandbox, meaning all over the place. Today, I save a <strong class="red">ton of time and stress</strong>.
+      If you're hesitating to take action with Raph, it's probably because you're super busy. If you're very busy, that's exactly why you should meet him. I was using Notion like a 4-year-old in a sandbox — all over the place. Today I save <strong class="red">a ton of time and stress</strong>.
     </div>
     <div class="testimonial-attribution">
       <div class="testimonial-avatar"><img src="assets/photos/carl-moreau.jpg" alt="Carl Moreau" /></div>
@@ -1528,74 +1712,11 @@
     </div>
   </div>
 
+  <!-- 8. TRUST — all-in -->
   <div class="testimonial-single reveal">
+    <div class="testimonial-transform"><span>Lost</span> → Confident</div>
     <div class="testimonial-quote">
-      You showed up one morning and you'd done it overnight. Like a surprise. "Boys, the site is faster." We increased our <strong>conversion rate</strong>, our recurring revenue. It's really not comfortable working with you sometimes. But I know it's going to bring something positive. You tell us <strong class="red">the real things</strong>, and then we have no choice.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/william-burgess.jpg" alt="William Burgess" /></div>
-      <div>
-        <div class="testimonial-name"><a href="https://www.linkedin.com/in/william-burgess-3a0687a7/" target="_blank" rel="noopener">William Burgess</a></div>
-        <div class="testimonial-title">Co-founder, <a href="https://monsieurchalets.com/" target="_blank" rel="noopener">Monsieur Chalets</a></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      He's <strong class="red">not there just trying to be nice</strong> to keep a long-term contract. He's there to make real <strong>positive changes</strong> in your business. That's extremely underrated. I didn't feel like I was buying something I'd be dependent on. I was <strong>building my own skills</strong> through the whole process.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/oli-pharand.jpg" alt="Oli Pharand" /></div>
-      <div>
-        <div class="testimonial-name">Oli Pharand</div>
-        <div class="testimonial-title">Entrepreneur &middot; Service business</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      We went from <strong class="red">being scared</strong> to getting positive results. We would've been happy if people just thought of us when they got the text. But no, people were responding. They were coming in. I don't know when you sleep, but you're on it. There's not a single dollar spent elsewhere that'll give you a <strong>better return</strong>.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/emmanuel-ouellet.png" alt="Emanuel Ouellet Lapointe" /></div>
-      <div>
-        <div class="testimonial-name">Emanuel « Mani » Ouellet Lapointe</div>
-        <div class="testimonial-title">Restaurant owner &middot; <a href="https://share.google/bJ7hul6ON4wCaj1LG" target="_blank" rel="noopener">Taza Flores</a> &middot; Pour de Vrai</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      I know the kind of <strong class="red">energy you put into your projects</strong>. We made adjustments, simplified the message, added an offer. We saw a <strong>rapid increase</strong> in subscribers. People came to the counter talking about it. You're available, you're present. We got a service <strong>truly adapted to our reality</strong>.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/noemie-paleta.jpeg" alt="Noémie Paleta" /></div>
-      <div>
-        <div class="testimonial-name">Noémie Paleta</div>
-        <div class="testimonial-title">Owner, <a href="https://www.paleta.ca/" target="_blank" rel="noopener">Café Paleta</a> &middot; <a href="https://farmzz.com/" target="_blank" rel="noopener">Farmzz</a></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      Texting is a way to reach customers fast. The open rate is about <strong>99%</strong>. I <strong class="red">quickly saw clients come buy thanks to</strong> a text I sent through Farmzz. One of my clients told me "it's because I got your text" — and placed an <strong>order of at least $150</strong>.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/emilie-turcotte.jpg" alt="Émilie Turcotte" /></div>
-      <div>
-        <div class="testimonial-name">Émilie Turcotte</div>
-        <div class="testimonial-title">Agricultural Producer &middot; <a href="https://farmzz.com/" target="_blank" rel="noopener">Farmzz</a></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      What you taught me is to <strong>think in systems</strong>. Whenever you do something, there should be a system that can replace you or make you better. <strong class="red">I recovered so much time</strong> that every time now I want to think in systems. You free up time in your schedule and you think: ok my God, <strong>more time, more money</strong>.
+      When something came out of your mouth, it wasn't up for debate. You do your due diligence, <strong class="red">you're so all-in</strong>. You were my source of information for everything. When we started, there was no ChatGPT that powerful. You were my ChatGPT. Head down, knife between the teeth. With Raph, <strong>you feel safe</strong>.
     </div>
     <div class="testimonial-attribution">
       <div class="testimonial-avatar"><img src="assets/photos/miguel-alain.jpg" alt="Miguel Alain" /></div>
@@ -1606,7 +1727,144 @@
     </div>
   </div>
 
+  <!-- 9. RESULTS — SMS -->
   <div class="testimonial-single reveal">
+    <div class="testimonial-transform"><span>Text sent</span> → $150+ order</div>
+    <div class="testimonial-quote">
+      Texting is a way to reach customers fast. The open rate is about 99%. I <strong class="red">quickly saw clients come in to buy</strong> because of a text I sent through Farmzz. One client came up and said "it's because I got your text" — and placed an order of at least $150.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/emilie-turcotte.jpg" alt="Émilie Turcotte" /></div>
+      <div>
+        <div class="testimonial-name">Émilie Turcotte</div>
+        <div class="testimonial-title">Agricultural producer &middot; <a href="https://farmzz.com/" target="_blank" rel="noopener">Farmzz</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10. LEADERSHIP — hitting walls -->
+  <div class="testimonial-single reveal">
+    <div class="testimonial-transform"><span>Nobody listens</span> → Everyone buys in</div>
+    <div class="testimonial-quote">
+      We had a team <strong class="red">hitting walls</strong> and nobody was raising the flag. Raph gave me concrete tools, not pretty frameworks. Real stuff that works. Within weeks, I got buy-in from the most resistant person on the team. I stepped up as a real lead. He challenges you, gives you juice, then lets you drive. If your org needs to get to the next level, <strong>he's the one you want</strong>.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/angie-clerine.jpg" alt="Angie Clérine" /></div>
+      <div>
+        <div class="testimonial-name">Angie Clérine</div>
+        <div class="testimonial-title"><a href="https://nouvellevie.com/" target="_blank" rel="noopener">Église Nouvelle Vie</a> &middot; NV Centrale &middot; 11 campuses</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11. GROWTH — rapid rise -->
+  <div class="testimonial-single reveal">
+    <div class="testimonial-transform"><span>Invisible</span> → Clients talking about you</div>
+    <div class="testimonial-quote">
+      I know the kind of <strong class="red">energy you put into your projects</strong>. We made adjustments, simplified the message, added an offer. We saw a rapid rise in subscribers. People would come to the counter and talk to us about it. You're available, you're present. We got a service truly adapted to our reality.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/noemie-paleta.jpeg" alt="Noémie Paleta" /></div>
+      <div>
+        <div class="testimonial-name">Noémie Paleta</div>
+        <div class="testimonial-title">Owner, <a href="https://www.paleta.ca/" target="_blank" rel="noopener">Café Paleta</a> &middot; <a href="https://farmzz.com/" target="_blank" rel="noopener">Farmzz</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 12. STRAIGHT — the real stuff -->
+  <div class="testimonial-single reveal">
+    <div class="testimonial-transform"><span>Slow site</span> → Faster, more sales</div>
+    <div class="testimonial-quote">
+      You showed up one morning and you'd done it overnight. It felt like a surprise. "Boys, the site is faster." We increased our conversion rate, our recurring revenue. It's really not comfortable working with you sometimes. But I know it's going to bring positive things. You tell us <strong class="red">the real stuff</strong>, and after that, we have no choice.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/william-burgess.jpg" alt="William Burgess" /></div>
+      <div>
+        <div class="testimonial-name"><a href="https://www.linkedin.com/in/william-burgess-3a0687a7/" target="_blank" rel="noopener">William Burgess</a></div>
+        <div class="testimonial-title">Co-founder, <a href="https://monsieurchalets.com/" target="_blank" rel="noopener">Monsieur Chalets</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 13. TECH — Claude Code -->
+  <div class="testimonial-single reveal">
+    <div class="testimonial-transform"><span>Tech-blocked</span> → Autonomous in 1h</div>
+    <div class="testimonial-quote">
+      Claude Code is magical. Raph taught me how to use it and <strong class="red">it changed everything</strong>. I recommended it to a lead of mine who needed Airtable automations. Her tech guy wasn't available, her projects were behind. I told her: have you tried Claude? An hour later she texts me: I'm done with my automations, I don't even need that person anymore. I'm building an employee and client portal myself with Supabase and Hostinger. We've really entered <strong>another world</strong>.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/gael-mercier.png" alt="Gaël Mercier" /></div>
+      <div>
+        <div class="testimonial-name"><a href="https://www.linkedin.com/in/merciergael/" target="_blank" rel="noopener">Gaël Mercier</a></div>
+        <div class="testimonial-title">COO, <a href="https://www.lesgmstudios.com/" target="_blank" rel="noopener">GM Studios</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 14. EMOTIONAL — being scared -->
+  <div class="testimonial-single reveal">
+    <div class="testimonial-transform"><span>Scared</span> → People come back</div>
+    <div class="testimonial-quote">
+      We went from <strong class="red">being scared</strong> to getting positive results. We would've been happy if people just thought of us when they got the text. But no — people replied. They came in. I don't know when you sleep, but you're on it. There's not a single dollar spent elsewhere that'll give you a <strong>better return</strong>.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/emmanuel-ouellet.png" alt="Emanuel Ouellet Lapointe" /></div>
+      <div>
+        <div class="testimonial-name">Emanuel « Mani » Ouellet Lapointe</div>
+        <div class="testimonial-title">Restaurant owner &middot; <a href="https://share.google/bJ7hul6ON4wCaj1LG" target="_blank" rel="noopener">Taza Flores</a> &middot; Pour de Vrai</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 15. AUTONOMY — build skills -->
+  <div class="testimonial-single reveal">
+    <div class="testimonial-transform"><span>Dependent</span> → Capable on my own</div>
+    <div class="testimonial-quote">
+      He's <strong class="red">not there just trying to be nice</strong> to keep a long-term contract. He's there to make positive changes in your business. That's extremely underrated. I didn't feel like I was buying something I'd be dependent on. I was building my own skills through the whole process.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/oli-pharand.jpg" alt="Oli Pharand" /></div>
+      <div>
+        <div class="testimonial-name">Oli Pharand</div>
+        <div class="testimonial-title">Entrepreneur &middot; <a href="https://www.instagram.com/opsell.ca/" target="_blank" rel="noopener">Opsell</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 16. SYSTEMS — think in systems -->
+  <div class="testimonial-single reveal">
+    <div class="testimonial-transform"><span>All manual</span> → More time, more money</div>
+    <div class="testimonial-quote">
+      What you taught me is to think in systems. As soon as there's something you do, there should be a system that can replace you or make you better. <strong class="red">I recovered so much time</strong> that now every time, I want to think in systems. You free up time in your schedule and you think: ok my God, <strong>more time, more money</strong>.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/miguel-alain.jpg" alt="Miguel Alain" /></div>
+      <div>
+        <div class="testimonial-name"><a href="https://amorcekinesiologie.com/" target="_blank" rel="noopener">Miguel Alain</a></div>
+        <div class="testimonial-title">Founder, <a href="https://amorcekinesiologie.com/" target="_blank" rel="noopener">Amorce</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 17. TRANSFORMATION — agency, 4h -->
+  <div class="testimonial-single reveal">
+    <div class="testimonial-transform"><span>Everything stuck</span> → Unblocked in 4h</div>
+    <div class="testimonial-quote">
+      Before working with Raph, our agency was facing several bottlenecks that were massively slowing down our client onboarding. Our internal structure wasn't optimal and video approvals were quickly becoming complex for clients. Raph didn't just add automations. We took the time together to identify the real problems, friction points and inefficiencies in our process. Most importantly, he taught me how to use Claude Code, which now lets me solve my own problems without depending on anyone else. <strong class="red">It's a skill that will serve me for the rest of my life</strong>. Honestly, it's impressive to see everything that just <strong>4 hours of consulting</strong> were able to transform in my business.
+    </div>
+    <div class="testimonial-attribution">
+      <div class="testimonial-avatar"><img src="assets/photos/evan-arcand.jpg" alt="Evan Arcand" /></div>
+      <div>
+        <div class="testimonial-name"><a href="https://axiomedia.ca/" target="_blank" rel="noopener">Evan Arcand</a></div>
+        <div class="testimonial-title">Founder, <a href="https://axiomedia.ca/" target="_blank" rel="noopener">Axiomedia</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 18. CHAOS — clarity -->
+  <div class="testimonial-single reveal">
+    <div class="testimonial-transform"><span>Excel + Trello + chaos</span> → Clarity</div>
     <div class="testimonial-quote">
       It was <strong class="red">chaos</strong>. We could see numbers but didn't understand our numbers. It was a mix of Excel, Trello and a bunch of tools together. Honestly, it was hell. Raph didn't try to sell anything. He just looked at everything I had in my systems. When I finished the call, I realized he was truly there to help me get <strong>clarity</strong>.
     </div>
@@ -1618,33 +1876,12 @@
       </div>
     </div>
   </div>
+
+  <!-- 19. CHARACTER — 16 years, drive -->
   <div class="testimonial-single reveal">
+    <div class="testimonial-transform"><span>Unknown</span> → Visible</div>
     <div class="testimonial-quote">
-      Before working with Raph, our agency was facing several bottlenecks that were massively slowing down our client onboarding. Our internal structure wasn't optimal and video approvals were quickly becoming complex for clients. <strong class="red">Raph didn't just add automations</strong>. We took the time together to identify the real problems, the friction points and the inefficiencies in our process. Most importantly, he taught me how to use Claude Code, which now allows me to <strong>solve my own problems</strong> without depending on anyone else. <strong class="red">It's a skill that will serve me for the rest of my life</strong>. Honestly, it's impressive to see everything that just <strong>4 hours of consulting</strong> were able to transform in my business.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/evan-arcand.jpg" alt="Evan Arcand" /></div>
-      <div>
-        <div class="testimonial-name"><a href="https://axiomedia.ca/" target="_blank" rel="noopener">Evan Arcand</a></div>
-        <div class="testimonial-title">Founder, <a href="https://axiomedia.ca/" target="_blank" rel="noopener">Axiomedia</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      Claude Code is <strong>magical</strong>. Raph taught me how to use it and <strong class="red">it changed everything</strong>. I recommended it to a lead of mine who needed automations with Airtable. The tech guy wasn't available, her projects were behind. I told her: have you thought about using Claude? One hour later, she texts me: I'm done with my automations, <strong>I don't even need that person anymore</strong>. I'm building a portal for employees and clients myself with Supabase and Hostinger. We've really entered <strong>another world</strong>.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/gael-mercier.png" alt="Gaël Mercier" /></div>
-      <div>
-        <div class="testimonial-name"><a href="https://www.linkedin.com/in/merciergael/" target="_blank" rel="noopener">Gaël Mercier</a></div>
-        <div class="testimonial-title">COO, <a href="https://www.lesgmstudios.com/" target="_blank" rel="noopener">GM Studios</a></div>
-      </div>
-    </div>
-  </div>
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      I've known Raph for <strong>over 16 years</strong>. He's like a car with <strong class="red">no brakes</strong>. When he commits to something, he goes all the way. It's rare to find someone with that kind of <strong>drive</strong>. He helped me <strong>get on the map</strong>, <strong>learn by doing</strong> and <strong>automate what I do</strong>.
+      I've known Raph for <strong>over 16 years</strong>. He's like a car with <strong class="red">no brakes</strong>. When he commits to something, he goes all the way. It's rare to find people with that kind of <strong>drive</strong>. He helped me <strong>get on the map</strong>, <strong>learn by doing</strong> and <strong>automate what I do</strong>.
     </div>
     <div class="testimonial-attribution">
       <div class="testimonial-avatar"><img src="assets/photos/nicolas-nihezagire.png" alt="Nicolas R Nihezagire" /></div>
@@ -1654,44 +1891,7 @@
       </div>
     </div>
   </div>
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      Having Raph by your side is like having a <strong class="red">Swiss army knife in the wild</strong>. Very few people combine such a high level of knowledge AND such fast execution. Email deliverability, marketing strategy, workflows, automations: Raph masters it and delivers. You can have the best can opener in the world… if you can't cut your fish or start your fire, you won't get far. And above all: he <strong class="red">overdelivers</strong>. Always. You never just get what you asked for, you always get more. If you want someone who moves things forward, <strong>Raph is a no-brainer</strong>.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/christophe-contant.jpg" alt="Christophe Contant" /></div>
-      <div>
-        <div class="testimonial-name"><a href="https://www.liveholos.com/" target="_blank" rel="noopener">Christophe Contant</a></div>
-        <div class="testimonial-title">Co-founder, <a href="https://www.liveholos.com/" target="_blank" rel="noopener">HOLOS</a> &middot; Founder &amp; CEO, <a href="https://elevonutrition.com/" target="_blank" rel="noopener">ELEVO Nutrition</a></div>
-      </div>
-    </div>
-  </div>
 
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      We had a team <strong class="red">hitting walls</strong> and nobody was raising the flag. Raph gave me <strong>concrete tools</strong>, not nice frameworks. Real stuff that works. Within weeks, I got <strong class="red">buy-in from the most resistant person</strong> on the team. I stepped up as a real lead. He challenges you, gives you juice, then lets you drive. If your org needs to hit the <strong class="red">next level</strong>, <strong>he's the one you want</strong>.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/angie-clerine.jpg" alt="Angie Clérine" /></div>
-      <div>
-        <div class="testimonial-name">Angie Clérine</div>
-        <div class="testimonial-title"><a href="https://nouvellevie.com/" target="_blank" rel="noopener">Église Nouvelle Vie</a> &middot; NV Centrale &middot; 11 campus</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="testimonial-single reveal">
-    <div class="testimonial-quote">
-      We brought Raphaël in to <strong class="red">optimize our Notion projects</strong>. He quickly grasped our challenges and found <strong>tailored, lasting solutions</strong>. Raphaël is attentive, dynamic, and extremely professional. His expertise didn't just meet our expectations — it <strong class="red">exceeded them</strong>.
-    </div>
-    <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/melanie-bacquet.jpg" alt="Mélanie Bacquet" /></div>
-      <div>
-        <div class="testimonial-name"><a href="https://nouvellevie.com/" target="_blank" rel="noopener">Mélanie Bacquet</a></div>
-        <div class="testimonial-title">Responsable | Communications et Productions &mdash; <a href="https://nouvellevie.com/" target="_blank" rel="noopener">NV Québec</a> &middot; +1800 personnes chaque dimanche &middot; Notion architecture/management</div>
-      </div>
-    </div>
-  </div>
   </div>
 </div>
 
@@ -1701,8 +1901,8 @@
     <div class="aigeeks-hero reveal">
       <div class="aigeeks-hero-text">
         <div class="section-label">AI Geeks</div>
-        <h2><u>AI-first</u>. Not AI-eventually.</h2>
-        <p>I founded <strong>AI Geeks</strong> to bring together builders who want to use artificial intelligence to ship faster, not just talk about it on LinkedIn.</p>
+        <h2><strong class="red">AI-first</strong>. Not AI-eventually.</h2>
+        <p>I founded <strong>AI Geeks</strong> to bring together builders who want to use AI to ship faster, not just talk about it on LinkedIn.</p>
         <p>Events, workshops, content. A community of people who think in systems, build with AI, and execute.</p>
         <div class="aigeeks-stats">
           <div>
@@ -1745,23 +1945,23 @@
 
     <div class="aigeeks-testimonials">
       <div class="aigeeks-testimonial reveal">
-        <blockquote>I <strong>learned more in one evening</strong> at AI Geeks than in 4 trainings elsewhere. One single conference was more relevant than all those full days. I'd heard about Claude Code all week, installed everything, it wasn't working, I was at "fuck this." Then I was there that same evening and <strong>it all clicked</strong>. It's the quality of people. People who are sharp. That's the <strong>real value</strong>.</blockquote>
+        <blockquote>I <strong>learned more in one evening</strong> at AI Geeks than in 4 trainings elsewhere. One single talk was more relevant than entire days there. I'd been hearing about Claude Code all week, I'd installed everything, it wasn't working, I was at "fuck this." Then I was there that same evening and <strong>it all clicked</strong>. It's the quality of people. People who are sharp. That's the <strong>real value</strong>.</blockquote>
         <cite><strong>Gabriel Gouveia</strong>CEO, Lasclay.com</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
-        <blockquote>It's impressive to see how we're <strong>redefining the rules</strong> of what we've always known and done. That kind of shift is huge. Most people use AI in copy-paste mode. The next step is when your computer <strong>takes control and executes</strong> for you. Big crowd, filled with amazing people, all eager to learn more and most importantly, to execute.</blockquote>
+        <blockquote>It's impressive to see how we're <strong>redefining the rules</strong> of what we've always known and done. That kind of shift is huge. Most people use AI in copy-paste mode. The next step is when your computer <strong>takes control and executes</strong> for you. Big crowd, filled with amazing people, all eager to learn more — and above all, to execute.</blockquote>
         <cite><strong>Stéphanie Bédard</strong>Fractional CMO</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
-        <blockquote><strong>Tangible! Real!</strong> A packed full house of 70 people watching presentations on <strong>concrete use cases</strong>. Anthony B. with his cabin retreat that produced tools in 3 hours, Francois Lanthier Nadeau who created a newsletter live without touching his keyboard… Excellent event organization.</blockquote>
+        <blockquote><strong>Tangible! Real!</strong> A packed full house of 70 people watching presentations on <strong>concrete use cases</strong>. Anthony B. with his cabin retreat that produced tools in 3 hours, François Lanthier Nadeau who created a newsletter live without touching his keyboard… Excellent event organization.</blockquote>
         <cite><strong>Francis Laplante</strong>CEO, Spektrum</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
-        <blockquote>Before Raphaël started this, Quebec really had nothing. Now, 55 people sign up, <strong>everything sells out in four days</strong>. The difference: people who actually build share real use cases, concrete demos. This is where Quebec's AI community gathers. If you're shipping something with AI, <strong>you need to be in this room</strong>.</blockquote>
+        <blockquote>Before Raphaël started this, Quebec really had nothing. Now, 55 people sign up and <strong>everything sells out in four days</strong>. The difference: people who actually build share real use cases, concrete demos. This is where Quebec's AI community gathers. If you're shipping something with AI, <strong>you need to be in this room</strong>.</blockquote>
         <cite><strong>Jacomo Deschatelets</strong>Founder, Instrumnt</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
-        <blockquote>For founders by founders — I love the approach (while remaining super accessible for non-founders like me). Wow. I had <strong>zero expectations</strong> and <strong>I LOVED IT!</strong> It was accessible, unpretentious, and super welcoming.</blockquote>
+        <blockquote>For founders by founders — I love the approach (while staying super accessible for non-founders like me). Wow. I had <strong>zero expectations</strong> and <strong>I LOVED IT!</strong> Accessible, unpretentious, and super welcoming.</blockquote>
         <cite><strong>Rosalie Simard, MBA</strong>Venture Capital @ Investissement Québec · VP @ Capitale Numérique</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
@@ -1769,8 +1969,8 @@
         <cite><strong>Rosalie Breton</strong>VP of Operations, iFinance</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
-        <blockquote>What surprised me most was how much AI and the presented cases have advanced since the previous edition. Capabilities have <strong>evolved enormously</strong> and we got access to use cases that show new features can truly apply in a business context. <strong>I can't wait for the next one!</strong></blockquote>
-        <cite><strong>Daphné Croteau</strong>Customer Experience & Process Optimization Expert</cite>
+        <blockquote>What surprised me most was how much AI and the cases presented have advanced since the previous edition. Capabilities have <strong>evolved enormously</strong> and we got access to use cases that show new features can truly apply in a business context. <strong>I can't wait for the next one!</strong></blockquote>
+        <cite><strong>Daphné Croteau</strong>Customer experience &amp; process optimization expert</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
         <blockquote>It's <strong>insane</strong> what you're building, honestly.</blockquote>
@@ -1815,7 +2015,7 @@
 
     <div class="aigeeks-photos reveal">
       <img src="assets/photos/aigeeks-1.webp" alt="AI Geeks networking" loading="lazy" />
-      <img src="assets/photos/aigeeks-2.webp" alt="AI Geeks participants" loading="lazy" />
+      <img src="assets/photos/aigeeks-2.webp" alt="AI Geeks attendees" loading="lazy" />
       <img src="assets/photos/aigeeks-4.webp" alt="AI Geeks presentation" loading="lazy" />
       <img src="assets/photos/aigeeks-3.webp" alt="AI Geeks conversations" loading="lazy" />
     </div>
@@ -1870,8 +2070,8 @@
   <div class="creds-grid">
     <div class="cred-card reveal">
       <div class="cred-issuer">Notion</div>
-      <h3>Consulting Partner</h3>
-      <p>Certified partner on the Notion Marketplace. Profile @leverageos.</p>
+      <h3>Certified Consulting Partner</h3>
+      <p>Certified consulting partner on the Notion Marketplace. Profile @leverageos.</p>
     </div>
     <div class="cred-card reveal reveal-delay-1">
       <div class="cred-issuer">Cloudflare</div>
@@ -1880,8 +2080,8 @@
     </div>
     <div class="cred-card reveal reveal-delay-2">
       <div class="cred-issuer">Notion</div>
-      <h3>Advanced + Workflows + Essentials</h3>
-      <p>Triple Notion certification. Advanced, Workflows, Settings & Sharing badges.</p>
+      <h3>Notion Certifications</h3>
+      <p>Triple Notion certification: Advanced, Workflows, Settings &amp; Sharing.</p>
     </div>
     <div class="cred-card reveal">
       <div class="cred-issuer">Notion &middot; Waterloo</div>
@@ -1895,7 +2095,7 @@
     </div>
     <div class="cred-card reveal reveal-delay-2">
       <div class="cred-issuer">Treehouse</div>
-      <h3>Full Stack JavaScript</h3>
+      <h3>Full Stack JavaScript Development</h3>
       <p>Full-stack web development certification.</p>
     </div>
     <a href="https://ici.radio-canada.ca/info/videos/1-8118601/futurs-maraichers-a-entrainement?liste=28-34803" target="_blank" rel="noopener" class="cred-card cred-card-press reveal">
@@ -1930,8 +2130,16 @@
 <div id="contact" class="contact-section">
   <div class="contact-inner reveal">
     <h2>Get in touch</h2>
-    <p>A question, a project, an idea? Write to me.</p>
-    <a href="mailto:raphatbventures@gmail.com?subject=Contact%20%E2%80%94%20raphatb.com" class="contact-mailto">Send me an email →</a>
+    <p>A question, a project, an idea? Drop me a line.</p>
+    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="9b4777fc-2433-41ad-9e0c-f217a3dddbf3">
+      <input type="hidden" name="subject" value="New message via raphatb.com">
+      <input type="hidden" name="redirect" value="https://raphatb.com/en.html">
+      <input type="email" name="email" placeholder="your@email.com" required />
+      <input type="text" name="name" placeholder="Subject" required />
+      <textarea name="message" placeholder="Your message..." rows="3" required></textarea>
+      <button type="submit">Send →</button>
+    </form>
   </div>
 </div>
 
@@ -2018,7 +2226,6 @@
     const update = () => {
       const scrollY = window.scrollY + window.innerHeight / 3;
 
-      // Show/hide TOC based on scroll position
       toc.classList.toggle('visible', window.scrollY > 400);
 
       let active = sections[0];
