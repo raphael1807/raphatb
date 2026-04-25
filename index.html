@@ -683,6 +683,62 @@
       border: 0;
     }
 
+    .talks-subhead {
+      max-width: 900px;
+      margin: 64px auto 24px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+    }
+
+    .talks-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .talk-card {
+      display: block;
+    }
+
+    .talk-card-video {
+      aspect-ratio: 16/9;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin-bottom: 12px;
+    }
+
+    .talk-card-video iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .talk-card-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--fg);
+      margin-bottom: 4px;
+    }
+
+    .talk-card-meta {
+      font-size: 0.8rem;
+      color: var(--fg-muted);
+    }
+
+    @media (max-width: 768px) {
+      .talks-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* ── TESTIMONIALS ── */
     .testimonials-section {
       background: var(--bg-subtle);
@@ -2140,16 +2196,72 @@
 <div id="onstage" class="video-section">
   <div class="section" style="padding-bottom: 80px;">
     <div class="section-label">Sur scène</div>
-    <h2 class="section-heading">Notion Presentations, Waterloo</h2>
-    <p class="section-lead">Conférence sur les systèmes Notion, l'automatisation et la productivité pour entrepreneurs.</p>
+    <h2 class="section-heading">Solo Founder : ship comme une équipe de 30</h2>
+    <p class="section-lead">Ma conférence à AI Geeks #3 — comment un founder solo peut livrer comme une équipe de 30 grâce aux bons systèmes et à l'AI.</p>
     <div class="video-container">
       <iframe
-        src="https://www.youtube.com/embed/CGxoRasRJrs"
-        title="Raph TB, Notion Presentations Waterloo"
+        src="https://www.youtube.com/embed/6Kcr3JI_LZc"
+        title="Solo Founder: Comment Une Équipe De 3 Ship Comme 30! — Raphaël Tremblay-Bouchard (AI Geeks #3)"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
         loading="lazy">
       </iframe>
+    </div>
+
+    <div class="talks-subhead">Les autres talks que j'ai hosté à AI Geeks #3</div>
+    <div class="talks-grid">
+      <a href="https://www.youtube.com/watch?v=HAykLd4updc" target="_blank" rel="noopener" class="talk-card reveal">
+        <div class="talk-card-video">
+          <iframe
+            src="https://www.youtube.com/embed/HAykLd4updc"
+            title="Sans Coder, Mon Équipe Bâtit Des Outils En 3h Avec L'AI — Anthony Blais, Elia (AI Geeks #3)"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+        <div class="talk-card-title">Sans coder, mon équipe bâtit des outils en 3h avec l'AI</div>
+        <div class="talk-card-meta">Anthony Blais &middot; Elia &middot; 21:12</div>
+      </a>
+      <a href="https://www.youtube.com/watch?v=O1dQO0eMU_8" target="_blank" rel="noopener" class="talk-card reveal reveal-delay-1">
+        <div class="talk-card-video">
+          <iframe
+            src="https://www.youtube.com/embed/O1dQO0eMU_8"
+            title="GTM Expert: Votre ICP N'Est Qu'une Hypothèse! Voici Quoi Faire — Bruno Marchand (AI Geeks #3)"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+        <div class="talk-card-title">Votre ICP n'est qu'une hypothèse — voici quoi faire</div>
+        <div class="talk-card-meta">Bruno Marchand &middot; GTM Expert &middot; 16:13</div>
+      </a>
+      <a href="https://www.youtube.com/watch?v=Fe1SzOA9Xxw" target="_blank" rel="noopener" class="talk-card reveal">
+        <div class="talk-card-video">
+          <iframe
+            src="https://www.youtube.com/embed/Fe1SzOA9Xxw"
+            title="Baseline AI Expert: 90% Des Projets AI Échouent À Cause De Ça! — David Beauchemin (AI Geeks #3)"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+        <div class="talk-card-title">90% des projets AI échouent à cause de ça</div>
+        <div class="talk-card-meta">David Beauchemin &middot; Baseline AI &middot; 42:57</div>
+      </a>
+      <a href="https://www.youtube.com/watch?v=CGxoRasRJrs" target="_blank" rel="noopener" class="talk-card reveal reveal-delay-1">
+        <div class="talk-card-video">
+          <iframe
+            src="https://www.youtube.com/embed/CGxoRasRJrs"
+            title="Raph TB, Notion Presentations Waterloo"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy">
+          </iframe>
+        </div>
+        <div class="talk-card-title">Notion Presentations, Waterloo</div>
+        <div class="talk-card-meta">Systèmes Notion &middot; productivité entrepreneurs</div>
+      </a>
     </div>
   </div>
 </div>
