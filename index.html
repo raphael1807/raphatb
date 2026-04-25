@@ -743,6 +743,33 @@
       margin-bottom: 12px;
     }
 
+    .testimonial-screenshot-frame {
+      margin-bottom: 24px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #0a0a0a;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+      max-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .testimonial-screenshot-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+    }
+    .testimonial-screenshot-caption {
+      font-size: 0.78rem;
+      color: var(--fg-muted);
+      margin-top: -16px;
+      margin-bottom: 16px;
+      letter-spacing: 0.02em;
+    }
+
     .testimonial-attribution {
       display: flex;
       align-items: center;
@@ -1466,7 +1493,7 @@
     <span class="nav-name">raphatb</span>
     <ul class="nav-links" id="nav-links">
       <li><a href="#story">Parcours</a></li>
-      <li><a href="#testimonials">Témoignages (22)</a></li>
+      <li><a href="#testimonials">Témoignages (24)</a></li>
       <li><a href="#credentials">Références</a></li>
     </ul>
     <div class="nav-right">
@@ -1638,7 +1665,7 @@
 <div id="testimonials" class="testimonials-section">
   <div class="section" style="padding-bottom: 0;">
     <div class="section-label">Témoignages</div>
-    <h2 class="section-heading">22 transformations. Dans leurs mots.</h2>
+    <h2 class="section-heading">24 transformations. Dans leurs mots.</h2>
     <p class="section-lead">Des vrais mots, de vraies personnes avec qui j'ai travaillé.</p>
   </div>
 
@@ -1925,6 +1952,36 @@
       <div>
         <div class="testimonial-name">Nicolas R Nihezagire</div>
         <div class="testimonial-title">Acquéreur de PME &middot; Nomad Capital &middot; Ex-PwC M&amp;A &middot; Tiny Capital</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 20. SCREENSHOT — Jeremy-Noah, coaching tip -->
+  <div class="testimonial-single reveal">
+    <div class="testimonial-transform"><span>J'abandonnais</span> → Ça change tout</div>
+    <div class="testimonial-screenshot-frame">
+      <img src="assets/screenshots/jeremy-noah-theriault.png" alt="Conversation Messenger avec Jeremy-Noah Theriault" loading="lazy" />
+    </div>
+    <div class="testimonial-screenshot-caption">Messenger &middot; non sollicité</div>
+    <div class="testimonial-attribution">
+      <div>
+        <div class="testimonial-name">Jeremy-Noah Theriault</div>
+        <div class="testimonial-title">« C'est fou comment le tip de coacher l'AI jusqu'à temps qu'il le nail, c'est fort. Avant, j'abandonnais. »</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 21. SCREENSHOT — Emmanuel, demande d'avis -->
+  <div class="testimonial-single reveal">
+    <div class="testimonial-transform"><span>Avant de décider</span> → Demande l'avis de Raph</div>
+    <div class="testimonial-screenshot-frame">
+      <img src="assets/screenshots/emmanuel-conversation.png" alt="Conversation Messenger avec Emmanuel demandant l'avis de Raph sur Wix" loading="lazy" />
+    </div>
+    <div class="testimonial-screenshot-caption">Messenger &middot; non sollicité</div>
+    <div class="testimonial-attribution">
+      <div>
+        <div class="testimonial-name">Emmanuel</div>
+        <div class="testimonial-title">« Je respecte beaucoup ton opinion et tes connaissances. »</div>
       </div>
     </div>
   </div>
