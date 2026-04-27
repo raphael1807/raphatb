@@ -2,5 +2,6 @@
 .env
 node_modules/
 carousels/
+transcripts/
 *.bak
 *.mp4
