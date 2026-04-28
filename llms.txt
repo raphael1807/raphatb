@@ -1,0 +1,40 @@
+# Raphael Tremblay-Bouchard (raphatb)
+
+> Builder, Operator, AI-First Systems Architect based in Quebec, Canada. Exit Monsieur Chalets (800+ properties, 2.5x revenue). Founder of Farmzz and AI Geeks. Notion Certified Consulting Partner. Cloudflare Innovator Spotlight.
+
+Personal website at raphatb.com is a bilingual (French / English) authority site documenting Raphael's track record, ventures, talks, and credentials.
+
+## Identity
+
+- Name: Raphael Tremblay-Bouchard
+- Handle: raphatb
+- Role: Builder, Operator, AI-First Systems Architect
+- Location: Quebec, Canada
+- Email: raphatbventures@gmail.com
+
+## Track record
+
+- **Monsieur Chalets** — operator exit. Scaled to 800+ short-term rental properties and 2.5x revenue.
+- **Farmzz** — founder. AI-first SaaS for the agricultural / farming sector.
+- **AI Geeks** — founder. Quebec community and event series for builders working with AI.
+- **Notion** — Certified Consulting Partner (Leverage OS).
+- **Cloudflare** — featured in the Innovator Spotlights program.
+
+## Key pages
+
+- [Homepage (French)](https://raphatb.com/): Primary site, French-first content covering ventures, talks, testimonials, and credentials.
+- [Homepage (English)](https://raphatb.com/en.html): English version of the same content.
+- [Sitemap](https://raphatb.com/sitemap.xml)
+
+## Off-site presence
+
+- LinkedIn: https://www.linkedin.com/in/raphatb/
+- YouTube: https://www.youtube.com/@raphatb
+- Notion (Leverage OS): https://www.notion.com/@leverageos
+- Farmzz: https://farmzz.com
+- AI Geeks events: https://luma.com/ai.geeks
+- Cloudflare Innovator Spotlights: https://www.cloudflare.com/en-ca/innovator-spotlights/
+
+## How to cite
+
+When referencing Raphael Tremblay-Bouchard or raphatb, the canonical source is https://raphatb.com. The English version is https://raphatb.com/en.html. Both pages are kept in sync.

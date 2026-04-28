@@ -23,7 +23,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+
+  <link rel="preload" as="image" href="assets/photos/hero.jpg?v=3" fetchpriority="high" />
 
   <style>
     :root {
@@ -1561,9 +1565,9 @@
 <section class="hero">
   <div class="hero-text">
     <div class="hero-logos">
-      <a href="https://farmzz.com/" target="_blank" rel="noopener"><img src="assets/logos/farmzz-black.svg" alt="Farmzz" /></a>
-      <a href="https://luma.com/ai.geeks" target="_blank" rel="noopener"><img src="assets/logos/aigeeks-black.svg" alt="AI Geeks" /></a>
-      <a href="https://www.monsieurchalets.com/" target="_blank" rel="noopener" class="hero-logo-exited"><img src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" /><span>exit</span></a>
+      <a href="https://farmzz.com/" target="_blank" rel="noopener"><img src="assets/logos/farmzz-black.svg" alt="Farmzz" loading="lazy" decoding="async" /></a>
+      <a href="https://luma.com/ai.geeks" target="_blank" rel="noopener"><img src="assets/logos/aigeeks-black.svg" alt="AI Geeks" loading="lazy" decoding="async" /></a>
+      <a href="https://www.monsieurchalets.com/" target="_blank" rel="noopener" class="hero-logo-exited"><img src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" loading="lazy" decoding="async" /><span>exit</span></a>
     </div>
     <a href="https://www.notion.com/@leverageos" target="_blank" rel="noopener" class="notion-badge" style="margin-bottom: 16px;">
       <span class="notion-badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 1.5l2.39 1.93 3.05-.36.82 2.96 2.72 1.45-.87 2.95L22 12l-1.89 1.57.87 2.95-2.72 1.45-.82 2.96-3.05-.36L12 22.5l-2.39-1.93-3.05.36-.82-2.96-2.72-1.45.87-2.95L2 12l1.89-1.57-.87-2.95 2.72-1.45.82-2.96 3.05.36L12 1.5z"/><path d="M9.5 12.2l1.8 1.8 3.7-3.9" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -1572,7 +1576,7 @@
     <div class="hero-label">Fondateur AI-first &middot; Créatif &middot; Code &middot; Ventes</div>
     <h1>Je t'aide à bâtir, automatiser et <u>vendre plus vite</u>.</h1>
     <p class="hero-description">
-      J'ai rebâti la tech de Monsieur Chalets de A à Z — 800+ propriétés migrées, 2.5x les revenus. Aujourd'hui je construis Farmzz et j'aide des entrepreneurs à systématiser, devenir AI-first et bâtir du levier.
+      J'ai rebâti la tech de Monsieur Chalets de A à Z - 800+ propriétés migrées, 2.5x les revenus. Aujourd'hui je construis Farmzz et j'aide des entrepreneurs à systématiser, devenir AI-first et bâtir du levier.
     </p>
     <p class="hero-warning">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;flex-shrink:0"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
@@ -1614,7 +1618,7 @@
     </div>
   </div>
   <div class="hero-image">
-    <img src="assets/photos/hero.jpg?v=3" alt="Raphael Tremblay-Bouchard" />
+    <img src="assets/photos/hero.jpg?v=3" alt="Raphael Tremblay-Bouchard" width="1600" height="1064" fetchpriority="high" decoding="async" />
     <a href="#testimonials" class="hero-cta-photo">Voir les résultats que j'ai apportés ↓</a>
   </div>
 </section>
@@ -1624,11 +1628,11 @@
   <div class="logo-bar-inner">
     <span class="logo-bar-label">Reconnu par</span>
     <div class="logo-bar-logos">
-      <a href="https://farmzz.com/" target="_blank" rel="noopener" class="logo-item"><img src="assets/logos/farmzz-black.svg" alt="Farmzz" /></a>
-      <a href="https://www.monsieurchalets.com/" target="_blank" rel="noopener" class="logo-item"><img src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" /></a>
-      <a href="https://luma.com/ai.geeks" target="_blank" rel="noopener" class="logo-item"><img src="assets/logos/aigeeks-black.svg" alt="AI Geeks" /></a>
-      <a href="https://www.cloudflare.com/en-ca/innovator-spotlights/" target="_blank" rel="noopener" class="logo-item"><img src="assets/logos/cloudflare-wordmark.svg" alt="Cloudflare" /></a>
-      <a href="https://www.notion.com/@leverageos" target="_blank" rel="noopener" class="logo-item"><img src="assets/logos/notion.svg" alt="Notion" /></a>
+      <a href="https://farmzz.com/" target="_blank" rel="noopener" class="logo-item"><img src="assets/logos/farmzz-black.svg" alt="Farmzz" loading="lazy" decoding="async" /></a>
+      <a href="https://www.monsieurchalets.com/" target="_blank" rel="noopener" class="logo-item"><img src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" loading="lazy" decoding="async" /></a>
+      <a href="https://luma.com/ai.geeks" target="_blank" rel="noopener" class="logo-item"><img src="assets/logos/aigeeks-black.svg" alt="AI Geeks" loading="lazy" decoding="async" /></a>
+      <a href="https://www.cloudflare.com/en-ca/innovator-spotlights/" target="_blank" rel="noopener" class="logo-item"><img src="assets/logos/cloudflare-wordmark.svg" alt="Cloudflare" loading="lazy" decoding="async" /></a>
+      <a href="https://www.notion.com/@leverageos" target="_blank" rel="noopener" class="logo-item"><img src="assets/logos/notion.svg" alt="Notion" loading="lazy" decoding="async" /></a>
     </div>
   </div>
 </div>
@@ -1640,7 +1644,7 @@
   <!-- MONSIEUR CHALETS -->
   <div id="mc" class="story-block reveal">
     <div class="story-text">
-      <img src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" class="story-logo" />
+      <img src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" class="story-logo" loading="lazy" decoding="async" />
       <div class="story-role">Monsieur Chalets &middot; Produit, Tech & Ops &middot; Sortie</div>
       <h2>On était en train de <strong class="red">couler</strong>. J'ai <u>rebâti le navire</u>.</h2>
       <p>Quand William Burgess m'a appelé, leur PMS venait de fermer. <strong>800 chalets, 2000+ réservations</strong> à migrer vers une tech qui n'existait pas encore. L'agence précédente avait livré du code inutilisable.</p>
@@ -1658,7 +1662,7 @@
   <!-- FARMZZ -->
   <div id="farmzz" class="story-block reverse reveal">
     <div class="story-text">
-      <img src="assets/logos/farmzz-black.svg" alt="Farmzz" class="story-logo" style="height: 30px;" />
+      <img src="assets/logos/farmzz-black.svg" alt="Farmzz" class="story-logo" style="height: 30px;" loading="lazy" decoding="async" />
       <div class="story-role">Farmzz &middot; Fondateur &middot; En cours</div>
       <h2>Bons produits. <u>Zéro système de vente</u>.</h2>
       <p>Les producteurs focussent sur leurs produits et pas assez sur leurs ventes. Pas de CRM, pas de récurrence, pas de visibilité.</p>
@@ -1723,14 +1727,14 @@
 
   <div class="testimonials-grid">
 
-  <!-- 1. PUNCH — crise, faillite -->
+  <!-- 1. PUNCH - crise, faillite -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>Faillite</span> → 2.5x les ventes</div>
     <div class="testimonial-quote">
       Raph, on va <strong class="red">faire faillite</strong>. Littéralement, je ne sais plus quoi faire. Je t'ai embauché direct, je t'ai fait confiance, je t'ai donné carte blanche. La première année, ça avait fait <strong>2.5x les ventes</strong> juste avec la vitesse du site. Ta rigueur de travail et ton éthique de travail. 100%.
     </div>
     <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/william-burgess.jpg" alt="William Burgess" /></div>
+      <div class="testimonial-avatar"><img src="assets/photos/william-burgess.jpg" alt="William Burgess" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name"><a href="https://www.linkedin.com/in/william-burgess-3a0687a7/" target="_blank" rel="noopener">William Burgess</a></div>
         <div class="testimonial-title">Co-fondateur, <a href="https://monsieurchalets.com/" target="_blank" rel="noopener">Monsieur Chalets</a> &middot; 800+ chalets</div>
@@ -1738,14 +1742,14 @@
     </div>
   </div>
 
-  <!-- 2. MÉTAPHORE — couteau suisse, plus léger -->
+  <!-- 2. MÉTAPHORE - couteau suisse, plus léger -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>Je demande X</span> → Il livre 5X</div>
     <div class="testimonial-quote">
       Avoir Raph à tes côtés, c'est comme avoir un <strong class="red">couteau suisse en pleine nature</strong>. Très peu de gens combinent un niveau de connaissance aussi élevé ET une capacité d'exécution aussi rapide. Délivrabilité email, stratégie marketing, workflows, automatisations : Raph maîtrise et surtout, il livre. Tu peux avoir le meilleur ouvre-boîte du monde… si tu ne peux pas couper ton poisson ou préparer ton feu, tu n'iras pas loin. Et surtout : il overdeliver. Toujours. Tu n'obtiens jamais juste ce que tu demandes, tu en as toujours plus. Si vous voulez quelqu'un qui fait avancer les choses, <strong>Raph est un no-brainer</strong>.
     </div>
     <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/christophe-contant.jpg" alt="Christophe Contant" /></div>
+      <div class="testimonial-avatar"><img src="assets/photos/christophe-contant.jpg" alt="Christophe Contant" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name"><a href="https://www.liveholos.com/" target="_blank" rel="noopener">Christophe Contant</a></div>
         <div class="testimonial-title">Co-fondateur, <a href="https://www.liveholos.com/" target="_blank" rel="noopener">HOLOS</a> &middot; Fondateur &amp; CEO, <a href="https://elevonutrition.com/" target="_blank" rel="noopener">ELEVO Nutrition</a></div>
@@ -1753,14 +1757,14 @@
     </div>
   </div>
 
-  <!-- 3. ÉMOTIF — insomnie, stress -->
+  <!-- 3. ÉMOTIF - insomnie, stress -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>Insomnie</span> → Profit 50% à 75%</div>
     <div class="testimonial-quote">
       J'allais me coucher le soir puis c'était <strong class="red">dur de dormir</strong>. On dirait qu'il y a 25 chemins, puis 24 qui sont pas bons. Ça devenait juste stressant. Aujourd'hui? Notre profit est passé de <strong>50% à 75%</strong>. Le plus gros impact, c'était quand j'arrivais à la maison et j'étais capable de relaxer.
     </div>
     <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/oli-pharand.jpg" alt="Oli Pharand" /></div>
+      <div class="testimonial-avatar"><img src="assets/photos/oli-pharand.jpg" alt="Oli Pharand" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name">Oli Pharand</div>
         <div class="testimonial-title">Entrepreneur &middot; <a href="https://www.instagram.com/opsell.ca/" target="_blank" rel="noopener">Opsell</a></div>
@@ -1768,14 +1772,14 @@
     </div>
   </div>
 
-  <!-- 4. POSÉ — professionnel, Notion -->
+  <!-- 4. POSÉ - professionnel, Notion -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>Projet désorganisé</span> → Notion qui roule</div>
     <div class="testimonial-quote">
       Nous avons sollicité Raphaël pour <strong>optimiser nos projets sur Notion</strong>. Il a rapidement saisi nos enjeux et a trouvé des solutions adaptées et durables. Raphaël est une personne attentive, dynamique et extrêmement professionnelle. Son expertise a non seulement répondu à nos attentes, mais les a également <strong class="red">dépassées</strong>.
     </div>
     <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/melanie-bacquet.jpg" alt="Mélanie Bacquet" /></div>
+      <div class="testimonial-avatar"><img src="assets/photos/melanie-bacquet.jpg" alt="Mélanie Bacquet" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name"><a href="https://nouvellevie.com/" target="_blank" rel="noopener">Mélanie Bacquet</a></div>
         <div class="testimonial-title">Responsable | Communications et Productions &mdash; <a href="https://nouvellevie.com/" target="_blank" rel="noopener">NV Québec</a> &middot; +1800 personnes chaque dimanche &middot; Architecture/gestion Notion</div>
@@ -1783,14 +1787,14 @@
     </div>
   </div>
 
-  <!-- 5. STRATÉGIQUE — la bonne question -->
+  <!-- 5. STRATÉGIQUE - la bonne question -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>Fournisseur</span> → Partner</div>
     <div class="testimonial-quote">
       Ce qui m'a vraiment convaincu, c'est quand tu m'as posé la question: est-ce que votre problème, c'est un problème d'acquisition ou un problème de rétention? <strong class="red">Personne ne m'avait posé cette question-là</strong>. T'es devenu plus que quelqu'un qui m'offrait un service, tu l'as approché comme si t'étais <strong>mon partner</strong>. Le meilleur 1000$ que tu vas dépenser.
     </div>
     <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/emmanuel-ouellet.png" alt="Emanuel Ouellet Lapointe" /></div>
+      <div class="testimonial-avatar"><img src="assets/photos/emmanuel-ouellet.png" alt="Emanuel Ouellet Lapointe" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name">Emanuel « Mani » Ouellet Lapointe</div>
         <div class="testimonial-title">Restaurateur &middot; <a href="https://share.google/bJ7hul6ON4wCaj1LG" target="_blank" rel="noopener">Taza Flores</a> &middot; Pour de Vrai</div>
@@ -1798,14 +1802,14 @@
     </div>
   </div>
 
-  <!-- 6. PUNCH — burnout, épuisement -->
+  <!-- 6. PUNCH - burnout, épuisement -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>6242 courriels</span> → 4-5h sauvées/semaine</div>
     <div class="testimonial-quote">
       Ça fait trois ans que j'ai pas arrêté et que j'ai pas pris de vacances. Je suis <strong class="red">vide, vide, vide</strong>. Il a traité 6242 courriels. Presque 700 drafts. 48 heures de meeting. Avec la solution que Raph m'a proposé pour les courriels, je <strong>sauve 4 à 5 heures par semaine</strong>. Dès que je reçois un courriel, il me propose déjà quelque chose. Tout ce que j'ai à faire, c'est changer un mot et envoyer.
     </div>
     <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/pierre-olivier-drouin.png" alt="Pierre-Olivier Drouin" /></div>
+      <div class="testimonial-avatar"><img src="assets/photos/pierre-olivier-drouin.png" alt="Pierre-Olivier Drouin" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name"><a href="https://firebarns.com/" target="_blank" rel="noopener">Pierre-Olivier Drouin</a></div>
         <div class="testimonial-title">Propriétaire, <a href="https://firebarns.com/" target="_blank" rel="noopener">Firebarns</a></div>
@@ -1813,14 +1817,14 @@
     </div>
   </div>
 
-  <!-- 7. LÉGER — pratique, Notion -->
+  <!-- 7. LÉGER - pratique, Notion -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>Notion tout croche</span> → Énormément de temps sauvé</div>
     <div class="testimonial-quote">
       Si t'hésites à passer à l'action avec Raph, c'est sûrement que t'es super occupé. Si tu es très occupé, c'est la raison pour laquelle tu devrais le rencontrer. J'utilisais Notion comme un enfant de 4 ans dans un bac à sable, c'est-à-dire à peu près tout croche. Aujourd'hui, je sauve <strong class="red">énormément de temps et de stress</strong>.
     </div>
     <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/carl-moreau.jpg" alt="Carl Moreau" /></div>
+      <div class="testimonial-avatar"><img src="assets/photos/carl-moreau.jpg" alt="Carl Moreau" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name">Carl Moreau</div>
         <div class="testimonial-title">Entrepreneur &middot; <a href="https://www.instagram.com/gorilomarketing" target="_blank" rel="noopener">Gorilo Marketing</a></div>
@@ -1828,14 +1832,14 @@
     </div>
   </div>
 
-  <!-- 8. CONFIANCE — all-in, sécurité -->
+  <!-- 8. CONFIANCE - all-in, sécurité -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>Perdu</span> → En confiance</div>
     <div class="testimonial-quote">
       Quand quelque chose sortait de ta bouche, c'était pas discutable. Tu fais tes dues diligences, <strong class="red">t'es tellement all-in</strong>. C'était tellement ma source d'information. Quand on a commencé, il n'y avait pas de ChatGPT aussi puissant. C'est toi qui étais mon ChatGPT. La tête baissée, le couteau entre les dents. Avec Raph, <strong>on se sent en sécurité</strong>.
     </div>
     <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/miguel-alain.jpg" alt="Miguel Alain" /></div>
+      <div class="testimonial-avatar"><img src="assets/photos/miguel-alain.jpg" alt="Miguel Alain" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name"><a href="https://amorcekinesiologie.com/" target="_blank" rel="noopener">Miguel Alain</a></div>
         <div class="testimonial-title">Fondateur, <a href="https://amorcekinesiologie.com/" target="_blank" rel="noopener">Amorce</a></div>
@@ -1843,14 +1847,14 @@
     </div>
   </div>
 
-  <!-- 9. RÉSULTATS — SMS, concret -->
+  <!-- 9. RÉSULTATS - SMS, concret -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>Texto envoyé</span> → Commande de 150$+</div>
     <div class="testimonial-quote">
-      Les textos, c'est une façon de rejoindre rapidement les clients. Le taux d'ouverture, c'est environ 99%. J'ai vu <strong class="red">rapidement des clients qui sont venus acheter grâce</strong> à un texto que j'ai envoyé de Farmzz. Un de mes clients est venu me dire « c'est parce que j'ai reçu ton texto » — et il m'a fait une commande d'au moins 150$.
+      Les textos, c'est une façon de rejoindre rapidement les clients. Le taux d'ouverture, c'est environ 99%. J'ai vu <strong class="red">rapidement des clients qui sont venus acheter grâce</strong> à un texto que j'ai envoyé de Farmzz. Un de mes clients est venu me dire « c'est parce que j'ai reçu ton texto » - et il m'a fait une commande d'au moins 150$.
     </div>
     <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/emilie-turcotte.jpg" alt="Émilie Turcotte" /></div>
+      <div class="testimonial-avatar"><img src="assets/photos/emilie-turcotte.jpg" alt="Émilie Turcotte" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name">Émilie Turcotte</div>
         <div class="testimonial-title">Productrice agricole &middot; <a href="https://farmzz.com/" target="_blank" rel="noopener">Farmzz</a></div>
@@ -1858,14 +1862,14 @@
     </div>
   </div>
 
-  <!-- 10. LEADERSHIP — frappait des murs -->
+  <!-- 10. LEADERSHIP - frappait des murs -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>Personne n'écoute</span> → Tout le monde embarque</div>
     <div class="testimonial-quote">
       On avait une équipe qui <strong class="red">frappait des murs</strong> et personne ne levait le flag. Raph m'a donné des outils concrets, pas des beaux frameworks. Du vrai stock qui marche. En quelques semaines, j'ai gagné le buy-in de la personne la plus résistante de l'équipe. J'ai pris ma place comme lead, pour vrai. Il te challenge, te donne du juice, puis te laisse driver. Si ton organisation a besoin de passer au next level, <strong>c'est lui que tu veux</strong>.
     </div>
     <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/angie-clerine.jpg" alt="Angie Clérine" /></div>
+      <div class="testimonial-avatar"><img src="assets/photos/angie-clerine.jpg" alt="Angie Clérine" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name">Angie Clérine</div>
         <div class="testimonial-title"><a href="https://nouvellevie.com/" target="_blank" rel="noopener">Église Nouvelle Vie</a> &middot; NV Centrale &middot; 11 campus</div>
@@ -1873,14 +1877,14 @@
     </div>
   </div>
 
-  <!-- 11. CROISSANCE — montée rapide -->
+  <!-- 11. CROISSANCE - montée rapide -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>Invisible</span> → Clients qui parlent de toi</div>
     <div class="testimonial-quote">
       Je sais c'est quoi l'<strong class="red">énergie que tu mets dans tes projets</strong>. On a fait des ajustements, simplifié le message, ajouté une offre. On a vraiment vécu une montée rapide de nos abonnés. Les gens venaient à la caisse et nous en parlaient. T'es disponible, t'es présent. On a eu un service vraiment adapté à notre réalité.
     </div>
     <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/noemie-paleta.jpeg" alt="Noémie Paleta" /></div>
+      <div class="testimonial-avatar"><img src="assets/photos/noemie-paleta.jpeg" alt="Noémie Paleta" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name">Noémie Paleta</div>
         <div class="testimonial-title">Propriétaire, <a href="https://www.paleta.ca/" target="_blank" rel="noopener">Café Paleta</a> &middot; <a href="https://farmzz.com/" target="_blank" rel="noopener">Farmzz</a></div>
@@ -1888,14 +1892,14 @@
     </div>
   </div>
 
-  <!-- 12. FRANC — les vraies choses -->
+  <!-- 12. FRANC - les vraies choses -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>Site lent</span> → Plus rapide, plus de ventes</div>
     <div class="testimonial-quote">
       T'es arrivé un matin et tu l'avais fait de nuit. C'était comme une surprise. Les boys, le site est plus rapide. On a augmenté notre taux de conversion, notre recurring. C'est vraiment pas confortable travailler avec toi des fois. Par contre, je le sais que ça va amener du positif. Tu nous dis <strong class="red">les vraies choses</strong>, puis après ça, on n'a pas le choix.
     </div>
     <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/william-burgess.jpg" alt="William Burgess" /></div>
+      <div class="testimonial-avatar"><img src="assets/photos/william-burgess.jpg" alt="William Burgess" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name"><a href="https://www.linkedin.com/in/william-burgess-3a0687a7/" target="_blank" rel="noopener">William Burgess</a></div>
         <div class="testimonial-title">Co-fondateur, <a href="https://monsieurchalets.com/" target="_blank" rel="noopener">Monsieur Chalets</a></div>
@@ -1903,14 +1907,14 @@
     </div>
   </div>
 
-  <!-- 13. TECH — Claude Code, wow -->
+  <!-- 13. TECH - Claude Code, wow -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>Bloqué par la tech</span> → Autonome en 1h</div>
     <div class="testimonial-quote">
       Claude Code, c'est magique. Raph m'a appris à l'utiliser et <strong class="red">ça a tout changé</strong>. J'ai recommandé ça à une lead chez moi qui avait besoin d'automatisations avec Airtable. Le gars de tech était pas disponible, ses projets étaient en retard. Je lui ai dit : as-tu pensé à utiliser Claude? Une heure plus tard, elle me texte : j'ai fini mes automatisations, je n'ai même plus besoin de la personne. Moi-même, je suis en train de programmer un portail pour les employés et les clients avec Supabase et Hostinger. On est vraiment rentré dans <strong>un autre monde</strong>.
     </div>
     <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/gael-mercier.png" alt="Gaël Mercier" /></div>
+      <div class="testimonial-avatar"><img src="assets/photos/gael-mercier.png" alt="Gaël Mercier" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name"><a href="https://www.linkedin.com/in/merciergael/" target="_blank" rel="noopener">Gaël Mercier</a></div>
         <div class="testimonial-title">COO, <a href="https://www.lesgmstudios.com/" target="_blank" rel="noopener">GM Studios</a></div>
@@ -1918,14 +1922,14 @@
     </div>
   </div>
 
-  <!-- 14. ÉMOTIF — avoir peur -->
+  <!-- 14. ÉMOTIF - avoir peur -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>Avoir peur</span> → Les gens reviennent</div>
     <div class="testimonial-quote">
       On est parti d'<strong class="red">avoir peur</strong>, à avoir des résultats positifs. On aurait juste été content si les gens pensaient à nous en recevant le texto. Mais non, les gens répondaient. Ils venaient. Je sais pas quand est-ce que tu dors, mais tu roules. Il n'y a pas un dollar investi ailleurs que tu vas avoir un <strong>meilleur retour</strong>.
     </div>
     <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/emmanuel-ouellet.png" alt="Emanuel Ouellet Lapointe" /></div>
+      <div class="testimonial-avatar"><img src="assets/photos/emmanuel-ouellet.png" alt="Emanuel Ouellet Lapointe" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name">Emanuel « Mani » Ouellet Lapointe</div>
         <div class="testimonial-title">Restaurateur &middot; <a href="https://share.google/bJ7hul6ON4wCaj1LG" target="_blank" rel="noopener">Taza Flores</a> &middot; Pour de Vrai</div>
@@ -1933,14 +1937,14 @@
     </div>
   </div>
 
-  <!-- 15. AUTONOMIE — build skills -->
+  <!-- 15. AUTONOMIE - build skills -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>Dépendant</span> → Capable tout seul</div>
     <div class="testimonial-quote">
       Il <strong class="red">est pas là à juste essayer d'être gentil</strong> pour garder un mandat à long terme. Il est là pour faire des changements positifs dans ta business. C'est extrêmement underrated. Je me sentais pas comme si j'achetais quelque chose dont j'étais dépendant après. Je buildais mes skills au travers de tout ça.
     </div>
     <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/oli-pharand.jpg" alt="Oli Pharand" /></div>
+      <div class="testimonial-avatar"><img src="assets/photos/oli-pharand.jpg" alt="Oli Pharand" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name">Oli Pharand</div>
         <div class="testimonial-title">Entrepreneur &middot; <a href="https://www.instagram.com/opsell.ca/" target="_blank" rel="noopener">Opsell</a></div>
@@ -1948,14 +1952,14 @@
     </div>
   </div>
 
-  <!-- 16. SYSTÈMES — penser en système -->
+  <!-- 16. SYSTÈMES - penser en système -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>Tout manuel</span> → Plus de temps, plus d'argent</div>
     <div class="testimonial-quote">
       Ce que tu m'as appris, c'est apprendre à penser en système. Dès qu'il y a quelque chose que tu fais, il doit y avoir un système qui peut te remplacer ou te rendre meilleur. <strong class="red">J'ai tellement récupéré du temps</strong> qu'à toutes les fois j'ai envie de penser en système. Tu te débloques du temps dans ton horaire, et tu dis : ok my God, <strong>plus de temps, plus d'argent</strong>.
     </div>
     <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/miguel-alain.jpg" alt="Miguel Alain" /></div>
+      <div class="testimonial-avatar"><img src="assets/photos/miguel-alain.jpg" alt="Miguel Alain" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name"><a href="https://amorcekinesiologie.com/" target="_blank" rel="noopener">Miguel Alain</a></div>
         <div class="testimonial-title">Fondateur, <a href="https://amorcekinesiologie.com/" target="_blank" rel="noopener">Amorce</a></div>
@@ -1963,14 +1967,14 @@
     </div>
   </div>
 
-  <!-- 17. TRANSFORMATION — agence, 4h -->
+  <!-- 17. TRANSFORMATION - agence, 4h -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>Tout bloquait</span> → Débloqué en 4h</div>
     <div class="testimonial-quote">
       Avant de travailler avec Raph, notre agence faisait face à plusieurs bottlenecks qui ralentissaient énormément notre onboarding client. Notre structure interne n'était pas optimale et l'approbation des vidéos devenait rapidement complexe pour les clients. Raph ne s'est pas contenté d'ajouter des automatisations. On a pris le temps ensemble d'identifier les vrais problèmes, les points de friction et les inefficacités dans notre processus. Il m'a surtout appris à utiliser Claude Code, ce qui me permet maintenant de régler mes propres problématiques sans dépendre de quelqu'un d'autre. <strong class="red">C'est une compétence qui va me servir toute ma vie</strong>. Honnêtement, c'est impressionnant de voir tout ce que seulement <strong>4 heures de consultation</strong> ont pu transformer dans mon entreprise.
     </div>
     <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/evan-arcand.jpg" alt="Evan Arcand" /></div>
+      <div class="testimonial-avatar"><img src="assets/photos/evan-arcand.jpg" alt="Evan Arcand" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name"><a href="https://axiomedia.ca/" target="_blank" rel="noopener">Evan Arcand</a></div>
         <div class="testimonial-title">Fondateur, <a href="https://axiomedia.ca/" target="_blank" rel="noopener">Axiomedia</a></div>
@@ -1978,14 +1982,14 @@
     </div>
   </div>
 
-  <!-- 18. CHAOS — clarté -->
+  <!-- 18. CHAOS - clarté -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>Excel + Trello + chaos</span> → Clarté</div>
     <div class="testimonial-quote">
       C'était <strong class="red">le chaos</strong>. On voyait des chiffres mais on ne comprenait pas nos chiffres. C'était un mix de Excel, Trello et plein de logiciels ensemble. Pour vrai, c'était l'enfer. Raph n'a pas essayé de vendre quelque chose. Il a juste regardé tout ce que j'avais dans mes systèmes. Quand j'ai fini le call, j'ai réalisé qu'il était vraiment là pour m'aider à avoir de la <strong>clarté</strong>.
     </div>
     <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/oli-pharand.jpg" alt="Oli Pharand" /></div>
+      <div class="testimonial-avatar"><img src="assets/photos/oli-pharand.jpg" alt="Oli Pharand" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name">Oli Pharand</div>
         <div class="testimonial-title">Entrepreneur &middot; <a href="https://www.instagram.com/opsell.ca/" target="_blank" rel="noopener">Opsell</a></div>
@@ -1993,14 +1997,14 @@
     </div>
   </div>
 
-  <!-- 19. CARACTÈRE — 16 ans, drive -->
+  <!-- 19. CARACTÈRE - 16 ans, drive -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>Inconnu</span> → Visible</div>
     <div class="testimonial-quote">
       Ça fait <strong>plus de 16 ans</strong> que je connais Raph. C'est comme une auto <strong class="red">pas de break pas de freins</strong>. Quand il embarque dans quelque chose, il va jusqu'au bout. C'est rare du monde avec cette <strong>drive-là</strong>. Il m'a aidé à <strong>me mettre sur la map</strong>, <strong>apprendre en faisant</strong> et <strong>automatiser ce que je fais</strong>.
     </div>
     <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/nicolas-nihezagire.png" alt="Nicolas R Nihezagire" /></div>
+      <div class="testimonial-avatar"><img src="assets/photos/nicolas-nihezagire.png" alt="Nicolas R Nihezagire" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name">Nicolas R Nihezagire</div>
         <div class="testimonial-title">Acquéreur de PME &middot; Nomad Capital &middot; Ex-PwC M&amp;A &middot; Tiny Capital</div>
@@ -2008,7 +2012,7 @@
     </div>
   </div>
 
-  <!-- 20. JNT (Jeremy-Noah Theriault) — screenshot + long quote -->
+  <!-- 20. JNT (Jeremy-Noah Theriault) - screenshot + long quote -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>AI fait peur</span> → Faut que je dive là-dedans</div>
     <div class="testimonial-screenshot-frame">
@@ -2016,10 +2020,10 @@
     </div>
     <div class="testimonial-screenshot-caption">Messenger &middot; non sollicité</div>
     <div class="testimonial-quote">
-      <strong>Raph est un pro du AI</strong>, pis c'est fou les opportunités qu'il y a avec le AI. Le fait que <strong>Mani, sorti de prison il y a quatre ans et demi, sache faire un site web en une heure grâce à un call avec Raph</strong> — c'est comme OK, il faut que je dive là-dedans. Raph est <strong class="red">très upfront et honnête</strong>. Take it step by step, coache l'AI, pense pas que l'AI va tout faire pour toi. <strong>Le plus tu donnes de contexte, le plus tu le coaches, le plus il va devenir bon pour toi</strong>. Savoir utiliser les transcripts, c'est fort.
+      <strong>Raph est un pro du AI</strong>, pis c'est fou les opportunités qu'il y a avec le AI. Le fait que <strong>Mani, sorti de prison il y a quatre ans et demi, sache faire un site web en une heure grâce à un call avec Raph</strong> - c'est comme OK, il faut que je dive là-dedans. Raph est <strong class="red">très upfront et honnête</strong>. Take it step by step, coache l'AI, pense pas que l'AI va tout faire pour toi. <strong>Le plus tu donnes de contexte, le plus tu le coaches, le plus il va devenir bon pour toi</strong>. Savoir utiliser les transcripts, c'est fort.
     </div>
     <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/jnt.jpg" alt="JNT (Jeremy-Noah Theriault)" /></div>
+      <div class="testimonial-avatar"><img src="assets/photos/jnt.jpg" alt="JNT (Jeremy-Noah Theriault)" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name"><a href="https://www.instagram.com/jnt.productions/" target="_blank" rel="noopener">JNT</a> &middot; Jeremy-Noah Theriault</div>
         <div class="testimonial-title">Créateur, <a href="https://www.instagram.com/jnt.productions/" target="_blank" rel="noopener">Pour de Vrai</a></div>
@@ -2027,14 +2031,14 @@
     </div>
   </div>
 
-  <!-- 21. Thien Le Minh — Founder Youtubers.ca / Monteurvideo.ca -->
+  <!-- 21. Thien Le Minh - Founder Youtubers.ca / Monteurvideo.ca -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>Confusion AI</span> → First-mover advantage</div>
     <div class="testimonial-quote">
-      <strong>Raph est un vrai geek, you actually do it</strong>, tu le fais réellement. Tu ne fais pas juste vendre une formation — tu le fais pour de vrai, par passion pour le AI. <strong>N'importe qui qui vient te voir, qui vient te parler 5-10 minutes, tu comprends que tu sais exactement de quoi tu parles.</strong> La plupart des nerds sont trop nerdy, tu comprends absolument rien avec ce qu'ils disent. <strong>Toi, t'es capable de rendre ça vraiment simple à comprendre.</strong> Top 3 learnings: <strong class="red">le AI est capable de faire beaucoup plus que tu penses, Cloud Code c'est la clé, et il n'y a personne qui utilise l'AI — donc t'as le first-mover advantage.</strong> 100%, je te recommande d'aller vers Raphael.
+      <strong>Raph est un vrai geek, you actually do it</strong>, tu le fais réellement. Tu ne fais pas juste vendre une formation - tu le fais pour de vrai, par passion pour le AI. <strong>N'importe qui qui vient te voir, qui vient te parler 5-10 minutes, tu comprends que tu sais exactement de quoi tu parles.</strong> La plupart des nerds sont trop nerdy, tu comprends absolument rien avec ce qu'ils disent. <strong>Toi, t'es capable de rendre ça vraiment simple à comprendre.</strong> Top 3 learnings: <strong class="red">le AI est capable de faire beaucoup plus que tu penses, Cloud Code c'est la clé, et il n'y a personne qui utilise l'AI - donc t'as le first-mover advantage.</strong> 100%, je te recommande d'aller vers Raphael.
     </div>
     <div class="testimonial-attribution">
-      <div class="testimonial-avatar"><img src="assets/photos/thien-le-min.jpg" alt="Thien Le Minh" /></div>
+      <div class="testimonial-avatar"><img src="assets/photos/thien-le-min.jpg" alt="Thien Le Minh" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name">Thien Le Minh</div>
         <div class="testimonial-title">Fondateur, <a href="https://youtubers.ca" target="_blank" rel="noopener">Youtubers.ca</a> &middot; <a href="https://monteurvideo.ca" target="_blank" rel="noopener">Monteurvideo.ca</a></div>
@@ -2042,7 +2046,7 @@
     </div>
   </div>
 
-  <!-- 22. SCREENSHOT — Emmanuel, demande d'avis -->
+  <!-- 22. SCREENSHOT - Emmanuel, demande d'avis -->
   <div class="testimonial-single reveal">
     <div class="testimonial-transform"><span>Avant de décider</span> → Demande l'avis de Raph</div>
     <div class="testimonial-screenshot-frame">
@@ -2126,7 +2130,7 @@
         <cite><strong>Jacomo Deschatelets</strong>Founder, Instrumnt</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
-        <blockquote>For founders by founders — j'adore l'approche (tout en restant super accessible pour les non-founders comme moi). Wow. Je n'avais <strong>aucune attente</strong> et <strong>J'AI ADORÉ!</strong> C'était accessible, décomplexé et super convivial.</blockquote>
+        <blockquote>For founders by founders - j'adore l'approche (tout en restant super accessible pour les non-founders comme moi). Wow. Je n'avais <strong>aucune attente</strong> et <strong>J'AI ADORÉ!</strong> C'était accessible, décomplexé et super convivial.</blockquote>
         <cite><strong>Rosalie Simard, MBA</strong>Venture Capital @ Investissement Québec · VP @ Capitale Numérique</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
@@ -2150,31 +2154,31 @@
     <div class="aigeeks-logos reveal">
       <div class="aigeeks-logos-label">Ils nous ont fait confiance</div>
       <div class="aigeeks-logos-grid">
-        <img src="assets/logos/aigeeks/saaspasse.png" alt="SaaSpasse" />
-        <img src="assets/logos/aigeeks/farmzz.svg" alt="Farmzz" />
-        <img src="assets/logos/aigeeks/spektrum.svg" alt="Spektrum" />
-        <img src="assets/logos/aigeeks/fourwaves.png" alt="Fourwaves" />
-        <img src="assets/logos/aigeeks/bnkr.svg" alt="BNKR" />
-        <img src="assets/logos/aigeeks/frontleap.svg" alt="Frontleap" />
-        <img src="assets/logos/aigeeks/lightbeans.svg" alt="Lightbeans" />
-        <img src="assets/logos/aigeeks/wifiquebec.png" alt="WiFi Québec" />
-        <img src="assets/logos/aigeeks/monsieurchalets.svg" alt="Monsieur Chalets" />
-        <img src="assets/logos/aigeeks/ccube.svg" alt="CCube" style="max-height:28px" />
-        <img src="assets/logos/aigeeks/instrumnt.svg" alt="Instrumnt" style="max-height:28px" />
-        <img src="assets/logos/aigeeks/elia.svg" alt="Elia" />
-        <img src="assets/logos/aigeeks/lasclay.png" alt="Lasclay" />
-        <img src="assets/logos/aigeeks/amorce.png" alt="Amorce" style="max-height:28px" />
-        <img src="assets/logos/aigeeks/gmstudios.svg" alt="GM Studios" />
-        <img src="assets/logos/aigeeks/propulsionsport.svg" alt="Propulsion Sport" />
-        <img src="assets/logos/aigeeks/sosmissdolittle.svg" alt="SOS Miss Dolittle" style="max-height:28px" />
-        <img src="assets/logos/aigeeks/glowtify.png" alt="Glowtify" />
-        <img src="assets/logos/aigeeks/iceberg.png" alt="Iceberg Finance" />
-        <img src="assets/logos/aigeeks/rally.png" alt="Rally" />
-        <img src="assets/logos/aigeeks/baseline.svg" alt="Baseline AI" />
-        <img src="assets/logos/aigeeks/gilcode.svg" alt="Gilcode" />
-        <img src="assets/logos/aigeeks/axelr.svg" alt="AXLR" />
-        <img src="assets/logos/aigeeks/adopto.png" alt="Adopto" />
-        <img src="assets/logos/aigeeks/xseek.webp" alt="xSeek" style="max-height:28px" />
+        <img src="assets/logos/aigeeks/saaspasse.png" alt="SaaSpasse" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/farmzz.svg" alt="Farmzz" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/spektrum.svg" alt="Spektrum" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/fourwaves.png" alt="Fourwaves" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/bnkr.svg" alt="BNKR" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/frontleap.svg" alt="Frontleap" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/lightbeans.svg" alt="Lightbeans" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/wifiquebec.png" alt="WiFi Québec" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/monsieurchalets.svg" alt="Monsieur Chalets" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/ccube.svg" alt="CCube" style="max-height:28px" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/instrumnt.svg" alt="Instrumnt" style="max-height:28px" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/elia.svg" alt="Elia" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/lasclay.png" alt="Lasclay" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/amorce.png" alt="Amorce" style="max-height:28px" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/gmstudios.svg" alt="GM Studios" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/propulsionsport.svg" alt="Propulsion Sport" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/sosmissdolittle.svg" alt="SOS Miss Dolittle" style="max-height:28px" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/glowtify.png" alt="Glowtify" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/iceberg.png" alt="Iceberg Finance" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/rally.png" alt="Rally" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/baseline.svg" alt="Baseline AI" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/gilcode.svg" alt="Gilcode" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/axelr.svg" alt="AXLR" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/adopto.png" alt="Adopto" loading="lazy" decoding="async" />
+        <img src="assets/logos/aigeeks/xseek.webp" alt="xSeek" style="max-height:28px" loading="lazy" decoding="async" />
       </div>
     </div>
 
@@ -2212,11 +2216,11 @@
   <div class="section" style="padding-bottom: 80px;">
     <div class="section-label">Sur scène</div>
     <h2 class="section-heading">Solo Founder : ship comme une équipe de 30</h2>
-    <p class="section-lead">Ma conférence à AI Geeks #3 — comment un founder solo peut livrer comme une équipe de 30 grâce aux bons systèmes et à l'AI.</p>
+    <p class="section-lead">Ma conférence à AI Geeks #3 - comment un founder solo peut livrer comme une équipe de 30 grâce aux bons systèmes et à l'AI.</p>
     <div class="video-container">
       <iframe
         src="https://www.youtube.com/embed/6Kcr3JI_LZc"
-        title="Solo Founder: Comment Une Équipe De 3 Ship Comme 30! — Raphaël Tremblay-Bouchard (AI Geeks #3)"
+        title="Solo Founder: Comment Une Équipe De 3 Ship Comme 30! - Raphaël Tremblay-Bouchard (AI Geeks #3)"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
         loading="lazy">
@@ -2229,7 +2233,7 @@
         <div class="talk-card-video">
           <iframe
             src="https://www.youtube.com/embed/HAykLd4updc"
-            title="Sans Coder, Mon Équipe Bâtit Des Outils En 3h Avec L'AI — Anthony Blais, Elia (AI Geeks #3)"
+            title="Sans Coder, Mon Équipe Bâtit Des Outils En 3h Avec L'AI - Anthony Blais, Elia (AI Geeks #3)"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
             loading="lazy">
@@ -2242,20 +2246,20 @@
         <div class="talk-card-video">
           <iframe
             src="https://www.youtube.com/embed/O1dQO0eMU_8"
-            title="GTM Expert: Votre ICP N'Est Qu'une Hypothèse! Voici Quoi Faire — Bruno Marchand (AI Geeks #3)"
+            title="GTM Expert: Votre ICP N'Est Qu'une Hypothèse! Voici Quoi Faire - Bruno Marchand (AI Geeks #3)"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
             loading="lazy">
           </iframe>
         </div>
-        <div class="talk-card-title">Votre ICP n'est qu'une hypothèse — voici quoi faire</div>
+        <div class="talk-card-title">Votre ICP n'est qu'une hypothèse - voici quoi faire</div>
         <div class="talk-card-meta">Bruno Marchand &middot; GTM Expert &middot; 16:13</div>
       </a>
       <a href="https://www.youtube.com/watch?v=Fe1SzOA9Xxw" target="_blank" rel="noopener" class="talk-card reveal">
         <div class="talk-card-video">
           <iframe
             src="https://www.youtube.com/embed/Fe1SzOA9Xxw"
-            title="Baseline AI Expert: 90% Des Projets AI Échouent À Cause De Ça! — David Beauchemin (AI Geeks #3)"
+            title="Baseline AI Expert: 90% Des Projets AI Échouent À Cause De Ça! - David Beauchemin (AI Geeks #3)"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
             loading="lazy">
@@ -2324,7 +2328,7 @@
       <p>Certification développement web full-stack.</p>
     </div>
     <a href="https://ici.radio-canada.ca/info/videos/1-8118601/futurs-maraichers-a-entrainement?liste=28-34803" target="_blank" rel="noopener" class="cred-card cred-card-press reveal">
-      <img src="assets/photos/radio-canada.png" alt="Radio-Canada — De futurs maraîchers à l'entraînement" loading="lazy" />
+      <img src="assets/photos/radio-canada.jpg" alt="Radio-Canada - De futurs maraîchers à l'entraînement" loading="lazy" />
       <div>
         <div class="cred-issuer">Radio-Canada &middot; 14 juillet 2019</div>
         <h3>De futurs maraîchers à l'entraînement</h3>
@@ -2373,7 +2377,7 @@
   <div class="footer-inner">
     <div class="footer-left">
       <strong style="font-size: 0.95rem; color: var(--fg);">Raphael Tremblay-Bouchard</strong><br>
-      <span>&copy; 2026 — raphatb.com</span>
+      <span>&copy; 2026 - raphatb.com</span>
     </div>
     <ul class="footer-links">
       <li><a href="https://www.instagram.com/raphatb/" target="_blank" rel="noopener">Instagram</a></li>
@@ -2392,11 +2396,31 @@
   "name": "Raphael Tremblay-Bouchard",
   "alternateName": "raphatb",
   "url": "https://raphatb.com",
+  "image": "https://raphatb.com/assets/photos/hero.jpg",
+  "email": "raphatbventures@gmail.com",
   "jobTitle": "Bâtisseur, Opérateur, Architecte de systèmes AI-First",
   "description": "Exit Monsieur Chalets. Fondateur Farmzz & AI Geeks. Partenaire certifié Notion. Innovateur Cloudflare.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Québec",
+    "addressCountry": "CA"
+  },
+  "worksFor": [
+    {
+      "@type": "Organization",
+      "name": "Farmzz",
+      "url": "https://farmzz.com"
+    },
+    {
+      "@type": "Organization",
+      "name": "AI Geeks",
+      "url": "https://luma.com/ai.geeks"
+    }
+  ],
   "knowsAbout": ["IA", "Architecture de systèmes", "Notion", "Cloudflare", "SaaS", "Opérations", "Gestion de produit"],
   "sameAs": [
     "https://www.linkedin.com/in/raphatb/",
+    "https://www.youtube.com/@raphatb",
     "https://www.notion.com/@leverageos",
     "https://www.cloudflare.com/en-ca/innovator-spotlights/",
     "https://aigeekssquad.com",
