@@ -880,6 +880,24 @@
       color: var(--fg);
     }
 
+    .testimonial-brand-logo {
+      height: 14px;
+      width: auto;
+      vertical-align: -2px;
+      display: inline-block;
+      margin-left: 2px;
+    }
+    :root[data-theme="dark"] .testimonial-brand-logo {
+      filter: brightness(0) invert(1);
+      opacity: 0.85;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) .testimonial-brand-logo {
+        filter: brightness(0) invert(1);
+        opacity: 0.85;
+      }
+    }
+
     @media (max-width: 768px) {
       .testimonials-grid {
         grid-template-columns: 1fr;
@@ -2078,7 +2096,7 @@
       <div class="testimonial-avatar"><img src="assets/photos/azaria-chavannes.jpg" alt="Azaria Chavannes" loading="lazy" decoding="async" /></div>
       <div>
         <div class="testimonial-name">Azaria Chavannes</div>
-        <div class="testimonial-title">Cofondateur &amp; Président, Propulsion Technologies</div>
+        <div class="testimonial-title">Cofondateur &amp; Président, <a href="https://www.propulsionsport.com/fr" target="_blank" rel="noopener" aria-label="Propulsion"><img src="assets/logos/propulsion.svg" alt="Propulsion" class="testimonial-brand-logo" loading="lazy" decoding="async" /></a></div>
       </div>
     </div>
   </div>
