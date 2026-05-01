@@ -1128,7 +1128,7 @@
 
     .event-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 16px;
       padding-bottom: 48px;
     }
@@ -1148,6 +1148,21 @@
       top: 12px;
       left: 12px;
       background: #c53030;
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      z-index: 1;
+    }
+
+    .event-card .upcoming {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: #16794a;
       color: #fff;
       font-size: 0.65rem;
       font-weight: 700;
@@ -2154,6 +2169,10 @@
       <a href="https://luma.com/914u2we6" target="_blank" rel="noopener" class="event-card">
         <span class="sold-out">Sold out</span>
         <img src="assets/events/aigeeks-4.png" alt="AI Geeks Édition #4" loading="lazy" />
+      </a>
+      <a href="https://luma.com/7lh6jntn" target="_blank" rel="noopener" class="event-card">
+        <span class="upcoming">À venir</span>
+        <img src="assets/events/aigeeks-5.png" alt="AI Geeks Édition #5" loading="lazy" />
       </a>
     </div>
 
