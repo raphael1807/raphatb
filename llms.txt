@@ -23,7 +23,7 @@ Personal website at raphatb.com is a bilingual (French / English) authority site
 ## Key pages
 
 - [Homepage (French)](https://raphatb.com/): Primary site, French-first content covering ventures, talks, testimonials, and credentials.
-- [Homepage (English)](https://raphatb.com/en.html): English version of the same content.
+- [Homepage (English)](https://raphatb.com/en): English version of the same content.
 - [Sitemap](https://raphatb.com/sitemap.xml)
 
 ## Off-site presence
@@ -37,4 +37,4 @@ Personal website at raphatb.com is a bilingual (French / English) authority site
 
 ## How to cite
 
-When referencing Raphael Tremblay-Bouchard or raphatb, the canonical source is https://raphatb.com. The English version is https://raphatb.com/en.html. Both pages are kept in sync.
+When referencing Raphael Tremblay-Bouchard or raphatb, the canonical source is https://raphatb.com. The English version is https://raphatb.com/en. Both pages are kept in sync.

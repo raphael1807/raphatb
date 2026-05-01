@@ -9,7 +9,7 @@ Static HTML. No build step, no framework, no package.json. Edit files directly a
 ## Files that matter
 
 - `index.html` — French homepage (canonical, served at `/`)
-- `en.html` — English homepage (served at `/en.html`)
+- `en.html` — English homepage source (canonical URL `/en`; `/en.html` should redirect or canonicalize to `/en`)
 - `assets/photos/` — referenced photos, kebab-case names (e.g. `william-burgess.jpg`)
 - `assets/logos/` — brand/partner logos, mostly SVG
 - `robots.txt`, `sitemap.xml`, `llms.txt` — crawler + AI discovery files

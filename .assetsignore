@@ -1,2 +1,8 @@
 .git
 node_modules
+.gitignore
+CLAUDE.md
+RECREATE_PROMPT.md
+notion_badges.txt
+raph_description.txt
+raphatb-website-playbook copy.md
