@@ -22,6 +22,7 @@ Static HTML. No build step, no framework, no package.json. Edit files directly a
 - **Premium authority voice, no generic templates.** This is a personal authority site, not a SaaS landing page. No "boost your productivity" / "10x your X" / generic SEO fluff. Specific track record, named ventures, real numbers (e.g. "800+ properties, 2.5x revenue" at Monsieur Chalets).
 - **Hero image is the LCP element.** `assets/photos/hero.jpg` is preloaded with `fetchpriority="high"` in both files. Don't lazy-load it. Don't remove the `<link rel="preload">` for it in `<head>`.
 - **Both HTML files inline all CSS in a single `<style>` block.** No external stylesheet. Keep it that way unless the file gets unmanageable.
+- **Post-merge branch cleanup:** once a pushed branch/PR has been merged, close the branch too. Delete only the merged task branch you just used, after verifying it is merged; never delete `main` or unrelated branches.
 
 ## Conventions
 
