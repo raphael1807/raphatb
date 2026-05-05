@@ -500,9 +500,9 @@
       display: inline-flex;
       align-items: center;
       gap: 7px;
-      background: #fce8e6;
+      background: #e8f1ff;
       border: none;
-      color: #a02020;
+      color: #0b4f9c;
       padding: 6px 14px;
       border-radius: 999px;
       font-size: 0.82rem;
@@ -511,25 +511,49 @@
       text-decoration: none;
       transition: background 0.15s;
     }
-    .notion-badge:hover { background: #f9d5d1; }
+    .notion-badge:hover { background: #dbeafe; }
+    .notion-badge-text { white-space: nowrap; }
     .notion-badge-icon {
-      width: 14px;
-      height: 14px;
+      width: auto;
+      height: 16px;
       flex-shrink: 0;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      color: #e53e3e;
+      gap: 4px;
+      margin-left: 2px;
+      color: #2563eb;
     }
-    .notion-badge-icon svg { width: 14px; height: 14px; display: block; }
+    .notion-badge-icon img { width: 14px; height: 14px; display: block; }
+    .notion-badge-check {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #2563eb;
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      font-weight: 700;
+      line-height: 1;
+    }
     :root[data-theme="dark"] .notion-badge {
-      background: rgba(229, 62, 62, 0.15);
-      color: #ff8585;
+      background: rgba(37, 99, 235, 0.18);
+      color: #93c5fd;
+    }
+    :root[data-theme="dark"] .notion-badge-check {
+      background: #93c5fd;
+      color: #0a0a0a;
     }
     @media (prefers-color-scheme: dark) {
       :root:not([data-theme="light"]) .notion-badge {
-        background: rgba(229, 62, 62, 0.15);
-        color: #ff8585;
+        background: rgba(37, 99, 235, 0.18);
+        color: #93c5fd;
+      }
+      :root:not([data-theme="light"]) .notion-badge-check {
+        background: #93c5fd;
+        color: #0a0a0a;
       }
     }
 
@@ -1628,8 +1652,9 @@
       <a href="https://www.monsieurchalets.com/" target="_blank" rel="noopener" class="hero-logo-exited"><img src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" loading="lazy" decoding="async" /><span>exit</span></a>
     </div>
     <a href="https://www.notion.com/@leverageos" target="_blank" rel="noopener" class="notion-badge" style="margin-bottom: 16px;">
-      <span class="notion-badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 1.5l2.39 1.93 3.05-.36.82 2.96 2.72 1.45-.87 2.95L22 12l-1.89 1.57.87 2.95-2.72 1.45-.82 2.96-3.05-.36L12 22.5l-2.39-1.93-3.05.36-.82-2.96-2.72-1.45.87-2.95L2 12l1.89-1.57-.87-2.95 2.72-1.45.82-2.96 3.05.36L12 1.5z"/><path d="M9.5 12.2l1.8 1.8 3.7-3.9" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      Notion Certified Consultant
+      <span class="notion-badge-check" aria-hidden="true">&#10003;</span>
+      <span class="notion-badge-text">Notion Certified Consultant</span>
+      <span class="notion-badge-icon" aria-hidden="true"><img src="assets/logos/notion.svg" alt="" /></span>
     </a>
     <div class="hero-label">Tech &middot; Ops &middot; Sales &middot; AI-first systems</div>
     <h1>I build the systems that make your business less dependent on you.</h1>
@@ -1733,7 +1758,7 @@
     <div class="story-text">
       <img src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" class="story-logo" loading="lazy" decoding="async" />
       <div class="story-role">Monsieur Chalets &middot; Product, tech, operations &middot; Exit</div>
-      <h2>Their booking system went down. We had to <strong class="red">rebuild fast</strong>.</h2>
+      <h2>Their booking system was on borrowed time. We had to <strong class="red">rebuild fast</strong>.</h2>
       <p>When William Burgess called me, we had to move <strong>800 chalets and 2,000+ reservations</strong> to a platform that did not exist yet.</p>
       <p>I built the dev team, rebuilt the platform, structured operations in Notion, protected SEO and added Cloudflare. The site was <strong>80% faster</strong> the first night.</p>
       <div class="story-stat">
@@ -2317,8 +2342,9 @@
       <h3>Certified Consulting Partner</h3>
       <p>Certified consulting partner on the Notion Marketplace. Profile @leverageos.</p>
       <a href="https://www.notion.com/@leverageos" target="_blank" rel="noopener" class="notion-badge" style="margin-top: 16px;">
-        <span class="notion-badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 1.5l2.39 1.93 3.05-.36.82 2.96 2.72 1.45-.87 2.95L22 12l-1.89 1.57.87 2.95-2.72 1.45-.82 2.96-3.05-.36L12 22.5l-2.39-1.93-3.05.36-.82-2.96-2.72-1.45.87-2.95L2 12l1.89-1.57-.87-2.95 2.72-1.45.82-2.96 3.05.36L12 1.5z"/><path d="M9.5 12.2l1.8 1.8 3.7-3.9" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        Notion Certified Consultant
+        <span class="notion-badge-check" aria-hidden="true">&#10003;</span>
+        <span class="notion-badge-text">Notion Certified Consultant</span>
+        <span class="notion-badge-icon" aria-hidden="true"><img src="assets/logos/notion.svg" alt="" /></span>
       </a>
     </div>
     <div class="cred-card reveal reveal-delay-1">
