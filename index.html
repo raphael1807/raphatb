@@ -348,13 +348,15 @@
       position: relative;
       border-radius: var(--radius);
       overflow: hidden;
+      aspect-ratio: 4 / 5;
+      background: var(--bg-muted);
     }
 
     .hero-image img {
       width: 100%;
-      aspect-ratio: 4/5;
+      height: 100%;
       object-fit: cover;
-      object-position: center top;
+      object-position: 55% top;
       display: block;
     }
 
@@ -428,6 +430,67 @@
 
     .logo-item img[alt="Monsieur Chalets"] {
       height: 14px;
+    }
+
+    /* ── AUTHORITY PROOF ── */
+    .authority-proof {
+      border-bottom: 1px solid var(--border);
+      padding: 40px 24px;
+      background: var(--bg-subtle);
+    }
+
+    .authority-proof-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 0.65fr 2fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .authority-proof-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--fg-muted);
+    }
+
+    .authority-proof-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      border: 1px solid var(--border);
+      background: var(--border);
+    }
+
+    .authority-proof-item {
+      min-height: 142px;
+      padding: 20px;
+      background: var(--bg);
+    }
+
+    .authority-proof-kicker {
+      margin-bottom: 10px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #c53030;
+    }
+
+    .authority-proof-item strong {
+      display: block;
+      font-size: 0.98rem;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+    }
+
+    .authority-proof-item p {
+      margin-top: 8px;
+      font-size: 0.83rem;
+      line-height: 1.5;
+      color: var(--fg-secondary);
     }
 
     u { text-decoration-color: var(--fg-muted); text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
@@ -1434,6 +1497,27 @@
         gap: 48px;
       }
 
+      .hero-image {
+        width: min(100%, 460px);
+        margin: 0 auto;
+        aspect-ratio: 1 / 1.08;
+      }
+
+      .hero-image img {
+        object-position: 64% top;
+      }
+
+      .hero-cta-photo {
+        bottom: 16px;
+        width: calc(100% - 32px);
+        max-width: 310px;
+        padding: 13px 16px;
+        font-size: 0.95rem;
+        line-height: 1.2;
+        text-align: center;
+        white-space: normal;
+      }
+
       .hero-stats { gap: 32px; }
 
       .logo-bar-inner {
@@ -1445,6 +1529,15 @@
         flex-wrap: wrap;
         gap: 24px;
         justify-content: center;
+      }
+
+      .authority-proof-inner {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .authority-proof-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .story-block {
@@ -1547,6 +1640,12 @@
     @media (max-width: 768px) {
       .side-toc { display: none !important; }
     }
+
+    @media (max-width: 600px) {
+      .authority-proof { padding: 32px 24px; }
+      .authority-proof-grid { grid-template-columns: 1fr; }
+      .authority-proof-item { min-height: auto; }
+    }
   </style>
 </head>
 <body>
@@ -1615,8 +1714,8 @@
       <span class="notion-badge-icon"><svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 1.5l2.39 1.93 3.05-.36.82 2.96 2.72 1.45-.87 2.95L22 12l-1.89 1.57.87 2.95-2.72 1.45-.82 2.96-3.05-.36L12 22.5l-2.39-1.93-3.05.36-.82-2.96-2.72-1.45.87-2.95L2 12l1.89-1.57-.87-2.95 2.72-1.45.82-2.96 3.05.36L12 1.5z"/><path d="M9.5 12.2l1.8 1.8 3.7-3.9" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       Notion Certified Consultant
     </a>
-    <div class="hero-label">Fondateur AI-first &middot; Créatif &middot; Code &middot; Ventes</div>
-    <h1>Je t'aide à bâtir, automatiser et <u>vendre plus vite</u>.</h1>
+    <div class="hero-label">Tech &middot; Ops &middot; Vente &middot; Systèmes AI-first</div>
+    <h1>Je rends ta business moins dépendante de toi.</h1>
     <p class="hero-description">
       J'ai rebâti la tech de Monsieur Chalets de A à Z - 800+ propriétés migrées, 2.5x les revenus. Aujourd'hui je construis Farmzz et j'aide des entrepreneurs à systématiser, devenir AI-first et bâtir du levier.
     </p>
@@ -1678,6 +1777,35 @@
     </div>
   </div>
 </div>
+
+<!-- AUTHORITY PROOF -->
+<section class="authority-proof">
+  <div class="authority-proof-inner">
+    <div class="authority-proof-label">Preuves d'autorité</div>
+    <div class="authority-proof-grid">
+      <div class="authority-proof-item">
+        <div class="authority-proof-kicker">Produit + tech</div>
+        <strong>Monsieur Chalets jusqu'à la sortie</strong>
+        <p>Produit, tech et ops sur une plateforme de location à grande échelle.</p>
+      </div>
+      <div class="authority-proof-item">
+        <div class="authority-proof-kicker">Migration critique</div>
+        <strong>800+ propriétés, 2 000+ réservations</strong>
+        <p>Migration complète sans perdre les positions SEO existantes.</p>
+      </div>
+      <div class="authority-proof-item">
+        <div class="authority-proof-kicker">Notion</div>
+        <strong>Partenaire certifié + 3 certifications</strong>
+        <p>Advanced, Workflows, Settings &amp; Sharing, avec profil Marketplace @leverageos.</p>
+      </div>
+      <div class="authority-proof-item">
+        <div class="authority-proof-kicker">Reconnaissance</div>
+        <strong>Cloudflare + Radio-Canada</strong>
+        <p>Innovator Spotlight Cloudflare et reportage à la télévision nationale.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- STORY -->
 <div id="story" class="section">
