@@ -22,13 +22,7 @@
   <link rel="icon" href="favicon.ico?v=2" sizes="any" />
   <link rel="icon" href="favicon-32.png?v=2" type="image/png" sizes="32x32" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
-
-  <link rel="preload" as="image" href="assets/photos/hero.jpg?v=3" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/photos/hero.webp?v=1" type="image/webp" fetchpriority="high" />
 
   <style>
     :root {
@@ -105,7 +99,7 @@
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: var(--bg);
       color: var(--fg);
       -webkit-font-smoothing: antialiased;
@@ -350,6 +344,12 @@
       overflow: hidden;
       aspect-ratio: 4 / 5;
       background: var(--bg-muted);
+    }
+
+    .hero-image picture {
+      display: block;
+      width: 100%;
+      height: 100%;
     }
 
     .hero-image img {
@@ -766,10 +766,77 @@
       border: 1px solid var(--border);
     }
 
-    .video-container iframe {
+    .video-container iframe,
+    .talk-card-video iframe {
       width: 100%;
       height: 100%;
       border: 0;
+      display: block;
+    }
+
+    .youtube-lite {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      border: 0;
+      color: #fff;
+      background: #111;
+      cursor: pointer;
+      overflow: hidden;
+      font: inherit;
+    }
+
+    .youtube-lite img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: saturate(0.9) contrast(0.95);
+      transition: transform 0.2s ease, filter 0.2s ease;
+    }
+
+    .youtube-lite::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.34));
+      pointer-events: none;
+    }
+
+    .youtube-lite-play {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 1;
+      width: 64px;
+      height: 44px;
+      border-radius: 8px;
+      background: rgba(210, 24, 24, 0.94);
+      transform: translate(-50%, -50%);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+    }
+
+    .youtube-lite-play::before {
+      content: "";
+      position: absolute;
+      left: 25px;
+      top: 12px;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 16px solid #fff;
+    }
+
+    .youtube-lite:hover img,
+    .youtube-lite:focus-visible img {
+      transform: scale(1.03);
+      filter: saturate(1) contrast(1);
+    }
+
+    .youtube-lite:focus-visible {
+      outline: 3px solid var(--fg);
+      outline-offset: -3px;
     }
 
     .talks-subhead {
@@ -800,13 +867,6 @@
       overflow: hidden;
       border: 1px solid var(--border);
       margin-bottom: 12px;
-    }
-
-    .talk-card-video iframe {
-      width: 100%;
-      height: 100%;
-      border: 0;
-      display: block;
     }
 
     .talk-card-title {
@@ -1779,7 +1839,10 @@
     </div>
   </div>
   <div class="hero-image">
-    <img src="assets/photos/hero.jpg?v=3" alt="Raphael Tremblay-Bouchard" width="1600" height="1064" fetchpriority="high" decoding="async" />
+    <picture>
+      <source srcset="assets/photos/hero.webp?v=1" type="image/webp" />
+      <img src="assets/photos/hero.jpg?v=3" alt="Raphael Tremblay-Bouchard" width="1600" height="1064" fetchpriority="high" decoding="async" />
+    </picture>
     <a href="#testimonials" class="hero-cta-photo">Voir les résultats ↓</a>
   </div>
 </section>
@@ -2414,7 +2477,7 @@
 <!-- PHOTO STRIP -->
 <div class="photo-strip-wrapper">
   <div class="photo-strip">
-    <img src="assets/photos/hero.jpg?v=3" alt="Raph" loading="lazy" />
+    <img src="assets/photos/hero.webp?v=1" alt="Raph" loading="lazy" />
     <img src="assets/photos/meeting.jpg" alt="Raph en consultation" loading="lazy" />
     <img src="assets/photos/event-smile.jpg" alt="Raph rooftop" loading="lazy" />
     <img src="assets/photos/consulting.jpg" alt="Raph consulting" loading="lazy" />
@@ -2427,72 +2490,57 @@
 <div id="onstage" class="video-section">
   <div class="section" style="padding-bottom: 80px;">
     <div class="section-label">Sur scène</div>
-    <h2 class="section-heading">Solo founder : livrer comme une petite équipe</h2>
-    <p class="section-lead">À AI Geeks #3, j'ai montré comment un fondateur solo peut utiliser les bons systèmes et l'AI pour livrer plus sans ajouter de complexité.</p>
+    <h2 class="section-heading">AI-first avec Codex : agents, second brain et workflows</h2>
+    <p class="section-lead">À AI Geeks #4, j'ai montré comment j'utilise Codex, des agents, un second brain et des workflows pour bâtir des systèmes sans perdre le contrôle.</p>
     <div class="video-container">
-      <iframe
-        src="https://www.youtube.com/embed/6Kcr3JI_LZc"
-        title="Solo Founder: Comment Une Équipe De 3 Ship Comme 30! - Raphaël Tremblay-Bouchard (AI Geeks #3)"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-        loading="lazy">
-      </iframe>
+      <button type="button" class="youtube-lite" data-youtube-id="i8Hn9iCd9Qc" data-youtube-title="AI-first avec Codex: agents, second brain et workflows - Raphaël (AI Geeks #4)" aria-label="Lire AI-first avec Codex: agents, second brain et workflows">
+        <img src="https://i.ytimg.com/vi/i8Hn9iCd9Qc/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+        <span class="youtube-lite-play" aria-hidden="true"></span>
+      </button>
     </div>
 
-    <div class="talks-subhead">Les autres talks que j'ai hosté à AI Geeks #3</div>
+    <div class="talks-subhead">Autres talks AI Geeks à voir</div>
     <div class="talks-grid">
-      <a href="https://www.youtube.com/watch?v=HAykLd4updc" target="_blank" rel="noopener" class="talk-card reveal">
+      <article class="talk-card reveal">
         <div class="talk-card-video">
-          <iframe
-            src="https://www.youtube.com/embed/HAykLd4updc"
-            title="Sans Coder, Mon Équipe Bâtit Des Outils En 3h Avec L'AI - Anthony Blais, Elia (AI Geeks #3)"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+          <button type="button" class="youtube-lite" data-youtube-id="6Kcr3JI_LZc" data-youtube-title="Solo Founder, Il Shippe Comme 10! - Raphaël Tremblay-Bouchard (AI Geeks #3)" aria-label="Lire Solo Founder, Il Shippe Comme 10">
+            <img src="https://i.ytimg.com/vi/6Kcr3JI_LZc/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+            <span class="youtube-lite-play" aria-hidden="true"></span>
+          </button>
         </div>
-        <div class="talk-card-title">Sans coder, mon équipe bâtit des outils en 3h avec l'AI</div>
-        <div class="talk-card-meta">Anthony Blais &middot; Elia &middot; 21:12</div>
-      </a>
-      <a href="https://www.youtube.com/watch?v=O1dQO0eMU_8" target="_blank" rel="noopener" class="talk-card reveal reveal-delay-1">
+        <div class="talk-card-title">Solo founder : shipper comme une petite équipe</div>
+        <div class="talk-card-meta">Raphaël Tremblay-Bouchard &middot; AI Geeks #3 &middot; 17:12</div>
+      </article>
+      <article class="talk-card reveal reveal-delay-1">
         <div class="talk-card-video">
-          <iframe
-            src="https://www.youtube.com/embed/O1dQO0eMU_8"
-            title="GTM Expert: Votre ICP N'Est Qu'une Hypothèse! Voici Quoi Faire - Bruno Marchand (AI Geeks #3)"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+          <button type="button" class="youtube-lite" data-youtube-id="B9UYfPWzt24" data-youtube-title="Product Oracle: conversations clients vers roadmap - Mathieu Chartier (AI Geeks #4)" aria-label="Lire Product Oracle: conversations clients vers roadmap">
+            <img src="https://i.ytimg.com/vi/B9UYfPWzt24/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+            <span class="youtube-lite-play" aria-hidden="true"></span>
+          </button>
         </div>
-        <div class="talk-card-title">Votre ICP n'est qu'une hypothèse - voici quoi faire</div>
-        <div class="talk-card-meta">Bruno Marchand &middot; GTM Expert &middot; 16:13</div>
-      </a>
-      <a href="https://www.youtube.com/watch?v=Fe1SzOA9Xxw" target="_blank" rel="noopener" class="talk-card reveal">
+        <div class="talk-card-title">Détecter les feedbacks client et les transformer en roadmap</div>
+        <div class="talk-card-meta">Mathieu Chartier &middot; Product Oracle &middot; 35:10</div>
+      </article>
+      <article class="talk-card reveal">
         <div class="talk-card-video">
-          <iframe
-            src="https://www.youtube.com/embed/Fe1SzOA9Xxw"
-            title="Baseline AI Expert: 90% Des Projets AI Échouent À Cause De Ça! - David Beauchemin (AI Geeks #3)"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+          <button type="button" class="youtube-lite" data-youtube-id="pUzwwiCrEgM" data-youtube-title="Coder avec l'IA sans casser la prod: tests, routines, code review (AI Geeks #4)" aria-label="Lire Coder avec l'IA sans casser la prod">
+            <img src="https://i.ytimg.com/vi/pUzwwiCrEgM/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+            <span class="youtube-lite-play" aria-hidden="true"></span>
+          </button>
         </div>
-        <div class="talk-card-title">90% des projets AI échouent à cause de ça</div>
-        <div class="talk-card-meta">David Beauchemin &middot; Baseline AI &middot; 42:57</div>
-      </a>
-      <a href="https://www.youtube.com/watch?v=CGxoRasRJrs" target="_blank" rel="noopener" class="talk-card reveal reveal-delay-1">
+        <div class="talk-card-title">Coder avec l'IA sans casser la prod</div>
+        <div class="talk-card-meta">Tests, routines, code review &middot; 30:20</div>
+      </article>
+      <article class="talk-card reveal reveal-delay-1">
         <div class="talk-card-video">
-          <iframe
-            src="https://www.youtube.com/embed/CGxoRasRJrs"
-            title="Raph TB, Notion Presentations Waterloo"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+          <button type="button" class="youtube-lite" data-youtube-id="_zs7T5sN2tM" data-youtube-title="Des MILLIONS de vues organiques avec l'IA: le cas Resto Richard (AI Geeks #4)" aria-label="Lire le moteur IA derrière 20M d'impressions Facebook">
+            <img src="https://i.ytimg.com/vi/_zs7T5sN2tM/hqdefault.jpg" alt="" loading="lazy" decoding="async" />
+            <span class="youtube-lite-play" aria-hidden="true"></span>
+          </button>
         </div>
-        <div class="talk-card-title">Notion Presentations, Waterloo</div>
-        <div class="talk-card-meta">Systèmes Notion &middot; productivité entrepreneurs</div>
-      </a>
+        <div class="talk-card-title">Le moteur IA derrière 20M d'impressions Facebook</div>
+        <div class="talk-card-meta">Étude de cas Resto Richard &middot; 36:06</div>
+      </article>
     </div>
   </div>
 </div>
@@ -2655,6 +2703,20 @@
     link.addEventListener('click', () => {
       document.getElementById('nav-links').classList.remove('open');
     });
+  });
+
+  // Lazy YouTube embeds
+  document.querySelectorAll('.youtube-lite').forEach(button => {
+    button.addEventListener('click', () => {
+      const id = button.dataset.youtubeId;
+      const iframe = document.createElement('iframe');
+      iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+      iframe.title = button.dataset.youtubeTitle || 'YouTube video';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allowFullscreen = true;
+      iframe.loading = 'lazy';
+      button.replaceWith(iframe);
+    }, { once: true });
   });
 
   // Scroll reveal
