@@ -102,7 +102,7 @@
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; scroll-padding-top: 80px; }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -112,8 +112,6 @@
       -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
     }
-
-    html { overflow-x: hidden; }
 
     h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; }
     a { color: inherit; text-decoration: none; }
@@ -1115,48 +1113,6 @@
       .cred-card-press img { width: 100%; height: 180px; }
     }
 
-    /* ── MID CTA ── */
-    .mid-cta {
-      text-align: center;
-      padding: 80px 24px;
-      max-width: 640px;
-      margin: 0 auto;
-    }
-
-    .mid-cta-handle {
-      display: block;
-      font-size: 1.1rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      color: var(--fg);
-      margin-bottom: 8px;
-      transition: opacity 0.2s;
-    }
-
-    .mid-cta-handle:hover { opacity: 0.6; }
-
-    .mid-cta-label {
-      font-size: 0.85rem;
-      color: var(--fg-muted);
-      margin-bottom: 4px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 500;
-    }
-
-    .mid-cta-row {
-      display: flex;
-      justify-content: center;
-      gap: 60px;
-      margin-bottom: 32px;
-    }
-
-    .mid-cta-col {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
     /* ── FINAL CTA ── */
     .final-cta {
       text-align: center;
@@ -1449,22 +1405,6 @@
       margin-bottom: 32px;
       font-size: 0.95rem;
     }
-    .contact-mailto {
-      display: inline-block;
-      background: #e53e3e;
-      color: #fff;
-      padding: 16px 32px;
-      border-radius: 10px;
-      font-size: 1.1rem;
-      font-weight: 700;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.2s;
-      box-shadow: 0 4px 20px rgba(229,62,62,0.4);
-    }
-    .contact-mailto:hover {
-      background: #c53030;
-      transform: scale(1.03);
-    }
     .contact-form {
       display: flex;
       flex-direction: column;
@@ -1546,9 +1486,14 @@
 
     /* ── ANIMATIONS ── */
     .reveal {
+      opacity: 1;
+      transform: none;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .reveal-pending {
       opacity: 0;
       transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
     }
 
     .reveal.visible {
@@ -1647,7 +1592,6 @@
         text-align: center;
       }
 
-      .side-toc { display: none; }
     }
 
     /* ── SIDE TOC ── */
@@ -1731,6 +1675,19 @@
       .authority-proof-grid { grid-template-columns: 1fr; }
       .authority-proof-item { min-height: auto; }
     }
+
+    @media (max-width: 900px) {
+      .side-toc { display: none; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+      .reveal, .reveal-pending { opacity: 1; transform: none; }
+    }
   </style>
 </head>
 <body>
@@ -1779,9 +1736,9 @@
     <div class="nav-right">
       <a href="#testimonials" class="nav-cta">Voir les résultats</a>
       <a href="/en" class="nav-lang">EN</a>
-      <button class="theme-toggle" id="theme-toggle" aria-label="Changer le thème">☀️</button>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Changer le thème">☀️</button>
     </div>
-    <button class="hamburger" id="hamburger" aria-label="Menu">&#9776;</button>
+    <button class="hamburger" id="hamburger" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">&#9776;</button>
   </div>
 </nav>
 
@@ -1914,7 +1871,7 @@
       </div>
     </div>
     <div class="story-visual">
-      <img src="assets/photos/consulting.jpg" alt="Raph en consultation" loading="lazy" />
+      <img src="assets/photos/consulting.jpg" alt="Raph en consultation" loading="lazy" decoding="async" />
     </div>
   </div>
 
@@ -1928,7 +1885,7 @@
       <p>Farmzz transforme le trafic en personne en revenus récurrents: collecte de contacts, relances, commandes et suivi client pour les gens qui vendent des produits réels.</p>
     </div>
     <div class="story-visual">
-      <img src="assets/photos/working.jpg" alt="Raph au travail" loading="lazy" />
+      <img src="assets/photos/working.jpg" alt="Raph au travail" loading="lazy" decoding="async" />
     </div>
   </div>
 
@@ -1940,40 +1897,40 @@
     <div class="people-helped-label">Quelques équipes avec qui j'ai travaillé</div>
     <div class="people-helped-grid">
       <a href="https://www.monsieurchalets.com/" target="_blank" rel="noopener" class="people-helped-item">
-        <img src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" class="people-helped-logo" loading="lazy" />
+        <img src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" class="people-helped-logo" loading="lazy" decoding="async" />
       </a>
       <a href="https://www.liveholos.com/" target="_blank" rel="noopener" class="people-helped-item">
-        <img src="assets/logos/holos.png" alt="HOLOS" class="people-helped-logo" loading="lazy" />
+        <img src="assets/logos/holos.png" alt="HOLOS" class="people-helped-logo" loading="lazy" decoding="async" />
       </a>
       <a href="https://elevonutrition.com/" target="_blank" rel="noopener" class="people-helped-item">
-        <img src="assets/logos/elevo.png" alt="ELEVO Nutrition" class="people-helped-logo" loading="lazy" />
+        <img src="assets/logos/elevo.png" alt="ELEVO Nutrition" class="people-helped-logo" loading="lazy" decoding="async" />
       </a>
       <a href="https://firebarns.com/" target="_blank" rel="noopener" class="people-helped-item">
-        <img src="assets/logos/firebarns.png" alt="Firebarns" class="people-helped-logo" loading="lazy" />
+        <img src="assets/logos/firebarns.png" alt="Firebarns" class="people-helped-logo" loading="lazy" decoding="async" />
       </a>
       <a href="https://nouvellevie.com/" target="_blank" rel="noopener" class="people-helped-item">
-        <img src="assets/logos/nouvellevie.svg" alt="Nouvelle Vie" class="people-helped-logo" loading="lazy" />
+        <img src="assets/logos/nouvellevie.svg" alt="Nouvelle Vie" class="people-helped-logo" loading="lazy" decoding="async" />
       </a>
       <a href="https://amorcekinesiologie.com/" target="_blank" rel="noopener" class="people-helped-item">
-        <img src="assets/logos/amorce.png" alt="Amorce" class="people-helped-logo" loading="lazy" />
+        <img src="assets/logos/amorce.png" alt="Amorce" class="people-helped-logo" loading="lazy" decoding="async" />
       </a>
       <a href="https://www.paleta.ca/" target="_blank" rel="noopener" class="people-helped-item">
-        <img src="assets/logos/paleta.png" alt="Café Paleta" class="people-helped-logo" loading="lazy" />
+        <img src="assets/logos/paleta.png" alt="Café Paleta" class="people-helped-logo" loading="lazy" decoding="async" />
       </a>
       <a href="https://www.lesgmstudios.com/" target="_blank" rel="noopener" class="people-helped-item">
-        <img src="assets/logos/gmstudios.png" alt="GM Studios" class="people-helped-logo" loading="lazy" />
+        <img src="assets/logos/gmstudios.png" alt="GM Studios" class="people-helped-logo" loading="lazy" decoding="async" />
       </a>
       <a href="https://axiomedia.ca/" target="_blank" rel="noopener" class="people-helped-item">
-        <img src="assets/logos/axiomedia.png" alt="Axiomedia" class="people-helped-logo" loading="lazy" />
+        <img src="assets/logos/axiomedia.png" alt="Axiomedia" class="people-helped-logo" loading="lazy" decoding="async" />
       </a>
       <a href="https://www.instagram.com/opsell.ca/" target="_blank" rel="noopener" class="people-helped-item">
-        <img src="assets/logos/opsell.png" alt="Opsell" class="people-helped-logo" loading="lazy" />
+        <img src="assets/logos/opsell.png" alt="Opsell" class="people-helped-logo" loading="lazy" decoding="async" />
       </a>
       <a href="https://farmzz.com/" target="_blank" rel="noopener" class="people-helped-item">
-        <img src="assets/logos/farmzz-black.svg" alt="Farmzz" class="people-helped-logo" loading="lazy" />
+        <img src="assets/logos/farmzz-black.svg" alt="Farmzz" class="people-helped-logo" loading="lazy" decoding="async" />
       </a>
       <a href="https://www.propulsionsport.com/fr" target="_blank" rel="noopener" class="people-helped-item">
-        <img src="assets/logos/propulsion.svg" alt="Propulsion" class="people-helped-logo" loading="lazy" />
+        <img src="assets/logos/propulsion.svg" alt="Propulsion" class="people-helped-logo" loading="lazy" decoding="async" />
       </a>
     </div>
   </div>
@@ -2366,7 +2323,7 @@
         </div>
       </div>
       <div class="aigeeks-hero-visual">
-        <img src="assets/photos/speaking.jpg" alt="Raph en conférence AI Geeks" loading="lazy" />
+        <img src="assets/photos/speaking.jpg" alt="Raph en conférence AI Geeks" loading="lazy" decoding="async" />
       </div>
     </div>
 
@@ -2476,10 +2433,10 @@
     </div>
 
     <div class="aigeeks-photos reveal">
-      <img src="assets/photos/aigeeks-1.webp" alt="AI Geeks networking" loading="lazy" />
-      <img src="assets/photos/aigeeks-2.webp" alt="AI Geeks participants" loading="lazy" />
-      <img src="assets/photos/aigeeks-4.webp" alt="AI Geeks présentation" loading="lazy" />
-      <img src="assets/photos/aigeeks-3.webp" alt="AI Geeks conversations" loading="lazy" />
+      <img src="assets/photos/aigeeks-1.webp" alt="AI Geeks networking" loading="lazy" decoding="async" />
+      <img src="assets/photos/aigeeks-2.webp" alt="AI Geeks participants" loading="lazy" decoding="async" />
+      <img src="assets/photos/aigeeks-4.webp" alt="AI Geeks présentation" loading="lazy" decoding="async" />
+      <img src="assets/photos/aigeeks-3.webp" alt="AI Geeks conversations" loading="lazy" decoding="async" />
     </div>
 
     <div class="aigeeks-cta">
@@ -2495,12 +2452,12 @@
 <!-- PHOTO STRIP -->
 <div class="photo-strip-wrapper">
   <div class="photo-strip">
-    <img src="assets/photos/hero.webp?v=1" alt="Raph" loading="lazy" />
-    <img src="assets/photos/meeting.jpg" alt="Raph en consultation" loading="lazy" />
-    <img src="assets/photos/event-smile.jpg" alt="Raph rooftop" loading="lazy" />
-    <img src="assets/photos/consulting.jpg" alt="Raph consulting" loading="lazy" />
-    <img src="assets/photos/seated.jpg" alt="Raph seated" loading="lazy" />
-    <img src="assets/photos/speaking.jpg" alt="Raph arms crossed" loading="lazy" />
+    <img src="assets/photos/hero.webp?v=1" alt="Raph" loading="lazy" decoding="async" />
+    <img src="assets/photos/meeting.jpg" alt="Raph en consultation" loading="lazy" decoding="async" />
+    <img src="assets/photos/event-smile.jpg" alt="Raph rooftop" loading="lazy" decoding="async" />
+    <img src="assets/photos/consulting.jpg" alt="Raph consulting" loading="lazy" decoding="async" />
+    <img src="assets/photos/seated.jpg" alt="Raph seated" loading="lazy" decoding="async" />
+    <img src="assets/photos/speaking.jpg" alt="Raph arms crossed" loading="lazy" decoding="async" />
   </div>
 </div>
 
@@ -2607,7 +2564,7 @@
       <p>Certification développement web full-stack.</p>
     </div>
     <a href="https://ici.radio-canada.ca/info/videos/1-8118601/futurs-maraichers-a-entrainement?liste=28-34803" target="_blank" rel="noopener" class="cred-card cred-card-press reveal">
-      <img src="assets/photos/radio-canada.jpg" alt="Radio-Canada - De futurs maraîchers à l'entraînement" loading="lazy" />
+      <img src="assets/photos/radio-canada.jpg" alt="Radio-Canada - De futurs maraîchers à l'entraînement" loading="lazy" decoding="async" />
       <div>
         <div class="cred-issuer">Radio-Canada &middot; 14 juillet 2019</div>
         <h3>De futurs maraîchers à l'entraînement</h3>
@@ -2644,9 +2601,9 @@
       <input type="hidden" name="subject" value="Nouveau message via raphatb.com">
       <input type="hidden" name="redirect" value="https://raphatb.com">
       <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display: none;">
-      <input type="email" name="email" placeholder="ton@email.com" required />
-      <input type="text" name="name" placeholder="Sujet" required />
-      <textarea name="message" placeholder="Ton message..." rows="3" required></textarea>
+      <input type="email" name="email" aria-label="Courriel" placeholder="ton@email.com" required />
+      <input type="text" name="name" aria-label="Sujet" placeholder="Sujet" required />
+      <textarea name="message" aria-label="Message" placeholder="Ton message..." rows="3" required></textarea>
       <button type="submit">Envoyer →</button>
     </form>
   </div>
@@ -2713,13 +2670,23 @@
 
 <script>
   // Mobile menu
-  document.getElementById('hamburger').addEventListener('click', () => {
-    document.getElementById('nav-links').classList.toggle('open');
+  const menuButton = document.getElementById('hamburger');
+  const menu = document.getElementById('nav-links');
+  const setMenuOpen = (open) => {
+    menu.classList.toggle('open', open);
+    menuButton.setAttribute('aria-expanded', String(open));
+  };
+  menuButton.addEventListener('click', () => setMenuOpen(!menu.classList.contains('open')));
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menu.classList.contains('open')) {
+      setMenuOpen(false);
+      menuButton.focus();
+    }
   });
 
   document.querySelectorAll('#nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-      document.getElementById('nav-links').classList.remove('open');
+      setMenuOpen(false);
     });
   });
 
@@ -2737,27 +2704,22 @@
     }, { once: true });
   });
 
-  // Scroll reveal
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+  // Reveal progressively; content stays visible when animations are unavailable.
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if ('IntersectionObserver' in window && !reducedMotion.matches) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => {
+      observer.observe(el);
+      el.classList.add('reveal-pending');
     });
-  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
+  }
 
   // Side TOC
   (() => {
@@ -2790,19 +2752,24 @@
   (() => {
     const toggle = document.getElementById('theme-toggle');
     const html = document.documentElement;
-    const saved = localStorage.getItem('theme');
-    const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (saved) {
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+    let saved;
+    try { saved = localStorage.getItem('theme'); } catch {}
+    if (saved === 'light' || saved === 'dark') {
       html.setAttribute('data-theme', saved);
     }
-    const isDark = saved === 'dark' || (!saved && systemDark);
-    toggle.textContent = isDark ? '☀️' : '🌙';
+    const isDark = () => html.getAttribute('data-theme') === 'dark' ||
+      (!html.hasAttribute('data-theme') && systemTheme.matches);
+    const updateToggle = () => {
+      toggle.textContent = isDark() ? '☀️' : '🌙';
+    };
+    updateToggle();
+    systemTheme.addEventListener('change', updateToggle);
     toggle.addEventListener('click', () => {
-      const current = html.getAttribute('data-theme');
-      const next = current === 'dark' ? 'light' : 'dark';
+      const next = isDark() ? 'light' : 'dark';
       html.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      toggle.textContent = next === 'dark' ? '☀️' : '🌙';
+      try { localStorage.setItem('theme', next); } catch {}
+      updateToggle();
     });
   })();
 </script>

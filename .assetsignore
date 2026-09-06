@@ -6,3 +6,17 @@ RECREATE_PROMPT.md
 notion_badges.txt
 raph_description.txt
 raphatb-website-playbook copy.md
+.claude
+.DS_Store
+.env
+AGENTS.md
+output
+tmp
+carousels
+transcripts
+testimonials
+whatsapp
+moi
+azaria.png
+*.bak
+*.mp4
