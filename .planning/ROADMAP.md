@@ -6,7 +6,7 @@ Une phase pour archiver et vérifier le travail existant. La conception et la pu
 
 ## Phases
 
-- [ ] **Phase 1: Archive vérifiée et reprise** - Documents GSD, contrôle des fichiers et push dédié.
+- [x] **Phase 1: Archive vérifiée et reprise** - Documents GSD, contrôle des fichiers et push dédié.
 
 ## Phase Details
 
@@ -22,10 +22,10 @@ Une phase pour archiver et vérifier le travail existant. La conception et la pu
 **Plans**: 1 plan
 
 Plans:
-- [ ] 01-01: Documenter, valider et pousser l’archive existante.
+- [x] 01-01: Documenter, valider et pousser l’archive existante.
 
 ## Progress
 
 | Phase | Plans Complete | Status | Completed |
 | --- | --- | --- | --- |
-| 1. Archive vérifiée et reprise | 0/1 | In progress | - |
+| 1. Archive vérifiée et reprise | 1/1 | Complete | 2026-09-20 |

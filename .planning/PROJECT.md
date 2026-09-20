@@ -21,7 +21,7 @@ Retrouver les bons fichiers et les décisions approuvées, sans confondre propos
 
 ### Active
 
-- Conserver le contexte dans GSD, vérifier les fichiers et pousser le complément sur la même branche. Suivi : [REQUIREMENTS.md](REQUIREMENTS.md).
+Aucune exigence restante dans cette sauvegarde. Le contexte GSD et les contrôles sont livrés; le push `0515a21` est vérifié. Suivi : [REQUIREMENTS.md](REQUIREMENTS.md).
 
 ### Out of Scope
 

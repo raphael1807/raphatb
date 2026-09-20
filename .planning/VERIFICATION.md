@@ -23,7 +23,9 @@ Le premier essai du vérificateur dépassait le tampon standard de Node sur une 
 
 ## Git distant
 
-Baseline `6eac2a16d3becf38118f63cd3b7f8078848f7654` déjà poussée et vérifiée. Le complément GSD doit passer le même contrôle : comparer `git rev-parse HEAD` avec `git ls-remote origin refs/heads/codex/youtube-branding-20260920`, puis vérifier `git status --porcelain` vide.
+Baseline `6eac2a16d3becf38118f63cd3b7f8078848f7654` déjà poussée et vérifiée. Complément GSD poussé : `0515a21179c2ba777eb07f8e511390fca6a0620e`. `git rev-parse HEAD` et `git ls-remote origin refs/heads/codex/youtube-branding-20260920` ont retourné ce même SHA; `git status --porcelain` était vide.
+
+Ce constat est antérieur au commit de clôture qui contient ce document. Après sa publication, refaire les mêmes contrôles; le SHA final est communiqué dans le compte rendu et le hub existant pour éviter une référence de commit à lui-même.
 
 ## Limites conservées
 

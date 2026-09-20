@@ -9,7 +9,7 @@
 - [x] **ARCH-02** : pointer vers V18, les descriptions FR/EN, les quatre liens de profil et les preuves datées.
 - [x] **ARCH-03** : fournir le contexte GSD léger, une feuille de route et un état de reprise cohérents.
 - [x] **ARCH-04** : vérifier les références locales, dimensions, textes et liens avec un contrôle reproductible.
-- [ ] **ARCH-05** : pousser le complément GSD, comparer les commits local/distant et laisser le worktree propre.
+- [x] **ARCH-05** : pousser le complément GSD, comparer les commits local/distant et laisser le worktree propre.
 
 ## Out of Scope
 
@@ -28,7 +28,7 @@
 | ARCH-02 | Phase 1 | Complete |
 | ARCH-03 | Phase 1 | Complete |
 | ARCH-04 | Phase 1 | Complete |
-| ARCH-05 | Phase 1 | Pending remote verification |
+| ARCH-05 | Phase 1 | Complete (`0515a21` distant vérifié) |
 
 ## Definition of Done
 
