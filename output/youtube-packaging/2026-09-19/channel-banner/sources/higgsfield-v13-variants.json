@@ -1,0 +1,149 @@
+{
+  "date": "2026-09-19",
+  "status": "propositions non publiées",
+  "requests": [
+    {
+      "index": 1,
+      "params": {
+        "model": "gpt_image_2_5",
+        "aspect_ratio": "16:9",
+        "resolution": "2k",
+        "quality": "high",
+        "count": 1,
+        "medias": [
+          {
+            "role": "image",
+            "value": "fbf698b2-90c5-410b-aa49-45d8f5cae258"
+          },
+          {
+            "role": "image",
+            "value": "179f2ab9-aebf-4be4-a081-89163f184310"
+          },
+          {
+            "role": "image",
+            "value": "4f7ae9e7-22e8-4252-837c-63b7113ea69c"
+          }
+        ],
+        "prompt": "Design a premium YouTube CHANNEL BANNER for the personal brand raphatb. Reference 1 is the user's real event photograph: he is the man at the left wearing a black cap, black shirt, with both hands raised, speaking to an audience. Keep this real moment recognizable; do not invent extra people or change his chin or face. Reference 2 is the previous raphatb white banner, useful for understated brand and second consulting photo. Reference 3 is Nick Saraev's banner, ONLY for confident editorial hierarchy and the mix of real-world proof and a short promise, not its people, logo, statistics or copy. FULL 16:9 YouTube canvas, all essential content MUST fit inside centered rectangle x=20%-80%, y=36%-64%. Main text exact: 'Construire avec l’IA.' secondary line exact: 'Du concret. Pas du bruit.' Brand exact 'raphatb' tiny, not dominant. French flawless. No invented results, no revenue or member count, no testimonial badges, no YouTube logo, no subscribe button, no AI icon soup, no glows, no 3D, no busy ornament. A quietly confident founder, clean authentic photography. Never place face or text outside central safe band. Professional bespoke graphic design, not a generic template. VERSION A — IMMERSIVE / OLIVE. Photographic atmosphere inspired by Nick's strong banner composition. Deep charcoal olive background. Real event photo as a widescreen scene integrated into the middle safe band, presenter entire head and raised hands at x=28%-39%, y=38%-61%. Audience extends behind scene subtly towards right. Soft dark vignette at edges. Compact bold white headline on two lines at x=46%-72%, y=43%-51%, muted sage subtitle below y=55%, tiny white raphatb above y=39%. Headline text may be 'Construire' then 'avec l’IA.' No text overlap on a face. Dark near-black upper and lower canvas. Rich natural photo, subtle grain only. Editorial restraint. Keep the type medium, enough negative space."
+      }
+    },
+    {
+      "index": 2,
+      "params": {
+        "model": "gpt_image_2_5",
+        "aspect_ratio": "16:9",
+        "resolution": "2k",
+        "quality": "high",
+        "count": 1,
+        "medias": [
+          {
+            "role": "image",
+            "value": "fbf698b2-90c5-410b-aa49-45d8f5cae258"
+          },
+          {
+            "role": "image",
+            "value": "179f2ab9-aebf-4be4-a081-89163f184310"
+          },
+          {
+            "role": "image",
+            "value": "4f7ae9e7-22e8-4252-837c-63b7113ea69c"
+          }
+        ],
+        "prompt": "Design a premium YouTube CHANNEL BANNER for the personal brand raphatb. Reference 1 is the user's real event photograph: he is the man at the left wearing a black cap, black shirt, with both hands raised, speaking to an audience. Keep this real moment recognizable; do not invent extra people or change his chin or face. Reference 2 is the previous raphatb white banner, useful for understated brand and second consulting photo. Reference 3 is Nick Saraev's banner, ONLY for confident editorial hierarchy and the mix of real-world proof and a short promise, not its people, logo, statistics or copy. FULL 16:9 YouTube canvas, all essential content MUST fit inside centered rectangle x=20%-80%, y=36%-64%. Main text exact: 'Construire avec l’IA.' secondary line exact: 'Du concret. Pas du bruit.' Brand exact 'raphatb' tiny, not dominant. French flawless. No invented results, no revenue or member count, no testimonial badges, no YouTube logo, no subscribe button, no AI icon soup, no glows, no 3D, no busy ornament. A quietly confident founder, clean authentic photography. Never place face or text outside central safe band. Professional bespoke graphic design, not a generic template. VERSION B — PURE WHITE / NOTION. Pure white canvas, clean black Swiss typography, plenty of empty space. Safe band is one row. Left text block x=23%-49% with tiny raphatb above bold modest two-line 'Construire' / 'avec l’IA.', then small gray 'Du concret. Pas du bruit.' Right event photo rectangle x=52%-77%, y=38%-62%, authentic photo showing complete presenter head AND both hands and audience. No gradients, no shadows, no rounded UI cards. Barely visible thin short black rule as single accent. Timeless independent creator publication. The photograph is evidence, the text is the promise, neither should feel loud. Layout precise and restrained."
+      }
+    },
+    {
+      "index": 3,
+      "params": {
+        "model": "gpt_image_2_5",
+        "aspect_ratio": "16:9",
+        "resolution": "2k",
+        "quality": "high",
+        "count": 1,
+        "medias": [
+          {
+            "role": "image",
+            "value": "fbf698b2-90c5-410b-aa49-45d8f5cae258"
+          },
+          {
+            "role": "image",
+            "value": "179f2ab9-aebf-4be4-a081-89163f184310"
+          },
+          {
+            "role": "image",
+            "value": "4f7ae9e7-22e8-4252-837c-63b7113ea69c"
+          }
+        ],
+        "prompt": "Design a premium YouTube CHANNEL BANNER for the personal brand raphatb. Reference 1 is the user's real event photograph: he is the man at the left wearing a black cap, black shirt, with both hands raised, speaking to an audience. Keep this real moment recognizable; do not invent extra people or change his chin or face. Reference 2 is the previous raphatb white banner, useful for understated brand and second consulting photo. Reference 3 is Nick Saraev's banner, ONLY for confident editorial hierarchy and the mix of real-world proof and a short promise, not its people, logo, statistics or copy. FULL 16:9 YouTube canvas, all essential content MUST fit inside centered rectangle x=20%-80%, y=36%-64%. Main text exact: 'Construire avec l’IA.' secondary line exact: 'Du concret. Pas du bruit.' Brand exact 'raphatb' tiny, not dominant. French flawless. No invented results, no revenue or member count, no testimonial badges, no YouTube logo, no subscribe button, no AI icon soup, no glows, no 3D, no busy ornament. A quietly confident founder, clean authentic photography. Never place face or text outside central safe band. Professional bespoke graphic design, not a generic template. VERSION C — WARM EDITORIAL / TWO PHOTOS. Warm ivory canvas, near-black text. Narrow sophisticated symmetrical composition, much more editorial than a corporate logo banner. Event photo on left of safe band x=22%-40%, y=39%-61%, showing presenter complete face and raised hands. Consulting photo from reference2 on right x=62%-78%, y=39%-61%, keep man at laptop intact. Tiny lowercase raphatb centered above headline at y=40%, center x=42%-60% has medium-weight headline on three short lines 'Construire' / 'avec l’IA.' and subtitle 'Du concret.' / 'Pas du bruit.' small below. Leave generous gap between photos and text. Original warm photography, no cutout heads, no fake hand-drawn illustrations, no badges. A premium magazine masthead, contemporary but understated."
+      }
+    }
+  ],
+  "jobs": [
+    {
+      "index": 1,
+      "job_id": "aaa4ca2b-e278-421c-b298-5b45b67d2381",
+      "status": "pending",
+      "adjustments": {
+        "medias[0].role": {
+          "requested": "image",
+          "used": "image_references",
+          "reason": "GPT Image 2.5 backend expects schema-key media roles"
+        },
+        "medias[1].role": {
+          "requested": "image",
+          "used": "image_references",
+          "reason": "GPT Image 2.5 backend expects schema-key media roles"
+        },
+        "medias[2].role": {
+          "requested": "image",
+          "used": "image_references",
+          "reason": "GPT Image 2.5 backend expects schema-key media roles"
+        }
+      }
+    },
+    {
+      "index": 2,
+      "job_id": "dcdf34df-6519-4bc7-a865-4c3bd0aa51d1",
+      "status": "pending",
+      "adjustments": {
+        "medias[0].role": {
+          "requested": "image",
+          "used": "image_references",
+          "reason": "GPT Image 2.5 backend expects schema-key media roles"
+        },
+        "medias[1].role": {
+          "requested": "image",
+          "used": "image_references",
+          "reason": "GPT Image 2.5 backend expects schema-key media roles"
+        },
+        "medias[2].role": {
+          "requested": "image",
+          "used": "image_references",
+          "reason": "GPT Image 2.5 backend expects schema-key media roles"
+        }
+      }
+    },
+    {
+      "index": 3,
+      "job_id": "35c55728-c9ce-494f-9609-1c79190d8d42",
+      "status": "pending",
+      "adjustments": {
+        "medias[0].role": {
+          "requested": "image",
+          "used": "image_references",
+          "reason": "GPT Image 2.5 backend expects schema-key media roles"
+        },
+        "medias[1].role": {
+          "requested": "image",
+          "used": "image_references",
+          "reason": "GPT Image 2.5 backend expects schema-key media roles"
+        },
+        "medias[2].role": {
+          "requested": "image",
+          "used": "image_references",
+          "reason": "GPT Image 2.5 backend expects schema-key media roles"
+        }
+      }
+    }
+  ]
+}

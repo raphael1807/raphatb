@@ -1,0 +1,15 @@
+{
+  "channel": "https://www.youtube.com/@raphatb",
+  "channel_id": "UCc5GGFRjQrTjPWog0VKRjMg",
+  "verified_on": "2026-09-20",
+  "profile_links": [
+    {"title": "Website", "url": "https://raphatb.com/"},
+    {"title": "Instagram", "url": "https://www.instagram.com/raphatb/"},
+    {"title": "LinkedIn", "url": "https://www.linkedin.com/in/raphatb/"},
+    {"title": "TikTok", "url": "https://www.tiktok.com/@rapha.tb"}
+  ],
+  "description_ctas": [
+    {"title": "AI Académie", "url": "https://aiacademie.ca/"},
+    {"title": "AI Geeks", "url": "https://aigeekssquad.com/"}
+  ]
+}
