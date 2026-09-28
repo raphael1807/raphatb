@@ -1581,12 +1581,10 @@
       .hero-text {
         max-width: 680px;
         margin-inline: auto;
-        text-align: center;
+        text-align: left;
       }
 
-      .hero-logos { justify-content: center; flex-wrap: wrap; gap: 16px 24px; }
-      .hero h1 { max-width: 20ch; margin-inline: auto; text-wrap: balance; }
-      .hero-warning, .hero-quote { text-align: left; }
+      .hero-logos { justify-content: flex-start; flex-wrap: wrap; gap: 16px 24px; }
       .hero-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
       .hero-image {
@@ -1611,7 +1609,6 @@
       }
 
       .hero-stats { gap: 32px; }
-      .hero-stats > :last-child:nth-child(3n + 1) { grid-column: 2; }
     }
 
     @media (max-width: 900px) {
