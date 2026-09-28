@@ -1540,21 +1540,16 @@
     }
 
     .footer-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
       font-size: 0.8rem;
       color: var(--fg-muted);
       transition: color 0.2s;
     }
 
     .footer-links a:hover { color: var(--fg); }
-    .footer-links .footer-youtube {
-      display: inline-flex; align-items: center; gap: 8px;
-      min-height: 44px; padding: 10px 14px;
-      border: 1px solid var(--border); border-radius: 8px;
-      color: var(--fg); font-weight: 600; text-decoration: none;
-    }
-    .footer-links .footer-youtube:hover { border-color: var(--fg); }
-    .footer-links .footer-youtube:focus-visible { outline: 2px solid var(--fg); outline-offset: 4px; }
-    .footer-links .footer-youtube svg { width: 18px; height: 18px; }
+    .footer-links a:focus-visible { outline: 2px solid var(--fg); outline-offset: 4px; }
 
 
     /* ── ANIMATIONS ── */
@@ -2678,8 +2673,7 @@
     <ul class="footer-links">
       <li><a href="https://www.instagram.com/raphatb/" target="_blank" rel="noopener">Instagram</a></li>
       <li><a href="https://www.linkedin.com/in/raphatb/" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="https://www.youtube.com/@raphatb" target="_blank" rel="noopener noreferrer" class="footer-youtube">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z" fill="currentColor" stroke="none"/></svg> YouTube</a></li>
+      <li><a href="https://www.youtube.com/@raphatb" target="_blank" rel="noopener noreferrer" class="footer-youtube">YouTube</a></li>
       <li><a href="https://www.notion.com/@leverageos" target="_blank" rel="noopener">Notion</a></li>
       <li><a href="mailto:raphatbventures@gmail.com">Email</a></li>
     </ul>
