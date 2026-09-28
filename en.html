@@ -271,6 +271,25 @@
       border-radius: 3px;
     }
 
+    .hero-youtube {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      margin: -24px 0 48px;
+      padding: 12px 20px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--fg);
+      background: var(--bg-muted);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .hero-youtube:hover { border-color: var(--fg); }
+    .hero-youtube:focus-visible { outline: 2px solid var(--fg); outline-offset: 4px; }
+    .hero-youtube svg { width: 22px; height: 22px; flex-shrink: 0; }
+
     .hero-warning {
       display: flex;
       align-items: center;
@@ -1779,6 +1798,10 @@
     <p class="hero-description">
       I rebuilt Monsieur Chalets' platform during an operational crisis: 800+ properties migrated, 2.5x revenue in the first year. Today, I build Farmzz and help founders put the systems, AI and operations in place to create leverage.
     </p>
+    <a href="https://www.youtube.com/@raphatb" target="_blank" rel="noopener noreferrer" class="hero-youtube">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z" fill="currentColor" stroke="none"/></svg>
+      Visit my YouTube channel
+    </a>
     <p class="hero-warning">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;flex-shrink:0"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
       <span>If you just want to delegate a task list, this probably isn't the right fit. I work best with founders who want to move fast, decide fast and treat the system as an <strong>investment</strong>.</span>
