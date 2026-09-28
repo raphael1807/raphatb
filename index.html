@@ -271,25 +271,6 @@
       border-radius: 3px;
     }
 
-    .hero-youtube {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      min-height: 48px;
-      margin: -24px 0 48px;
-      padding: 12px 20px;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      color: var(--fg);
-      background: var(--bg-muted);
-      font-weight: 600;
-      text-decoration: none;
-    }
-    .hero-youtube:hover { border-color: var(--fg); }
-    .hero-youtube:focus-visible { outline: 2px solid var(--fg); outline-offset: 4px; }
-    .hero-youtube svg { width: 22px; height: 22px; flex-shrink: 0; }
-
     .hero-warning {
       display: flex;
       align-items: center;
@@ -1551,6 +1532,9 @@
 
     .footer-links {
       display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
       gap: 24px;
       list-style: none;
     }
@@ -1562,6 +1546,16 @@
     }
 
     .footer-links a:hover { color: var(--fg); }
+    .footer-links .footer-youtube {
+      display: inline-flex; align-items: center; gap: 8px;
+      min-height: 44px; padding: 10px 14px;
+      border: 1px solid var(--border); border-radius: 8px;
+      color: var(--fg); font-weight: 600; text-decoration: none;
+    }
+    .footer-links .footer-youtube:hover { border-color: var(--fg); }
+    .footer-links .footer-youtube:focus-visible { outline: 2px solid var(--fg); outline-offset: 4px; }
+    .footer-links .footer-youtube svg { width: 18px; height: 18px; }
+
 
     /* ── ANIMATIONS ── */
     .reveal {
@@ -1825,10 +1819,6 @@
     <p class="hero-description">
       J'ai reconstruit la plateforme de Monsieur Chalets pendant une crise opérationnelle: 800+ propriétés migrées, 2.5x les revenus la première année. Aujourd'hui, je bâtis Farmzz et j'aide des fondateurs à installer les systèmes, l'AI et les opérations qui créent du levier.
     </p>
-    <a href="https://www.youtube.com/@raphatb" target="_blank" rel="noopener noreferrer" class="hero-youtube">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z" fill="currentColor" stroke="none"/></svg>
-      Voir ma chaîne YouTube
-    </a>
     <p class="hero-warning">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;flex-shrink:0"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
       <span>Si tu veux juste déléguer une liste de tâches, ce n'est probablement pas le bon fit. Je travaille mieux avec des fondateurs qui veulent aller vite, décider vite et traiter le système comme un <strong>investissement</strong>.</span>
@@ -2688,7 +2678,8 @@
     <ul class="footer-links">
       <li><a href="https://www.instagram.com/raphatb/" target="_blank" rel="noopener">Instagram</a></li>
       <li><a href="https://www.linkedin.com/in/raphatb/" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="https://www.youtube.com/@raphatb" target="_blank" rel="noopener">YouTube</a></li>
+      <li><a href="https://www.youtube.com/@raphatb" target="_blank" rel="noopener noreferrer" class="footer-youtube">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z" fill="currentColor" stroke="none"/></svg> YouTube</a></li>
       <li><a href="https://www.notion.com/@leverageos" target="_blank" rel="noopener">Notion</a></li>
       <li><a href="mailto:raphatbventures@gmail.com">Email</a></li>
     </ul>
