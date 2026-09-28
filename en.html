@@ -102,7 +102,10 @@
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -1212,6 +1215,8 @@
       padding: 80px 0 48px;
     }
 
+    .aigeeks-hero > * { min-width: 0; }
+
     .aigeeks-hero-text h2 {
       font-size: clamp(2rem, 4vw, 3rem);
       line-height: 1.15;
@@ -1237,6 +1242,7 @@
 
     .aigeeks-stats {
       display: flex;
+      flex-wrap: wrap;
       gap: 48px;
       margin-top: 32px;
       padding-top: 24px;
@@ -2381,7 +2387,7 @@
         <img src="assets/photos/aigeeks-edition-5.webp" alt="AI Geeks Edition #5" width="560" height="560" loading="lazy" decoding="async" />
       </a>
       <a href="https://luma.com/pneee587" target="_blank" rel="noopener" class="event-card">
-        <span class="upcoming">Upcoming</span>
+        <span class="sold-out">Past event</span>
         <img src="assets/photos/aigeeks-edition-6.webp" alt="AI Geeks Edition #6 — Vooban" width="560" height="560" loading="lazy" decoding="async" />
       </a>
       <a href="https://luma.com/kubvksr6" target="_blank" rel="noopener" class="event-card">
@@ -2747,17 +2753,6 @@
 
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
-
   // Side TOC
   (() => {
     const toc = document.getElementById('side-toc');
@@ -2797,7 +2792,7 @@
     const isDark = saved === 'dark' || (!saved && systemDark);
     toggle.textContent = isDark ? '☀️' : '🌙';
     toggle.addEventListener('click', () => {
-      const current = html.getAttribute('data-theme');
+      const current = html.getAttribute('data-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
       const next = current === 'dark' ? 'light' : 'dark';
       html.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
