@@ -1757,6 +1757,18 @@
       .nav-lang { display: inline-flex; align-items: center; justify-content: center; min-width: 32px; min-height: 44px; }
       .theme-toggle { width: 40px; height: 40px; }
     }
+
+    /* Participant voices: source media load on demand. */
+    .community-proof-video { max-width: 720px; margin: 0 auto 40px; }
+    .community-proof-video h3 { font-size: 22px; margin: 18px 0 8px; }
+    .community-proof-video p { line-height: 1.6; margin: 0 0 12px; }
+    .community-proof-video a, .proof-source a { color: inherit; text-underline-offset: 3px; }
+    .community-proof-video .talk-video { max-width: none; margin: 0; }
+    .proof-source { margin: 16px 0; font-size: 14px; }
+    .proof-source summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; text-decoration: underline; text-underline-offset: 3px; }
+    .proof-source img, .community-proof-capture { display: block; width: 100%; height: auto; margin: 12px 0 18px; border-radius: 6px; }
+    #testimonials, #aigeeks-testimonials { scroll-margin-top: 110px; }
+
   </style>
 </head>
 <body>
@@ -2400,18 +2412,32 @@
       </a>
     </div>
 
+<h3 id="aigeeks-testimonials" style="margin:32px 0 24px;">From the people at AI Geeks.</h3>
+    <article class="community-proof-video" aria-label="Olivier · AI Geeks participant">
+      <div class="talk-card-video">
+        <button class="youtube-lite" type="button" data-youtube-id="EqDbUS9GQwg" data-youtube-title="Olivier · AI Geeks participant" aria-label="Play Olivier’s testimonial">
+          <img src="https://i.ytimg.com/vi/EqDbUS9GQwg/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+          <span class="youtube-lite-play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <h3>His experience, on video.</h3>
+      <p><strong>Olivier · AI Geeks participant</strong><br>Since edition 4, Olivier uses Codex for supplier research and e-commerce analysis. Original video in French.</p>
+      <a href="https://www.youtube.com/watch?v=EqDbUS9GQwg" target="_blank" rel="noopener">Watch on YouTube ↗</a>
+    </article>
     <div class="aigeeks-testimonials">
+      <div class="aigeeks-testimonial reveal"><img class="community-proof-capture" src="assets/photos/aigeeks-proof-annie-ofarrell.png" alt="Original message in French" width="410" height="214" loading="lazy" decoding="async" /><cite><strong>Annie O'Farrell</strong>CMO, Vooban · Original message in French</cite></div>
+      <div class="aigeeks-testimonial reveal"><img class="community-proof-capture" src="assets/photos/aigeeks-proof-antoine-boudreau.png" alt="Original message in French" width="457" height="328" loading="lazy" decoding="async" /><cite><strong>Antoine Boudreau</strong>AI Geeks participant · Original message in French</cite></div>
       <div class="aigeeks-testimonial reveal">
         <blockquote>I <strong>learned more in one evening</strong> at AI Geeks than in 4 trainings elsewhere. One single talk was more relevant than entire days there. I'd been hearing about Claude Code all week, I'd installed everything, it wasn't working, I was at "fuck this." Then I was there that same evening and <strong>it all clicked</strong>. It's the quality of people. People who are sharp. That's the <strong>real value</strong>.</blockquote>
         <cite><strong>Gabriel Gouveia</strong>CEO, Lasclay.com</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
         <blockquote>It's impressive to see how we're <strong>redefining the rules</strong> of what we've always known and done. That kind of shift is huge. Most people use AI in copy-paste mode. The next step is when your computer <strong>takes control and executes</strong> for you. Big crowd, filled with amazing people, all eager to learn more - and above all, to execute.</blockquote>
-        <cite><strong>Stéphanie Bédard</strong>Fractional CMO</cite>
+        <cite><strong><a href="https://www.linkedin.com/posts/stephbedard_ai-geeks-3-anthony-blais-de-elia-a-racont%C3%A9-share-7438219639974895617-RIyb" target="_blank" rel="noopener" style="color:inherit;">Stéphanie Bédard</a></strong>Fractional CMO</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
         <blockquote><strong>Tangible! Real!</strong> A packed full house of 70 people watching presentations on <strong>concrete use cases</strong>. Anthony B. with his cabin retreat that produced tools in 3 hours, François Lanthier Nadeau who created a newsletter live without touching his keyboard… Excellent event organization.</blockquote>
-        <cite><strong>Francis Laplante</strong>CEO, Spektrum</cite>
+        <cite><strong><a href="https://www.linkedin.com/feed/update/urn:li:activity:7438225412750639104/" target="_blank" rel="noopener" style="color:inherit;">Francis Laplante</a></strong>CEO, Spektrum</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
         <blockquote>Before Raphaël started this, Quebec really had nothing. Now, 55 people sign up and <strong>everything sells out in four days</strong>. The difference: people who actually build share real use cases, concrete demos. This is where Quebec's AI community gathers. If you're shipping something with AI, <strong>you need to be in this room</strong>.</blockquote>
@@ -2419,7 +2445,7 @@
       </div>
       <div class="aigeeks-testimonial reveal">
         <blockquote>For founders by founders - I love the approach (while staying super accessible for non-founders like me). Wow. I had <strong>zero expectations</strong> and <strong>I LOVED IT!</strong> Accessible, unpretentious, and super welcoming.</blockquote>
-        <cite><strong>Rosalie Simard, MBA</strong>Venture Capital @ Investissement Québec · VP @ Capitale Numérique</cite>
+        <details class="proof-source"><summary>Read the original message (French)</summary><img class="community-proof-capture" src="assets/photos/aigeeks-proof-rosalie-simard.png" alt="Original message in French" width="404" height="346" loading="lazy" decoding="async" /></details><cite><strong>Rosalie Simard, MBA</strong>Venture Capital @ Investissement Québec · VP @ Capitale Numérique</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
         <blockquote>Two editions, and each time I leave with <strong>concrete ideas</strong> we can apply <strong>the very next day</strong> in our operations. It's the kind of event where the value comes as much from the conversations as from the presentations.</blockquote>
@@ -2431,11 +2457,11 @@
       </div>
       <div class="aigeeks-testimonial reveal">
         <blockquote>It's <strong>insane</strong> what you're building, honestly.</blockquote>
-        <cite><strong>William Topaczewski</strong>Founding Account Executive, Glowtify</cite>
+        <details class="proof-source"><summary>Read the original message (French)</summary><img class="community-proof-capture" src="assets/photos/aigeeks-proof-william-topaczewski.png" alt="Original message in French" width="446" height="108" loading="lazy" decoding="async" /></details><cite><strong>William Topaczewski</strong>Founding Account Executive, Glowtify</cite>
       </div>
       <div class="aigeeks-testimonial reveal">
         <blockquote>We're using the AI Geeks evening as a <strong>launchpad</strong> for Homard Cloud. At Spektrum, it's always been in our DNA: <strong>launching projects</strong>, encouraging entrepreneurship.</blockquote>
-        <cite><strong>Sébastien Lemieux</strong>CEO, Spektrum</cite>
+        <cite><strong><a href="https://www.linkedin.com/posts/sebastienlemieux_homardcloud-ia-quaezbec-activity-7437955560718761984-0Cci" target="_blank" rel="noopener" style="color:inherit;">Sébastien Lemieux</a></strong>CEO, Spektrum</cite>
       </div>
     </div>
 
