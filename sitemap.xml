@@ -19,4 +19,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://raphatb.com/en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://raphatb.com/"/>
   </url>
+  <url><loc>https://raphatb.com/consultation/</loc><lastmod>2026-10-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority><xhtml:link rel="alternate" hreflang="fr" href="https://raphatb.com/consultation/"/><xhtml:link rel="alternate" hreflang="en" href="https://raphatb.com/consultation/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://raphatb.com/consultation/"/></url>
+  <url><loc>https://raphatb.com/consultation/en/</loc><lastmod>2026-10-03</lastmod><changefreq>monthly</changefreq><priority>0.8</priority><xhtml:link rel="alternate" hreflang="fr" href="https://raphatb.com/consultation/"/><xhtml:link rel="alternate" hreflang="en" href="https://raphatb.com/consultation/en/"/><xhtml:link rel="alternate" hreflang="x-default" href="https://raphatb.com/consultation/"/></url>
 </urlset>
