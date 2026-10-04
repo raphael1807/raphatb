@@ -26,6 +26,9 @@ Personal website at raphatb.com is a bilingual (French / English) authority site
 - [Homepage (English)](https://raphatb.com/en): English version of the same content.
 - [Sitemap](https://raphatb.com/sitemap.xml)
 
+- [AI consultation (French)](https://raphatb.com/consultation/): One-on-one with Raphael, 3 hours for CAD $1,500 before tax. Booking by request; no online checkout is offered on this page.
+- [AI consultation (English)](https://raphatb.com/consultation/en/): English version of the same offer and process.
+
 ## Off-site presence
 
 - LinkedIn: https://www.linkedin.com/in/raphatb/

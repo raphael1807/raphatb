@@ -1796,6 +1796,15 @@
     .proof-source img, .community-proof-capture { display: block; width: 100%; height: auto; margin: 12px 0 18px; border-radius: 6px; }
     #testimonials, #aigeeks-testimonials { scroll-margin-top: 110px; }
 
+
+    .consultation-entry { border-block: 1px solid var(--border); background: var(--bg-subtle); }
+    .consultation-entry-inner { max-width: 1136px; margin: auto; padding: 38px 32px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+    .consultation-entry-label { font-size: 11px; letter-spacing: .12em; font-weight: 700; color: #c53030; text-transform: uppercase; margin-bottom: 9px; }
+    .consultation-entry h2 { font-size: clamp(23px, 2.4vw, 30px); margin-bottom: 8px; }
+    .consultation-entry p { color: var(--fg-secondary); font-size: 15px; line-height: 1.6; }
+    .consultation-entry a { flex-shrink: 0; }
+    @media(max-width: 720px) { .consultation-entry-inner { padding: 30px 24px; flex-direction: column; align-items: flex-start; gap: 20px; } }
+
   </style>
 </head>
 <body>
@@ -1837,6 +1846,7 @@
   <div class="nav-inner">
     <span class="nav-name">raphatb</span>
     <ul class="nav-links" id="nav-links">
+      <li><a href="/consultation/">Consultation IA</a></li>
       <li><a href="#story">Parcours</a></li>
       <li><a href="#testimonials">Témoignages (25)</a></li>
       <li><a href="#credentials">Reconnaissances</a></li>
@@ -1920,6 +1930,9 @@
     <a href="#testimonials" class="hero-cta-photo">Voir les résultats ↓</a>
   </div>
 </section>
+
+<!-- ONE-ON-ONE CONSULTATION -->
+<section class="consultation-entry" id="consultation" aria-labelledby="consultation-heading"><div class="consultation-entry-inner"><div><div class="consultation-entry-label">One-on-one IA · Avec Raphaël</div><h2 id="consultation-heading">3 heures pour avancer avec l’IA.</h2><p>Tes outils, tes cas, tes priorités. 1 500 $ CAD avant taxes.</p></div><a class="btn-primary" href="/consultation/">Découvrir le forfait <span aria-hidden="true">↗</span></a></div></section>
 
 <!-- LOGO BAR -->
 <div class="logo-bar">
@@ -2744,6 +2757,7 @@
       <span>&copy; 2026 - raphatb.com</span>
     </div>
     <ul class="footer-links">
+      <li><a href="/consultation/">Consultation IA</a></li>
       <li><a href="https://www.instagram.com/raphatb/" target="_blank" rel="noopener">Instagram</a></li>
       <li><a href="https://www.linkedin.com/in/raphatb/" target="_blank" rel="noopener">LinkedIn</a></li>
       <li><a href="https://www.youtube.com/@raphatb" target="_blank" rel="noopener noreferrer" class="footer-youtube">YouTube</a></li>
