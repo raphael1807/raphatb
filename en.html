@@ -156,6 +156,8 @@
       list-style: none;
     }
 
+    .nav-consultation-mobile { display: none; }
+
     .nav-links a {
       font-size: 0.82rem;
       font-weight: 500;
@@ -1754,6 +1756,7 @@
     }
     @media (max-width: 520px) {
       .nav-cta { display: none; }
+      .nav-consultation-mobile { display: list-item; }
       .nav-lang { display: inline-flex; align-items: center; justify-content: center; min-width: 32px; min-height: 44px; }
       .theme-toggle { width: 40px; height: 40px; }
     }
@@ -1768,15 +1771,6 @@
     .proof-source summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; text-decoration: underline; text-underline-offset: 3px; }
     .proof-source img, .community-proof-capture { display: block; width: 100%; height: auto; margin: 12px 0 18px; border-radius: 6px; }
     #testimonials, #aigeeks-testimonials { scroll-margin-top: 110px; }
-
-
-    .consultation-entry { border-block: 1px solid var(--border); background: var(--bg-subtle); }
-    .consultation-entry-inner { max-width: 1136px; margin: auto; padding: 38px 32px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
-    .consultation-entry-label { font-size: 11px; letter-spacing: .12em; font-weight: 700; color: #c53030; text-transform: uppercase; margin-bottom: 9px; }
-    .consultation-entry h2 { font-size: clamp(23px, 2.4vw, 30px); margin-bottom: 8px; }
-    .consultation-entry p { color: var(--fg-secondary); font-size: 15px; line-height: 1.6; }
-    .consultation-entry a { flex-shrink: 0; }
-    @media(max-width: 720px) { .consultation-entry-inner { padding: 30px 24px; flex-direction: column; align-items: flex-start; gap: 20px; } }
 
   </style>
 </head>
@@ -1819,14 +1813,14 @@
   <div class="nav-inner">
     <span class="nav-name">raphatb</span>
     <ul class="nav-links" id="nav-links">
-      <li><a href="/consultation/en/">AI consultation</a></li>
+      <li class="nav-consultation-mobile"><a href="/consultation/en/">AI consultation</a></li>
       <li><a href="#story">Story</a></li>
       <li><a href="#testimonials">Testimonials (23)</a></li>
       <li><a href="#credentials">Recognition</a></li>
       <li><a href="https://www.youtube.com/@raphatb" target="_blank" rel="noopener noreferrer">YouTube</a></li>
     </ul>
     <div class="nav-right">
-      <a href="#testimonials" class="nav-cta">See the results</a>
+      <a href="/consultation/en/" class="nav-cta">AI consultation</a>
       <a href="/" class="nav-lang">FR</a>
       <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">☀️</button>
       <button class="hamburger" id="hamburger" type="button" aria-label="Menu" aria-controls="nav-links" aria-expanded="false">
@@ -1903,9 +1897,6 @@
     <a href="#testimonials" class="hero-cta-photo">See the results ↓</a>
   </div>
 </section>
-
-<!-- ONE-ON-ONE CONSULTATION -->
-<section class="consultation-entry" id="consultation" aria-labelledby="consultation-heading"><div class="consultation-entry-inner"><div><div class="consultation-entry-label">One-on-one AI · With Raphael</div><h2 id="consultation-heading">3 hours to put AI to work.</h2><p>Your tools, your tasks, your priorities. $1,500 CAD before tax.</p></div><a class="btn-primary" href="/consultation/en/">Explore the package <span aria-hidden="true">↗</span></a></div></section>
 
 <!-- LOGO BAR -->
 <div class="logo-bar">
@@ -2657,8 +2648,8 @@
     <h2>Want the business to depend less on you?</h2>
     <p>If you're building something real and everything still runs through you, we should talk.</p>
     <div class="cta-buttons">
-      <a href="https://www.linkedin.com/in/raphatb/" target="_blank" rel="noopener" class="btn-primary">
-        Connect on LinkedIn
+      <a href="/consultation/en/" class="btn-primary">
+        3 hours with me
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:16px;height:16px"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
       </a>
       <a href="https://aigeekssquad.com" target="_blank" rel="noopener" class="btn-secondary">
