@@ -237,11 +237,11 @@
     .hero {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 160px 24px 120px;
+      padding: 112px 24px 80px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 80px;
-      align-items: center;
+      align-items: start;
     }
 
     .hero-text { width: 100%; max-width: 560px; min-width: 0; }
@@ -289,8 +289,8 @@
       display: flex;
       align-items: center;
       gap: 10px;
-      margin-top: -32px;
-      margin-bottom: 48px;
+      margin-top: 0;
+      margin-bottom: 28px;
       font-size: 0.9rem;
       color: var(--fg);
       padding: 16px 20px;
@@ -318,7 +318,7 @@
       font-size: 1.125rem;
       line-height: 1.7;
       color: var(--fg-secondary);
-      margin-bottom: 48px;
+      margin-bottom: 24px;
     }
 
     .hero-quote {
@@ -380,27 +380,6 @@
       display: block;
     }
 
-    .hero-cta-photo {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #c53030;
-      color: #fff;
-      padding: 14px 28px;
-      border-radius: 10px;
-      font-size: 1.05rem;
-      font-weight: 700;
-      text-decoration: none;
-      letter-spacing: -0.01em;
-      box-shadow: 0 4px 20px rgba(197,48,48,0.4);
-      transition: background 0.2s, transform 0.2s;
-      white-space: nowrap;
-    }
-    .hero-cta-photo:hover {
-      background: #c53030;
-      transform: translateX(-50%) scale(1.03);
-    }
 
     /* ── LOGO BAR ── */
     .logo-bar {
@@ -1605,16 +1584,6 @@
         object-position: 64% top;
       }
 
-      .hero-cta-photo {
-        bottom: 16px;
-        width: calc(100% - 32px);
-        max-width: 310px;
-        padding: 13px 16px;
-        font-size: 0.95rem;
-        line-height: 1.2;
-        text-align: center;
-        white-space: normal;
-      }
 
       .hero-stats { gap: 32px; }
     }
@@ -1772,16 +1741,18 @@
     .proof-source img, .community-proof-capture { display: block; width: 100%; height: auto; margin: 12px 0 18px; border-radius: 6px; }
     #testimonials, #aigeeks-testimonials { scroll-margin-top: 110px; }
 
-    /* The homepage keeps its original story; the offer has its own page. */
-    .hero-client-proof { display: flex; align-items: flex-start; gap: 16px; margin: -16px 0 40px; }
+    /* Keep the portrait clear and place both actions beside the offer text. */
+    .hero-client-proof { display: flex; align-items: flex-start; gap: 16px; margin: 0 0 32px; }
     .hero-client-proof > img { width: 60px; height: 76px; flex: 0 0 60px; object-fit: cover; border-radius: 8px; }
     .hero-client-proof .hero-quote { margin: 0; }
-    .hero-photo-actions { position: absolute; bottom: 20px; left: 20px; right: 20px; display: grid; gap: 10px; }
-    .hero-photo-actions .hero-cta-photo { position: static; transform: none; width: auto; max-width: none; text-align: center; white-space: normal; }
-    .hero-photo-actions .hero-cta-photo:hover { transform: translateY(-2px); }
-    .hero-photo-actions .hero-cta-secondary { background: #fff; color: #222; box-shadow: 0 4px 20px rgba(0,0,0,.12); }
-    .hero-photo-actions a:focus-visible { outline: 3px solid var(--fg); outline-offset: 3px; }
-    @media (max-width: 1024px) { .hero-photo-actions { bottom: 16px; left: 16px; right: 16px; } }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 28px; }
+    .hero-cta-photo { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 13px 20px; border: 1px solid #c53030; border-radius: 10px; background: #c53030; color: #fff; font-size: .95rem; font-weight: 700; line-height: 1.3; text-align: center; text-decoration: none; transition: background .2s; }
+    .hero-cta-photo:hover { background: #a02020; }
+    .hero-cta-secondary { background: var(--bg); color: var(--fg); border-color: var(--border); }
+    .hero-cta-secondary:hover { background: var(--bg-muted); }
+    .hero-actions a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
+    .hero-image img { transform: scale(1.18); transform-origin: 55% bottom; }
+    @media (max-width: 600px) { .hero-actions { display: grid; grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -1860,6 +1831,10 @@
     <p class="hero-description">
       I rebuilt Monsieur Chalets' platform during an operational crisis: 800+ properties migrated, 2.5x revenue in the first year. Today, I build Farmzz and help founders put the systems, AI and operations in place to create leverage.
     </p>
+    <div class="hero-actions">
+      <a href="#testimonials" class="hero-cta-photo">See the testimonials</a>
+      <a href="/consultation/en/" class="hero-cta-photo hero-cta-secondary">One-on-one AI <span aria-hidden="true">↗</span></a>
+    </div>
     <p class="hero-warning">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;flex-shrink:0"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
       <span>If you just want to delegate a task list, this probably isn't the right fit. I work best with founders who want to move fast, decide fast and treat the system as an <strong>investment</strong>.</span>
@@ -1907,10 +1882,6 @@
       <source srcset="assets/photos/hero.webp?v=1" type="image/webp" />
       <img src="assets/photos/hero.jpg?v=3" alt="Raphael Tremblay-Bouchard" width="1600" height="1064" fetchpriority="high" loading="eager" decoding="sync" />
     </picture>
-    <div class="hero-photo-actions">
-      <a href="#testimonials" class="hero-cta-photo">See the testimonials</a>
-      <a href="/consultation/en/" class="hero-cta-photo hero-cta-secondary">One-on-one AI <span aria-hidden="true">↗</span></a>
-    </div>
   </div>
 </section>
 
