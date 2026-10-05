@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Payment and booking | One on One AI | raphatb</title><meta name="description" content="3 hours with Raphaël. One-time payment of CAD $1,600 before tax. Arrange your date before paying.">
+<title>Payment and booking | One on One AI | raphatb</title><meta name="description" content="3 hours with Raphaël. One-time payment of CAD $1,600 before tax. Choose your time in the calendar and pay with Stripe.">
 <meta name="robots" content="noindex,follow">
 <link rel="canonical" href="https://raphatb.com/consultation/reserver/en/">
 <link rel="alternate" hreflang="fr" href="https://raphatb.com/consultation/reserver/">
@@ -14,6 +14,8 @@
 
 .checkout{--oao-ink:var(--ink);--oao-muted:var(--muted);--oao-line:var(--line);--oao-bg:var(--bg);width:min(1120px,calc(100% - 64px));margin:0 auto;padding:36px 0 64px}.checkout p{margin:0}.checkout h1,.checkout h2{margin-top:0}.steps{font-size:12px;color:var(--muted);margin:0 0 38px;display:flex;flex-wrap:wrap;align-items:center;gap:12px}.steps a{text-underline-offset:4px}.steps [aria-current]{color:var(--ink);font-weight:600}.offer-name{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px!important}.reservation{border-top:0;padding:0}.reservation h1{font-size:clamp(32px,4vw,48px);letter-spacing:-.045em;line-height:1.1;margin-bottom:16px}.oao-button:focus-visible,.steps a:focus-visible{outline:3px solid #bd3037;outline-offset:4px}.back-link{display:inline-block;font-size:12px;margin-top:28px;text-underline-offset:4px}.oao-reservation-grid{margin-top:38px}.oao-reservation-panel .oao-button{width:100%}.oao-calendar-pending{min-height:210px}.oao-calendar-pending .booking-contact{font-size:13px;font-weight:600;text-underline-offset:4px;margin-top:8px}
 @media(max-width:680px){.checkout{width:calc(100% - 40px);padding:28px 0 36px}.steps{gap:8px;margin-bottom:28px}.reservation h1{font-size:32px}.reservation{padding:0}.oao-reservation-panel .oao-button{width:100%}}
+
+.oao-reservation-grid{grid-template-columns:minmax(260px,.75fr) minmax(0,1.6fr);gap:32px}.oao-reservation-panel+.oao-reservation-panel{padding-left:28px}.oao-calendar{background:#fff;border:1px solid var(--oao-line);border-radius:8px;overflow:hidden;min-width:0}.oao-calendar iframe{display:block;width:100%;height:800px;border:0;color-scheme:light}.oao-calendar-link{display:inline-block;font-size:12px;line-height:1.6;margin-top:12px;text-underline-offset:4px}.oao-calendar-link:focus-visible{outline:3px solid #bd3037;outline-offset:4px}.oao-booking-meta{font-size:12px;line-height:1.6;color:var(--oao-muted);margin-bottom:16px!important}@media(max-width:800px){.oao-reservation-grid{grid-template-columns:1fr;gap:28px}.oao-reservation-panel+.oao-reservation-panel{border-left:0;padding-left:0;border-top:1px solid var(--oao-line);padding-top:24px}.oao-calendar iframe{height:1350px}}
 </style>
 </head><body>
 <a class="skip" href="#main">Skip to content</a>
@@ -22,11 +24,11 @@
 <nav class="steps" aria-label="Booking steps"><a href="/en">Home</a><span aria-hidden="true">→</span><a href="/consultation/en/">One on One AI</a><span aria-hidden="true">→</span><span aria-current="page">Payment and booking</span></nav>
 <p class="offer-name">One on One AI · Raphaël</p>
 <section class="reservation" id="reserver" aria-labelledby="reservation-title">
-<h1 id="reservation-title">Payment and booking</h1><p class="oao-reservation-lede">3 hours together to work on a real problem in your business.</p>
+<h1 id="reservation-title">Payment and booking</h1><p class="oao-reservation-lede">Choose your 3-hour time slot, then complete payment.</p>
 <div class="oao-reservation-grid">
 <div class="oao-reservation-panel" aria-labelledby="payment-title"><h2 id="payment-title">Your One on One AI</h2><p class="oao-reservation-price">$1,600 <span>CAD</span></p><p class="oao-reservation-detail">3 hours with Raphaël · One-time payment · Before taxes</p><a class="oao-button oao-button-primary" href="https://buy.stripe.com/cNi7sK0MF5G9dlb1VK6J200?locale=en">Pay $1,600 CAD <span aria-hidden="true">↗</span></a><p class="oao-reservation-note">Secure payment on Stripe. Taxes are calculated using your billing address.</p></div>
-<div class="oao-reservation-panel" aria-labelledby="calendar-title"><h2 id="calendar-title">Your appointment</h2><div class="oao-calendar-pending"><strong>Availability is not open yet.</strong><p>The booking calendar will appear here.</p><a class="booking-contact" href="mailto:raphatbventures@gmail.com?subject=One%20on%20One%20AI">Email Raphaël ↗</a></div></div>
-</div><p class="oao-reservation-status">Payment does not reserve a time slot yet. <a href="mailto:raphatbventures@gmail.com?subject=One%20on%20One%20AI">Contact me to arrange the date</a> of your 3 hours before paying.</p></section>
+<div class="oao-reservation-panel" aria-labelledby="calendar-title"><h2 id="calendar-title">Your appointment</h2><p class="oao-booking-meta">3-hour Google Meet session · Quebec time.</p><div class="oao-calendar"><iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3HLA1VNIaXV91rJHqzyZsLzOTuzHk1udpeAxwnHuXcfS4BYeGUjWWCY7BHLq72YwrrsGBa_YJT?gv=true&amp;hl=en" title="Choose a 3-hour appointment with Raphaël" loading="eager" referrerpolicy="strict-origin-when-cross-origin"></iframe></div><a class="oao-calendar-link" href="https://calendar.app.google/AjPeV2Y7GWbdnajk6" target="_blank" rel="noopener noreferrer">Open the calendar in a new tab ↗</a></div>
+</div><p class="oao-reservation-status">Book your time in the calendar, then complete payment using the same email address. These are two separate steps. If you have already paid, do not pay again.</p></section>
 <a class="back-link" href="/consultation/en/">← Back to the offer</a>
 </main><footer>© 2026 raphatb · Consulting by Raphaël · Invoiced by Application Farmzz inc.</footer>
 <script>(()=>{const doc=document.documentElement;let saved;try{saved=localStorage.getItem('theme')}catch{}if(saved==='light'||saved==='dark')doc.dataset.theme=saved;document.getElementById('theme-toggle').addEventListener('click',()=>{const dark=doc.dataset.theme?doc.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;const theme=dark?'light':'dark';doc.dataset.theme=theme;try{localStorage.setItem('theme',theme)}catch{}})})();</script>
