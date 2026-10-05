@@ -11,6 +11,7 @@ AGENTS.md
 .github
 .agents
 .codex
+.wrangler
 .env*
 .dev.vars*
 doc
