@@ -358,11 +358,20 @@
       margin-top: 4px;
     }
 
+    .hero-visual {
+      display: flex;
+      flex-direction: column;
+      align-self: stretch;
+      min-width: 0;
+      gap: 24px;
+    }
+
     .hero-image {
       position: relative;
+      flex: 1;
+      min-height: 560px;
       border-radius: var(--radius);
       overflow: hidden;
-      aspect-ratio: 4 / 5;
       background: var(--bg-muted);
     }
 
@@ -373,6 +382,8 @@
     }
 
     .hero-image img {
+      position: absolute;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -1601,10 +1612,17 @@
       .hero-logos { justify-content: flex-start; flex-wrap: wrap; gap: 16px 24px; }
       .hero-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
+      .hero-visual {
+        width: 100%;
+        max-width: 680px;
+        margin-inline: auto;
+      }
+
       .hero-image {
-        width: min(100%, 460px);
-        margin: 0 auto;
-        aspect-ratio: 1 / 1.08;
+        flex: none;
+        min-height: 0;
+        width: 100%;
+        aspect-ratio: 4 / 5;
       }
 
       .hero-image img {
@@ -1769,8 +1787,8 @@
     #testimonials, #aigeeks-testimonials { scroll-margin-top: 110px; }
 
     /* Keep the portrait clear and place both actions beside the offer text. */
-    .hero-client-proof { display: flex; align-items: flex-start; gap: 16px; margin: 0 0 32px; }
-    .hero-client-proof > img { width: 60px; height: 76px; flex: 0 0 60px; object-fit: cover; border-radius: 8px; }
+    .hero-client-proof { display: flex; align-items: flex-start; gap: 16px; margin: 0; }
+    .hero-client-proof > img { width: 60px; height: auto; flex: 0 0 60px; border-radius: 8px; }
     .hero-client-proof .hero-quote { margin: 0; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 28px; }
     .hero-cta-photo { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 13px 20px; border: 1px solid #c53030; border-radius: 10px; background: #c53030; color: #fff; font-size: .95rem; font-weight: 700; line-height: 1.3; text-align: center; text-decoration: none; transition: background .2s; }
@@ -1778,7 +1796,6 @@
     .hero-cta-secondary { background: var(--bg); color: var(--fg); border-color: var(--border); }
     .hero-cta-secondary:hover { background: var(--bg-muted); }
     .hero-actions a:focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
-    .hero-image img { transform: scale(1.18); transform-origin: 55% bottom; }
     @media (max-width: 600px) { .hero-actions { display: grid; grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -1866,13 +1883,6 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;flex-shrink:0"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
       <span>Si tu veux juste déléguer une liste de tâches, ce n'est probablement pas le bon fit. Je travaille mieux avec des fondateurs qui veulent aller vite, décider vite et traiter le système comme un <strong>investissement</strong>.</span>
     </p>
-    <div class="hero-client-proof">
-      <img src="assets/photos/william-burgess.jpg" alt="William Burgess, Monsieur Chalets" width="344" height="500" decoding="async" />
-    <blockquote class="hero-quote">
-      "Sa rigueur de travail et son éthique de travail. 100%. La première année, 2.5x les ventes juste avec la vitesse du site."
-      <cite>William Burgess, Co-fondateur Monsieur Chalets</cite>
-    </blockquote>
-    </div>
     <div class="hero-stats">
       <div>
         <div class="hero-stat-num">22+</div>
@@ -1904,11 +1914,20 @@
       </div>
     </div>
   </div>
-  <div class="hero-image">
-    <picture>
-      <source srcset="assets/photos/hero.webp?v=1" type="image/webp" />
-      <img src="assets/photos/hero.jpg?v=3" alt="Raphael Tremblay-Bouchard" width="1600" height="1064" fetchpriority="high" loading="eager" decoding="sync" />
-    </picture>
+  <div class="hero-visual">
+    <div class="hero-client-proof">
+      <img src="assets/photos/william-burgess.jpg" alt="William Burgess, Monsieur Chalets" width="344" height="500" decoding="async" />
+      <blockquote class="hero-quote">
+        "Sa rigueur de travail et son éthique de travail. 100%. La première année, 2.5x les ventes juste avec la vitesse du site."
+        <cite>William Burgess, Co-fondateur Monsieur Chalets</cite>
+      </blockquote>
+    </div>
+    <div class="hero-image">
+      <picture>
+        <source srcset="assets/photos/hero.webp?v=1" type="image/webp" />
+        <img src="assets/photos/hero.jpg?v=3" alt="Raphael Tremblay-Bouchard" width="1600" height="1064" fetchpriority="high" loading="eager" decoding="sync" />
+      </picture>
+    </div>
   </div>
 </section>
 
