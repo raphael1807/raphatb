@@ -6,3 +6,19 @@ RECREATE_PROMPT.md
 notion_badges.txt
 raph_description.txt
 raphatb-website-playbook copy.md
+AGENTS.md
+.assetsignore
+.github
+.agents
+.codex
+.wrangler
+.env*
+.dev.vars*
+doc
+harness
+output
+scripts
+moi
+testimonials
+transcripts
+whatsapp
