@@ -903,6 +903,17 @@
     .testimonial-reel-context { margin: 16px 0; font-size: 14px; line-height: 1.5; }
     .testimonial-reel-context a { color: inherit; text-underline-offset: 3px; }
 
+    .proof-library-nav { display:flex; flex-wrap:wrap; gap:12px 24px; margin:24px 0 32px; }
+    .proof-library-nav a { color:var(--fg); font-size:.9rem; font-weight:600; text-underline-offset:4px; }
+    .proof-library-note { color:var(--fg-muted); font-size:.8rem; line-height:1.5; margin:12px 0 24px; }
+    .proof-video-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px 24px; margin:24px 0 40px; }
+    .proof-video-name { font-size:1rem; line-height:1.4; margin:12px 0 4px; }
+    .proof-video-context { font-size:.85rem; color:var(--fg-secondary); line-height:1.5; margin:0 0 8px; }
+    .proof-video-source { font-size:.8rem; color:var(--fg); text-underline-offset:3px; }
+    #client-testimonials { scroll-margin-top:110px; }
+    @media(max-width:900px) { .proof-video-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media(max-width:600px) { .proof-video-grid { grid-template-columns:1fr; } }
+
     /* ── TESTIMONIALS ── */
     .testimonials-section {
       background: var(--bg-subtle);
@@ -1895,7 +1906,7 @@
     <ul class="nav-links" id="nav-links">
       <li class="nav-consultation-mobile"><a href="/consultation/">One on One AI</a></li>
       <li><a href="#story">Parcours</a></li>
-      <li><a href="#testimonials">Témoignages (23)</a></li>
+      <li><a href="#testimonials">Témoignages (<span data-testimonial-count="all">44</span>)</a></li>
       <li><a href="#credentials">Reconnaissances</a></li>
       <li><a href="https://www.youtube.com/@raphatb" target="_blank" rel="noopener noreferrer">YouTube</a></li>
     </ul>
@@ -1971,7 +1982,7 @@
   </div>
   <div class="hero-visual">
     <section class="hero-company-proof" aria-label="Quelques entreprises que j'ai aidées">
-      <div class="company-proof-heading"><div><div class="company-proof-rating"><div class="company-proof-stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg></div><a class="company-proof-count" href="#testimonials">23 témoignages</a></div><a class="company-proof-title" href="#testimonials">Quelques entreprises que j'ai aidées <span aria-hidden="true">↗</span></a></div></div>
+      <div class="company-proof-heading"><div><div class="company-proof-rating"><div class="company-proof-stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg></div><a class="company-proof-count" href="#testimonials"><span data-testimonial-count="all">44</span> témoignages</a></div><a class="company-proof-title" href="#testimonials">Quelques entreprises que j'ai aidées <span aria-hidden="true">↗</span></a></div></div>
       <div class="company-proof-window"><div class="company-proof-track"><div class="company-proof-group" role="list"><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/firebarns.png" alt="Firebarns" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/holos.png" alt="HOLOS" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/gmstudios.png" alt="GM Studios" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/elevo.png" alt="ELEVO Nutrition" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/axiomedia.png" alt="Axiomedia" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/nouvellevie.svg" alt="Nouvelle Vie" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/amorce.png" alt="Amorce" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/paleta.png" alt="Café Paleta" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/propulsion.svg" alt="Propulsion" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/taza-flores.png" alt="Taza Flores" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><span class="company-proof-wordmark" role="img" aria-label="Gorilo Marketing">Gorilō</span></span></div><div class="company-proof-group" aria-hidden="true"><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/firebarns.png" alt="Firebarns" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/holos.png" alt="HOLOS" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/gmstudios.png" alt="GM Studios" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/elevo.png" alt="ELEVO Nutrition" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/axiomedia.png" alt="Axiomedia" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/nouvellevie.svg" alt="Nouvelle Vie" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/amorce.png" alt="Amorce" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/paleta.png" alt="Café Paleta" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/propulsion.svg" alt="Propulsion" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/taza-flores.png" alt="Taza Flores" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><span class="company-proof-wordmark" role="img" aria-label="Gorilo Marketing">Gorilō</span></span></div></div></div>
     </section>
     <div class="hero-client-proof">
@@ -2126,12 +2137,17 @@
     <div class="section-label">Témoignages</div>
     <h2 class="section-heading">Ce que les gens disent après avoir travaillé avec moi.</h2>
     <p class="section-lead">Clients, partenaires, fondateurs. Je garde leurs mots tels quels.</p>
+    <nav class="proof-library-nav" aria-label="Catégories de témoignages">
+      <a href="#client-testimonials">Clients et accompagnement (<span data-testimonial-count="clients">21</span>)</a>
+      <a href="#aigeeks-testimonials">Communauté AI Geeks (<span data-testimonial-count="community">23</span>)</a>
+    </nav>
+    <p class="proof-library-note">Retours clients, accompagnement personnel et expériences aux événements. Les extraits d’un même témoignage comptent une seule fois.</p>
   </div>
 
-  <div class="testimonials-grid">
+  <div class="testimonials-grid" id="client-testimonials">
 
   <!-- 1. PUNCH - crise, faillite -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-william-burgess" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Faillite</span> → 2.5x les ventes</div>
     <div class="testimonial-quote">
       Raph, on va <strong class="red">faire faillite</strong>. Littéralement, je ne sais plus quoi faire. Je t'ai embauché direct, je t'ai fait confiance, je t'ai donné carte blanche. La première année, ça avait fait <strong>2.5x les ventes</strong> juste avec la vitesse du site. Ta rigueur de travail et ton éthique de travail. 100%.
@@ -2146,7 +2162,7 @@
   </div>
 
   <!-- 2. MÉTAPHORE - couteau suisse, plus léger -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-christophe-contant" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Besoin ponctuel</span> → Plus que demandé</div>
     <div class="testimonial-quote">
       Avoir Raph à tes côtés, c'est comme avoir un <strong class="red">couteau suisse en pleine nature</strong>. Très peu de gens combinent un niveau de connaissance aussi élevé ET une capacité d'exécution aussi rapide. Délivrabilité email, stratégie marketing, workflows, automatisations : Raph maîtrise et surtout, il livre. Tu peux avoir le meilleur ouvre-boîte du monde… si tu ne peux pas couper ton poisson ou préparer ton feu, tu n'iras pas loin. Et surtout : il overdeliver. Toujours. Tu n'obtiens jamais juste ce que tu demandes, tu en as toujours plus. Si vous voulez quelqu'un qui fait avancer les choses, <strong>Raph est un no-brainer</strong>.
@@ -2161,7 +2177,7 @@
   </div>
 
   <!-- 3. ÉMOTIF - insomnie, stress -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-oli-pharand" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Stress opérationnel</span> → Profit 50% à 75%</div>
     <div class="testimonial-quote">
       J'allais me coucher le soir puis c'était <strong class="red">dur de dormir</strong>. On dirait qu'il y a 25 chemins, puis 24 qui sont pas bons. Ça devenait juste stressant. Aujourd'hui? Notre profit est passé de <strong>50% à 75%</strong>. Le plus gros impact, c'était quand j'arrivais à la maison et j'étais capable de relaxer.
@@ -2176,7 +2192,7 @@
   </div>
 
   <!-- 4. POSÉ - professionnel, Notion -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-melanie-bacquet" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Projet éparpillé</span> → Notion qui tient</div>
     <div class="testimonial-quote">
       Nous avons sollicité Raphaël pour <strong>optimiser nos projets sur Notion</strong>. Il a rapidement saisi nos enjeux et a trouvé des solutions adaptées et durables. Raphaël est une personne attentive, dynamique et extrêmement professionnelle. Son expertise a non seulement répondu à nos attentes, mais les a également <strong class="red">dépassées</strong>.
@@ -2191,7 +2207,7 @@
   </div>
 
   <!-- 5. STRATÉGIQUE - la bonne question -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-mani" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Mandat</span> → Partenariat</div>
     <div class="testimonial-quote">
       Ce qui m'a vraiment convaincu, c'est quand tu m'as posé la question: est-ce que votre problème, c'est un problème d'acquisition ou un problème de rétention? <strong class="red">Personne ne m'avait posé cette question-là</strong>. T'es devenu plus que quelqu'un qui m'offrait un service, tu l'as approché comme si t'étais <strong>mon partner</strong>. Le meilleur 1000$ que tu vas dépenser.
@@ -2206,7 +2222,7 @@
   </div>
 
   <!-- 6. PUNCH - burnout, épuisement -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-po-drouin" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Boîte courriel saturée</span> → 4-5h sauvées/semaine</div>
     <div class="testimonial-quote">
       Ça fait trois ans que j'ai pas arrêté et que j'ai pas pris de vacances. Je suis <strong class="red">vide, vide, vide</strong>. Il a traité 6242 courriels. Presque 700 drafts. 48 heures de meeting. Avec la solution que Raph m'a proposé pour les courriels, je <strong>sauve 4 à 5 heures par semaine</strong>. Dès que je reçois un courriel, il me propose déjà quelque chose. Tout ce que j'ai à faire, c'est changer un mot et envoyer.
@@ -2221,7 +2237,7 @@
   </div>
 
   <!-- 7. LÉGER - pratique, Notion -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-carl-moreau" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Notion désorganisé</span> → Temps sauvé</div>
     <div class="testimonial-quote">
       Si t'hésites à passer à l'action avec Raph, c'est sûrement que t'es super occupé. Si tu es très occupé, c'est la raison pour laquelle tu devrais le rencontrer. J'utilisais Notion comme un enfant de 4 ans dans un bac à sable, c'est-à-dire à peu près tout croche. Aujourd'hui, je sauve <strong class="red">énormément de temps et de stress</strong>.
@@ -2236,7 +2252,7 @@
   </div>
 
   <!-- 8. CONFIANCE - all-in, sécurité -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-miguel-alain" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Perdu dans les options</span> → En confiance</div>
     <div class="testimonial-quote">
       Quand quelque chose sortait de ta bouche, c'était pas discutable. Tu fais tes dues diligences, <strong class="red">t'es tellement all-in</strong>. C'était tellement ma source d'information. Quand on a commencé, il n'y avait pas de ChatGPT aussi puissant. C'est toi qui étais mon ChatGPT. La tête baissée, le couteau entre les dents. Avec Raph, <strong>on se sent en sécurité</strong>.
@@ -2251,7 +2267,7 @@
   </div>
 
   <!-- 9. RÉSULTATS - SMS, concret -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-emilie-turcotte" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Simple texto</span> → Commande de 150$+</div>
     <div class="testimonial-quote">
       Les textos, c'est une façon de rejoindre rapidement les clients. Le taux d'ouverture, c'est environ 99%. J'ai vu <strong class="red">rapidement des clients qui sont venus acheter grâce</strong> à un texto que j'ai envoyé de Farmzz. Un de mes clients est venu me dire « c'est parce que j'ai reçu ton texto » - et il m'a fait une commande d'au moins 150$.
@@ -2266,7 +2282,7 @@
   </div>
 
   <!-- 10. LEADERSHIP - frappait des murs -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-angie-clerine" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Équipe sceptique</span> → Tout le monde embarque</div>
     <div class="testimonial-quote">
       On avait une équipe qui <strong class="red">frappait des murs</strong> et personne ne levait le flag. Raph m'a donné des outils concrets, pas des beaux frameworks. Du vrai stock qui marche. En quelques semaines, j'ai gagné le buy-in de la personne la plus résistante de l'équipe. J'ai pris ma place comme lead, pour vrai. Il te challenge, te donne du juice, puis te laisse driver. Si ton organisation a besoin de passer au next level, <strong>c'est lui que tu veux</strong>.
@@ -2281,7 +2297,7 @@
   </div>
 
   <!-- 11. CROISSANCE - montée rapide -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-noemie" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Peu visible</span> → Clients qui parlent de toi</div>
     <div class="testimonial-quote">
       Je sais c'est quoi l'<strong class="red">énergie que tu mets dans tes projets</strong>. On a fait des ajustements, simplifié le message, ajouté une offre. On a vraiment vécu une montée rapide de nos abonnés. Les gens venaient à la caisse et nous en parlaient. T'es disponible, t'es présent. On a eu un service vraiment adapté à notre réalité.
@@ -2296,7 +2312,7 @@
   </div>
 
   <!-- 12. FRANC - les vraies choses -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-william-burgess" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Site lent</span> → Plus rapide, plus de ventes</div>
     <div class="testimonial-quote">
       T'es arrivé un matin et tu l'avais fait de nuit. C'était comme une surprise. Les boys, le site est plus rapide. On a augmenté notre taux de conversion, notre recurring. C'est vraiment pas confortable travailler avec toi des fois. Par contre, je le sais que ça va amener du positif. Tu nous dis <strong class="red">les vraies choses</strong>, puis après ça, on n'a pas le choix.
@@ -2311,7 +2327,7 @@
   </div>
 
   <!-- 13. TECH - Claude Code, wow -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-gael-mercier" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Bloqué par la tech</span> → Autonome en 1h</div>
     <div class="testimonial-quote">
       Claude Code, c'est magique. Raph m'a appris à l'utiliser et <strong class="red">ça a tout changé</strong>. J'ai recommandé ça à une lead chez moi qui avait besoin d'automatisations avec Airtable. Le gars de tech était pas disponible, ses projets étaient en retard. Je lui ai dit : as-tu pensé à utiliser Claude? Une heure plus tard, elle me texte : j'ai fini mes automatisations, je n'ai même plus besoin de la personne. Moi-même, je suis en train de programmer un portail pour les employés et les clients avec Supabase et Hostinger. On est vraiment rentré dans <strong>un autre monde</strong>.
@@ -2326,7 +2342,7 @@
   </div>
 
   <!-- 14. ÉMOTIF - avoir peur -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-mani" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Hésitation</span> → Les gens reviennent</div>
     <div class="testimonial-quote">
       On est parti d'<strong class="red">avoir peur</strong>, à avoir des résultats positifs. On aurait juste été content si les gens pensaient à nous en recevant le texto. Mais non, les gens répondaient. Ils venaient. Je sais pas quand est-ce que tu dors, mais tu roules. Il n'y a pas un dollar investi ailleurs que tu vas avoir un <strong>meilleur retour</strong>.
@@ -2341,7 +2357,7 @@
   </div>
 
   <!-- 15. AUTONOMIE - build skills -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-oli-pharand" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Dépendant de l'outil</span> → Autonome</div>
     <div class="testimonial-quote">
       Il <strong class="red">est pas là à juste essayer d'être gentil</strong> pour garder un mandat à long terme. Il est là pour faire des changements positifs dans ta business. C'est extrêmement underrated. Je me sentais pas comme si j'achetais quelque chose dont j'étais dépendant après. Je buildais mes skills au travers de tout ça.
@@ -2356,7 +2372,7 @@
   </div>
 
   <!-- 16. SYSTÈMES - penser en système -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-miguel-alain" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Tout manuel</span> → Plus de temps, plus de revenus</div>
     <div class="testimonial-quote">
       Ce que tu m'as appris, c'est apprendre à penser en système. Dès qu'il y a quelque chose que tu fais, il doit y avoir un système qui peut te remplacer ou te rendre meilleur. <strong class="red">J'ai tellement récupéré du temps</strong> qu'à toutes les fois j'ai envie de penser en système. Tu te débloques du temps dans ton horaire, et tu dis : ok my God, <strong>plus de temps, plus d'argent</strong>.
@@ -2371,7 +2387,7 @@
   </div>
 
   <!-- 17. TRANSFORMATION - agence, 4h -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-evan-arcand" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Projet bloqué</span> → Débloqué en 4h</div>
     <div class="testimonial-quote">
       Avant de travailler avec Raph, notre agence faisait face à plusieurs bottlenecks qui ralentissaient énormément notre onboarding client. Notre structure interne n'était pas optimale et l'approbation des vidéos devenait rapidement complexe pour les clients. Raph ne s'est pas contenté d'ajouter des automatisations. On a pris le temps ensemble d'identifier les vrais problèmes, les points de friction et les inefficacités dans notre processus. Il m'a surtout appris à utiliser Claude Code, ce qui me permet maintenant de régler mes propres problématiques sans dépendre de quelqu'un d'autre. <strong class="red">C'est une compétence qui va me servir toute ma vie</strong>. Honnêtement, c'est impressionnant de voir tout ce que seulement <strong>4 heures de consultation</strong> ont pu transformer dans mon entreprise.
@@ -2386,7 +2402,7 @@
   </div>
 
   <!-- 18. CHAOS - clarté -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-oli-pharand" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Excel + Trello + chaos</span> → Clarté</div>
     <div class="testimonial-quote">
       C'était <strong class="red">le chaos</strong>. On voyait des chiffres mais on ne comprenait pas nos chiffres. C'était un mix de Excel, Trello et plein de logiciels ensemble. Pour vrai, c'était l'enfer. Raph n'a pas essayé de vendre quelque chose. Il a juste regardé tout ce que j'avais dans mes systèmes. Quand j'ai fini le call, j'ai réalisé qu'il était vraiment là pour m'aider à avoir de la <strong>clarté</strong>.
@@ -2401,7 +2417,7 @@
   </div>
 
   <!-- 19. CARACTÈRE - 16 ans, drive -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-nicolas-nihezagire" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Inconnu</span> → Visible</div>
     <div class="testimonial-quote">
       Ça fait <strong>plus de 16 ans</strong> que je connais Raph. C'est comme une auto <strong class="red">pas de break pas de freins</strong>. Quand il embarque dans quelque chose, il va jusqu'au bout. C'est rare du monde avec cette <strong>drive-là</strong>. Il m'a aidé à <strong>me mettre sur la map</strong>, <strong>apprendre en faisant</strong> et <strong>automatiser ce que je fais</strong>.
@@ -2416,7 +2432,7 @@
   </div>
 
   <!-- 20. JNT (Jeremy-Noah Theriault) - screenshot + long quote -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-jnt" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>AI intimidante</span> → Envie d'essayer</div>
     <div class="testimonial-screenshot-frame">
       <img width="1045" height="1308" src="assets/photos/jeremy-noah-theriault.webp" alt="Conversation Messenger avec JNT (Jeremy-Noah Theriault)" loading="lazy" decoding="async" />
@@ -2435,7 +2451,7 @@
   </div>
 
   <!-- 21. Thien Le Minh - Founder Youtubers.ca / Monteurvideo.ca -->
-  <div class="testimonial-single reveal" id="temoignage-thien">
+  <div class="testimonial-single reveal" id="temoignage-thien" data-testimonial-key="personal-thien-le-minh" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Confusion AI</span> → Avance concrète</div>
     <div class="testimonial-quote">
       <strong>Raph est un vrai geek, you actually do it</strong>, tu le fais réellement. Tu ne fais pas juste vendre une formation - tu le fais pour de vrai, par passion pour le AI. <strong>N'importe qui qui vient te voir, qui vient te parler 5-10 minutes, tu comprends que tu sais exactement de quoi tu parles.</strong> La plupart des nerds sont trop nerdy, tu comprends absolument rien avec ce qu'ils disent. <strong>Toi, t'es capable de rendre ça vraiment simple à comprendre.</strong> Top 3 learnings: <strong class="red">le AI est capable de faire beaucoup plus que tu penses, Cloud Code c'est la clé, et il n'y a personne qui utilise l'AI - donc t'as le first-mover advantage.</strong> 100%, je te recommande d'aller vers Raphael.
@@ -2453,7 +2469,7 @@
   </div>
 
   <!-- 22. SCREENSHOT - Emmanuel, demande d'avis -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-emmanuel-message" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Avant de décider</span> → Demande l'avis de Raph</div>
     <div class="testimonial-screenshot-frame">
       <img width="1000" height="530" src="assets/photos/emmanuel-conversation.webp" alt="Conversation Messenger avec Emmanuel demandant l'avis de Raph sur Wix" loading="lazy" decoding="async" />
@@ -2468,7 +2484,7 @@
   </div>
 
   <!-- 23. Azaria Chavannes - B2B SaaS positionnement -->
-  <div class="testimonial-single reveal">
+  <div class="testimonial-single reveal" data-testimonial-key="personal-azaria-chavannes" data-testimonial-group="clients">
     <div class="testimonial-transform"><span>Trop prudent</span> → Tout a changé</div>
     <div class="testimonial-quote">
       Raphael, t'es un top ! Dans du B2B SaaS, on était <strong class="red">beaucoup trop prudent dans notre message et positionnement</strong> et tu m'as challengé et <strong>ça a tout changé</strong>. Toujours pertinent dans tes interventions et t'en donnes beaucoup ! Merci encore pour tes conseils.
@@ -2482,6 +2498,40 @@
     </div>
   </div>
 
+
+    <article class="testimonial-single reveal" data-testimonial-key="personal-antoine-boudreau" data-testimonial-group="clients">
+      <div class="talk-card-video">
+        <button class="youtube-lite" type="button" data-youtube-id="1eKLUanmxpk" data-youtube-title="Antoine Boudreau" aria-label="Lire le témoignage : Antoine Boudreau">
+          <img src="https://i.ytimg.com/vi/1eKLUanmxpk/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+          <span class="youtube-lite-play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <h3 class="proof-video-name">Antoine Boudreau</h3>
+      <p class="proof-video-context">Accompagnement personnel avec Raph</p>
+      <a class="proof-video-source" href="https://www.youtube.com/watch?v=1eKLUanmxpk" target="_blank" rel="noopener">Voir sur YouTube ↗</a>
+    </article>
+    <article class="testimonial-single reveal" data-testimonial-key="personal-ebay" data-testimonial-group="clients">
+      <div class="talk-card-video">
+        <button class="youtube-lite" type="button" data-youtube-id="AvXrnzTCUeE" data-youtube-title="Vendeur eBay" aria-label="Lire le témoignage : Vendeur eBay">
+          <img src="https://i.ytimg.com/vi/AvXrnzTCUeE/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+          <span class="youtube-lite-play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <h3 class="proof-video-name">Vendeur eBay</h3>
+      <p class="proof-video-context">Accompagnement IA · Annonces eBay</p>
+      <a class="proof-video-source" href="https://www.youtube.com/watch?v=AvXrnzTCUeE" target="_blank" rel="noopener">Voir sur YouTube ↗</a>
+    </article>
+    <article class="testimonial-single reveal" data-testimonial-key="personal-david-simard" data-testimonial-group="clients">
+      <div class="talk-card-video">
+        <button class="youtube-lite" type="button" data-youtube-id="r9FD6EAft7U" data-youtube-title="David Simard" aria-label="Lire le témoignage : David Simard">
+          <img src="https://i.ytimg.com/vi/r9FD6EAft7U/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+          <span class="youtube-lite-play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <h3 class="proof-video-name">David Simard</h3>
+      <p class="proof-video-context">Farmzz · Expérience client</p>
+      <a class="proof-video-source" href="https://www.youtube.com/watch?v=r9FD6EAft7U" target="_blank" rel="noopener">Voir sur YouTube ↗</a>
+    </article>
   </div>
 </div>
 
@@ -2550,49 +2600,194 @@
     </div>
 
 <h3 id="aigeeks-testimonials" style="margin:32px 0 24px;">Ceux qui étaient au AI Geeks.</h3>
-    <article class="community-proof-video" aria-label="Olivier · Participant AI Geeks">
+    <div class="proof-video-grid">
+    <article class="proof-video-card" data-testimonial-key="community-olivier" data-testimonial-group="community">
       <div class="talk-card-video">
-        <button class="youtube-lite" type="button" data-youtube-id="EqDbUS9GQwg" data-youtube-title="Olivier · Participant AI Geeks" aria-label="Lire le témoignage d’Olivier">
-          <img src="https://i.ytimg.com/vi/EqDbUS9GQwg/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+        <button class="youtube-lite" type="button" data-youtube-id="K-f7hwy8VZU" data-youtube-title="Olivier" aria-label="Lire le témoignage : Olivier">
+          <img src="https://i.ytimg.com/vi/K-f7hwy8VZU/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
           <span class="youtube-lite-play" aria-hidden="true"></span>
         </button>
       </div>
-      <h3>Son expérience, en vidéo.</h3>
-      <p><strong>Olivier · Participant AI Geeks</strong><br>Depuis l’édition 4, Olivier utilise Codex pour ses recherches de fournisseurs et ses analyses en commerce électronique.</p>
-      <a href="https://www.youtube.com/watch?v=EqDbUS9GQwg" target="_blank" rel="noopener">Voir sur YouTube ↗</a>
+      <h3 class="proof-video-name">Olivier</h3>
+      <p class="proof-video-context">AI Geeks · Retour d’événement</p>
+      <a class="proof-video-source" href="https://www.youtube.com/watch?v=K-f7hwy8VZU" target="_blank" rel="noopener">Voir sur YouTube ↗</a>
     </article>
+    <article class="proof-video-card" data-testimonial-key="community-francois-jolicoeur" data-testimonial-group="community">
+      <div class="talk-card-video">
+        <button class="youtube-lite" type="button" data-youtube-id="eCd2CprlAag" data-youtube-title="François Jolicoeur" aria-label="Lire le témoignage : François Jolicoeur">
+          <img src="https://i.ytimg.com/vi/eCd2CprlAag/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+          <span class="youtube-lite-play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <h3 class="proof-video-name">François Jolicoeur</h3>
+      <p class="proof-video-context">AI Geeks · Retour d’événement</p>
+      <a class="proof-video-source" href="https://www.youtube.com/watch?v=eCd2CprlAag" target="_blank" rel="noopener">Voir sur YouTube ↗</a>
+    </article>
+    <article class="proof-video-card" data-testimonial-key="community-nazarie-miron" data-testimonial-group="community">
+      <div class="talk-card-video">
+        <button class="youtube-lite" type="button" data-youtube-id="3x9Alw635DU" data-youtube-title="Nazarie Miron" aria-label="Lire le témoignage : Nazarie Miron">
+          <img src="https://i.ytimg.com/vi/3x9Alw635DU/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+          <span class="youtube-lite-play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <h3 class="proof-video-name">Nazarie Miron</h3>
+      <p class="proof-video-context">AI Geeks · Retour d’événement</p>
+      <a class="proof-video-source" href="https://www.youtube.com/watch?v=3x9Alw635DU" target="_blank" rel="noopener">Voir sur YouTube ↗</a>
+    </article>
+    <article class="proof-video-card" data-testimonial-key="community-jean-sebastien-roy" data-testimonial-group="community">
+      <div class="talk-card-video">
+        <button class="youtube-lite" type="button" data-youtube-id="y0V4yDcIEz8" data-youtube-title="Jean-Sébastien Roy" aria-label="Lire le témoignage : Jean-Sébastien Roy">
+          <img src="https://i.ytimg.com/vi/y0V4yDcIEz8/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+          <span class="youtube-lite-play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <h3 class="proof-video-name">Jean-Sébastien Roy</h3>
+      <p class="proof-video-context">AI Geeks · Retour d’événement</p>
+      <a class="proof-video-source" href="https://www.youtube.com/watch?v=y0V4yDcIEz8" target="_blank" rel="noopener">Voir sur YouTube ↗</a>
+    </article>
+    <article class="proof-video-card" data-testimonial-key="community-samuel" data-testimonial-group="community">
+      <div class="talk-card-video">
+        <button class="youtube-lite" type="button" data-youtube-id="avWogCT5LIQ" data-youtube-title="Samuel" aria-label="Lire le témoignage : Samuel">
+          <img src="https://i.ytimg.com/vi/avWogCT5LIQ/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+          <span class="youtube-lite-play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <h3 class="proof-video-name">Samuel</h3>
+      <p class="proof-video-context">AI Geeks · Retour d’événement</p>
+      <a class="proof-video-source" href="https://www.youtube.com/watch?v=avWogCT5LIQ" target="_blank" rel="noopener">Voir sur YouTube ↗</a>
+    </article>
+    <article class="proof-video-card" data-testimonial-key="community-antoine-spektrum" data-testimonial-group="community">
+      <div class="talk-card-video">
+        <button class="youtube-lite" type="button" data-youtube-id="fiZjMmBG4Ds" data-youtube-title="Antoine · Spektrum" aria-label="Lire le témoignage : Antoine · Spektrum">
+          <img src="https://i.ytimg.com/vi/fiZjMmBG4Ds/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+          <span class="youtube-lite-play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <h3 class="proof-video-name">Antoine · Spektrum</h3>
+      <p class="proof-video-context">AI Geeks · Retour d’événement</p>
+      <a class="proof-video-source" href="https://www.youtube.com/watch?v=fiZjMmBG4Ds" target="_blank" rel="noopener">Voir sur YouTube ↗</a>
+    </article>
+    <article class="proof-video-card" data-testimonial-key="community-philippe-lightbeans" data-testimonial-group="community">
+      <div class="talk-card-video">
+        <button class="youtube-lite" type="button" data-youtube-id="aXOqsJUhguA" data-youtube-title="Philippe · Lightbeans" aria-label="Lire le témoignage : Philippe · Lightbeans">
+          <img src="https://i.ytimg.com/vi/aXOqsJUhguA/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+          <span class="youtube-lite-play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <h3 class="proof-video-name">Philippe · Lightbeans</h3>
+      <p class="proof-video-context">AI Geeks · Retour d’événement</p>
+      <a class="proof-video-source" href="https://www.youtube.com/watch?v=aXOqsJUhguA" target="_blank" rel="noopener">Voir sur YouTube ↗</a>
+    </article>
+    <article class="proof-video-card" data-testimonial-key="community-rosalie-breton" data-testimonial-group="community">
+      <div class="talk-card-video">
+        <button class="youtube-lite" type="button" data-youtube-id="mRTaTFs7jPw" data-youtube-title="Rosalie Breton" aria-label="Lire le témoignage : Rosalie Breton">
+          <img src="https://i.ytimg.com/vi/mRTaTFs7jPw/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+          <span class="youtube-lite-play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <h3 class="proof-video-name">Rosalie Breton</h3>
+      <p class="proof-video-context">AI Geeks · Retour d’événement</p>
+      <a class="proof-video-source" href="https://www.youtube.com/watch?v=mRTaTFs7jPw" target="_blank" rel="noopener">Voir sur YouTube ↗</a>
+    </article>
+    <article class="proof-video-card" data-testimonial-key="community-mathieu-beaulieu" data-testimonial-group="community">
+      <div class="talk-card-video">
+        <button class="youtube-lite" type="button" data-youtube-id="mE1gBHf_Cdk" data-youtube-title="Mathieu Beaulieu" aria-label="Lire le témoignage : Mathieu Beaulieu">
+          <img src="https://i.ytimg.com/vi/mE1gBHf_Cdk/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+          <span class="youtube-lite-play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <h3 class="proof-video-name">Mathieu Beaulieu</h3>
+      <p class="proof-video-context">AI Geeks · Retour d’événement</p>
+      <a class="proof-video-source" href="https://www.youtube.com/watch?v=mE1gBHf_Cdk" target="_blank" rel="noopener">Voir sur YouTube ↗</a>
+    </article>
+    <article class="proof-video-card" data-testimonial-key="community-reseautage" data-testimonial-group="community">
+      <div class="talk-card-video">
+        <button class="youtube-lite" type="button" data-youtube-id="gHuWaRvrZGk" data-youtube-title="Participant · Réseautage" aria-label="Lire le témoignage : Participant · Réseautage">
+          <img src="https://i.ytimg.com/vi/gHuWaRvrZGk/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+          <span class="youtube-lite-play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <h3 class="proof-video-name">Participant · Réseautage</h3>
+      <p class="proof-video-context">AI Geeks · Retour d’événement</p>
+      <a class="proof-video-source" href="https://www.youtube.com/watch?v=gHuWaRvrZGk" target="_blank" rel="noopener">Voir sur YouTube ↗</a>
+    </article>
+    <article class="proof-video-card" data-testimonial-key="community-second-brain" data-testimonial-group="community">
+      <div class="talk-card-video">
+        <button class="youtube-lite" type="button" data-youtube-id="Vya9FHu_3BE" data-youtube-title="Participant · Second Brain" aria-label="Lire le témoignage : Participant · Second Brain">
+          <img src="https://i.ytimg.com/vi/Vya9FHu_3BE/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+          <span class="youtube-lite-play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <h3 class="proof-video-name">Participant · Second Brain</h3>
+      <p class="proof-video-context">AI Geeks · Retour d’événement</p>
+      <a class="proof-video-source" href="https://www.youtube.com/watch?v=Vya9FHu_3BE" target="_blank" rel="noopener">Voir sur YouTube ↗</a>
+    </article>
+    <article class="proof-video-card" data-testimonial-key="community-evan" data-testimonial-group="community">
+      <div class="talk-card-video">
+        <button class="youtube-lite" type="button" data-youtube-id="uZj9ClPQCaI" data-youtube-title="Evan" aria-label="Lire le témoignage : Evan">
+          <img src="https://i.ytimg.com/vi/uZj9ClPQCaI/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+          <span class="youtube-lite-play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <h3 class="proof-video-name">Evan</h3>
+      <p class="proof-video-context">AI Geeks · Retour d’événement</p>
+      <a class="proof-video-source" href="https://www.youtube.com/watch?v=uZj9ClPQCaI" target="_blank" rel="noopener">Voir sur YouTube ↗</a>
+    </article>
+    <article class="proof-video-card" data-testimonial-key="community-xavier" data-testimonial-group="community">
+      <div class="talk-card-video">
+        <button class="youtube-lite" type="button" data-youtube-id="2VbRnpR5Y9U" data-youtube-title="Xavier" aria-label="Lire le témoignage : Xavier">
+          <img src="https://i.ytimg.com/vi/2VbRnpR5Y9U/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+          <span class="youtube-lite-play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <h3 class="proof-video-name">Xavier</h3>
+      <p class="proof-video-context">AI Geeks · Retour d’événement</p>
+      <a class="proof-video-source" href="https://www.youtube.com/watch?v=2VbRnpR5Y9U" target="_blank" rel="noopener">Voir sur YouTube ↗</a>
+    </article>
+    <article class="proof-video-card" data-testimonial-key="community-antoine-beaupre" data-testimonial-group="community">
+      <div class="talk-card-video">
+        <button class="youtube-lite" type="button" data-youtube-id="r0BO_GnnGDU" data-youtube-title="Antoine Beaupré" aria-label="Lire le témoignage : Antoine Beaupré">
+          <img src="https://i.ytimg.com/vi/r0BO_GnnGDU/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async" />
+          <span class="youtube-lite-play" aria-hidden="true"></span>
+        </button>
+      </div>
+      <h3 class="proof-video-name">Antoine Beaupré</h3>
+      <p class="proof-video-context">AI Geeks · Retour d’événement</p>
+      <a class="proof-video-source" href="https://www.youtube.com/watch?v=r0BO_GnnGDU" target="_blank" rel="noopener">Voir sur YouTube ↗</a>
+    </article>
+    </div>
     <div class="aigeeks-testimonials">
-      <div class="aigeeks-testimonial reveal"><img class="community-proof-capture" src="assets/photos/aigeeks-proof-annie-ofarrell.png" alt="Message original" width="410" height="214" loading="lazy" decoding="async" /><cite><strong>Annie O'Farrell</strong>CMO, Vooban</cite></div>
-      <div class="aigeeks-testimonial reveal"><img class="community-proof-capture" src="assets/photos/aigeeks-proof-antoine-boudreau.png" alt="Message original" width="457" height="328" loading="lazy" decoding="async" /><cite><strong>Antoine Boudreau</strong>Participant AI Geeks</cite></div>
-      <div class="aigeeks-testimonial reveal">
+      <div class="aigeeks-testimonial reveal" data-testimonial-key="community-annie-ofarrell" data-testimonial-group="community"><img class="community-proof-capture" src="assets/photos/aigeeks-proof-annie-ofarrell.png" alt="Message original" width="410" height="214" loading="lazy" decoding="async" /><cite><strong>Annie O'Farrell</strong>CMO, Vooban</cite></div>
+      <div class="aigeeks-testimonial reveal" data-testimonial-key="community-antoine-boudreau" data-testimonial-group="community"><img class="community-proof-capture" src="assets/photos/aigeeks-proof-antoine-boudreau.png" alt="Message original" width="457" height="328" loading="lazy" decoding="async" /><cite><strong>Antoine Boudreau</strong>Participant AI Geeks</cite></div>
+      <div class="aigeeks-testimonial reveal" data-testimonial-key="community-gabriel-gouveia" data-testimonial-group="community">
         <blockquote>J'ai <strong>plus appris en une soirée</strong> au AI Geeks qu'en 4 formations ailleurs. Plus pertinent une seule conférence que toutes les journées là-bas. J'avais entendu parler de Claude Code toute la semaine, j'ai tout installé, ça marchait pas, j'étais à la "fuck this". Puis j'étais là le soir même et <strong>ça tout déclenché</strong>. C'est les gens de qualité. Les gens qui sont sharp. C'est ça la <strong>vraie valeur</strong>.</blockquote>
         <cite><strong>Gabriel Gouveia</strong>CEO, Lasclay.com</cite>
       </div>
-      <div class="aigeeks-testimonial reveal">
+      <div class="aigeeks-testimonial reveal" data-testimonial-key="community-stephanie-bedard" data-testimonial-group="community">
         <blockquote>C'est impressionnant de voir comment on est en train de <strong>redéfinir les règles</strong> de ce qu'on a toujours su et fait. Ce genre de shift-là, c'est gros. La plupart des gens utilisent l'IA en mode copier-coller. Passer à l'étape suivante, c'est quand ton ordi <strong>prend le contrôle et exécute</strong> à ta place. Grosse crowd, remplie de belles personnes, toutes eager d'en apprendre plus et surtout, d'exécuter.</blockquote>
         <cite><strong><a href="https://www.linkedin.com/posts/stephbedard_ai-geeks-3-anthony-blais-de-elia-a-racont%C3%A9-share-7438219639974895617-RIyb" target="_blank" rel="noopener" style="color:inherit;">Stéphanie Bédard</a></strong>Fractional CMO</cite>
       </div>
-      <div class="aigeeks-testimonial reveal">
+      <div class="aigeeks-testimonial reveal" data-testimonial-key="community-francis-laplante" data-testimonial-group="community">
         <blockquote><strong>Du tangible! Du vrai!</strong> Un petit full house de 70 personnes pour regarder des présentations sur des <strong>user cases concrets</strong>. Anthony B. avec sa retraite au chalet qui a produit des outils en 3h, Francois Lanthier Nadeau qui a créé une infolettre live sans toucher son clavier… Excellente organisation de l'événement.</blockquote>
         <cite><strong><a href="https://www.linkedin.com/feed/update/urn:li:activity:7438225412750639104/" target="_blank" rel="noopener" style="color:inherit;">Francis Laplante</a></strong>CEO, Spektrum</cite>
       </div>
-      <div class="aigeeks-testimonial reveal">
+      <div class="aigeeks-testimonial reveal" data-testimonial-key="community-jacomo-deschatelets" data-testimonial-group="community">
         <blockquote>Avant que Raphaël commence ça, le Québec n'avait vraiment rien. Maintenant, 55 personnes s'inscrivent, <strong>tout est vendu en quatre jours</strong>. La différence : des gens qui buildent vraiment partagent des vrais use cases, des démos concrètes. C'est ici que la communauté AI du Québec se ramasse. Si tu ships de quoi avec l'AI, <strong>tu dois être dans cette salle</strong>.</blockquote>
         <cite><strong>Jacomo Deschatelets</strong>Founder, Instrumnt</cite>
       </div>
-      <div class="aigeeks-testimonial reveal">
+      <div class="aigeeks-testimonial reveal" data-testimonial-key="community-rosalie-simard" data-testimonial-group="community">
         <blockquote>For founders by founders - j'adore l'approche (tout en restant super accessible pour les non-founders comme moi). Wow. Je n'avais <strong>aucune attente</strong> et <strong>J'AI ADORÉ!</strong> C'était accessible, décomplexé et super convivial.</blockquote>
         <details class="proof-source"><summary>Lire le message original</summary><img class="community-proof-capture" src="assets/photos/aigeeks-proof-rosalie-simard.png" alt="Message original" width="404" height="346" loading="lazy" decoding="async" /></details><cite><strong>Rosalie Simard, MBA</strong>Venture Capital @ Investissement Québec · VP @ Capitale Numérique</cite>
       </div>
-      <div class="aigeeks-testimonial reveal">
+      <div class="aigeeks-testimonial reveal" data-testimonial-key="community-rosalie-breton" data-testimonial-group="community">
         <blockquote>Deux éditions, et chaque fois je repars avec des <strong>idées concrètes</strong> qu'on peut appliquer <strong>dès le lendemain</strong> dans nos opérations. C'est le genre d'événement où la valeur vient autant des échanges que des présentations.</blockquote>
         <cite><strong>Rosalie Breton</strong>VP aux opérations, iFinance</cite>
       </div>
-      <div class="aigeeks-testimonial reveal">
+      <div class="aigeeks-testimonial reveal" data-testimonial-key="community-daphne-croteau" data-testimonial-group="community">
         <blockquote>Ce qui m'a le plus surpris, c'est l'avancée de l'IA et des cas présentés depuis l'édition précédente. Les capacités ont <strong>énormément évolué</strong> et on a eu accès à des use cases qui démontrent que les nouvelles fonctionnalités peuvent vraiment s'appliquer dans un contexte d'affaires. J'ai déjà <strong>hâte au prochain!</strong></blockquote>
         <cite><strong>Daphné Croteau</strong>Experte en expérience client et optimisation de processus</cite>
       </div>
-      <div class="aigeeks-testimonial reveal">
+      <div class="aigeeks-testimonial reveal" data-testimonial-key="community-william-topaczewski" data-testimonial-group="community">
         <blockquote>C'est <strong>fou</strong> ce que tu bâtis, honestly.</blockquote>
         <details class="proof-source"><summary>Lire le message original</summary><img class="community-proof-capture" src="assets/photos/aigeeks-proof-william-topaczewski.png" alt="Message original" width="446" height="108" loading="lazy" decoding="async" /></details><cite><strong>William Topaczewski</strong>Founding Account Executive, Glowtify</cite>
       </div>
@@ -2891,6 +3086,14 @@
     }
   });
   matchMedia('(max-width: 1024px)').addEventListener('change', () => setMenuOpen(false));
+
+  // Count each testimonial source once, even when several excerpts are shown.
+  // Personal and event feedback are separate contexts, never a count of clients.
+  document.querySelectorAll('[data-testimonial-count]').forEach(counter => {
+    const group = counter.dataset.testimonialCount;
+    const selector = group === 'all' ? '[data-testimonial-key]' : `[data-testimonial-group="${group}"]`;
+    counter.textContent = new Set(Array.from(document.querySelectorAll(selector), card => card.dataset.testimonialKey)).size;
+  });
 
   // Lazy YouTube embeds
   document.querySelectorAll('.youtube-lite').forEach(button => {
