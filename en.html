@@ -1793,12 +1793,9 @@
     .company-proof-stars svg { width: 16px; height: 16px; }
     .company-proof-title { display: inline-block; font-size: .85rem; font-weight: 600; line-height: 1.4; color: var(--fg); text-decoration: none; }
     .company-proof-title:hover { text-decoration: underline; text-underline-offset: 3px; }
-    .company-proof-toggle { flex: none; min-width: 44px; min-height: 44px; padding: 8px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--fg-secondary); font: inherit; font-size: .7rem; cursor: pointer; }
-    .company-proof-toggle:hover { background: var(--bg-muted); }
-    .company-proof-title:focus-visible, .company-proof-toggle:focus-visible { outline: 2px solid #c53030; outline-offset: 3px; }
+    .company-proof-title:focus-visible { outline: 2px solid #c53030; outline-offset: 3px; }
     .company-proof-window { margin-top: 18px; overflow: hidden; mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent); }
-    .company-proof-track { display: flex; width: max-content; animation: company-proof-scroll 30s linear infinite; animation-play-state: paused; }
-    .hero-company-proof[data-motion="running"] .company-proof-track { animation-play-state: running; }
+    .company-proof-track { display: flex; width: max-content; animation: company-proof-scroll 37.5s linear infinite; }
     .hero-company-proof:hover .company-proof-track, .hero-company-proof:focus-within .company-proof-track { animation-play-state: paused; }
     .company-proof-group { display: flex; align-items: center; flex: none; }
     .company-proof-item { width: 150px; height: 42px; padding: 0 18px; display: flex; align-items: center; justify-content: center; flex: none; }
@@ -1806,6 +1803,7 @@
     .company-proof-item .people-helped-logo[alt="Monsieur Chalets"] { width: 114px; }
     .company-proof-item .people-helped-logo[alt="Amorce"] { max-width: 48px; max-height: 42px; }
     .company-proof-item .people-helped-logo[alt="Axiomedia"], .company-proof-item .people-helped-logo[alt="Nouvelle Vie"] { max-width: 36px; max-height: 36px; }
+    .company-proof-item .people-helped-logo[alt="Café Paleta"] { filter: grayscale(1) brightness(.42); }
     @keyframes company-proof-scroll { to { transform: translateX(-50%); } }
     @media (max-width: 900px) {
       .hero-company-proof { position: relative; top: auto; left: auto; right: auto; order: -1; width: 100%; flex: none; }
@@ -1813,7 +1811,7 @@
     @media (prefers-reduced-motion: reduce) {
       .company-proof-track { animation: none; width: 100%; }
       .company-proof-group { width: 100%; flex-wrap: wrap; justify-content: center; gap: 16px 0; }
-      .company-proof-group[aria-hidden="true"], .company-proof-toggle { display: none; }
+      .company-proof-group[aria-hidden="true"] { display: none; }
       .company-proof-item { width: 50%; }
       .company-proof-window { mask-image: none; }
     }
@@ -1936,8 +1934,8 @@
   </div>
   <div class="hero-visual">
     <section class="hero-company-proof" aria-label="A few businesses I've helped">
-      <div class="company-proof-heading"><div><div class="company-proof-stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg></div><a class="company-proof-title" href="#testimonials">A few businesses I've helped <span aria-hidden="true">↗</span></a></div><button class="company-proof-toggle" type="button">Pause</button></div>
-      <div class="company-proof-window"><div class="company-proof-track"><div class="company-proof-group" role="list"><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/firebarns.png" alt="Firebarns" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/holos.png" alt="HOLOS" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/gmstudios.png" alt="GM Studios" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/elevo.png" alt="ELEVO Nutrition" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/axiomedia.png" alt="Axiomedia" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/nouvellevie.svg" alt="Nouvelle Vie" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/amorce.png" alt="Amorce" width="114" height="42" decoding="async" /></span></div><div class="company-proof-group" aria-hidden="true"><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/firebarns.png" alt="Firebarns" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/holos.png" alt="HOLOS" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/gmstudios.png" alt="GM Studios" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/elevo.png" alt="ELEVO Nutrition" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/axiomedia.png" alt="Axiomedia" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/nouvellevie.svg" alt="Nouvelle Vie" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/amorce.png" alt="Amorce" width="114" height="42" decoding="async" /></span></div></div></div>
+      <div class="company-proof-heading"><div><div class="company-proof-stars" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z"/></svg></div><a class="company-proof-title" href="#testimonials">A few businesses I've helped <span aria-hidden="true">↗</span></a></div></div>
+      <div class="company-proof-window"><div class="company-proof-track"><div class="company-proof-group" role="list"><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/firebarns.png" alt="Firebarns" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/holos.png" alt="HOLOS" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/gmstudios.png" alt="GM Studios" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/elevo.png" alt="ELEVO Nutrition" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/axiomedia.png" alt="Axiomedia" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/nouvellevie.svg" alt="Nouvelle Vie" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/amorce.png" alt="Amorce" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/paleta.png" alt="Café Paleta" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/propulsion.svg" alt="Propulsion" width="114" height="42" decoding="async" /></span></div><div class="company-proof-group" aria-hidden="true"><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/monsieurchalets.svg" alt="Monsieur Chalets" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/firebarns.png" alt="Firebarns" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/holos.png" alt="HOLOS" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/gmstudios.png" alt="GM Studios" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/elevo.png" alt="ELEVO Nutrition" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/axiomedia.png" alt="Axiomedia" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/nouvellevie.svg" alt="Nouvelle Vie" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/amorce.png" alt="Amorce" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/paleta.png" alt="Café Paleta" width="114" height="42" decoding="async" /></span><span class="company-proof-item" role="listitem"><img class="people-helped-logo" src="assets/logos/propulsion.svg" alt="Propulsion" width="114" height="42" decoding="async" /></span></div></div></div>
     </section>
     <div class="hero-client-proof">
       <img src="assets/photos/william-burgess.jpg" alt="William Burgess, Monsieur Chalets" width="344" height="500" decoding="async" />
@@ -2893,23 +2891,5 @@
   })();
 </script>
 
-<script>
-  document.querySelectorAll('.hero-company-proof').forEach((proof) => {
-    const toggle = proof.querySelector('.company-proof-toggle');
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const isEnglish = document.documentElement.lang === 'en';
-    let paused = false;
-    function updateMotion() {
-      const stopped = paused || reduceMotion.matches;
-      proof.dataset.motion = stopped ? 'paused' : 'running';
-      toggle.textContent = stopped ? (isEnglish ? 'Play' : 'Reprendre') : 'Pause';
-      toggle.setAttribute('aria-label', stopped ? (isEnglish ? 'Play company logo animation' : 'Reprendre le défilement des logos') : (isEnglish ? 'Pause company logo animation' : 'Mettre le défilement des logos en pause'));
-      toggle.setAttribute('aria-pressed', String(stopped));
-    }
-    toggle.addEventListener('click', () => { paused = !paused; updateMotion(); });
-    reduceMotion.addEventListener('change', updateMotion);
-    updateMotion();
-  });
-</script>
 </body>
 </html>
