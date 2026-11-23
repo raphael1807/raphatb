@@ -26,7 +26,7 @@ Personal website at raphatb.com is a bilingual (French / English) authority site
 - [Homepage (English)](https://raphatb.com/en): English version of the same content.
 - [Sitemap](https://raphatb.com/sitemap.xml)
 
-- [AI consultation (French)](https://raphatb.com/consultation/): One-on-one with Raphael to put AI to work in your business: preparation modules, then a 2-hour session on your own tasks. Billed as two invoices of CAD $750 before tax: one paid right away, the other later. Payment and booking are on a separate reservation page.
+- [AI consultation (French)](https://raphatb.com/consultation/): One-on-one with Raphael to put AI to work in your business: preparation modules, then a 2-hour session on your own tasks. Billed as two invoices of CAD $750 before tax: one paid right away, the other at the end of the training. Payment and booking are on a separate reservation page.
 - [AI consultation (English)](https://raphatb.com/consultation/en/): English version of the same offer and process.
 
 ## Off-site presence
